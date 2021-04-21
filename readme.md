@@ -8,6 +8,7 @@ Our Main Character is a Food Court Employee
 
 For the mini game:
   You run around the kitchen collecting ingredients and bringing them back to bowl
+  Need to figure out for sure if the ingredients are going to pop up in the same place, or in random spots throughout the kitchen
 
 For the chatting, we have 4 interactive characters:
 Customer(Stalker/bad)
