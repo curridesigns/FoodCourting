@@ -2,6 +2,10 @@ Hey Everyone,
 
 Thought I would get started with a Read Me file. Just helps me gather some thought for a bigger project.
 
+First and foremost, I have brought in the p5.js library for javascript. It has got a lot of really good things in it that will make our lives a lot of easier. If you have any questions please check the documentation for it first. 
+https://p5js.org/reference/
+it is full of great resources for how stuff works, and the syntax for different things
+
 So far we got a chatting game with one mini game that is either maze, or a grab and place style game.
 
 Our Main Character is a Food Court Employee
