@@ -24,6 +24,7 @@ class Toppings(){
   constructor(name,location[],image){
     this.name = name
     this.pos = location[]
+    this.image = image
   }
 }
 
