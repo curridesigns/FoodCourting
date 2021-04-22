@@ -21,14 +21,14 @@
 
 
 class Topping {
-  constructor(name, location, tempImage){
-    this.name = name;
-    this.pos = location;
+  constructor(tempName, tempLocation, tempImage){
+    this.name = tempName;
+    this.pos = tempLocation;
     this.image = tempImage;
   }
   
   render(){
-    rect(,10,20,20);
+    rect(...this.pos,20);
   }
 }
 
