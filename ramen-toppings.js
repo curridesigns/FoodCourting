@@ -1,18 +1,19 @@
 //grouping of objects for the mini-ramen-game - will be referenced in mini-game
+const  ramen = {};
 
-function noodles(){
+ramen.noodles = function (){
   
 }
 
-function egg(){  
+ramen.egg = function (){  
   
 }
 
-function weed(){
+ramen.weed = function (){
   
 }
 
-function broth(){
+ramen.broth = function (){
   
 }
 
