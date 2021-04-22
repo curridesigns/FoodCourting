@@ -19,13 +19,16 @@
 
 //some pseudo code to try and help me figure out some back end
 
-/*
-class Toppings(){
-  constructor(name,location[],image){
-    this.name = name
-    this.pos = location[]
-    this.image = image
+
+class Topping {
+  constructor(name, location, tempImage){
+    this.name = name;
+    this.pos = location;
+    this.image = tempImage;
+  }
+  
+  render(){
+    rect(,10,20,20);
   }
 }
 
-*/
