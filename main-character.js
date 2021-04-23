@@ -6,8 +6,8 @@ class Character {
     this.down = 83;
     this.right = 68;
     this.left = 65;
-    
-    this.selectKey = 32;
+    this.grab = false
+    this.grabKey = 32;
   }
   
   render(){
