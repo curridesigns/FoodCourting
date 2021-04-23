@@ -30,4 +30,10 @@ class Character {
         this.pos[0]++;
       }
   }
+  
+  grab(){
+    if(keyIsDown(this.select)){
+      return = true;
+    }
+  }
 }

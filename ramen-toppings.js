@@ -32,9 +32,17 @@ class Topping {
     rect(...this.pos,20);
   }
   
+  select(characterSelect){
+    if(characterSelect){
+      !this.isSelected;
+    }
+    
+  }
+  
   selected(characterPOS){
     if(this.isSelected){
-      this.pos[]
+      this.pos[0] = characterPOS[0];
+      this.pos[1] = characterPOS[1] + 10;
     }
   }
 }
