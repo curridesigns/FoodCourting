@@ -11,16 +11,16 @@ function preload(){
 function setup() {
   rectMode(CENTER);
   createCanvas(800,800);
-  background(200);
+  
   // noodles.render();
   //image(img,10,10);
 }
 
 function draw() {
+  background(200);
   character.render();
   character.movement();
   noodles.render();
-  // if(keyIsDown(32)){
-  //   console.log("this is working");
-  // }
+  noodles.select(character.grab());
+  noodles.selected(character.pos);
 }

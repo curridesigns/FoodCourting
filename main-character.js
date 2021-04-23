@@ -33,7 +33,7 @@ class Character {
   
   grab(){
     if(keyIsDown(this.select)){
-      return = true;
+      return true;
     }
   }
 }

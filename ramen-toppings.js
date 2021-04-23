@@ -34,7 +34,7 @@ class Topping {
   
   select(characterSelect){
     if(characterSelect){
-      !this.isSelected;
+      this.isSelected = !this.isSelected;
     }
     
   }
