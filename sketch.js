@@ -16,11 +16,18 @@ function setup() {
   //image(img,10,10);
 }
 
+//this is the animation loop, it is the frame
 function draw() {
   background(200);
   character.render();
   character.movement();
   noodles.render();
-  noodles.select(character.grab());
+  noodles.select(character.grab);
   noodles.selected(character.pos);
+}
+
+function keyReleased(){
+  if(keyCode===32){
+    console.log("it works");
+  }
 }
