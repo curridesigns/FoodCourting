@@ -1,6 +1,6 @@
-class MainCharacter {
+class Character {
   constructor(){
-    this.pos = [100,100];
+    this.pos = [20,20];
     this.size = 10;
     this.up = 38;
     this.down = 40
@@ -20,17 +20,14 @@ class MainCharacter {
       }
       //moves the ball down
       if (keyIsDown(this.down)) {
-        this.brakePedal = false;
-        this.yDirection = 1;
+        this.pos[0]--;
       }
       if (keyIsDown(this.left)) {
-        this.brakePedal = false;
-        this.xDirection = -1;
+        this.pos[1]--;
       }
       //moves the ball down
       if (keyIsDown(this.right)) {
-        this.brakePedal = false;
-        this.xDirection = 1;
+        this.pos[1]++;
       }
   }
 }
