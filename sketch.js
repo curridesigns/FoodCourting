@@ -27,8 +27,12 @@ function draw() {
   //console.log(character.grab)
 }
 
-function keyReleased(){
-  if(keyCode===character.grabKey){
-    character.hold = !character.hold;
+function keyPressed(){
+  if(keyCode==='Space'){
+    if(character.hold){
+    character.hold = false;
+    } else {
+      character.hold = true;
+    }
   }
 }
