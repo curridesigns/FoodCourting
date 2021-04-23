@@ -7,7 +7,7 @@ function preload(){
 }
 
 
-
+//this function runs once on page load, allows for setting static variables
 function setup() {
   rectMode(CENTER);
   createCanvas(800,800);
