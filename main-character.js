@@ -6,7 +6,7 @@ class Character {
     this.down = 83;
     this.right = 68;
     this.left = 65;
-    this.grab = false
+    this.hold = false
     this.grabKey = 32;
   }
   
@@ -33,8 +33,10 @@ class Character {
   }
   
   grab(){
-    if(keyIsDown(this.select)){
-      return true;
-    }
+    this.hold = !this.hold;
+  }
+  
+  hello(){
+    console.log("this works");
   }
 }

@@ -22,12 +22,13 @@ function draw() {
   character.render();
   character.movement();
   noodles.render();
-  noodles.select(character.grab);
+  noodles.select(character.hold);
   noodles.selected(character.pos);
+  //console.log(character.grab)
 }
 
 function keyReleased(){
-  if(keyCode===32){
-    console.log("it works");
+  if(keyCode===character.grabKey){
+    character.hold = !character.hold;
   }
 }
