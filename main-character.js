@@ -12,4 +12,25 @@ class MainCharacter {
   render(){
     rect(...this.pos,20);
   }
+  
+  movement(){
+    //sets the values for the direction to pass to the physics.movement function
+      if (keyIsDown(this.up)) {
+        this.pos[0]++;
+      }
+      //moves the ball down
+      if (keyIsDown(this.down)) {
+        this.brakePedal = false;
+        this.yDirection = 1;
+      }
+      if (keyIsDown(this.left)) {
+        this.brakePedal = false;
+        this.xDirection = -1;
+      }
+      //moves the ball down
+      if (keyIsDown(this.right)) {
+        this.brakePedal = false;
+        this.xDirection = 1;
+      }
+  }
 }
