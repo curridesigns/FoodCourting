@@ -25,10 +25,17 @@ class Topping {
     this.name = tempName;
     this.pos = tempLocation;
     this.image = tempImage;
+    this.isSelected = false;
   }
   
   render(){
     rect(...this.pos,20);
+  }
+  
+  selected(characterPOS){
+    if(this.isSelected){
+      this.pos[]
+    }
   }
 }
 
