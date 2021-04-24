@@ -33,7 +33,9 @@ class Topping {
   
   select(characterSelect, characterPOS){
     if(characterSelect){
+      if(characterPOS[0] <= this.pos[0] + 15 && characterPOS[0] >= this.pos[0] +15){
       this.isSelected = !this.isSelected;
+      }
     }
     if(this.isSelected){
       this.pos[0] = characterPOS[0];

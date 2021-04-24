@@ -16,13 +16,13 @@ let aggregatedTime = 0
 const frameRateInMillis =  60 // 30 FPS
 
 function setup(){
-  background();
+  // background();
   
   window.requestAnimationFrame(loop);
 }
 
 function draw () {
-  //background();
+  background();
   character.render();
   character.movement();
   noodles.render();
