@@ -7,7 +7,7 @@ class Character {
     this.right = {key: 68, flag: false};
     this.left = {key: 65, flag: false};
     this.grab = {key: 32, flag: false};
-    this.size = [20,20];
+    this.size = 20;
     this.direction = {x: 0, y: 0};
     this.speed = {x: 0, y:0};
     this.brakePedal = {x: true, y:true};
@@ -15,7 +15,7 @@ class Character {
   
   render(){
     ctx.fillStyle = "white"
-    ctx.fillRect(this.pos.x,this.pos.y, ...this.size);
+    ctx.fillRect(this.pos.x,this.pos.y, this.size,this.size);
   }
   
   keyDownHandler(){

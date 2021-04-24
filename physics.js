@@ -2,8 +2,9 @@ const physics = {};
 
 physics.movement = function (obj){
   //these are global movement speeds
-  const accel = 1.5;
+  const accel = 1.75;
   const decel = 0.5;
+  const speedMax = 10;
   
   //kick starts the movement so the equations later will work
   if(obj.direction.x !== 0){
@@ -36,4 +37,15 @@ physics.movement = function (obj){
       obj.speed.y = 0;
     }
   }
+  
+  if(obj.speed.x >= speedMax){
+    obj.speed.x = speedMax;
+  }
+  if(obj.speed.y >= speedMax){
+    obj.speed.y = speedMax;
+  }
+}
+
+physics.boundries = function (obj){
+  //if(obj.pos.x < obj.size)
 }
