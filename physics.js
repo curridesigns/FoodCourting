@@ -47,5 +47,21 @@ physics.movement = function (obj){
 }
 
 physics.boundries = function (obj){
-  //if(obj.pos.x < obj.size)
+  const boundries = {upper: 5, lower: ctx.height-5, right: 5, left: ctx.width - 5 };
+  
+  if(obj.pos.y < boundries.upper){
+    obj.pos.y = boundries.upper;
+  }
+  
+  if(obj.pos.y + obj.size > boundries.lower){
+    obj.pos.y = boundries.lower + obj.size;
+  }
+  
+  if(obj.pos.x < boundries.right){
+    obj.pos.x = boundries.right;
+  }
+  
+  if(obj.pos.x > boundries.left){
+    obj.pos.x = boundries.left + obj.size;
+  }
 }
