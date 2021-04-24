@@ -6,13 +6,14 @@ class Character {
     this.down = 83;
     this.right = 68;
     this.left = 65;
-    this.hold = false
+    this.hold = false;
     this.grabKey = 32;
+    this.size = [20,20];
   }
   
   render(){
-    ctx.fillStyle = "blue"
-    ctx.fillRect(...this.pos, 10, 10);
+    ctx.fillStyle = "white"
+    ctx.fillRect(...this.pos, ...this.size);
   }
   
   movement(){

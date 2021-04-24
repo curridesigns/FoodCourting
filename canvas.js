@@ -23,9 +23,9 @@ function setup(){
 function draw () {
   ctx.fillStyle = "blue"
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  // character.render();
+  character.render();
   // character.movement();
-  // noodles.render();
+  noodles.render();
   // noodles.select(character.hold);
   // noodles.selected(character.pos);
   // //console.log(character.grab)

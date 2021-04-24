@@ -23,10 +23,12 @@ class Topping {
     this.pos = tempLocation;
     this.image = tempImage;
     this.isSelected = false;
+    this.size = [10,10]
   }
   
   render(){
-    rect(...this.pos,20);
+    ctx.fillStyle = "white"
+    ctx.fillRect(...this.pos, ...this.size);
   }
   
   select(characterSelect){
