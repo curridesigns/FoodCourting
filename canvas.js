@@ -1,4 +1,4 @@
-const noodles = new Topping("noodles",[100,100],"this should be an image");
+const noodles = new Topping("noodles",{x: 100, y: 100},"this should be an image");
 const character = new Character();
 
 const canvas = document.querySelector('#gameCanvas');

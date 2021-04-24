@@ -46,22 +46,22 @@ physics.movement = function (obj){
   }
 }
 
-physics.boundries = function (obj){
-  const boundries = {upper: 5, lower: ctx.height-5, right: 5, left: ctx.width - 5 };
+physics.worldSpace = function (obj){
+  const boundries = {upper: 5, lower: canvas.height-5, right: 5, left: canvas.width - 5 };
   
   if(obj.pos.y < boundries.upper){
     obj.pos.y = boundries.upper;
   }
   
   if(obj.pos.y + obj.size > boundries.lower){
-    obj.pos.y = boundries.lower + obj.size;
+    obj.pos.y = boundries.lower - obj.size;
   }
   
   if(obj.pos.x < boundries.right){
     obj.pos.x = boundries.right;
   }
   
-  if(obj.pos.x > boundries.left){
-    obj.pos.x = boundries.left + obj.size;
+  if(obj.pos.x + obj.size > boundries.left){
+    obj.pos.x = boundries.left - obj.size;
   }
 }

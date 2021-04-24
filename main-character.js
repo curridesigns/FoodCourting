@@ -78,7 +78,7 @@ class Character {
       }
     
     physics.movement(this);
-    physics.boundries(this);
+    physics.worldSpace(this);
   }
   
 }
