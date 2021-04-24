@@ -41,8 +41,8 @@ class Topping {
       }
     }
     if(!this.isSelected){
-        this.pos.x = 100;
-        this.pos.y = 100;
+        this.pos.x = this.pos.x;
+        this.pos.y = this.pos.y;
       }
     
   }

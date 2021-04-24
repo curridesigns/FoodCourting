@@ -38,7 +38,7 @@ physics.movement = function (obj){
     }
   }
   
-  //makes the ob
+  //makes the object not be able to move faster than the "speedlimit"
   if(Math.abs(obj.speed.x) >= speedMax){
     if(obj.speed.x > 0){
       obj.speed.x = speedMax;
@@ -47,8 +47,12 @@ physics.movement = function (obj){
     }
   }
   
-  if(obj.speed.y >= speedMax){
-    obj.speed.y = speedMax;
+  if(Math.abs(obj.speed.y) >= speedMax){
+    if(obj.speed.y > 0){
+      obj.speed.y = speedMax;
+    } else if (obj.speed.y < 0){
+      obj.speed.y = -speedMax;
+    }
   }
 }
 
