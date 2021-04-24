@@ -1,6 +1,6 @@
 class Character {
   constructor(){
-    this.pos = [20,20];
+    this.pos = {x:20,y:20};
     this.size = 10;
     this.up = {key: 87, flag: false}
     this.down = {key: 83, flag: false};
@@ -8,7 +8,7 @@ class Character {
     this.left = {key: 65, flag: false};
     this.grab = {key: 32, flag: false};
     this.size = [20,20];
-    this.steps = 1;
+    this.direction = {x:0,y:0};
   }
   
   render(){
@@ -55,18 +55,18 @@ class Character {
   movement(){
     //sets the values for the direction to pass to the physics.movement function
       if (this.up.flag) {
-        this.pos[1] -= this.steps;
+        this.direction.x = -1
       }
       //moves the ball down
       if (this.down.flag) {
-        this.pos[1] += this.steps;
+        this.direction.x = 1;
       }
       if (this.left.flag) {
-        this.pos[0] -= this.steps;
+        this.direction.y = -1;
       }
       //moves the ball down
       if (this.right.flag) {
-        this.pos[0] += this.steps;
+        this.direction.y = 1;
       }
   }
   
