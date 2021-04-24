@@ -17,9 +17,6 @@
   
 // }
 
-//some pseudo code to try and help me figure out some back end
-
-
 class Topping {
   constructor(tempName, tempLocation, tempImage){
     this.name = tempName;

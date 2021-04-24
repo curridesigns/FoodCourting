@@ -11,7 +11,8 @@ class Character {
   }
   
   render(){
-    rect(...this.pos,20);
+    ctx.fillStyle = "blue"
+    ctx.fillRect(...this.pos, 10, 10);
   }
   
   movement(){
