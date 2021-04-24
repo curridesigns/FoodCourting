@@ -13,7 +13,7 @@ canvas.height = canvasSquare;
 
 let lastTime = 0
 let aggregatedTime = 0
-const frameRateInMillis =  1000 / 20 // 30 FPS
+const frameRateInMillis =  60 // 30 FPS
 
 function setup(){
   

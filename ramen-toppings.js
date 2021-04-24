@@ -37,7 +37,7 @@ class Topping {
     }
     if(this.isSelected){
       this.pos[0] = characterPOS[0];
-      this.pos[1] = characterPOS[1] + 10;
+      this.pos[1] = characterPOS[1] - 15;
     }
     
   }
