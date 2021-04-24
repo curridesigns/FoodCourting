@@ -9,6 +9,8 @@ class Character {
     this.grab = {key: 32, flag: false};
     this.size = [20,20];
     this.direction = {x:0,y:0};
+    this.speed = {x: 0, y:0};
+    this.brakepedal = {x: true, y:true};
   }
   
   render(){
@@ -53,20 +55,30 @@ class Character {
   }
   
   movement(){
+    this.brakepedal = {x: true, y:true};
+    
     //sets the values for the direction to pass to the physics.movement function
       if (this.up.flag) {
         this.direction.x = -1
+      } else if(!this.up.flag){
+        this.direction.x = 0
       }
       //moves the ball down
       if (this.down.flag) {
         this.direction.x = 1;
+      }else if(!this.down.flag){
+        this.direction.x = 0
       }
       if (this.left.flag) {
         this.direction.y = -1;
+      }else if(!this.left.flag){
+        this.direction.y = 0
       }
       //moves the ball down
       if (this.right.flag) {
         this.direction.y = 1;
+      }else if(!this.right.flag){
+        this.direction.y = 0
       }
   }
   
