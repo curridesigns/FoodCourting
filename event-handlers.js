@@ -3,5 +3,9 @@ document.addEventListener('keyup', keyUpHandler, false);
 
 
 function keyDownHandler(event){
-  character.movement();
+  character.keyDownHandler();
+}
+
+function keyUpHandler(event){
+  character.keyUpHandler();
 }
