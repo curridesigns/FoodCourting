@@ -10,7 +10,7 @@ class Character {
     this.size = [20,20];
     this.direction = {x:0,y:0};
     this.speed = {x: 0, y:0};
-    this.brakepedal = {x: true, y:true};
+    this.brakePedal = {x: true, y:true};
   }
   
   render(){
@@ -55,34 +55,27 @@ class Character {
   }
   
   movement(){
-    this.brakepedal = {x: true, y:true};
+    this.brakePedal = {x: true, y:true};
     
     //sets the values for the direction to pass to the physics.movement function
       if (this.up.flag) {
         this.direction.x = -1
-      } else if(!this.up.flag){
-        this.direction.x = 0
+        this.brakePedal.x = false;
       }
       //moves the ball down
       if (this.down.flag) {
         this.direction.x = 1;
-      }else if(!this.down.flag){
-        this.direction.x = 0
+        this.brakePedal.x = false;
       }
       if (this.left.flag) {
         this.direction.y = -1;
-      }else if(!this.left.flag){
-        this.direction.y = 0
+        this.brakePedal.x = false;
       }
       //moves the ball down
       if (this.right.flag) {
         this.direction.y = 1;
-      }else if(!this.right.flag){
-        this.direction.y = 0
+        this.brakePedal.x = false;
       }
   }
   
-  hello(){
-    console.log("this works");
-  }
 }
