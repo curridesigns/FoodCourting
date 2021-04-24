@@ -4,7 +4,7 @@ physics.movement = function (obj){
   //these are global movement speeds
   const accel = 1.75;
   const decel = 0.5;
-  const speedMax = 10;
+  const speedMax = 5;
   
   //kick starts the movement so the equations later will work
   if(obj.direction.x !== 0){
@@ -38,9 +38,15 @@ physics.movement = function (obj){
     }
   }
   
-  if(obj.speed.x >= speedMax){
-    obj.speed.x = speedMax;
+  //makes the ob
+  if(Math.abs(obj.speed.x) >= speedMax){
+    if(obj.speed.x > 0){
+      obj.speed.x = speedMax;
+    } else if (obj.speed.x < 0){
+      obj.speed.x = -speedMax;
+    }
   }
+  
   if(obj.speed.y >= speedMax){
     obj.speed.y = speedMax;
   }

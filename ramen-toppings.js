@@ -32,14 +32,18 @@ class Topping {
   }
   
   select(characterSelect, characterPOS){
+    this.isSelected = false;
     if(this.characterNear(characterPOS)){
       if(characterSelect){
-        this.pos = characterPOS;
-      }
-      if(!characterSelect){
-        this.pos = this.pos;
+        this.pos.x = characterPOS.x;
+        this.pos.y = characterPOS.y;
+        this.isSelected = true;
       }
     }
+    if(!this.isSelected){
+        this.pos.x = 100;
+        this.pos.y = 100;
+      }
     
   }
   
