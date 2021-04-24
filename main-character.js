@@ -8,6 +8,7 @@ class Character {
     this.left = {key: 65, flag: false};
     this.grab = {key: 32, flag: false};
     this.size = [20,20];
+    this.steps = 2;
   }
   
   render(){
@@ -43,28 +44,27 @@ class Character {
     if(event.keyCode == this.right.key){
       this.right.flag = false;
     }
+    if(event.keyCode == this.grab.key){
+      this.grab.flag = !this.grab.flag
+    }
   }
   
   movement(){
     //sets the values for the direction to pass to the physics.movement function
       if (this.up.flag) {
-        this.pos[1]--;
+        this.pos[1] -= this.steps;
       }
       //moves the ball down
       if (this.down.flag) {
-        this.pos[1]++;
+        this.pos[1] += this.steps;
       }
       if (this.left.flag) {
-        this.pos[0]--;
+        this.pos[0] -= this.steps;
       }
       //moves the ball down
       if (this.right.flag) {
-        this.pos[0]++;
+        this.pos[0] += this.steps;
       }
-  }
-  
-  grab(){
-    this.hold = !this.hold;
   }
   
   hello(){

@@ -31,18 +31,19 @@ class Topping {
     ctx.fillRect(...this.pos, ...this.size);
   }
   
-  select(characterSelect){
+  select(characterSelect, characterPOS){
     if(characterSelect){
       this.isSelected = !this.isSelected;
+    }
+    if(this.isSelected){
+      this.pos[0] = characterPOS[0];
+      this.pos[1] = characterPOS[1] + 10;
     }
     
   }
   
   selected(characterPOS){
-    if(this.isSelected){
-      this.pos[0] = characterPOS[0];
-      this.pos[1] = characterPOS[1] + 10;
-    }
+    
   }
 }
 

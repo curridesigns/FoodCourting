@@ -24,11 +24,11 @@ function draw () {
   ctx.fillStyle = "blue"
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   character.render();
-  // character.movement();
+  character.movement();
   noodles.render();
-  // noodles.select(character.hold);
+  noodles.select(character.grab.flag, character.pos);
   // noodles.selected(character.pos);
-  // //console.log(character.grab)
+  //console.log(character.grab)
 
 }
 
