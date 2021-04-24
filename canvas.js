@@ -1,16 +1,15 @@
 const noodles = new Topping("noodles",[100,100],"this should be an image");
 const character = new Character();
 
-const canvas = document.querySelector('#gameCanvas')
+const canvas = document.querySelector('#gameCanvas');
 
-
+const ctx = canvas.getContext('2d');
 
 const canvasSquare = 800;
 
-turtleCan.width = canvasSquare;
-turtleCan.height = canvasSquare;
-lineCan.width = canvasSquare;
-lineCan.height = canvasSquare;
+canvas.width = canvasSquare;
+canvas.height = canvasSquare;
+
 
 let lastTime = 0
 let aggregatedTime = 0
@@ -22,8 +21,8 @@ function setup(){
 }
 
 function draw () {
-  lineCtx.fillStyle = "blue"
-  lineCtx.fillRect(0, 0, turtleCan.width, turtleCan.height);
+  ctx.fillStyle = "blue"
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   // character.render();
   // character.movement();
   // noodles.render();
