@@ -16,13 +16,13 @@ let aggregatedTime = 0
 const frameRateInMillis =  60 // 30 FPS
 
 function setup(){
+  background();
   
   window.requestAnimationFrame(loop);
 }
 
 function draw () {
-  ctx.fillStyle = "blue"
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  //background();
   character.render();
   character.movement();
   noodles.render();
@@ -51,6 +51,11 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
   }
 
 	window.requestAnimationFrame(loop)
+}
+
+function background(){
+  ctx.fillStyle = "blue"
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 setup();

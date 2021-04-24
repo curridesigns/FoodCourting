@@ -8,7 +8,7 @@ class Character {
     this.left = {key: 65, flag: false};
     this.grab = {key: 32, flag: false};
     this.size = [20,20];
-    this.steps = 2;
+    this.steps = 1;
   }
   
   render(){
@@ -29,6 +29,9 @@ class Character {
     if(event.keyCode == this.right.key){
       this.right.flag = true;
     }
+    if(event.keyCode == this.grab.key){
+      this.grab.flag = true;
+    }
   }
   
   keyUpHandler(){
@@ -45,7 +48,7 @@ class Character {
       this.right.flag = false;
     }
     if(event.keyCode == this.grab.key){
-      this.grab.flag = !this.grab.flag
+      this.grab.flag = false;
     }
   }
   
