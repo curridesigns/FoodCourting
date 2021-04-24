@@ -28,7 +28,7 @@ function draw() {
 }
 
 function keyPressed(){
-  if(keyCode==='Space'){
+  if(keyCode===69){
     if(character.hold){
     character.hold = false;
     } else {
