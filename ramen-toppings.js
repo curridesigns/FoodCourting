@@ -32,20 +32,22 @@ class Topping {
   }
   
   select(characterSelect, characterPOS){
-    if(characterSelect){
-      
-    }
-    if(this.isSelected){
-      this.pos[0] = characterPOS.x;
-      this.pos[1] = characterPOS.y - 15;
+    if(this.characterNear(characterPOS)){
+      if(characterSelect){
+        this.pos = characterPOS;
+      }
+      if(!characterSelect){
+        this.pos = this.pos;
+      }
     }
     
   }
   
   characterNear(characterPOS){
-    if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15){
-        console.log("it is near")\;
+    if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
+        return true;
       }
+    return false;
   }
 }
 
