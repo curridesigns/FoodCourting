@@ -24,6 +24,7 @@ class Topping {
     this.image = tempImage;
     this.isSelected = false;
     this.size = [10,10]
+    this.characterNear = false;
   }
   
   render(){
