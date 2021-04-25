@@ -1,4 +1,4 @@
-class Character {
+class PlayerCharacter {
   constructor(){
     this.pos = {x:20,y:20};
     this.size = 10;
