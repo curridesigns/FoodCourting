@@ -2,7 +2,7 @@ class PlayerCharacter {
   constructor(){
     this.pos = {x:20,y:20};
     this.size = 10;
-    this.color = "purple";
+    this.color = "red";
     this.up = {key: 87, flag: false}
     this.down = {key: 83, flag: false};
     this.right = {key: 68, flag: false};
@@ -15,7 +15,7 @@ class PlayerCharacter {
   }
   
   render(){
-    ctx.fillStyle = this.color
+    ctx.fillStyle = this.color;
     ctx.fillRect(this.pos.x,this.pos.y, this.size,this.size);
   }
   

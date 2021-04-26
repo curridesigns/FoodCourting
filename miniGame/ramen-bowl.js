@@ -2,7 +2,7 @@ class RamenBowl {
   constructor(tempX, tempY){
     this.pos = {x: tempX, y: tempY};
     this.size = 20;
-    this.color = "red";
+    this.color = "purple";
   }
   
   render(){
