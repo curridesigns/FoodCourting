@@ -2,6 +2,10 @@
 
 const miniGame = {};
 
+miniGame.load = function(){
+  //this is unused atm, but will eventually have things that need to be initialized
+}
+
 miniGame.play = function(){
   background();
   character.render();
