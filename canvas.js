@@ -1,4 +1,4 @@
-var noodles, character;
+var bowl, noodles, character;
 
 const canvas = document.querySelector('#gameCanvas');
 
@@ -18,6 +18,7 @@ function setup(){
   // background();
   noodles = new Topping("noodles", {x: 100, y: 100}, "this should be an image");
   character = new PlayerCharacter();
+  bowl = new RamenBowl(canvas.width)
   window.requestAnimationFrame(loop);
 }
 
