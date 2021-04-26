@@ -12,4 +12,5 @@ miniGame.play = function(){
   character.movement();
   noodles.render();
   noodles.select(character.grab.flag, character.pos);
+  bowl.render();
 }

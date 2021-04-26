@@ -9,4 +9,11 @@ class RamenBowl {
     ctx.fillStyle = this.color;
     ctx.fillRect(this.pos.x,this.pos.y,this.size,this.size);
   }
+  
+  characterNear(characterPOS){
+    if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
+        return true;
+      }
+    return false;
+  }
 }

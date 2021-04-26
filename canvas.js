@@ -16,9 +16,9 @@ const frameRateInMillis =  1000/20 // 30 FPS
 
 function setup(){
   // background();
-  noodles = new Topping("noodles", {x: 100, y: 100}, "this should be an image");
+  noodles = new Topping("noodles", 100,100, "this should be an image");
   character = new PlayerCharacter();
-  bowl = new RamenBowl(canvas.width)
+  bowl = new RamenBowl(canvas.width/2,canvas.height/2);
   window.requestAnimationFrame(loop);
 }
 
