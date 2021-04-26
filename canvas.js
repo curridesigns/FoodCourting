@@ -22,11 +22,8 @@ function setup(){
 }
 
 function draw () {
-  background();
-  character.render();
-  character.movement();
-  noodles.render();
-  noodles.select(character.grab.flag, character.pos);
+  miniGame.play();
+  
   // noodles.selected(character.pos);
   //console.log(character.grab)
 
