@@ -3,7 +3,7 @@
 const miniGame = {};
 
 miniGame.load = function(){
-  //this is unused atm, but will eventually have things that need to be initialized
+  //this is unused atm, but will eventually have things that need to be initialized for the mini game
 }
 
 miniGame.play = function(){

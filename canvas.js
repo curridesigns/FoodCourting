@@ -1,5 +1,4 @@
-const noodles = new Topping("noodles", {x: 100, y: 100}, "this should be an image");
-const character = new PlayerCharacter();
+var noodles, character;
 
 const canvas = document.querySelector('#gameCanvas');
 
@@ -17,7 +16,8 @@ const frameRateInMillis =  1000/20 // 30 FPS
 
 function setup(){
   // background();
-  
+  noodles = new Topping("noodles", {x: 100, y: 100}, "this should be an image");
+  character = new PlayerCharacter();
   window.requestAnimationFrame(loop);
 }
 
