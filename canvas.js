@@ -1,8 +1,8 @@
 var bowl, noodles, character;
 
 const canvas = document.querySelector('#gameCanvas');
-
 const ctx = canvas.getContext('2d');
+let frameCount = 0;
 
 const canvasSquare = 800;
 
@@ -23,6 +23,7 @@ function setup(){
 
 function draw () {
   miniGame.play();
+  //console.log(frameCount);
   
   // noodles.selected(character.pos);
   //console.log(character.grab)
@@ -43,7 +44,9 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
   	aggregatedTime = aggregatedTime-frameRateInMillis // Reset aggregated time, it turtleCan also be carried over.
   	
     // DRAW HERE!
+    frameCount++;
     draw()
+    
   
   }
 
