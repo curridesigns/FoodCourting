@@ -12,9 +12,8 @@ miniGame.play = function(){
   character.movement();
   bowl.render();
   
-  while(!bowl.hasTopping(noodles, character.pos)){
-    noodles.render();
-    noodles.select(character.grab.flag, character.pos);
+  if(!bowl.hasTopping(noodles, character.pos)){
+    
   }
   
 }
