@@ -13,12 +13,12 @@ miniGame.play = function(){
   character.render();
   character.movement();
   bowl.render();
-  noodles[0].render();
-  if(!bowl.hasTopping(noodles, character.pos)){
+  // noodles[0].render();
+//   if(!bowl.hasTopping(noodles, character.pos)){
     
-  } else {
-    console.log('hello');
-  }
+//   } else {
+//     console.log('hello');
+//   }
   
   
   
@@ -26,6 +26,7 @@ miniGame.play = function(){
   
   
   for(let i=0; i<noodles.length;i++){
+    if()
     if(noodles[i].turnedIn){
       noodles.push(new Topping("noodles", 100,100, "this should be an image"));
       ingredients.push(noodles.shift());

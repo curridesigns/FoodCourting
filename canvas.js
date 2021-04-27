@@ -4,7 +4,7 @@ const canvas = document.querySelector('#gameCanvas');
 const ctx = canvas.getContext('2d');
 let frameCount = 0;
 
-const canvasSquare = 800;
+const canvasSquare = 700;
 
 canvas.width = canvasSquare;
 canvas.height = canvasSquare;
