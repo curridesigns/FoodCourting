@@ -24,6 +24,7 @@ class Topping {
     this.pos = {x: tempX, y: tempY};
     this.size = 10;
     this.isSelected = false;
+    this.hasMoved = false;
     this.image = tempImage;
   }
   
@@ -39,6 +40,7 @@ class Topping {
         this.pos.x = characterPOS.x;
         this.pos.y = characterPOS.y;
         this.isSelected = true;
+        this.hasMoved = true;
       }
     }
     if(!this.isSelected){
