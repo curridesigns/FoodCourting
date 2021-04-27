@@ -5,7 +5,7 @@ const miniGame = {};
 miniGame.load = function(){
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   bowl = new RamenBowl(canvas.width/2,canvas.height/2);
-  noodles = new Topping("noodles", 100,100, "this should be an image");                             
+  noodles = [new Topping("noodles", 100,100, "this should be an image")];
 }
 
 miniGame.play = function(){
@@ -13,6 +13,11 @@ miniGame.play = function(){
   character.render();
   character.movement();
   bowl.render();
+  for(let i=0; i>noodles.length;i++){
+    if(noodles[i].pos === noodles.startPOS){
+      
+    }
+  }
   noodles.render();
   noodles.select(character.grab.flag, character.pos);
   

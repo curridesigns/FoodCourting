@@ -21,7 +21,7 @@ class Topping {
   constructor(tempName, tempX, tempY, tempImage){
     this.name = tempName;
     this.startPOS = {x: tempX, y: tempY};
-    this.pos = {x: 100, y: 100};
+    this.pos = {x: tempX, y: tempY};
     this.size = 10;
     this.isSelected = false;
     this.image = tempImage;
