@@ -1,5 +1,5 @@
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
-
+let ingredients = [];
 const miniGame = {};
 
 miniGame.load = function(){
@@ -25,9 +25,13 @@ miniGame.play = function(){
   
   
   
-  for(let i=0; i<1;i++){
+  for(let i=0; i<noodles.length;i++){
+    if(noodles[i].turnedIn){
+      noodles.push(new Topping("noodles", 100,100, "this should be an image"));
+      ingredients.push(noodles.shift());
+    }
     noodles[i].render();
-    noodles[i].select(character.grab.flag, character.pos);
+    noodles[i].select(character.grab.flag, character.pos, bowl.pos);
   }
   
   
