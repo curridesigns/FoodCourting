@@ -20,13 +20,12 @@ miniGame.play = function(){
     console.log('hello');
   }
   
-  if()
   
   
   
   
   
-  for(let i=0; i<2;i++){
+  for(let i=0; i<1;i++){
     noodles[i].render();
     noodles[i].select(character.grab.flag, character.pos);
   }

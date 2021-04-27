@@ -31,9 +31,13 @@ class Topping {
   render(){
     ctx.fillStyle = "white"
     ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
+    if(this.hasMoved){
+      ctx.fillStyle = "blue"
+    ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
+    }
   }
   
-  select(characterSelect, characterPOS){
+  select(characterSelect, characterPOS, bowlPOS){
     this.isSelected = false;
     if(this.characterNear(characterPOS)){
       if(characterSelect){
@@ -47,11 +51,20 @@ class Topping {
         this.pos.x = this.pos.x;
         this.pos.y = this.pos.y;
       }
-    
+    if(!this.isSelected && this.bowlNear(bowlPOS)){
+      console.log('hello')
+    }
   }
   
   characterNear(characterPOS){
     if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
+        return true;
+      }
+    return false;
+  }
+  
+  bowlNear(bowlPOS){
+     if(bowlPOS.x <= this.pos.x + 15 && bowlPOS.x >= this.pos.x - 15 && bowlPOS.y <= this.pos.y + 15 && bowlPOS.y >= this.pos.y - 15){
         return true;
       }
     return false;
