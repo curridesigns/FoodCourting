@@ -16,4 +16,12 @@ class RamenBowl {
       }
     return false;
   }
+  
+  hasTopping(topping, characterPOS){
+    if(this.characterNear(characterPOS)){
+      if(topping.isSelected){
+        console.log('it functions');
+      }
+    }
+  }
 }
