@@ -62,6 +62,7 @@ class Topping {
   }
   
   characterNear(characterPOS){
+    //TODO: make a distance function
     if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
         return true;
       }
