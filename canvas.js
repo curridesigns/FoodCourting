@@ -41,7 +41,7 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
   
   if (aggregatedTime > frameRateInMillis) { // Divide by 1000 to get FPS
   
-  	aggregatedTime = 0 // Reset aggregated time, it turtleCan also be carried over.
+  	aggregatedTime = aggregatedTime-frameRateInMillis // Reset aggregated time, it turtleCan also be carried over.
   	
     // DRAW HERE!
     draw()

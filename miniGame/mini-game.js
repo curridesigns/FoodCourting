@@ -14,6 +14,8 @@ miniGame.play = function(){
   
   if(!bowl.hasTopping(noodles, character.pos)){
     
+  } else {
+    console.log('hello');
   }
   
 }
