@@ -32,10 +32,10 @@ class Topping {
   render(){
     ctx.fillStyle = "white"
     ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
-    // if(this.turnedIn){
-    //   ctx.fillStyle = "white"
-    // ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
-    // }
+    if(this.hasMoved){
+      ctx.fillStyle = (250,11,0,0.2);
+      ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
+    }
   }
   
   select(characterSelect, characterPOS, bowlPOS){
