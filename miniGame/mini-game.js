@@ -13,6 +13,7 @@ miniGame.play = function(){
   character.render();
   character.movement();
   bowl.render();
+  //noodles[0].render();
   if(!bowl.hasTopping(noodles, character.pos)){
     
   } else {
@@ -25,12 +26,11 @@ miniGame.play = function(){
   
   
   
-  for(let i=0; i>noodles.length;i++){
-    if(noodles[i].pos != noodles[i].startPOS){
-      noodles.push(new Topping("noodles", 100,100, "this should be an image"));
-    }
-    noodles[i].render();
-    noodles[i].select(character.grab.flag, character.pos);
+  for(let i = 0; i > noodles.length+1; i++){
+    // if(noodles[i].pos != noodles[i].startPOS){
+    //   noodles.push(new Topping("noodles", 100,100, "this should be an image"));
+    // }
+    console.log('hello')
   }
   
   
