@@ -13,6 +13,7 @@ miniGame.play = function(){
   character.render();
   character.movement();
   bowl.render();
+  //console.log(noodles.length)
   // noodles[0].render();
 //   if(!bowl.hasTopping(noodles, character.pos)){
     
@@ -26,10 +27,13 @@ miniGame.play = function(){
   
   
   for(let i=0; i<noodles.length;i++){
-    if()
+    if(noodles[i].hasMoved && !noodles[i].isSelected){
+      if(noodles[i+1]===undefined){
+        noodles.push(new Topping("noodles", 100,100, "this should be an image"));
+      }
+    }
     if(noodles[i].turnedIn){
-      noodles.push(new Topping("noodles", 100,100, "this should be an image"));
-      ingredients.push(noodles.shift());
+      ingredients.push(noodles.shift(noodles[i]));
     }
     noodles[i].render();
     noodles[i].select(character.grab.flag, character.pos, bowl.pos);

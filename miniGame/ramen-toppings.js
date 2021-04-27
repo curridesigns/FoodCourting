@@ -55,6 +55,10 @@ class Topping {
     if(!this.isSelected && this.bowlNear(bowlPOS)){
       this.turnedIn = true;
     }
+    
+    if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
+      this.hasMoved = true;
+    }
   }
   
   characterNear(characterPOS){
