@@ -10,8 +10,11 @@ miniGame.play = function(){
   background();
   character.render();
   character.movement();
-  noodles.render();
-  noodles.select(character.grab.flag, character.pos);
   bowl.render();
-  bowl.characterNear(character.pos);
+  
+  while(!bowl.hasTopping(noodles, character.pos)){
+    noodles.render();
+    noodles.select(character.grab.flag, character.pos);
+  }
+  
 }

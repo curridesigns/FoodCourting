@@ -20,8 +20,9 @@ class RamenBowl {
   hasTopping(topping, characterPOS){
     if(this.characterNear(characterPOS)){
       if(topping.isSelected){
-        console.log('it functions');
+        return true;
       }
     }
+    return false;
   }
 }
