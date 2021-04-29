@@ -1,4 +1,4 @@
-
+import { character } from "./miniGame/mini-game.js";
 
 document.addEventListener('keydown', keyDownHandler, false);
 document.addEventListener('keyup', keyUpHandler, false);

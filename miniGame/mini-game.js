@@ -60,4 +60,4 @@ miniGame.play = function() {
 };
 
 
-export { miniGame }
+export { miniGame, character }
