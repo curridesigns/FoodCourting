@@ -1,10 +1,9 @@
 import {miniGame} from "./miniGame/mini-game.js";
-import {PlayerCharacter} from "./characters/player-character.js";
+
 
 const canvas = document.querySelector('#gameCanvas');
 const ctx = canvas.getContext('2d');
 let frameCount = 0;
-var character;
 
 const canvasSquare = 700;
 
@@ -18,7 +17,7 @@ const frameRateInMillis =  1000/20 // 30 FPS
 
 function setup(){
   // background();
-  character = new PlayerCharacter();
+  
   miniGame.load();
   window.requestAnimationFrame(loop);
   

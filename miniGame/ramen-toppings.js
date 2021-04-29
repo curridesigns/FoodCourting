@@ -1,4 +1,4 @@
-/* global variables canvas, ctx */
+import { canvas, ctx } from "../canvas.js"
 
 class Topping {
   constructor(tempName, tempX, tempY, tempImage){

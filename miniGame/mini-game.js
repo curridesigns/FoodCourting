@@ -1,9 +1,10 @@
 /* global variables canvas, ctx */
 
 //import all the necessary files and function
-import { canvas } as canvas from "../canvas.js"
-import * as Topping from "./ramen-toppings.js"
-import * as RamenBowl from "./ramen-bowl.js"
+import { canvas, ctx }  from "../canvas.js"
+import { Topping }from "./ramen-toppings.js"
+import { RamenBowl } from "./ramen-bowl.js"
+import {PlayerCharacter} from "../characters/player-character.js";
 import * as helperfunction from "./helper-functions.js"
 //declare global variables for this page
 var character, noodles, bowl;
@@ -14,6 +15,7 @@ const miniGame = {};
 
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
+  character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
   noodles = [new Topping("noodles", 100, 100, "this should be an image")];
 };

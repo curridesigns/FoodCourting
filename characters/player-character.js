@@ -1,5 +1,5 @@
-/* global variables canvas, ctx */
 
+import { canvas, ctx } from "../canvas.js"
 import {physics} from "../miniGame/physics.js"
 
 class PlayerCharacter {
