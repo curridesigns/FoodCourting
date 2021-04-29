@@ -1,4 +1,11 @@
-/* global character, noodles */
+/* global variables canvas, ctx */
+
+//import all the necessary files and function
+import * as Topping from "./ramen-toppings.js"
+import * as RamenBowl from "./ramen-bowl.js"
+import * as helperfunv
+//declare global variables for this page
+var character, noodles, bowl;
 
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
 let ingredients = [];
@@ -48,3 +55,6 @@ miniGame.play = function() {
   //     console.log('hello');
   //   }
 };
+
+
+export { miniGame }
