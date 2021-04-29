@@ -1,6 +1,6 @@
 /* global variables canvas, ctx */
 
-import {physics} from ""
+import {physics} from "../miniGame/physics.js"
 
 class PlayerCharacter {
   constructor(){
