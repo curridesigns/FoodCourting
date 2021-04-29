@@ -1,7 +1,6 @@
 import { character } from "./mini-game.js";
 
-document.addEventListener('keydown', keyDownHandler, false);
-document.addEventListener('keyup', keyUpHandler, false);
+
 
 
 function keyDownHandler(event){
@@ -11,3 +10,5 @@ function keyDownHandler(event){
 function keyUpHandler(event){
   character.keyUpHandler();
 }
+
+export { keyDownHandler, keyUpHandler }
