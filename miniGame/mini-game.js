@@ -7,7 +7,7 @@ import { RamenBowl } from "./ramen-bowl.js"
 import {PlayerCharacter} from "../characters/player-character.js";
 import * as helperfunction from "./helper-functions.js"
 //declare global variables for this page
-var character, bowl;
+var character, noodles, bowl;
 
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
 let ingredients = [];
@@ -17,7 +17,7 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  
+  noodles = [new Topping("noodles", 100, 100, "this should be an image")];
 };
 
 miniGame.play = function() {
@@ -58,10 +58,5 @@ miniGame.play = function() {
   //     console.log('hello');
   //   }
 };
-
-
-function toppingBuilder(name, x, y, image){
-    let array = [new Topping("noodles", 100, 100, "this should be an image")]
-}
 
 export { miniGame, character }
