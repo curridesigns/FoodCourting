@@ -1,6 +1,7 @@
 /* global variables canvas, ctx */
 
 //import all the necessary files and function
+import canvas from "../../canvas.js"
 import * as Topping from "./ramen-toppings.js"
 import * as RamenBowl from "./ramen-bowl.js"
 import * as helperfunction from "./helper-functions.js"
