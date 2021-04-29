@@ -1,3 +1,5 @@
+/* global variables canvas, ctx */
+
 class RamenBowl {
   constructor(tempX, tempY){
     this.pos = {x: tempX, y: tempY};
@@ -26,3 +28,5 @@ class RamenBowl {
     return false;
   }
 }
+
+export { RamenBowl }

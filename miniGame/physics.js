@@ -1,3 +1,5 @@
+/* global variables canvas, ctx */
+
 const physics = {};
 
 physics.movement = function (obj){
@@ -75,3 +77,5 @@ physics.worldSpace = function (obj){
     obj.pos.x = boundries.left - obj.size;
   }
 }
+
+export { physics }

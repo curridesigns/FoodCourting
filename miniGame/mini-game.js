@@ -3,7 +3,7 @@
 //import all the necessary files and function
 import * as Topping from "./ramen-toppings.js"
 import * as RamenBowl from "./ramen-bowl.js"
-import * as helperfunv
+import * as helperfunction from "./helper-functions.js"
 //declare global variables for this page
 var character, noodles, bowl;
 
@@ -39,7 +39,7 @@ miniGame.play = function() {
 
   
   // All drawing
-  background();
+  helperfunction.background();
   character.render();
   bowl.render();
 

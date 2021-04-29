@@ -1,3 +1,7 @@
+/* global variables canvas, ctx */
+
+import {physics} from ""
+
 class PlayerCharacter {
   constructor(){
     this.pos = {x:20,y:20};
@@ -83,3 +87,5 @@ class PlayerCharacter {
   }
   
 }
+
+export { PlayerCharacter }
