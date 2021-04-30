@@ -28,23 +28,23 @@ class Topping {
     }
   }
   
-  select(characterSelect, characterPOS, bowlPOS){
+  select(characterGrab, characterPOS, bowlPOS){
     this.isSelected = false;
-    if(this.characterNear(characterPOS)){
-      if(characterSelect){
+    if(this.characterNear(characterPOS) && characterGrab.flag && !characterGrab.hasObject){
         this.pos.x = characterPOS.x;
         this.pos.y = characterPOS.y;
         this.isSelected = true;
         this.hasMoved = true;
-      }
+        characterGrab.hasObject = true;
     }
     if(!this.isSelected){
         this.pos.x = this.pos.x;
         this.pos.y = this.pos.y;
+        characterGrab.hasObject = false;
       }
     if(!this.isSelected && this.bowlNear(bowlPOS)){
       this.turnedIn = true;
-    }
+      characterGrab.hasObject = false;w   }
     
     if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
       this.hasMoved = true;
@@ -68,4 +68,4 @@ class Topping {
   }
 }
 
-export { Topping }
+export { Topping }d
