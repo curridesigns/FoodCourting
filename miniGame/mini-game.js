@@ -17,7 +17,7 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  console.log(ingredients.availableIngredients[1]);
+  console.log(ingredients.availableIngredients[0][0].render());
 };
 
 miniGame.play = function() {
@@ -34,7 +34,7 @@ miniGame.play = function() {
   helperfunction.background();
   character.render();
   bowl.render();
-  ingredients.render();
+  ingredients.availableIngredients[0][0].render();
   
   //toppingRender(noodles);
   //toppingRender(chashu);
