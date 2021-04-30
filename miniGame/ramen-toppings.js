@@ -44,7 +44,7 @@ class Topping {
       }
     if(!this.isSelected && this.bowlNear(bowlPOS)){
       this.turnIn = true;
-      characterGrab.hasObject = false;w   }
+      characterGrab.hasObject = false;}
     
     if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
       this.hasMoved = true;
@@ -68,4 +68,4 @@ class Topping {
   }
 }
 
-export { Topping }d
+export { Topping }

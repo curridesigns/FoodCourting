@@ -3,6 +3,7 @@
 //import all the necessary files and function
 import { canvas, ctx }  from "../canvas.js"
 import { Topping }from "./ramen-toppings.js"
+import { ingredients } from "./ingredients.js"
 import { RamenBowl } from "./ramen-bowl.js"
 import {PlayerCharacter} from "../characters/player-character.js";
 import * as helperfunction from "./helper-functions.js"
@@ -10,15 +11,13 @@ import * as helperfunction from "./helper-functions.js"
 var character, noodles, chashu, bowl;
 
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
-const ingredients = {turnInArray: [], availableIngredients: []                                        };
 const miniGame = {};
 
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  noodles = [new Topping("noodles", 100, 100, "this should be an image","#FAC600")];
-  chashu = [new Topping("chashu", 300, 300, "this should be an image", "#CE46E0")];
+  
 };
 
 miniGame.play = function() {
@@ -26,17 +25,18 @@ miniGame.play = function() {
 
   character.movement();
 
-  toppingBuilder(noodles);
-  toppingBuilder(chashu);
+  //toppingBuilder(noodles);
+  //toppingBuilder(chashu);
   
-
+  ingredients.availableIngredients[1].render();
   
   // All drawing
   helperfunction.background();
   character.render();
   bowl.render();
-  toppingRender(noodles);
-  toppingRender(chashu);
+  
+  //toppingRender(noodles);
+  //toppingRender(chashu);
   
   //console.log(noodles.length)
   // noodles[0].render();
