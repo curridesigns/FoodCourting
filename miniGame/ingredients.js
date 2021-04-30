@@ -20,4 +20,40 @@ ingredients.render = function () {
   }
 }
 
+ingredients.select = function (characterGrab) {
+  
+  for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
+    for(let j = 0; j < ingredients.availableIngredients[i].length; j++){
+      if (
+      ingredients.availableIngredients[i][j].hasMoved &&
+      !ingredients.availableIngredients[i][j].isSelected &&
+      ingredients.availableIngredients[i][j + 1] === undefined
+    ) {
+      ingredients.availableIngredients[i].push(new Topping(ingredients.availableIngredients[i][0].name, ingredients.availableIngredients[i][0].startPOS.x, ingredients.availableIngredients[i][0].startPOS.y, ingredients.availableIngredients[i][0].image, ingredients.availableIngredients[i][0].color));
+    }
+    if (ingredients.availableIngredients[i][j].turnedIn) {
+      ingredients.push(ingredients.availableIngredients[i][j].splice(i, 1));
+    }
+
+    array[i].select(character.grab, character.pos, bowl.pos);
+  }
+    }
+  
+  for (let i = 0; i < array.length; i++) {
+    if (
+      array[i].hasMoved &&
+      !array[i].isSelected &&
+      array[i + 1] === undefined
+    ) {
+      array.push(new Topping(array[0].name, array[0].startPOS.x, array[0].startPOS.y, array[0].image, array[0].color));
+    }
+    if (array[i].turnedIn) {
+      ingredients.push(array.splice(i, 1));
+    }
+
+    array[i].select(character.grab, character.pos, bowl.pos);
+  }
+  
+}
+
 export { ingredients };
