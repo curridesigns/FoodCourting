@@ -1,4 +1,5 @@
 import { canvas, ctx } from "../canvas.js"
+import { dist } from "./helper-functions.js"
 
 export class RamenBowl {
   constructor(tempX, tempY){
@@ -13,7 +14,7 @@ export class RamenBowl {
   }
   
   characterNear(characterPOS){
-    if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
+    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 20){
         return true;
       }
     return false;

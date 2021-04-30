@@ -13,14 +13,15 @@ class Topping {
     this.image = tempImage;
   }
   
-  render(){
-    ctx.fillStyle = "white"
-    ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
-    if(this.hasMoved){
-      ctx.fillStyle = (250,11,0,0.2);
-      ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
+  render(overrideX,overrideY){
+    if(overrideX === undefined && overrideY === undefined){
+      ctx.fillStyle = "white"
+      ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
+      if(this.hasMoved){
+        ctx.fillStyle = (250,11,0,0.2);
+        ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
+      }
     }
-    
   }
   
   select(characterSelect, characterPOS, bowlPOS){
@@ -56,7 +57,7 @@ class Topping {
   }
   
   bowlNear(bowlPOS){
-     if(dist(bowlPOS.x,)  <= this.pos.x + 15 && bowlPOS.x >= this.pos.x - 15 && bowlPOS.y <= this.pos.y + 15 && bowlPOS.y >= this.pos.y - 15){
+     if(dist(bowlPOS.x, bowlPOS.y, this.pos.x, this.pos.y)  <= 20){
         return true;
       }
     return false;
