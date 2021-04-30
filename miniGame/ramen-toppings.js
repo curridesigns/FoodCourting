@@ -1,4 +1,5 @@
 import { canvas, ctx } from "../canvas.js"
+import { dist } from "./helper-functions.js"
 
 class Topping {
   constructor(tempName, tempX, tempY, tempImage){
@@ -19,6 +20,7 @@ class Topping {
       ctx.fillStyle = (250,11,0,0.2);
       ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
     }
+    
   }
   
   select(characterSelect, characterPOS, bowlPOS){
@@ -42,11 +44,12 @@ class Topping {
     if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
       this.hasMoved = true;
     }
+    //console.log(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y))
   }
   
   characterNear(characterPOS){
     //TODO: make a distance function
-    if(characterPOS.x <= this.pos.x + 15 && characterPOS.x >= this.pos.x - 15 && characterPOS.y <= this.pos.y + 15 && characterPOS.y >= this.pos.y - 15){
+    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 15){
         return true;
       }
     return false;

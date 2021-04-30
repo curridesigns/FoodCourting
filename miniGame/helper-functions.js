@@ -5,10 +5,10 @@ function background(){
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-function distance(){
-  
+function dist(x1,y1,x2,y2){
+  Math.hypot(x2-x1,y2-y1);
 }
 
 
 
-export { background }
+export { background, dist }
