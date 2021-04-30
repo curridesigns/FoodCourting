@@ -25,7 +25,7 @@ miniGame.play = function() {
   // All updates
 
   character.movement();
-
+  ingredients.select(character.grab, character.pos, bowl.pos);
   //toppingBuilder(noodles);
   //toppingBuilder(chashu);
   
