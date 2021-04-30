@@ -17,8 +17,8 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  noodles = [new Topping("noodles", 100, 100, "this should be an image")];
-  chashu = [new Topping("chashu", 300, 300, "this should be an image")]
+  noodles = [new Topping("noodles", 100, 100, "this should be an image","#FAC600")];
+  chashu = [new Topping("chashu", 300, 300, "this should be an image", "#CE46E0")]
 };
 
 miniGame.play = function() {
@@ -26,8 +26,8 @@ miniGame.play = function() {
 
   character.movement();
 
-  toppingBuilder(noodles, "noodles", 100, 100, "this should be an image");
-  toppingBuilder(chashu, "chashu", 300, 300, "this should be an image");
+  toppingBuilder(noodles);
+  toppingBuilder(chashu);
   
 
   
@@ -47,16 +47,15 @@ miniGame.play = function() {
   //   }
 };
 
-export { miniGame, character }
-
-function toppingBuilder(array, name, X, Y, image){
+function toppingBuilder(array){
+  
   for (let i = 0; i < array.length; i++) {
     if (
       array[i].hasMoved &&
       !array[i].isSelected &&
       array[i + 1] === undefined
     ) {
-      array.push(new Topping(name, X, Y, image));
+      array.push(new Topping(array[0].name, array[0].startPOS.x, array[0].startPOS.y, array[0].image, array[0].color));
     }
     if (array[i].turnedIn) {
       ingredients.push(array.splice(i, 1));
@@ -73,3 +72,9 @@ function toppingRender(array){
   }
 
 }
+
+function ingredientsBuilder() {
+  
+}
+
+export { miniGame, character }
