@@ -2,7 +2,7 @@ import { canvas, ctx } from "../canvas.js"
 import { dist } from "./helper-functions.js"
 
 class Topping {
-  constructor(tempName, tempX, tempY, tempImage){
+  constructor(tempName, tempX, tempY, tempImage, tempColor){
     this.name = tempName;
     this.startPOS = {x: tempX, y: tempY};
     this.pos = {x: tempX, y: tempY};
@@ -11,16 +11,20 @@ class Topping {
     this.hasMoved = false;
     this.turnedIn = false;
     this.image = tempImage;
+    this.color = tempColor;
   }
   
   render(overrideX,overrideY){
     if(overrideX === undefined && overrideY === undefined){
-      ctx.fillStyle = "white"
+      ctx.fillStyle = this.color
       ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
       if(this.hasMoved){
         ctx.fillStyle = (250,11,0,0.2);
         ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
       }
+    } else {
+      ctx.fillStyle = this.color
+      ctx.fillRect(overrideX, overrideY, this.size, this.size);
     }
   }
   
