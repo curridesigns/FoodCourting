@@ -44,19 +44,19 @@ class Topping {
     if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
       this.hasMoved = true;
     }
-    //console.log(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y))
+    
   }
   
   characterNear(characterPOS){
     //TODO: make a distance function
-    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 15){
+    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 20){
         return true;
       }
     return false;
   }
   
   bowlNear(bowlPOS){
-     if(bowlPOS.x <= this.pos.x + 15 && bowlPOS.x >= this.pos.x - 15 && bowlPOS.y <= this.pos.y + 15 && bowlPOS.y >= this.pos.y - 15){
+     if(dist(bowlPOS.x,)  <= this.pos.x + 15 && bowlPOS.x >= this.pos.x - 15 && bowlPOS.y <= this.pos.y + 15 && bowlPOS.y >= this.pos.y - 15){
         return true;
       }
     return false;
