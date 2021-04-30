@@ -9,7 +9,7 @@ class Topping {
     this.size = 10;
     this.isSelected = false;
     this.hasMoved = false;
-    this.turnedIn = false;
+    this.turnIn = false;
     this.image = tempImage;
     this.color = tempColor;
   }
@@ -43,7 +43,7 @@ class Topping {
         characterGrab.hasObject = false;
       }
     if(!this.isSelected && this.bowlNear(bowlPOS)){
-      this.turnedIn = true;
+      this.turnIn = true;
       characterGrab.hasObject = false;w   }
     
     if(this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y){
