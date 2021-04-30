@@ -17,7 +17,7 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  
+  console.log(ingredients.availableIngredients[1]);
 };
 
 miniGame.play = function() {
@@ -28,12 +28,13 @@ miniGame.play = function() {
   //toppingBuilder(noodles);
   //toppingBuilder(chashu);
   
-  ingredients.availableIngredients[1].render();
+  
   
   // All drawing
   helperfunction.background();
   character.render();
   bowl.render();
+  ingredients.render();
   
   //toppingRender(noodles);
   //toppingRender(chashu);
@@ -64,13 +65,6 @@ function toppingBuilder(array){
     array[i].select(character.grab, character.pos, bowl.pos);
   }
   
-}
-
-function toppingRender(array){
-  for (let i = 0; i < array.length; i += 1) {
-    array[i].render();
-  }
-
 }
 
 function ingredientsBuilder() {
