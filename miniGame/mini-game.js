@@ -10,7 +10,7 @@ import * as helperfunction from "./helper-functions.js"
 var character, noodles, chashu, bowl;
 
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
-const ingredients = [];
+const ingredients = {turnInArray: [], availableIngredients: []};
 const miniGame = {};
 
 miniGame.load = function() {
@@ -18,7 +18,7 @@ miniGame.load = function() {
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
   noodles = [new Topping("noodles", 100, 100, "this should be an image","#FAC600")];
-  chashu = [new Topping("chashu", 300, 300, "this should be an image", "#CE46E0")]
+  chashu = [new Topping("chashu", 300, 300, "this should be an image", "#CE46E0")];
 };
 
 miniGame.play = function() {
