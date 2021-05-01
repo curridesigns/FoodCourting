@@ -15,20 +15,20 @@ ingredients.availableIngredients = [
 
 ingredients.turnedInIngredients = [];
 
+ingredients.bowlIngredients = [];
 
-ingredients.bowlIngredients = function () {
-  let tempArray = [],j;
+ingredients.generateBowl = function () {
   for(let i = 0; i < randomRange(5,10); i++){
-    j = Math.ceil((Math.random()*10)%6)-1;
-    tempArray.push(ingredients.availableIngredients[j]);
+    let j = Math.ceil((Math.random()*10)%6)-1;
+    ingredients.bowlIngredients.push(ingredients.availableIngredients[j]);
   }
-  return tempArray;
 }
 
 ingredients.turnIn = function (){
-  if(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].name === ){
-    
+  if(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].name === ingredients.bowlIngredients[ingredients.turnedInIngredients.length-1].name){
+    return true;
   }
+  return false;
 }
 
 
@@ -74,11 +74,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
-      if (
-        ingredients.availableIngredients[i][j].hasMoved &&
-        !ingredients.availableIngredients[i][j].isSelected &&
-        ingredients.availableIngredients[i][j + 1] === undefined
-      ) {
+      if (ingredients.turnIn()) {
         ingredients.availableIngredients[i].push(
           new Topping(
             ingredients.availableIngredients[i][0].name,
@@ -87,6 +83,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].image,
             ingredients.availableIngredients[i][0].color
           ));
+        console.log(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].pos)
       }
     }
   }
