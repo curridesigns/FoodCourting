@@ -26,7 +26,7 @@ ingredients.bowlIngredients = function () {
 }
 
 ingredients.turnIn = function (){
-  if(ingredients.checkForMatch){
+  if(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].name === ){
     
   }
 }
