@@ -17,12 +17,18 @@ ingredients.turnedInIngredients = [];
 
 
 ingredients.bowlIngredients = function () {
-  let tempArray,j;
+  let tempArray = [],j;
   for(let i = 0; i < randomRange(5,10); i++){
     j = Math.ceil((Math.random()*10)%6)-1;
     tempArray.push(ingredients.availableIngredients[j]);
   }
-  return console.log(tempArray);
+  return tempArray;
+}
+
+ingredients.turnIn = function (){
+  if(ingredients.checkForMatch){
+    
+  }
 }
 
 
@@ -59,6 +65,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
       }
       if (ingredients.availableIngredients[i][j].turnIn) {
         ingredients.turnedInIngredients.push(ingredients.availableIngredients[i].splice(j, 1));
+        ingredients.checkForMatch = true;
       }
 
       ingredients.availableIngredients[i][j].select(characterGrab, characterPOS, bowlPOS);
@@ -79,8 +86,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].startPOS.y,
             ingredients.availableIngredients[i][0].image,
             ingredients.availableIngredients[i][0].color
-          )
-        );
+          ));
       }
     }
   }
