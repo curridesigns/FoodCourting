@@ -16,7 +16,12 @@ ingredients.turnedInIngredients = [];
 
 
 ingredients.bowlIngredients = function () {
-  
+  let tempArray,j;
+  for(let i = 0; i < Math.floor(Math.random()*10); i++){
+    j = Math.floor((Math.random()*10)%6);
+    console.log(j);
+  }
+  return tempArray;
 }
 
 
