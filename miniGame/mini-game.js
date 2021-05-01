@@ -36,7 +36,7 @@ miniGame.play = function() {
   character.render();
   bowl.render();
   ingredients.render();
-  // console.log(ingredients.availableIngredients[0][0].name)
+  console.log()
   
   //toppingRender(noodles);
   //toppingRender(chashu);
