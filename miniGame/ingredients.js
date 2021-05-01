@@ -20,7 +20,7 @@ ingredients.bowlIngredients = function () {
   let tempArray,j;
   for(let i = 0; i < randomRange(5,10); i++){
     j = Math.ceil((Math.random()*10)%6)-1;
-    console.log(ingredients.availbleIngredients[j])
+    tempArray.push(ingredients.availableIngredients[j]);
   }
   return console.log(tempArray);
 }
