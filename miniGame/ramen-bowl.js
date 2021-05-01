@@ -6,6 +6,7 @@ export class RamenBowl {
     this.pos = {x: tempX, y: tempY};
     this.size = 20;
     this.color = "purple";
+    this.lives = 3;
   }
   
   render(){

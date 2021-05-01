@@ -24,7 +24,7 @@ ingredients.generateBowl = function() {
   }
 };
 
-ingredients.turnIn = function() {
+ingredients.checkMatch = function(bowlLives) {
   if (
     ingredients.turnedInIngredients[
       ingredients.turnedInIngredients.length - 1
@@ -33,11 +33,11 @@ ingredients.turnIn = function() {
     if (
       ingredients.turnedInIngredients[
         ingredients.turnedInIngredients.length - 1
-      ].name ===
+      ].name !==
       ingredients.bowlIngredients[ingredients.turnedInIngredients.length - 1]
         .name
     ) {
-      return true;
+      ingredients.avaibleIngredients
     }
   }
   return false;
@@ -73,7 +73,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
         ingredients.turnedInIngredients.push(
           ingredients.availableIngredients[i].splice(j, 1)
         );
-        ingredients.checkForMatch = true;
+        ingredients.checkFlag = true;
       }
 
       ingredients.availableIngredients[i][j].select(
@@ -86,7 +86,11 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
-      if (ingredients.turnIn()) {
+      if (
+        ingredients.availableIngredients[i][j].hasMoved &&
+        !ingredients.availableIngredients[i][j].isSelected &&
+        ingredients.availableIngredients[i][j + 1] === undefined
+      ) {
         ingredients.availableIngredients[i].push(
           new Topping(
             ingredients.availableIngredients[i][0].name,
@@ -96,9 +100,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
-      } else {
-        ingredients.availableIngredients[i].push(ingredients.turnedInIngredients.splice(ingredients.turnedInIngredients.length - 1, 1));
-      }
+      } 
     }
   }
 };
