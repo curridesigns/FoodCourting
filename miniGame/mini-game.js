@@ -28,15 +28,14 @@ miniGame.play = function() {
   ingredients.select(character.grab, character.pos, bowl.pos);
   //toppingBuilder(noodles);
   //toppingBuilder(chashu);
-  
-  
+
   
   // All drawing
   helperfunction.background();
   character.render();
   bowl.render();
   ingredients.render();
-  console.log()
+  //console.log(ingredients.turnedInIngredients.length);
   
   //toppingRender(noodles);
   //toppingRender(chashu);

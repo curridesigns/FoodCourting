@@ -15,7 +15,9 @@ ingredients.availableIngredients = [
 ingredients.turnedInIngredients = [];
 
 
-
+ingredients.bowlIngredients = function () {
+  
+}
 
 
 
@@ -50,7 +52,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
         );
       }
       if (ingredients.availableIngredients[i][j].turnIn) {
-        ingredients.turnedInIngredients.push(ingredients.availableIngredients[i].splice(i, 1));
+        ingredients.turnedInIngredients.push(ingredients.availableIngredients[i].splice(j, 1));
       }
 
       ingredients.availableIngredients[i][j].select(characterGrab, characterPOS, bowlPOS);
