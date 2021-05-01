@@ -1,4 +1,5 @@
 import { Topping } from "./ramen-toppings.js";
+import { randomRange } from "./helper-functions.js"
 
 const ingredients = {};
 
@@ -17,11 +18,11 @@ ingredients.turnedInIngredients = [];
 
 ingredients.bowlIngredients = function () {
   let tempArray,j;
-  for(let i = 0; i < Math.floor(Math.random()*10); i++){
-    j = Math.floor((Math.random()*10)%6);
-    console.log(j);
+  for(let i = 0; i < randomRange(5,10); i++){
+    j = Math.ceil((Math.random()*10)%6)-1;
+    console.log(ingredients.availbleIngredients[j])
   }
-  return tempArray;
+  return console.log(tempArray);
 }
 
 
