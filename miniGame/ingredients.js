@@ -1,5 +1,5 @@
 import { Topping } from "./ramen-toppings.js";
-import { randomRange } from "./helper-functions.js"
+import { randomRange } from "./helper-functions.js";
 
 const ingredients = {};
 
@@ -17,25 +17,31 @@ ingredients.turnedInIngredients = [];
 
 ingredients.bowlIngredients = [];
 
-ingredients.generateBowl = function () {
-  for(let i = 0; i < randomRange(5,10); i++){
-    let j = Math.ceil((Math.random()*10)%6)-1;
+ingredients.generateBowl = function() {
+  for (let i = 0; i < randomRange(5, 10); i++) {
+    let j = Math.ceil((Math.random() * 10) % 6) - 1;
     ingredients.bowlIngredients.push(ingredients.availableIngredients[j]);
   }
-}
+};
 
-ingredients.turnIn = function (){
-  if(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].name === ingredients.bowlIngredients[ingredients.turnedInIngredients.length-1].name){
-    return true;
+ingredients.turnIn = function() {
+  if (
+    ingredients.turnedInIngredients[
+      ingredients.turnedInIngredients.length - 1
+    ] != undefined
+  ) {
+    if (
+      ingredients.turnedInIngredients[
+        ingredients.turnedInIngredients.length - 1
+      ].name ===
+      ingredients.bowlIngredients[ingredients.turnedInIngredients.length - 1]
+        .name
+    ) {
+      return true;
+    }
   }
   return false;
-}
-
-
-
-
-
-
+};
 
 ingredients.render = function() {
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
@@ -64,11 +70,17 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
         );
       }
       if (ingredients.availableIngredients[i][j].turnIn) {
-        ingredients.turnedInIngredients.push(ingredients.availableIngredients[i].splice(j, 1));
+        ingredients.turnedInIngredients.push(
+          ingredients.availableIngredients[i].splice(j, 1)
+        );
         ingredients.checkForMatch = true;
       }
 
-      ingredients.availableIngredients[i][j].select(characterGrab, characterPOS, bowlPOS);
+      ingredients.availableIngredients[i][j].select(
+        characterGrab,
+        characterPOS,
+        bowlPOS
+      );
     }
   }
 
@@ -82,8 +94,10 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].startPOS.y,
             ingredients.availableIngredients[i][0].image,
             ingredients.availableIngredients[i][0].color
-          ));
-        console.log(ingredients.turnedInIngredients[ingredients.turnedInIngredients.length-1].pos)
+          )
+        );
+      } else {
+        ingredients.availableIngredients[i].push(ingredients.turnedInIngredients.splice(ingredients.turnedInIngredients.length - 1, 1));
       }
     }
   }
