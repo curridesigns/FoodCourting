@@ -1,4 +1,4 @@
-import {miniGame} from "./miniGame/mini-game.js";
+import { miniGame } from "./miniGame/mini-game.js";
 import { keyDownHandler, keyUpHandler } from "./miniGame/event-handlers.js"
 
 
