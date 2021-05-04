@@ -1,6 +1,6 @@
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "./helper-functions.js";
-import { canvas,ctz}
+import { canvas,ctx } from "../canvas.js";
 
 const ingredients = {};
 
@@ -30,7 +30,9 @@ ingredients.renderBowlIngredients = function () {
     ingredients.bowlIngredients[i].render(100+i*20,10);
   }
   if(ingredients.checkMatch()){
-    
+    ctx.strokeStyle = `rgb(255,0,0)`;
+    ctx.beginPath();
+    ctx.arc(ingredients.bowlIngredients[ingredients.bowlIngredients - 1].)
   }
 }
 
