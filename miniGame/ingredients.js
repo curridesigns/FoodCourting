@@ -29,11 +29,11 @@ ingredients.renderBowlIngredients = function () {
   for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
     ingredients.bowlIngredients[i].render(100+i*20,10);
   }
-  if(ingredients.checkMatch()){
-    ctx.strokeStyle = `rgb(255,0,0)`;
-    ctx.beginPath();
-    ctx.arc(ingredients.bowlIngredients[ingredients.bowlIngredients - 1].)
-  }
+  // if(ingredients.checkMatch()){
+  //   ctx.strokeStyle = `rgb(255,0,0)`;
+  //   ctx.beginPath();
+  //   ctx.arc(ingredients.bowlIngredients[ingredients.bowlIngredients - 1].)
+  // }
 }
 
 ingredients.checkMatch = function() {
