@@ -49,6 +49,9 @@ ingredients.render = function() {
       ingredients.availableIngredients[i][j].render();
     }
   }
+  for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
+    ingredients.bowlIngredients[i].render(10+i*10,10);
+  }
 };
 
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
