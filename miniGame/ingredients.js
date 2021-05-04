@@ -1,5 +1,6 @@
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "./helper-functions.js";
+import { canvas,ctz}
 
 const ingredients = {};
 
@@ -20,11 +21,20 @@ ingredients.bowlIngredients = [];
 ingredients.generateBowl = function() {
   for (let i = 0; i < randomRange(5, 10); i++) {
     let j = Math.ceil((Math.random() * 10) % 6) - 1;
-    ingredients.bowlIngredients.push(ingredients.availableIngredients[j]);
+    ingredients.bowlIngredients.push(ingredients.availableIngredients[j][0]);
   }
 };
 
-ingredients.checkMatch = function(bowlLives) {
+ingredients.renderBowlIngredients = function () {
+  for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
+    ingredients.bowlIngredients[i].render(100+i*20,10);
+  }
+  if(ingredients.checkMatch()){
+    
+  }
+}
+
+ingredients.checkMatch = function() {
   if (
     ingredients.turnedInIngredients[
       ingredients.turnedInIngredients.length - 1
@@ -37,20 +47,17 @@ ingredients.checkMatch = function(bowlLives) {
       ingredients.bowlIngredients[ingredients.turnedInIngredients.length - 1]
         .name
     ) {
-      ingredients.avaibleIngredients
+      return true;
     }
   }
   return false;
 };
 
-ingredients.render = function() {
+ingredients.renderStarterIngredients = function() {
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
       ingredients.availableIngredients[i][j].render();
     }
-  }
-  for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
-    ingredients.bowlIngredients[i].render(10+i*10,10);
   }
 };
 
