@@ -1,9 +1,21 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  background: white;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+canvas {
+  margin: auto;
+  background: navy;
+  width: 100vh;
+  height: 100vh;
+  image-rendering: pixelated;
+}
+
+@media (orientation: portrait) {
   canvas {
-    display: block;
-    margin-left:100px
+    width: 100vw;
+    height: 100vw;
   }
-  
+}
