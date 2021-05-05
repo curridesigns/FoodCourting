@@ -26,7 +26,10 @@ ingredients.generateBowl = function() {
         ingredients.bowlIngredients.push(new Topping("noodles", 100, 100, "this should be an image", "#FAC600"));
         break;
       case 2:
-        ingredients.bowlIngredients.push();
+        ingredients.bowlIngredients.push(new Topping("chashu", 300, 100, "this should be an image", "#CE46E0"));
+        break;
+      case 3:
+        new Topping("chashu", 300, 100, "this should be an image", "#CE46E0")
     }
     
   }
