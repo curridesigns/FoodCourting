@@ -4,7 +4,7 @@ import { dist } from "./helper-functions.js"
 export class RamenBowl {
   constructor(tempX, tempY){
     this.pos = {x: tempX, y: tempY};
-    this.size = 20;
+    this.size = 40;
     this.color = "purple";
     this.lives = 3;
   }

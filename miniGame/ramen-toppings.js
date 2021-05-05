@@ -6,7 +6,7 @@ class Topping {
     this.name = tempName;
     this.startPOS = {x: tempX, y: tempY};
     this.pos = {x: tempX, y: tempY};
-    this.size = 10;
+    this.size = 30;
     this.isSelected = false;
     this.hasMoved = false;
     this.turnIn = false;

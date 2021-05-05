@@ -20,14 +20,21 @@ ingredients.bowlIngredients = [];
 
 ingredients.generateBowl = function() {
   for (let i = 0; i < randomRange(5, 10); i++) {
-    let j = Math.ceil((Math.random() * 10) % 6) - 1;
-    ingredients.bowlIngredients.push(ingredients.availableIngredients[j][0]);
+    let j = Math.ceil((Math.random() * 10) % 6);
+    switch(j){
+      case 1:
+        ingredients.bowlIngredients.push(new Topping("noodles", 100, 100, "this should be an image", "#FAC600"));
+        break;
+      case 2:
+        ingredients.bowlIngredients.push();
+    }
+    
   }
 };
 
 ingredients.renderBowlIngredients = function () {
   for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
-    ingredients.bowlIngredients[i].startPOS = {x: 250+i*30, y: 10};
+    ingredients.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
     ingredients.bowlIngredients[i].render();
   }
   // if(ingredients.checkMatch()){
