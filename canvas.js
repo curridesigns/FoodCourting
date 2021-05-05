@@ -6,10 +6,10 @@ const canvas = document.querySelector('#gameCanvas');
 const ctx = canvas.getContext('2d');
 let frameCount = 0;
 
-const canvasSquare = 700;
 
-canvas.width = canvasSquare;
-canvas.height = canvasSquare;
+
+canvas.width = 1920;
+canvas.height = 1080;
 
 document.addEventListener('keydown', keyDownHandler, false);
 document.addEventListener('keyup', keyUpHandler, false);
