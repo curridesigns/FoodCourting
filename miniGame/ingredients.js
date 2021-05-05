@@ -29,7 +29,11 @@ ingredients.generateBowl = function() {
         ingredients.bowlIngredients.push(new Topping("chashu", 300, 100, "this should be an image", "#CE46E0"));
         break;
       case 3:
-        new Topping("chashu", 300, 100, "this should be an image", "#CE46E0")
+        ingredients.bowlIngredients.push(new Topping("kakuni", 100, 300, "this should be an image", "#59A8F7"));
+        break;
+      case 4:
+        ingredients.bowlIngredients.push(new Topping("nikuSoboro", 300, 300, "this should be an image", "#FF9652"));
+        
     }
     
   }
