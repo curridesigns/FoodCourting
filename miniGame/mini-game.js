@@ -35,7 +35,8 @@ miniGame.play = function() {
   helperfunction.background();
   character.render();
   bowl.render();
-  ingredients.render();
+  ingredients.renderBowlIngredients();
+  ingredients.renderStarterIngredients();
   //console.log(ingredients.turnedInIngredients.length);
   
   //toppingRender(noodles);

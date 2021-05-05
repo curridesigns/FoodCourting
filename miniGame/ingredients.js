@@ -27,7 +27,8 @@ ingredients.generateBowl = function() {
 
 ingredients.renderBowlIngredients = function () {
   for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
-    ingredients.bowlIngredients[i].render(100+i*20,10);
+    ingredients.bowlIngredients[i].startPOS = {x: 250+i*30, y: 10};
+    ingredients.bowlIngredients[i].render();
   }
   // if(ingredients.checkMatch()){
   //   ctx.strokeStyle = `rgb(255,0,0)`;
