@@ -19,6 +19,7 @@ miniGame.load = function() {
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
   ingredients.generateBowl();
   console.log(ingredients.bowlIngredients);
+  
   //ingredients.availableIngredients;
 };
 
