@@ -21,27 +21,26 @@ ingredients.bowlIngredients = [];
 ingredients.generateBowl = function() {
   for (let i = 0; i < randomRange(5, 10); i++) {
     let j = Math.ceil((Math.random() * 10) % 6);
-    ingredients.bowlIngredients.();
-    // switch(j){
-    //   case 1:
-    //     ingredients.bowlIngredients.push(new Topping("noodles", 250+i*50, 10, "this should be an image", "#FAC600"));
-    //     break;
-    //   case 2:
-    //     ingredients.bowlIngredients.push(new Topping("chashu", 250+i*50, 10, "this should be an image", "#CE46E0"));
-    //     break;
-    //   case 3:
-    //     ingredients.bowlIngredients.push(new Topping("kakuni", 250+i*50, 10, "this should be an image", "#59A8F7"));
-    //     break;
-    //   case 4:
-    //     ingredients.bowlIngredients.push(new Topping("nikuSoboro", 250+i*50, 10, "this should be an image", "#FF9652"));
-    //     break;
-    //   case 5:
-    //     ingredients.bowlIngredients.push(new Topping("ajitama", 250+i*50, 10, "this should be an image", "#46E052"));
-    //     break;
-    //   case 6: 
-    //     ingredients.bowlIngredients.push(new Topping("menma", 250+i*50, 10, "this should be an image", "#4EFAEC"));
-    //     break;
-    // }
+    switch(j){
+      case 1:
+        ingredients.bowlIngredients.push(new Topping("noodles", 250+i*50, 10, "this should be an image", "#FAC600"));
+        break;
+      case 2:
+        ingredients.bowlIngredients.push(new Topping("chashu", 250+i*50, 10, "this should be an image", "#CE46E0"));
+        break;
+      case 3:
+        ingredients.bowlIngredients.push(new Topping("kakuni", 250+i*50, 10, "this should be an image", "#59A8F7"));
+        break;
+      case 4:
+        ingredients.bowlIngredients.push(new Topping("nikuSoboro", 250+i*50, 10, "this should be an image", "#FF9652"));
+        break;
+      case 5:
+        ingredients.bowlIngredients.push(new Topping("ajitama", 250+i*50, 10, "this should be an image", "#46E052"));
+        break;
+      case 6: 
+        ingredients.bowlIngredients.push(new Topping("menma", 250+i*50, 10, "this should be an image", "#4EFAEC"));
+        break;
+    }
     
   }
 };
@@ -104,10 +103,12 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
         );
       }
       if (ingredients.availableIngredients[i][j].turnIn) {
-        ingredients.turnedInIngredients.push(
+        if(ingredients.checkMatch()){
+          ingredients.turnedInIngredients.push(
           ingredients.availableIngredients[i].splice(j, 1)
         );
-        ingredients.checkFlag = true;
+          console.log()
+        }
       }
 
       ingredients.availableIngredients[i][j].select(
