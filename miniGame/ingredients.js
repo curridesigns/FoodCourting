@@ -57,22 +57,16 @@ ingredients.renderBowlIngredients = function () {
   // }
 }
 
-ingredients.checkMatch = function() {
-  if (
-    ingredients.turnedInIngredients[
-      ingredients.turnedInIngredients.length - 1
-    ] != undefined
-  ) {
-    if (
-      ingredients.turnedInIngredients[
-        ingredients.turnedInIngredients.length - 1
-      ].name !==
-      ingredients.bowlIngredients[ingredients.turnedInIngredients.length - 1]
+ingredients.checkMatch = function(checkObj) {
+  let checkIndex = 0;
+    if (checkObj.name ===
+      ingredients.bowlIngredients[checkIndex]
         .name
     ) {
+      checkIndex++;
+      console.log(checkIndex);
       return true;
     }
-  }
   return false;
 };
 
@@ -87,9 +81,10 @@ ingredients.renderStarterIngredients = function() {
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
+      let availIngred = ingredients.availableIngredients[i][j]
       if (
-        ingredients.availableIngredients[i][j].hasMoved &&
-        !ingredients.availableIngredients[i][j].isSelected &&
+        availIngred.hasMoved &&
+        !availIngred.isSelected &&
         ingredients.availableIngredients[i][j + 1] === undefined
       ) {
         ingredients.availableIngredients[i].push(
@@ -102,16 +97,16 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           )
         );
       }
-      if (ingredients.availableIngredients[i][j].turnIn) {
-        if(ingredients.checkMatch()){
+      if (availIngred.turnIn) {
+        if(ingredients.checkMatch(availIngred)){
           ingredients.turnedInIngredients.push(
           ingredients.availableIngredients[i].splice(j, 1)
         );
-          console.log()
+          console.log(ingredients.turnedInIngredients)
         }
       }
 
-      ingredients.availableIngredients[i][j].select(
+      availIngred.select(
         characterGrab,
         characterPOS,
         bowlPOS
