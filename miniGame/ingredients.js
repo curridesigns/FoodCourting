@@ -136,4 +136,11 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   }
 };
 
+ingredients.bowlComplete =  function(){
+  if(checkIndex === ingredients.bowlIngredients.length){
+    checkIndex = 0;
+    ingredients.generateBowl();
+  }
+}
+
 export { ingredients };
