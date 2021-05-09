@@ -3,6 +3,7 @@ import { randomRange } from "./helper-functions.js";
 import { canvas,ctx } from "../canvas.js";
 
 const ingredients = {};
+let checkIndex;
 
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.availableIngredients = [
@@ -41,8 +42,8 @@ ingredients.generateBowl = function() {
         ingredients.bowlIngredients.push(new Topping("menma", 250+i*50, 10, "this should be an image", "#4EFAEC"));
         break;
     }
-    
   }
+  checkIndex = 0;
 };
 
 ingredients.renderBowlIngredients = function () {
@@ -58,7 +59,7 @@ ingredients.renderBowlIngredients = function () {
 }
 
 ingredients.checkMatch = function(checkObj) {
-  let checkIndex = 0;
+  
     if (checkObj.name ===
       ingredients.bowlIngredients[checkIndex]
         .name
