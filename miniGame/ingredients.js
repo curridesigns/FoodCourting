@@ -21,7 +21,7 @@ ingredients.bowlIngredients = [];
 ingredients.generateBowl = function() {
   for (let i = 0; i < randomRange(5, 10); i++) {
     let j = Math.ceil((Math.random() * 10) % 6);
-    ingredients.bowlIngredients.concat(ingredients.availableIngredients);
+    ingredients.bowlIngredients.();
     // switch(j){
     //   case 1:
     //     ingredients.bowlIngredients.push(new Topping("noodles", 250+i*50, 10, "this should be an image", "#FAC600"));
