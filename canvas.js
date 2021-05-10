@@ -50,7 +50,8 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
   	
     // DRAW HERE!
     frameCount++;
-    draw()
+    draw();
+    //console.log(frameCount)
     
   
   }
