@@ -40,36 +40,14 @@ export class RamenBowl {
   this.bowlIngredients = [];
   for (let i = 0; i < randomRange(3, 5); i++) {
     let j = Math.ceil((Math.random() * 10) % 6);
+    console.log(ingredients.availableIngredients[j][0].name)
     this.bowlIngredients[i] = {};
-    this.bowlIngredients[i].name = "stuff";
+    this.bowlIngredients[i].name = ingredients.availableIngredients[j][0].name;
     this.bowlIngredients[i].image = ingredients.availableIngredients[j].image;
     this.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
-    
-    
-    
-    // switch(j){
-    //   case 1:
-    //     this.bowlIngredients.push(new Topping("noodles", 250+i*50, 10, "this should be an image", "#FAC600"));
-    //     break;
-    //   case 2:
-    //     this.bowlIngredients.push(new Topping("chashu", 250+i*50, 10, "this should be an image", "#CE46E0"));
-    //     break;
-    //   case 3:
-    //     this.bowlIngredients.push(new Topping("kakuni", 250+i*50, 10, "this should be an image", "#59A8F7"));
-    //     break;
-    //   case 4:
-    //     this.bowlIngredients.push(new Topping("nikuSoboro", 250+i*50, 10, "this should be an image", "#FF9652"));
-    //     break;
-    //   case 5:
-    //     this.bowlIngredients.push(new Topping("ajitama", 250+i*50, 10, "this should be an image", "#46E052"));
-    //     break;
-    //   case 6: 
-    //     this.bowlIngredients.push(new Topping("menma", 250+i*50, 10, "this should be an image", "#4EFAEC"));
-    //     break;
-    // }
   }
   //checkIndex = 0;
-  console.log(ingredients.availableIngredients[1]);
+  console.log(this.bowlIngredients[0]);
 }
   renderIngredients() {
   for (let i = 0; i < this.bowlIngredients.length; i+=1){
