@@ -49,18 +49,6 @@ ingredients.generateBowl = function() {
   console.log(ingredients.bowlIngredients);
 };
 
-ingredients.renderBowlIngredients = function () {
-  for (let i = 0; i < ingredients.bowlIngredients.length; i+=1){
-    //ingredients.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
-    ingredients.bowlIngredients[i].render();
-  }
-  // if(ingredients.checkMatch()){
-  //   ctx.strokeStyle = `rgb(255,0,0)`;
-  //   ctx.beginPath();
-  //   ctx.arc(ingredients.bowlIngredients[ingredients.bowlIngredients - 1].)
-  // }
-}
-
 ingredients.checkMatch = function(checkObj) {
   
     if (checkObj.name ===
