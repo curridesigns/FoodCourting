@@ -6,9 +6,10 @@ const ingredients = {};
 let checkIndex;
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
+ingredients.preLoad = function(){
 ingredients.images = { mushroom: document.getElementById("mush") };
-
-ingredients.availableIngredients = [
+  
+  ingredients.availableIngredients = [
   [new Topping("noodles", 100, 100, ingredients.images.mushroom, "#FAC600")],
   [new Topping("chashu", 300, 100, ingredients.images.mushroom, "#CE46E0")],
   [new Topping("kakuni", 100, 300, ingredients.images.mushroom, "#59A8F7")],
@@ -16,6 +17,7 @@ ingredients.availableIngredients = [
   [new Topping("ajitama", 100, 600, ingredients.images.mushroom, "#46E052")],
   [new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
+}
 
 ingredients.generateBowl = function() {
   ingredients.turnedInIngredients = [];
@@ -165,12 +167,12 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   }
 };
 
-ingredients.bowlComplete = function() {
-  if (checkIndex === ingredients.bowlIngredients.length) {
-    ingredients.turnedInIngredients = [];
-    console.log(checkIndex);
-    ingredients.generateBowl();
-  }
-};
+// ingredients.bowlComplete = function() {
+//   if (checkIndex === ingredients.bowlIngredients.length) {
+//     ingredients.turnedInIngredients = [];
+//     console.log(checkIndex);
+//     ingredients.generateBowl();
+//   }
+// };
 
 export { ingredients };

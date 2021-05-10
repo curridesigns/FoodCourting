@@ -13,15 +13,15 @@ var character, bowl;
 //separating out the mini-game so it can be referenced later as a popup --- ramen-toppings.js will also need to be referenced for the objects to add on - we might not need to separate it out? We can always put it all here
 const miniGame = {};
 
-// miniGame.preLoad = function() {
-//  ingredients.preLoad();
-// }
+miniGame.preLoad = function() {
+ ingredients.preLoad();
+}
 
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(canvas.width / 2, canvas.height / 2);
-  ingredients.generateBowl();
+  //ingredients.generateBowl();
   
   //ingredients.availableIngredients;
 };
@@ -31,7 +31,7 @@ miniGame.play = function() {
 
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
-  ingredients.bowlComplete();
+  // ingredients.bowlComplete();
   //toppingBuilder(noodles);
   //toppingBuilder(chashu);
 

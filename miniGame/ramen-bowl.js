@@ -9,11 +9,13 @@ export class RamenBowl {
     this.color = "purple";
     this.lives = 3;
     this.bowlIngredients = [];
+    this.generateBowl();
   }
   
   render(){
     ctx.fillStyle = this.color;
     ctx.fillRect(this.pos.x,this.pos.y,this.size,this.size);
+    //this.renderIngredients();
   }
   
   characterNear(characterPOS){
@@ -34,12 +36,17 @@ export class RamenBowl {
   
   generateBowl() {
   this.turnedInIngredients = [];
+    
   this.bowlIngredients = [];
   for (let i = 0; i < randomRange(3, 5); i++) {
     let j = Math.ceil((Math.random() * 10) % 6);
-    this.bowlIngredients[i].name = ingredients.availableIngredients[j][0].name;
-    this.bowlIngredients[i].image = ingredients.availableIngredients[j][0].image;
-    this.bowlIngredients[i].pos = {x: 250+i*50, y: 10}
+    this.bowlIngredients[i] = {};
+    this.bowlIngredients[i].name = "stuff";
+    this.bowlIngredients[i].image = ingredients.availableIngredients[j].image;
+    this.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
+    
+    
+    
     // switch(j){
     //   case 1:
     //     this.bowlIngredients.push(new Topping("noodles", 250+i*50, 10, "this should be an image", "#FAC600"));
@@ -62,7 +69,7 @@ export class RamenBowl {
     // }
   }
   //checkIndex = 0;
-  console.log(this.bowlIngredients);
+  console.log(ingredients.availableIngredients[1]);
 }
   renderIngredients() {
   for (let i = 0; i < this.bowlIngredients.length; i+=1){

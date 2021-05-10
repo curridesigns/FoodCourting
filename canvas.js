@@ -20,6 +20,7 @@ const frameRateInMillis =  1000/20 // 30 FPS
 
 function setup(){
   // background();
+  miniGame.preLoad();
   miniGame.load();
   window.requestAnimationFrame(loop);
   
