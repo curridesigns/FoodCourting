@@ -1,9 +1,10 @@
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "./helper-functions.js";
 import { canvas, ctx } from "../canvas.js";
+import { bowl } from "./mini-game.js";
 
 const ingredients = {};
-let checkIndex;
+let checkIndex = 0;
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
@@ -98,7 +99,7 @@ ingredients.generateBowl = function() {
 };
 
 ingredients.checkMatch = function(checkObj) {
-  if (checkObj.name === ingredients.bowlIngredients[checkIndex].name) {
+  if (checkObj.name === bowl.bowlIngredients[checkIndex].name) {
     checkIndex++;
     console.log(checkIndex);
     return true;
