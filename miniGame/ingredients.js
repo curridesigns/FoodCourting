@@ -138,7 +138,9 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
 ingredients.bowlComplete =  function(){
   if(checkIndex === ingredients.bowlIngredients.length){
+    console.log(checkIndex);
     checkIndex = 0;
+    console.log(checkIndex);
     ingredients.generateBowl();
   }
 }
