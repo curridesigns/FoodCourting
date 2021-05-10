@@ -15,12 +15,14 @@ ingredients.availableIngredients = [
   [new Topping("menma", 300, 600, "this should be an image", "#4EFAEC")]
 ];
 
-ingredients.turnedInIngredients = [];
 
-ingredients.bowlIngredients = [];
+
+
 
 ingredients.generateBowl = function() {
-  for (let i = 0; i < randomRange(5, 10); i++) {
+  ingredients.turnedInIngredients = [];
+  ingredients.bowlIngredients = [];
+  for (let i = 0; i < randomRange(3, 5); i++) {
     let j = Math.ceil((Math.random() * 10) % 6);
     switch(j){
       case 1:
@@ -44,6 +46,7 @@ ingredients.generateBowl = function() {
     }
   }
   checkIndex = 0;
+  console.log(ingredients.bowlIngredients);
 };
 
 ingredients.renderBowlIngredients = function () {
@@ -138,8 +141,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
 ingredients.bowlComplete =  function(){
   if(checkIndex === ingredients.bowlIngredients.length){
-    console.log(checkIndex);
-    checkIndex = 0;
+    ingredients.turnedInIngredients = [];
     console.log(checkIndex);
     ingredients.generateBowl();
   }
