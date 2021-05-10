@@ -4,17 +4,17 @@ import { canvas, ctx } from "../canvas.js";
 
 const ingredients = {};
 let checkIndex;
-
+//TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.images = { mushroom: document.getElementById("mush") };
 
 ingredients.availableIngredients = [
-  [new Topping("noodles", 100, 100, "this should be an image", "#FAC600")],
-  [new Topping("chashu", 300, 100, "this should be an image", "#CE46E0")],
-  [new Topping("kakuni", 100, 300, "this should be an image", "#59A8F7")],
+  [new Topping("noodles", 100, 100, ingredients.images.mushroom, "#FAC600")],
+  [new Topping("chashu", 300, 100, ingredients.images.mushroom, "#CE46E0")],
+  [new Topping("kakuni", 100, 300, ingredients.images.mushroom, "#59A8F7")],
   [new Topping("nikuSoboro", 300, 300, ingredients.images.mushroom, "#FF9652")],
-  [new Topping("ajitama", 100, 600, "this should be an image", "#46E052")],
-  [new Topping("menma", 300, 600, "this should be an image", "#4EFAEC")]
+  [new Topping("ajitama", 100, 600, ingredients.images.mushroom, "#46E052")],
+  [new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
 
 ingredients.generateBowl = function() {

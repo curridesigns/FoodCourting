@@ -67,7 +67,7 @@ export class RamenBowl {
   renderIngredients() {
   for (let i = 0; i < this.bowlIngredients.length; i+=1){
     
-    this.bowlIngredients[i].render();
+    ctx.drawImage(this.bowlIngredients[i].image, this.bowlIngredients.pos.x,this.bowlIngredients.pos.y);
   }
   
 }

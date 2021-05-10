@@ -16,11 +16,10 @@ class Topping {
   
   render(overrideX,overrideY){
     if(overrideX === undefined && overrideY === undefined){
-      ctx.fillStyle = this.color
-      ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
+      ctx.ctx.drawImage(this.image, this.pos.x,this.pos.y)
       if(this.hasMoved){
         ctx.fillStyle = (250,11,0,0.2);
-        ctx.fillRect(this.startPOS.x, this.startPOS.y, this.size, this.size);
+        ctx.drawImage(this.startPOS.x, this.startPOS.y, this.size, this.size);
       }
     } else {
       ctx.fillStyle = this.color
