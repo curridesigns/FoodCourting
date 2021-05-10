@@ -60,6 +60,7 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 
 
 
+
 setup();
 
 export { canvas, ctx }
