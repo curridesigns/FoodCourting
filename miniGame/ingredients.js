@@ -4,7 +4,7 @@ import { canvas, ctx } from "../canvas.js";
 import { bowl } from "./mini-game.js";
 
 const ingredients = {};
-let checkIndex = 0;
+ingredients.checkIndex = 0;
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
@@ -20,88 +20,10 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
 ];
 }
 
-ingredients.generateBowl = function() {
-  ingredients.turnedInIngredients = [];
-  ingredients.bowlIngredients = [];
-  for (let i = 0; i < randomRange(3, 5); i++) {
-    let j = Math.ceil((Math.random() * 10) % 6);
-    switch (j) {
-      case 1:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "noodles",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#FAC600"
-          )
-        );
-        break;
-      case 2:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "chashu",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#CE46E0"
-          )
-        );
-        break;
-      case 3:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "kakuni",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#59A8F7"
-          )
-        );
-        break;
-      case 4:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "nikuSoboro",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#FF9652"
-          )
-        );
-        break;
-      case 5:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "ajitama",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#46E052"
-          )
-        );
-        break;
-      case 6:
-        ingredients.bowlIngredients.push(
-          new Topping(
-            "menma",
-            250 + i * 50,
-            10,
-            "this should be an image",
-            "#4EFAEC"
-          )
-        );
-        break;
-    }
-  }
-  checkIndex = 0;
-  console.log(ingredients.bowlIngredients);
-};
-
 ingredients.checkMatch = function(checkObj) {
-  if (checkObj.name === bowl.bowlIngredients[checkIndex].name) {
-    checkIndex++;
-    console.log(checkIndex);
+  if (checkObj.name === bowl.bowlIngredients[ingredients.checkIndex].name) {
+    ingredients.checkIndex++;
+    console.log(ingredients.checkIndex);
     return true;
   }
   return false;

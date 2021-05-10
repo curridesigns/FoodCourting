@@ -35,6 +35,7 @@ export class RamenBowl {
   }
   
   generateBowl() {
+  
   this.turnedInIngredients = [];
     
   this.bowlIngredients = [];
