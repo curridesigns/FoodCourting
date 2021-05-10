@@ -15,7 +15,7 @@ export class RamenBowl {
   render(){
     ctx.fillStyle = this.color;
     ctx.fillRect(this.pos.x,this.pos.y,this.size,this.size);
-    //this.renderIngredients();
+    this.renderIngredients();
   }
   
   characterNear(characterPOS){
@@ -39,22 +39,21 @@ export class RamenBowl {
     
   this.bowlIngredients = [];
   for (let i = 0; i < randomRange(3, 5); i++) {
-    let j = Math.ceil((Math.random() * 10) % 6);
+    let j = Math.floor((Math.random() * 10) % 6);
     console.log(ingredients.availableIngredients[j][0].name)
     this.bowlIngredients[i] = {};
     this.bowlIngredients[i].name = ingredients.availableIngredients[j][0].name;
-    this.bowlIngredients[i].image = ingredients.availableIngredients[j].image;
+    this.bowlIngredients[i].image = ingredients.availableIngredients[j][0].image;
     this.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
   }
   //checkIndex = 0;
-  console.log(this.bowlIngredients[0]);
+  console.log(this.bowlIngredients);
 }
   renderIngredients() {
   for (let i = 0; i < this.bowlIngredients.length; i+=1){
     
-    ctx.drawImage(this.bowlIngredients[i].image, this.bowlIngredients.pos.x,this.bowlIngredients.pos.y);
+    ctx.drawImage(this.bowlIngredients[i].image, this.bowlIngredients[i].pos.x,this.bowlIngredients[i].pos.y);
   }
   
 }
 }
-
