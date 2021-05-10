@@ -8,15 +8,15 @@ let checkIndex = 0;
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
-ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg") };
+ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg"), sea420: document.getElementById("sea420"), spawn: document.getElementById("spawn"), swirly: document.getElementById("swirly") };
   
   ingredients.availableIngredients = [
   [new Topping("noodles", 100, 100, ingredients.images.mushroom, "#FAC600")],
   [new Topping("chashu", 300, 100, ingredients.images.egg, "#CE46E0")],
-  [new Topping("kakuni", 100, 300, ingredients.images.mushroom, "#59A8F7")],
-  [new Topping("nikuSoboro", 300, 300, ingredients.images.mushroom, "#FF9652")],
-  [new Topping("ajitama", 100, 600, ingredients.images.mushroom, "#46E052")],
-  [new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
+  [new Topping("kakuni", 100, 300, ingredients.images.sea420, "#59A8F7")],
+  [new Topping("nikuSoboro", 300, 300, ingredients.images.spawn, "#FF9652")],
+  [new Topping("ajitama", 100, 600, ingredients.images.swirly, "#46E052")],
+  //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
 }
 
@@ -139,7 +139,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           bowl.turnedInIngredients.push(
             ingredients.availableIngredients[i].splice(j, 1)
           );
-          console.log(ingredients.turnedInIngredients);
+          // console.log(ingredients.turnedInIngredients);
         }
       }
 
