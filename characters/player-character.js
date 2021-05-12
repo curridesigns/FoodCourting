@@ -16,11 +16,12 @@ class PlayerCharacter {
     this.direction = {x: 0, y: 0};
     this.speed = {x: 0, y:0};
     this.brakePedal = {x: true, y:true};
+    this.image = document.getElementById("character")
   }
   
   render(){
     ctx.fillStyle = this.color;
-    ctx.fillRect(this.pos.x,this.pos.y, this.size,this.size);
+    ctx.drawImage(this.image, this.pos.x, this.pos.y);
   }
   
   keyDownHandler(){
