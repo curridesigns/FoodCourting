@@ -11,7 +11,7 @@ ingredients.preLoad = function(){
 ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg"), sea420: document.getElementById("sea420"), spawn: document.getElementById("spawn"), swirly: document.getElementById("swirly") };
   
   ingredients.availableIngredients = [
-  [new Topping("noodles", 100, 100, ingredients.images.mushroom, "#FAC600")],
+  [new Topping("noodles", 700, 100, ingredients.images.mushroom, "#FAC600")],
   [new Topping("chashu", 300, 100, ingredients.images.egg, "#CE46E0")],
   [new Topping("kakuni", 100, 300, ingredients.images.sea420, "#59A8F7")],
   [new Topping("nikuSoboro", 300, 300, ingredients.images.spawn, "#FF9652")],
