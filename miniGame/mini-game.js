@@ -40,6 +40,7 @@ miniGame.play = function() {
   helperfunction.background();
   character.render();
   bowl.render();
+  console.log
   
   ingredients.renderStarterIngredients();
   //ingredients.renderBowlIngredients();

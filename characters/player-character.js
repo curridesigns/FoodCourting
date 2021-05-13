@@ -21,8 +21,12 @@ class PlayerCharacter {
   
   render(){
     ctx.fillStyle = this.color;
-    ctx.fill
-    ctx.drawImage(this.image, this.pos.x, this.pos.y);
+    ctx.beginPath();
+    ctx.strokeStyle = 'red'
+    ctx.arc(this.pos.x + this.size, this.pos.y + this.size, this.size, 0, 2*Math.Pi);
+    ctx.stroke();
+    ctx.fill();
+    // ctx.drawImage(this.image, this.pos.x, this.pos.y);
   }
   
   keyDownHandler(){
