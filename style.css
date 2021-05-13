@@ -12,6 +12,7 @@ canvas {
   width: 100vw;
   height: 90vh;
   image-rendering: pixelated;
+  position: absolute;
 }
 
 @media (orientation: landscape) {
