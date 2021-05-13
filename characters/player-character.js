@@ -4,7 +4,7 @@ import { physics } from "../miniGame/physics.js";
 class PlayerCharacter {
   constructor() {
     this.pos = { x: 650, y: 250 };
-    this.size = 75;
+    this.size = 10;
     this.color = "red";
     this.up = { key: 87, flag: false };
     this.down = { key: 83, flag: false };
@@ -24,7 +24,7 @@ class PlayerCharacter {
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
-    ctx.arc(this.pos.x + 77, this.pos.y + 90, 50, 0, 2 * Math.PI);
+    ctx.arc(this.pos.x + 75, this.pos.y + 90, this.size, 0, 2 * Math.PI);
     ctx.stroke();
     }    
   }

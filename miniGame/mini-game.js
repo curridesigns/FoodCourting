@@ -21,6 +21,7 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(315, 515);
+  console.log(character.size);
   //ingredients.generateBowl();
   
   //ingredients.availableIngredients;
