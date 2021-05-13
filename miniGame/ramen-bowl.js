@@ -41,7 +41,6 @@ export class RamenBowl {
   this.bowlIngredients = [];
   for (let i = 0; i < randomRange(3, 5); i++) {
     let j = Math.floor((Math.random() * 10) % ingredients.availableIngredients.length);
-    console.log(ingredients.availableIngredients[j][0].name)
     this.bowlIngredients[i] = {};
     this.bowlIngredients[i].name = ingredients.availableIngredients[j][0].name;
     this.bowlIngredients[i].image = ingredients.availableIngredients[j][0].image;
