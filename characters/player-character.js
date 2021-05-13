@@ -4,7 +4,7 @@ import {physics} from "../miniGame/physics.js"
 
 class PlayerCharacter {
   constructor(){
-    this.pos = {x:20,y:20};
+    this.pos = {x:650,y:250};
     this.size = 10;
     this.color = "red";
     this.up = {key: 87, flag: false}
