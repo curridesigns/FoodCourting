@@ -38,9 +38,9 @@ miniGame.play = function() {
   
   // All drawing
   helperfunction.background();
-  character.render();
+  character.render(true);
   bowl.render();
-  console.log
+  // console.log(character.pos.x);
   
   ingredients.renderStarterIngredients();
   //ingredients.renderBowlIngredients();
