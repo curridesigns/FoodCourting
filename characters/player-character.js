@@ -24,7 +24,7 @@ class PlayerCharacter {
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
-    ctx.arc(this.pos.x + 150, this.pos.y + 150, 50, 0, 2 * Math.PI);
+    ctx.arc(this.pos.x + 77, this.pos.y + 90, 50, 0, 2 * Math.PI);
     ctx.stroke();
     }    
   }
