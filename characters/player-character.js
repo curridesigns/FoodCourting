@@ -5,13 +5,13 @@ class PlayerCharacter {
   constructor() {
     this.pos = { x: 650, y: 250 };
     this.size = 5;
+    this.centerOffset = {x: 75, y: 90};
     this.color = "red";
     this.up = { key: 87, flag: false };
     this.down = { key: 83, flag: false };
     this.right = { key: 68, flag: false };
     this.left = { key: 65, flag: false };
     this.grab = { key: 32, flag: false, hasSelected: false };
-    this.size = 50;
     this.direction = { x: 0, y: 0 };
     this.speed = { x: 0, y: 0 };
     this.brakePedal = { x: true, y: true };
@@ -24,7 +24,7 @@ class PlayerCharacter {
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
-    ctx.arc(this.pos.x + 75, this.pos.y + 90, this.size, 0, 2 * Math.PI);
+    ctx.arc(this.pos.x + this.centerOffset.x, this.pos.y + this.centerOffset.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
     }    
   }
