@@ -1,7 +1,7 @@
 /* global variables canvas, ctx */
 
 //import all the necessary files and function
-import { canvas, ctx }  from "../canvas.js"
+import { canvas, ctx, frameCount }  from "../canvas.js"
 import { Topping }from "./ramen-toppings.js"
 import { ingredients } from "./ingredients.js"
 import { RamenBowl } from "./ramen-bowl.js"
@@ -32,6 +32,10 @@ miniGame.play = function() {
 
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
+  if(frameCount%10 === 0){
+    console.log("x: ", character.centerOffset.x + character.size);
+    console.log("y: ",character.centerOffset.y + character.size);
+  }
   // ingredients.bowlComplete();
   //toppingBuilder(noodles);
   //toppingBuilder(chashu);
