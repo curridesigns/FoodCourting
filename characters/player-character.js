@@ -4,8 +4,8 @@ import { physics } from "../miniGame/physics.js";
 class PlayerCharacter {
   constructor() {
     this.pos = { x: 650, y: 250 };
-    this.size = 5;
-    this.centerOffset = {x: 75, y: 90};
+    this.size = 45;
+    this.centerOffset = {x: this.pos.x + 75, y: this.pos.y + 90};
     this.color = "red";
     this.up = { key: 87, flag: false };
     this.down = { key: 83, flag: false };
@@ -20,11 +20,12 @@ class PlayerCharacter {
 
   render(debug = false) {
     ctx.drawImage(this.image, this.pos.x, this.pos.y);
+    this.centerOffset = {x: this.pos.x + 75, y: this.pos.y + 90};
     if(debug){
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
-    ctx.arc(this.pos.x + this.centerOffset.x, this.pos.y + this.centerOffset.y, this.size, 0, 2 * Math.PI);
+    ctx.arc(this.centerOffset.x, this.centerOffset.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
     }    
   }
