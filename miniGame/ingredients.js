@@ -90,7 +90,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   }
 };
 
-ingredients.finish
+ingredients.finishBowl
 
 // ingredients.bowlComplete = function() {
 //   if (checkIndex === ingredients.bowlIngredients.length) {
