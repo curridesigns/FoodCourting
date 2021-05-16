@@ -20,7 +20,7 @@ miniGame.preLoad = function() {
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
-  bowl = new RamenBowl(315, 515);
+  bowl = new RamenBowl(385, 588);
   console.log(character.size);
   //ingredients.generateBowl();
   
@@ -42,8 +42,6 @@ miniGame.play = function() {
   helperfunction.background();
   character.render(true);
   bowl.render();
-  ctx.fillStyle = "red";
-  ctx.fillRect(310,850,10,10);
   // console.log(character.pos.x);
   
   ingredients.renderStarterIngredients();

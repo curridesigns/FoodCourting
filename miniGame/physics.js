@@ -60,7 +60,7 @@ physics.movement = function (obj){
 }
 
 physics.collision = function (obj){
-  const counters = {front: {left: 500, bottom: 900}, top: {left: 655, bottom:165}, island: {top: 400, bottom: 705, left: 655, right: 1720}, bottom: {top: 900, left: 655}}
+  const counters = {front: {left: 500, bottom: 900}, top: {left: 655, bottom:165}, island: {top: 430, bottom: 675, left: 655, right: 1720}, bottom: {top: 900, left: 655}}
   if(obj.pos.y < counters.front.bottom){
     if(dist(obj.pos.x, counters.front.left) < obj.size){
       obj.pos.x = counters.front.left + obj.size;
@@ -87,22 +87,24 @@ physics.collision = function (obj){
     if(dist(obj.pos.y, counters.bottom.top) < obj.size){
       obj.pos.y = counters.bottom.top - obj.size
     }
-    if (obj.pos.x < 1720){
-      console.log("hello")
-      if(dist(obj.pos.y,675) < obj.size){
-        obj.pos.y = 675 + obj.size;
+    if (obj.pos.x < counters.island.right){
+      
+      if(dist(obj.pos.y,counters.island.bottom) < obj.size){
+        console.log("hello")
+        obj.pos.y = counters.island.bottom + obj.size;
       }
-      if(dist(obj.pos.y,430) < obj.size){
-        obj.pos.y = 430 - obj.size;
+      if(dist(obj.pos.y,counters.island.top) < obj.size){
+        obj.pos.y = counters.island.top - obj.size;
       }
     }
   }
-  if(obj.pos.y > 400 && obj.pos.y < 705){
-    if(dist(obj.pos.x, 655) < obj.size){
-      obj.pos.x = 655 - obj.size
+  if(obj.pos.y > counters.island.top && obj.pos.y < counters.island.bottom){
+    console.log("there")
+    if(dist(obj.pos.x, counters.island.left) < obj.size){
+      obj.pos.x = counters.island.left - obj.size
     }
-    if(dist(obj.pos.x, 1720) < obj.size){
-      obj.pos.x = 1720 + obj.size
+    if(dist(obj.pos.x, counters.island.right) < obj.size){
+      obj.pos.x = counters.island.right + obj.size
     }
   }
 }
