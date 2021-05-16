@@ -59,6 +59,8 @@ physics.movement = function (obj){
   }
 }
 
+physics.collision = function (obj)
+
 physics.worldSpace = function (obj){
   const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {left: 310, right: canvas.width - 46} };
   console.log(dist(obj.pos.y,worldBoundries.y.upper));
