@@ -60,7 +60,7 @@ physics.movement = function (obj){
 }
 
 physics.worldSpace = function (obj){
-  const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {right: 5, left: canvas.width - 5} };
+  const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {left: 310, right: canvas.width - 46} };
   
 //   for ( let i in worldBoundries.y){
     
@@ -68,11 +68,11 @@ physics.worldSpace = function (obj){
 //     obj.pos.y = worldBoundries.y[i];
 //   }
 //     // console.log(worldBoundries.y[i]);
-  //console.log(dist(obj.pos.y, worldBoundries.y.lower));
+  //console.log( );
 //   }
-  if(dist(obj.pos.x,worldBoundries.y.lower) < obj.size){
-    // obj.pos.y = worldBoundries.y.lower - obj.size;
-    console.log("hello");
+  if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
+    obj.pos.y = worldBoundries.y.lower - obj.size;
+    
   }
   
   if(obj.pos.x < worldBoundries.right){
