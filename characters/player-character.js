@@ -19,7 +19,11 @@ class PlayerCharacter {
   }
 
   render(debug = false) {
-    ctx.drawImage(this.image, this.pos.x, this.pos.y);
+    ctx.translate(this.pos.x, this.pos.y);
+    ctx.drawImage(this.image, 0, 0);
+    ctx.fillStyle = "blue";
+    ctx.fillRect(0,0,10,10);
+    ctx.translate(-this.pos.x, -this.pos.y)
     this.centerOffset = {x: this.pos.x + 75, y: this.pos.y + 90};
     if(debug){
     ctx.beginPath();

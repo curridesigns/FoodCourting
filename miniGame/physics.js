@@ -1,5 +1,5 @@
 import { canvas, ctx} from "../canvas.js"
-import { distance } from "./helper-functions.js"
+import { dist } from "./helper-functions.js"
 
 const physics = {};
 
@@ -70,8 +70,8 @@ physics.worldSpace = function (obj){
 //     // console.log(worldBoundries.y[i]);
 //   }
   if((obj.centerOffset.y - obj.size) > worldBoundries.y.lower){
-    obj.pos.y = worldBoundries.y.lower - (obj.centerOffset.y - obj.size);
-    console.log(worldBoundries);
+    obj.pos.y = worldBoundries.y.lower - obj.size;
+    console.log(worldBoundries.y.lower - (obj.centerOffset.y - obj.size));
   }
   
   if(obj.pos.x < worldBoundries.right){
