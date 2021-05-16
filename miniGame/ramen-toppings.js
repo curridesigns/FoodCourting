@@ -53,14 +53,14 @@ class Topping {
   
   characterNear(characterPOS){
     //TODO: make a distance function
-    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 125){
+    if(dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 150){
         return true;
       }
     return false;
   }
   
   bowlNear(bowlPOS){
-     if(dist(bowlPOS.x, bowlPOS.y, this.pos.x, this.pos.y)  <= 20){
+     if(dist(bowlPOS.x, bowlPOS.y, this.pos.x, this.pos.y)  <= 175){
         return true;
       }
     return false;
