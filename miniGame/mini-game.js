@@ -34,7 +34,7 @@ miniGame.play = function() {
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
     //console.log(canvas.height)
-    // console.log("x: ", character.centerOffset.x + character.size);
+    console.log("x: ", character.pos.x);
     // console.log("y: ",character.centerOffset.y + character.size);
   }
   
@@ -42,6 +42,8 @@ miniGame.play = function() {
   helperfunction.background();
   character.render(true);
   bowl.render();
+  ctx.fillStyle = "red";
+  ctx.fillRect(310,850,10,10);
   // console.log(character.pos.x);
   
   ingredients.renderStarterIngredients();
