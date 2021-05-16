@@ -1,4 +1,5 @@
 import { canvas, ctx} from "../canvas.js"
+import { distance } from "./helper-functions.js"
 
 const physics = {};
 
