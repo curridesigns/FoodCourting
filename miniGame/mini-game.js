@@ -40,7 +40,7 @@ miniGame.play = function() {
   
   // All drawing
   helperfunction.background();
-  character.render(true);
+  character.render();
   bowl.render();
   // console.log(character.pos.x);
   

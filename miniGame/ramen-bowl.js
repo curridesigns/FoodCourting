@@ -44,10 +44,10 @@ export class RamenBowl {
     this.bowlIngredients[i] = {};
     this.bowlIngredients[i].name = ingredients.availableIngredients[j][0].name;
     this.bowlIngredients[i].image = ingredients.availableIngredients[j][0].image;
-    this.bowlIngredients[i].pos = {x: 250+i*50, y: 10};
+    this.bowlIngredients[i].pos = {x: 850+i*50, y: 10};
   }
   //checkIndex = 0;
-  console.log(this.bowlIngredients);
+  //console.log(this.bowlIngredients);
 }
   renderIngredients() {
   for (let i = 0; i < this.bowlIngredients.length; i+=1){

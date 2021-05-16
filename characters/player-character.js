@@ -21,9 +21,9 @@ class PlayerCharacter {
   render(debug = false) {
     ctx.translate(this.pos.x, this.pos.y);
     ctx.drawImage(this.image, this.centerOffset.x, this.centerOffset.y);
+    if(debug){
     ctx.fillStyle = "blue";
     ctx.fillRect(0,0,10,10);
-    if(debug){
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
