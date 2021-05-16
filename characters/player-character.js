@@ -94,6 +94,7 @@ class PlayerCharacter {
 
     physics.movement(this);
     physics.worldSpace(this);
+    physics.collision(this);
   }
 }
 

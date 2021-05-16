@@ -34,7 +34,7 @@ miniGame.play = function() {
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
     //console.log(canvas.height)
-    console.log("x: ", character.pos.x);
+    // console.log("x: ", character.pos.x);
     // console.log("y: ",character.centerOffset.y + character.size);
   }
   

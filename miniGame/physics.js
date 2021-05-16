@@ -59,11 +59,23 @@ physics.movement = function (obj){
   }
 }
 
-physics.collision = function (obj)
+physics.collision = function (obj){
+  if(obj.pos.x > 655){
+    if(obj.pos.y < 165 + obj.size){
+    console.log("hello");
+      obj.pos.y = 165 + obj.size;
+    }
+    if(obj.pos.y > 910- obj.size){
+      obj.pos.y = 910 - obj.size
+    }
+    if (obj.pos.x > 1720){
+      
+    }
+  }
+}
 
 physics.worldSpace = function (obj){
   const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {left: 310, right: canvas.width - 46} };
-  console.log(dist(obj.pos.y,worldBoundries.y.upper));
   if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
     obj.pos.y = worldBoundries.y.lower - obj.size;
   }
