@@ -33,8 +33,8 @@ miniGame.play = function() {
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
-    console.log("x: ", character.centerOffset.x + character.size);
-    console.log("y: ",character.centerOffset.y + character.size);
+    // console.log("x: ", character.centerOffset.x + character.size);
+    // console.log("y: ",character.centerOffset.y + character.size);
   }
   // ingredients.bowlComplete();
   //toppingBuilder(noodles);
