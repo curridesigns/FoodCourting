@@ -60,12 +60,26 @@ physics.movement = function (obj){
 }
 
 physics.collision = function (obj){
-  if(obj.pos.y < 850){
+  const counters = {front: {left: 500, bottom: 900}, top: {right: 655, bottom:165}, island: {top: right: counters.top.right,}}
+  if(obj.pos.y < 900){
     if(dist(obj.pos.x, 500) < obj.size){
       obj.pos.x = 500 + obj.size;
     }
   }
-  if(obj.pos.y >)
+  if(obj.pos.y > 900){
+    if(dist(obj.pos.x, 655) < obj.size){
+      obj.pos.x = 655 - obj.size;
+    }
+    if(obj.pos.x < 510)
+      if(dist(obj.pos.y, 900) < obj.size){
+        obj.pos.y = 900 + obj.size;
+      }
+  }
+  if(obj.pos.y < 165){
+    if(dist(obj.pos.x, 655) < obj.size){
+      obj.pos.x = 655 - obj.size;
+    }
+  }
   if(obj.pos.x > 655){
     if(dist(obj.pos.y, 165) < obj.size){
       obj.pos.y = 165 + obj.size;
