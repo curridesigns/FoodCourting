@@ -61,17 +61,24 @@ physics.movement = function (obj){
 
 physics.collision = function (obj){
   if(obj.pos.x > 655){
-    if(obj.pos.y < 165 + obj.size){
+    if(dist(obj.pos.y, 165) < obj.size){
     console.log("hello");
       obj.pos.y = 165 + obj.size;
     }
-    if(obj.pos.y > 910- obj.size){
+    if(dist(obj.pos.y, 910) < obj.size){
       obj.pos.y = 910 - obj.size
     }
-    if (obj.pos.x > 1720){
-      
+    if (obj.pos.x < 1720){
+      console.log("hello");
+      if(dist(obj.pos.y,675) < obj.size){
+        obj.pos.y = 675 + obj.size;
+      }
+      if(dist(obj.pos.y,430) < obj.size){
+        obj.pos.y = 430 - obj.size;
+      }
     }
   }
+  if(obj.pos.y )
 }
 
 physics.worldSpace = function (obj){
