@@ -8,11 +8,9 @@ function background() {
 }
 
 function dist(x1, y1, x2, y2) {
-  if (!y1 && !y2) {
-    return Math.hypot(x1, x2);
-  } else if (!x1 && !x2) {
-    return Math.hypot(y1, y2);
-  } else {
+  if(!x2 && !y2){
+    return Math.hypot(x1, y1);
+  }else{
     return Math.hypot(x2 - x1, y2 - y1);
   }
 }

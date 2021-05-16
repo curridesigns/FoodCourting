@@ -68,9 +68,9 @@ physics.worldSpace = function (obj){
 //     obj.pos.y = worldBoundries.y[i];
 //   }
 //     // console.log(worldBoundries.y[i]);
-  console.log(dist(obj.pos.y,worldBoundries.y.lower));
+  //console.log(dist(obj.pos.y, worldBoundries.y.lower));
 //   }
-  if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
+  if(dist(obj.pos.x,worldBoundries.y.lower) < obj.size){
     // obj.pos.y = worldBoundries.y.lower - obj.size;
     console.log("hello");
   }
