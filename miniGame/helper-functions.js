@@ -1,23 +1,24 @@
-import { canvas, ctx } from "../canvas.js"
+import { canvas, ctx } from "../canvas.js";
 
-const kitchenBG = document.getElementById("kitchenBG")
+const kitchenBG = document.getElementById("kitchenBG");
 
-function background(){
-  ctx.fillStyle = "blue"
+function background() {
+  ctx.fillStyle = "blue";
   ctx.drawImage(kitchenBG, 0, 0);
 }
 
-function dist(x1,y1,x2,y2){
-  if(!y1 && !x2){
-    
+function dist(x1, y1, x2, y2) {
+  if (!y1 && !y2) {
+    return Math.hypot(x1, x2);
+  } else if (!x1 && !x2) {
+    return Math.hypot(y1, y2);
+  } else {
+    return Math.hypot(x2 - x1, y2 - y1);
   }
-  return Math.hypot(x2-x1,y2-y1);
 }
 
-function randomRange(min, max){
-  return Math.random() * (max-min) + min;
+function randomRange(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
-
-
-export { background, dist, randomRange }
+export { background, dist, randomRange };

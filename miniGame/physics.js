@@ -68,10 +68,11 @@ physics.worldSpace = function (obj){
 //     obj.pos.y = worldBoundries.y[i];
 //   }
 //     // console.log(worldBoundries.y[i]);
+  console.log(dist(obj.pos.y,worldBoundries.y.lower));
 //   }
-  if((obj.centerOffset.y - obj.size) > worldBoundries.y.lower){
-    obj.pos.y = worldBoundries.y.lower - obj.size;
-    console.log(worldBoundries.y.lower - (obj.centerOffset.y - obj.size));
+  if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
+    // obj.pos.y = worldBoundries.y.lower - obj.size;
+    console.log("hello");
   }
   
   if(obj.pos.x < worldBoundries.right){

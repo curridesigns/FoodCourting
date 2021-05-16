@@ -36,10 +36,6 @@ miniGame.play = function() {
     // console.log("x: ", character.centerOffset.x + character.size);
     // console.log("y: ",character.centerOffset.y + character.size);
   }
-  // ingredients.bowlComplete();
-  //toppingBuilder(noodles);
-  //toppingBuilder(chashu);
-
   
   // All drawing
   helperfunction.background();
