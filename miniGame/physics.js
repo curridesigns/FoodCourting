@@ -60,19 +60,19 @@ physics.movement = function (obj){
 }
 
 physics.worldSpace = function (obj){
-  const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {left: 365, right: canvas.width - 46} };
-  
+  const worldBoundries = {y: {upper: 5, lower: canvas.height-5,}, x: {left: 310, right: canvas.width - 46} };
+  console.log(dist(obj.pos.y,worldBoundries.y.upper));
   if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
     obj.pos.y = worldBoundries.y.lower - obj.size;
   }
-  if(dist(obj.pos.y,worldBoundries.y.upper) > obj.size){
+  if(dist(obj.pos.y,worldBoundries.y.upper) < obj.size){
     obj.pos.y = worldBoundries.y.upper + obj.size;
   }
   if(dist(obj.pos.x,worldBoundries.x.right) < obj.size){
-    obj.pos.x = worldBoundries.x.right + obj.size;
+    obj.pos.x = worldBoundries.x.right - obj.size;
   }
-  if(dist(obj.pos.x,worldBoundries.x.left) > obj.size){
-    obj.pos.x = worldBoundries.x.left - obj.size;
+  if(dist(worldBoundries.x.left,obj.pos.x) < obj.size){
+    obj.pos.x = worldBoundries.x.left + obj.size;
   }
   
 }
