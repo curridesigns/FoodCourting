@@ -38,7 +38,7 @@ miniGame.play = function() {
   bowl.render();
   
   ingredients.renderStarterIngredients();
-  ingredients.finishBowl();
+  ingredients.finishBowl(finishedBowls);
 };
 
 

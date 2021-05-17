@@ -97,9 +97,10 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   }
 };
 
-ingredients.finishBowl = function (){
+ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     bowl.generateBowl();
+    finishedBowls++;
     ingredients.checkIndex = 0;
   }
 };

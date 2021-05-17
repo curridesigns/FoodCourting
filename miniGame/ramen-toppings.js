@@ -42,7 +42,8 @@ class Topping {
       characterGrab.hasObject = true;
     }
     if(this.isSelected){
-      this
+      this.pos.x = characterPOS.x;
+      this.pos.y = characterPOS.y;
     }
     if (!this.isSelected) {
       this.pos.x = this.pos.x;
