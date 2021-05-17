@@ -22,6 +22,7 @@ miniGame.load = function() {
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588);
   console.log(character.size);
+  bowl.generateBowl();
   //ingredients.generateBowl();
   
   //ingredients.availableIngredients;
@@ -33,6 +34,7 @@ miniGame.play = function() {
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
+    console.log(ingredients.availableIngredients[1].length);
     //console.log(canvas.height)
     // console.log("x: ", character.pos.x);
     // console.log("y: ",character.centerOffset.y + character.size);

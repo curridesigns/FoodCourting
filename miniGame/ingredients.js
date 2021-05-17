@@ -4,7 +4,7 @@ import { canvas, ctx } from "../canvas.js";
 import { bowl } from "./mini-game.js";
 
 const ingredients = {};
-ingredients.checkIndex = 0;
+
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
@@ -18,6 +18,7 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
   //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
+  ingredients.checkIndex = 0;
 }
 
 ingredients.checkMatch = function(checkObj) {
@@ -94,7 +95,9 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   }
 };
 
-ingredients.finishBowl
+ingredients.finishBowl = function (){
+  if(ingredients.checkIndex > bowl.ingredients)
+};
 
 // ingredients.bowlComplete = function() {
 //   if (checkIndex === ingredients.bowlIngredients.length) {
