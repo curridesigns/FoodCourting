@@ -1,4 +1,4 @@
-import { canvas, ctx } from "../canvas.js";
+import { canvas, ctx, frameCount } from "../canvas.js";
 import { dist } from "./helper-functions.js";
 
 class Topping {
@@ -41,12 +41,18 @@ class Topping {
       this.hasMoved = true;
       characterGrab.hasObject = true;
     }
+    if(this.isSelected){
+      this
+    }
     if (!this.isSelected) {
       this.pos.x = this.pos.x;
       this.pos.y = this.pos.y;
+      let droppedFrame = frameCount;
+      if(droppedFrame + 100 < frameCount){
       characterGrab.hasObject = false;
+      }
     }
-    if (!this.isSelected && this.bowlNear(bowlPOS)) {
+    if (this.isSelected && this.bowlNear(bowlPOS)) {
       this.turnIn = true;
       // characterGrab.hasObject = false;
     }

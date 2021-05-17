@@ -1,3 +1,5 @@
+//this is where the ingredients are setup, rendered, selected, and new bowls are generated when one has been completed
+
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "./helper-functions.js";
 import { canvas, ctx } from "../canvas.js";
@@ -57,6 +59,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
+        console.log("hello")
         characterGrab.hasObject = false;
       }
       //checks if the 
