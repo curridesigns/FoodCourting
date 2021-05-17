@@ -29,7 +29,7 @@ miniGame.play = function() {
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
-    console.log(ingredients.availableIngredients[0][0].isSelected)
+    console.log(ingredients.availableIngredients[0][0].isRendered)
   }
   // All drawing
   helperfunction.background();

@@ -12,6 +12,7 @@ class Topping {
     this.turnIn = false;
     this.image = tempImage;
     this.color = tempColor;
+    this.isRendered = false
   }
 
   render(overrideX, overrideY) {
@@ -24,6 +25,7 @@ class Topping {
     } else {
       ctx.fillStyle = this.color;
       ctx.fillRect(overrideX, overrideY, this.size, this.size);
+      this.isRendered = true
     }
   }
 

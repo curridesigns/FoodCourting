@@ -20,7 +20,17 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
   //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
-  for(let i = 0)
+  for(let i = 0; i<ingredients.availableIngredients.length;i++){
+    ingredients.availableIngredients[i].push(
+          new Topping(
+            ingredients.availableIngredients[i][0].name,
+            ingredients.availableIngredients[i][0].startPOS.x,
+            ingredients.availableIngredients[i][0].startPOS.y,
+            ingredients.availableIngredients[i][0].image,
+            ingredients.availableIngredients[i][0].color
+          )
+        );
+  }
   ingredients.checkIndex = 0;
 }
 
@@ -48,8 +58,8 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
       //adds a new ingredient to the array when it has been moved
       if (
         availIngred.hasMoved &&
-        !availIngred.isSelected &&
-        ingredients.availableIngredients[i][j + 1] === undefined
+        !availIngred.isSelected 
+        // ingredients.availableIngredients[i][j + 1] === undefined
       ) {
         ingredients.availableIngredients[i].push(
           new Topping(
@@ -69,7 +79,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           bowl.turnedInIngredients.push(
             ingredients.availableIngredients[i].splice(j, 1)
           );
-          console.log(ingredients.availableIngredients[i])
+          // console.log(bowl.turnedInIngredients)
           // console.log(ingredients.turnedInIngredients);
         }
       }
