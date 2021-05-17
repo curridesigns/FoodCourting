@@ -34,9 +34,7 @@ miniGame.play = function() {
   helperfunction.background();
   character.render();
   bowl.render();
-  ctx.font = "48px ariel";
-  ctx.fillStyle = 'red'
-  ctx.fillText(finishedBowls, 1720, 100);
+  
   
   ingredients.renderStarterIngredients();
   ingredients.finishBowl(finishedBowls);
