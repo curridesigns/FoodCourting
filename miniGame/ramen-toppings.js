@@ -29,21 +29,16 @@ class Topping {
 
   select(characterGrab, characterPOS, bowlPOS) {
     this.isSelected = false;
-    //console.log(characterGrab.test);
+    // console.log(characterGrab.flag);
     if (
       this.characterNear(characterPOS) &&
-      characterGrab.flag &&
-      !characterGrab.hasObject
+      characterGrab.flag
     ) {
       this.pos.x = characterPOS.x;
       this.pos.y = characterPOS.y;
       this.isSelected = true;
       this.hasMoved = true;
       characterGrab.hasObject = true;
-    }
-    if(this.isSelected){
-      this.pos.x = characterPOS.x;
-      this.pos.y = characterPOS.y;
     }
     if (!this.isSelected) {
       this.pos.x = this.pos.x;

@@ -29,7 +29,7 @@ miniGame.play = function() {
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
-    
+    console.log(ingredients.availableIngredients[0][0].isSelected)
   }
   // All drawing
   helperfunction.background();
@@ -37,7 +37,7 @@ miniGame.play = function() {
   bowl.render();
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
-  ctx.fillText(finishedBowls, 100, 100);
+  ctx.fillText(finishedBowls, 1720, 100);
   
   ingredients.renderStarterIngredients();
   ingredients.finishBowl(finishedBowls);
