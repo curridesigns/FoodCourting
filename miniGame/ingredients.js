@@ -20,6 +20,7 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
   //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
+  for(let i = 0)
   ingredients.checkIndex = 0;
 }
 
@@ -42,7 +43,7 @@ ingredients.renderStarterIngredients = function() {
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   //runs through the multidimensional array of avvailableIngredients
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
-    for (let j = 1; j < ingredients.availableIngredients[i].length; j++) {
+    for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
       let availIngred = ingredients.availableIngredients[i][j];
       //adds a new ingredient to the array when it has been moved
       if (
@@ -59,14 +60,16 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
-
+        console.log("hello")
+        characterGrab.hasObject = false;
       }
-      //checks if the ingredients can be turned in
+      //checks if the 
       if (availIngred.turnIn) {
         if (ingredients.checkMatch(availIngred)) {
           bowl.turnedInIngredients.push(
             ingredients.availableIngredients[i].splice(j, 1)
           );
+          console.log(ingredients.availableIngredients[i])
           // console.log(ingredients.turnedInIngredients);
         }
       }
