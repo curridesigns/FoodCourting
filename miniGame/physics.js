@@ -90,7 +90,6 @@ physics.collision = function (obj){
     if (obj.pos.x < counters.island.right){
       
       if(dist(obj.pos.y,counters.island.bottom) < obj.size){
-        console.log("hello")
         obj.pos.y = counters.island.bottom + obj.size;
       }
       if(dist(obj.pos.y,counters.island.top) < obj.size){
@@ -99,7 +98,6 @@ physics.collision = function (obj){
     }
   }
   if(obj.pos.y > counters.island.top && obj.pos.y < counters.island.bottom){
-    console.log("there")
     if(dist(obj.pos.x, counters.island.left) < obj.size){
       obj.pos.x = counters.island.left - obj.size
     }

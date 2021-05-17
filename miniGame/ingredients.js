@@ -38,10 +38,11 @@ ingredients.renderStarterIngredients = function() {
 };
 
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
-  //runs through the multidimensional array of avvailableI
+  //runs through the multidimensional array of avvailableIngredients
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
       let availIngred = ingredients.availableIngredients[i][j];
+      //adds a new ingredient to the array when it has been moved
       if (
         availIngred.hasMoved &&
         !availIngred.isSelected &&
@@ -56,7 +57,9 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
+        characterGrab.hasObject = false;
       }
+      //checks if the 
       if (availIngred.turnIn) {
         if (ingredients.checkMatch(availIngred)) {
           bowl.turnedInIngredients.push(
