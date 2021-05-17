@@ -31,13 +31,13 @@ miniGame.play = function() {
   if(frameCount%10 === 0){
     
   }
-  ctx.font = "480px serif";
-  ctx.fillStyle = 'red'
-  ctx.strokeText('finishedBowls', 100, 1720);
   // All drawing
   helperfunction.background();
   character.render();
   bowl.render();
+  ctx.font = "48px serif";
+  ctx.fillStyle = 'red'
+  ctx.strokeText('finishedBowls', 100, 1720);
   
   ingredients.renderStarterIngredients();
   ingredients.finishBowl(finishedBowls);
