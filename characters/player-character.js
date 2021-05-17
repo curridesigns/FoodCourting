@@ -11,7 +11,7 @@ class PlayerCharacter {
     this.down = { key: 83, flag: false };
     this.right = { key: 68, flag: false };
     this.left = { key: 65, flag: false };
-    this.grab = { key: 32, flag: false, hasSelected: false };
+    this.grab = { key: 32, flag: false, hasObject: false };
     this.direction = { x: 0, y: 0 };
     this.speed = { x: 0, y: 0 };
     this.brakePedal = { x: true, y: true };

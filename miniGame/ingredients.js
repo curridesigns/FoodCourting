@@ -38,6 +38,7 @@ ingredients.renderStarterIngredients = function() {
 };
 
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
+  //runs through the multidimensional array of avvailableI
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
       let availIngred = ingredients.availableIngredients[i][j];
