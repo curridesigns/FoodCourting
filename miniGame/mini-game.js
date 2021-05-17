@@ -47,6 +47,7 @@ miniGame.play = function() {
   // console.log(character.pos.x);
   
   ingredients.renderStarterIngredients();
+  ingredients.finishBowl();
   //ingredients.renderBowlIngredients();
   //console.log(ingredients.turnedInIngredients.length);
   
