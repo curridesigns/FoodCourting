@@ -24,7 +24,6 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
 ingredients.checkMatch = function(checkObj) {
   if (checkObj.name === bowl.bowlIngredients[ingredients.checkIndex].name) {
     ingredients.checkIndex++;
-    console.log(ingredients.checkIndex);
     return true;
   }
   return false;
