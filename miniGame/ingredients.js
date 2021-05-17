@@ -53,13 +53,13 @@ ingredients.renderStarterIngredients = function() {
 ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
   //runs through the multidimensional array of avvailableIngredients
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
-    for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
+    for (let j = 1; j < ingredients.availableIngredients[i].length; j++) {
       let availIngred = ingredients.availableIngredients[i][j];
       //adds a new ingredient to the array when it has been moved
       if (
         availIngred.hasMoved &&
-        !availIngred.isSelected 
-        // ingredients.availableIngredients[i][j + 1] === undefined
+        !availIngred.isSelected &&
+        ingredients.availableIngredients[i][j + 1] === undefined
       ) {
         ingredients.availableIngredients[i].push(
           new Topping(
@@ -112,7 +112,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     bowl.generateBowl();
-    finishedBowls++;
+    finishedBowls+=1;
     ingredients.checkIndex = 0;
   }
 };
