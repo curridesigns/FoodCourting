@@ -20,7 +20,6 @@ miniGame.load = function() {
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588);
   bowl.generateBowl();
-  finishedBowls = 0;  
 };
 
 miniGame.play = function() {
@@ -29,7 +28,7 @@ miniGame.play = function() {
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
-    console.log(ingredients.availableIngredients[0][0].isRendered)
+    
   }
   // All drawing
   helperfunction.background();
@@ -45,4 +44,4 @@ miniGame.play = function() {
 
 
 
-export { miniGame, character, bowl }
+export { miniGame, character, bowl, finishedBowls }

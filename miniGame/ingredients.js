@@ -79,23 +79,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           bowl.turnedInIngredients.push(
             ingredients.availableIngredients[i].splice(j, 1)
           );
-          // console.log(bowl.turnedInIngredients)
-          // console.log(ingredients.turnedInIngredients);
-        }
-      }
-
-      availIngred.select(characterGrab, characterPOS, bowlPOS);
-    }
-  }
-
-  for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
-    for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
-      if (
-        ingredients.availableIngredients[i][j].hasMoved &&
-        !ingredients.availableIngredients[i][j].isSelected &&
-        ingredients.availableIngredients[i][j + 1] === undefined
-      ) {
-        ingredients.availableIngredients[i].push(
+          ingredients.availableIngredients[i].push(
           new Topping(
             ingredients.availableIngredients[i][0].name,
             ingredients.availableIngredients[i][0].startPOS.x,
@@ -104,15 +88,41 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
+          // console.log(bowl.turnedInIngredients)
+          console.log(ingredients.availableIngredients[i].length);
+        }
       }
+
+      availIngred.select(characterGrab, characterPOS, bowlPOS);
     }
   }
+
+  // for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
+  //   for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
+  //     if (
+  //       ingredients.availableIngredients[i][j].hasMoved &&
+  //       !ingredients.availableIngredients[i][j].isSelected &&
+  //       ingredients.availableIngredients[i][j + 1] === undefined
+  //     ) {
+  //       ingredients.availableIngredients[i].push(
+  //         new Topping(
+  //           ingredients.availableIngredients[i][0].name,
+  //           ingredients.availableIngredients[i][0].startPOS.x,
+  //           ingredients.availableIngredients[i][0].startPOS.y,
+  //           ingredients.availableIngredients[i][0].image,
+  //           ingredients.availableIngredients[i][0].color
+  //         )
+  //       );
+  //     }
+  //   }
+  // }
 };
 
 ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     bowl.generateBowl();
     finishedBowls+=1;
+    console.log(finishedBowls)
     ingredients.checkIndex = 0;
   }
 };
