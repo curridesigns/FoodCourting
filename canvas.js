@@ -20,7 +20,7 @@ document.addEventListener('click', onClick, false);
 let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
-let StartGame = false;
+var StartGame = true;
 const splashScreenBG = document.getElementById("splashScreen");
 
 function setup(){
