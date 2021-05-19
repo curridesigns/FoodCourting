@@ -1,5 +1,6 @@
 import { miniGame } from "./miniGame/mini-game.js";
 import { keyDownHandler, keyUpHandler } from "./miniGame/event-handlers.js"
+import * as helperFunction from "./helper-functions.js"
 
 
 const canvas = document.querySelector('#gameCanvas');
@@ -17,6 +18,7 @@ document.addEventListener('keyup', keyUpHandler, false);
 let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
+let StartGame = false;
 
 function setup(){
   // background();
@@ -31,6 +33,8 @@ function draw () {
   
   if(StartGame){
     miniGame.play();
+  } else {
+    SplashScreen();
   }
   //console.log(frameCount);
   
@@ -63,8 +67,8 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 	window.requestAnimationFrame(loop)
 }
 
-function StartGame(){
-  
+function SplashScreen(){
+  helperFunction.background()
   
 }
 
