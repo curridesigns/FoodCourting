@@ -19,6 +19,7 @@ let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
 let StartGame = false;
+const splashScreenBG = document.getElementById("splashScreen");
 
 function setup(){
   // background();
@@ -68,7 +69,7 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 }
 
 function SplashScreen(){
-  helperFunction.background()
+  helperFunction.background(splashScreenBG)
   
 }
 
