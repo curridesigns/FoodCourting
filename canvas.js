@@ -1,5 +1,5 @@
 import { miniGame } from "./miniGame/mini-game.js";
-import { keyDownHandler, keyUpHandler } from "./miniGame/event-handlers.js"
+import { keyDownHandler, keyUpHandler } from "./event-handlers.js"
 import * as helperFunction from "./helper-functions.js"
 
 
