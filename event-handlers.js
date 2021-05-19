@@ -17,4 +17,4 @@ function onClick(event){
   
 }
 
-export { keyDownHandler, keyUpHandler }
+export { keyDownHandler, keyUpHandler, onClick }

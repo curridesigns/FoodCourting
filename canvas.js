@@ -1,6 +1,7 @@
 import { miniGame } from "./miniGame/mini-game.js";
 import { keyDownHandler, keyUpHandler, onClick } from "./event-handlers.js"
 import * as helperFunction from "./helper-functions.js"
+import { splashScreen } from "./SplashScreen.js"
 
 
 const canvas = document.querySelector('#gameCanvas');
@@ -14,6 +15,7 @@ canvas.height = 1080;
 
 document.addEventListener('keydown', keyDownHandler, false);
 document.addEventListener('keyup', keyUpHandler, false);
+document.addEventListener('click', onClick, false);
 
 let lastTime = 0
 let aggregatedTime = 0
