@@ -70,7 +70,6 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
             ingredients.availableIngredients[i][0].color
           )
         );
-        console.log("hello")
         characterGrab.hasObject = false;
       }
       //checks if the 
@@ -89,7 +88,6 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           )
         );
           // console.log(bowl.turnedInIngredients)
-          console.log(ingredients.availableIngredients[i].length);
         }
       }
 
@@ -122,7 +120,6 @@ ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     bowl.generateBowl();
     finishedBowls+=1;
-    console.log(finishedBowls)
     ingredients.checkIndex = 0;
     
   }
