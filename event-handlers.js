@@ -13,7 +13,7 @@ function keyUpHandler(event){
   event.preventDefault;
 }
 
-function OnClick(event){
+function onClick(event){
   
 }
 

@@ -19,4 +19,6 @@ function randomRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+function button
+
 export { background, dist, randomRange };
