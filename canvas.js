@@ -27,7 +27,11 @@ function setup(){
 }
 
 function draw () {
-  miniGame.play();
+  
+  
+  if(StartGame){
+    miniGame.play();
+  }
   //console.log(frameCount);
   
   // noodles.selected(character.pos);
@@ -58,6 +62,8 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 
 	window.requestAnimationFrame(loop)
 }
+
+
 
 
 
