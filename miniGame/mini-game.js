@@ -25,7 +25,6 @@ miniGame.load = function() {
 
 miniGame.play = function() {
   // All updates
-  
   character.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if(frameCount%10 === 0){
@@ -35,8 +34,6 @@ miniGame.play = function() {
   helperFunction.background(kitchenBG);
   character.render();
   bowl.render();
-  
-  
   ingredients.renderStarterIngredients();
   ingredients.finishBowl(finishedBowls);
 };
