@@ -1,5 +1,5 @@
 import { canvas, ctx} from "../canvas.js"
-import { dist } from "./helper-functions.js"
+import { dist } from "../helper-functions.js"
 
 const physics = {};
 

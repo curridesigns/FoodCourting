@@ -1,5 +1,5 @@
 import { canvas, ctx, frameCount } from "../canvas.js";
-import { dist, randomRange } from "./helper-functions.js";
+import { dist, randomRange } from "../helper-functions.js";
 import { ingredients } from "./ingredients.js";
 
 export class RamenBowl {

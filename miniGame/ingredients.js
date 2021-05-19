@@ -1,7 +1,7 @@
 //this is where the ingredients are setup, rendered, selected, and new bowls are generated when one has been completed
 
 import { Topping } from "./ramen-toppings.js";
-import { randomRange } from "./helper-functions.js";
+import { randomRange } from "../helper-functions.js";
 import { canvas, ctx } from "../canvas.js";
 import { bowl } from "./mini-game.js";
 

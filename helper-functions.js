@@ -1,10 +1,10 @@
 import { canvas, ctx } from "../canvas.js";
 
-const kitchenBG = document.getElementById("kitchenBG");
 
-function background() {
+
+function background(image) {
   ctx.fillStyle = "blue";
-  ctx.drawImage(kitchenBG, 0, 0);
+  ctx.drawImage(image, 0, 0);
 }
 
 function dist(x1, y1, x2, y2) {

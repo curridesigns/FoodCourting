@@ -5,14 +5,15 @@ import { Topping }from "./ramen-toppings.js"
 import { ingredients } from "./ingredients.js"
 import { RamenBowl } from "./ramen-bowl.js"
 import { PlayerCharacter } from "../characters/player-character.js";
-import * as helperfunction from "./helper-functions.js"
+import * as helperfunction from "../helper-functions.js"
 //declare global variables for this page
 var character, bowl, finishedBowls;
 
 const miniGame = {};
-
+const kitchenBG = document.getElementById("kitchenBG");
 miniGame.preLoad = function() {
  ingredients.preLoad();
+  
 }
 
 miniGame.load = function() {
@@ -31,7 +32,7 @@ miniGame.play = function() {
     
   }
   // All drawing
-  helperfunction.background();
+  helperfunction.background(kitchenBG);
   character.render();
   bowl.render();
   

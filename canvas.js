@@ -63,7 +63,10 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 	window.requestAnimationFrame(loop)
 }
 
-
+function StartGame(){
+  
+  
+}
 
 
 

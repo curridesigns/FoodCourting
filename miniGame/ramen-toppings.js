@@ -1,5 +1,5 @@
 import { canvas, ctx, frameCount } from "../canvas.js";
-import { dist } from "./helper-functions.js";
+import { dist } from "../helper-functions.js";
 
 class Topping {
   constructor(tempName, tempX, tempY, tempImage, tempColor) {
