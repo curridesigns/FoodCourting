@@ -15,7 +15,7 @@ function keyUpHandler(event){
 }
 
 function onClick(event){
-  splashScreen.click();
+  splashScreen.click(event);
 }
 
 export { keyDownHandler, keyUpHandler, onClick }

@@ -21,7 +21,7 @@ let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
 var StartGame = false;
-const splashScreenBG = document.getElementById("splashScreen");
+
 
 function setup(){
   // background();
