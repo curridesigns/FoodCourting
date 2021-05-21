@@ -10,13 +10,12 @@ splashScreen.load = function(){
   helperFunction.background(splashScreen.bg)
   ctx.fillStyle = "#f9cb9cff"
   ctx.fillRect(200,800,300,100);
+  splashScreen.click();
 }
 
 
-splashScreen.click = function(event){
-  if(mouse){
-    
-  }
+splashScreen.click = function(){
+  console.log(event.clientX);
 }
 
 export { splashScreen };
