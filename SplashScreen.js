@@ -14,7 +14,7 @@ splashScreen.load = function(){
 
 
 splashScreen.click = function(event){
-  if(true){
+  if(mouse){
     
   }
 }
