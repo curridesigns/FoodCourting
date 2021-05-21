@@ -20,7 +20,7 @@ document.addEventListener('click', onClick, false);
 let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
-var StartGame = true;
+var StartGame = false;
 const splashScreenBG = document.getElementById("splashScreen");
 
 function setup(){
@@ -37,7 +37,7 @@ function draw () {
   if(StartGame){
     miniGame.play();
   } else {
-    SplashScreen();
+    splashScreen.load();
   }
   //console.log(frameCount);
   
@@ -70,10 +70,6 @@ function loop (time) { // Add the time parameter, and requestAnimation frame fil
 	window.requestAnimationFrame(loop)
 }
 
-function SplashScreen(){
-  helperFunction.background(splashScreenBG)
-  
-}
 
 
 

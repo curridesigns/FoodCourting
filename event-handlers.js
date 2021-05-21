@@ -1,4 +1,5 @@
 import { character } from "./miniGame/mini-game.js";
+import { splashScreen } from "./SplashScreen.js"
 
 
 
@@ -14,7 +15,7 @@ function keyUpHandler(event){
 }
 
 function onClick(event){
-  
+  splashScreen.click();
 }
 
 export { keyDownHandler, keyUpHandler, onClick }
