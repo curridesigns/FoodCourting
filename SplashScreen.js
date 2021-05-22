@@ -15,7 +15,9 @@ splashScreen.load = function(){
 
 
 splashScreen.click = function(event){
-  console.log(helperFunction.getMouseCoordinates(event).x);
-}
+  if(helperFunction.getMouseCoordinates(event).x > 200 && helperFunction.getMouseCoordinates(event).x < 500 && helperFunction.getMouseCoordinates(event).y > 800 && helperFunction.getMouseCoordinates(event).y > 900){
+    console.log("hello");
+  }
+ }
 
 export { splashScreen };
