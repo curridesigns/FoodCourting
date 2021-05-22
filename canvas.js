@@ -41,7 +41,7 @@ function draw () {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame){
     endScreen.load();
-    
+    miniGame.finishedBowls = 0;
   }
   
   //console.log(frameCount);
