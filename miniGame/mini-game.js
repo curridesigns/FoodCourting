@@ -1,6 +1,7 @@
 //This is the main file for the miniGame. All of the miniGame functions are called here, in order to help keep the canvas.js functions cleaner. All of the necessary files and functions can be found in this folder; except for PlayerCharacter, which can be found in the characters folder.
 //import all the necessary files and function
 import { canvas, ctx, frameCount } from "../canvas.js";
+import { endScreen } from "../EndScreen."
 import { Topping } from "./ramen-toppings.js";
 import { ingredients } from "./ingredients.js";
 import { RamenBowl } from "./ramen-bowl.js";
@@ -11,6 +12,8 @@ var character, bowl;
 
 const miniGame = {};
 const kitchenBG = document.getElementById("kitchenBG");
+const bowlImage = document.getElementById("bowl");
+
 miniGame.preLoad = function() {
   ingredients.preLoad();
   
@@ -19,7 +22,7 @@ miniGame.preLoad = function() {
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
-  bowl = new RamenBowl(385, 588);
+  bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
   
 };
@@ -34,7 +37,9 @@ miniGame.play = function() {
   character.render();
   bowl.render();
   ingredients.renderStarterIngredients();
-  ingredients.finishBowl();
+  if (ingredients.finishBowl()){
+    endScreen.endGame = true;
+  }
 
   //debug purposes only
   if (frameCount % 10 === 0) {

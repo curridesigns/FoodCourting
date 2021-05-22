@@ -128,12 +128,14 @@ ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     ingredients.reset();
     ingredients.finishedBowls+=1;
-    
-    
   }
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
   ctx.fillText(ingredients.finishedBowls, 1720, 100);
+  if(ingredients.finishedBowls === 2){
+    return true;
+  }
+  return false;
 };
 
 // ingredients.bowlComplete = function() {

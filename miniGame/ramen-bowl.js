@@ -3,10 +3,11 @@ import { dist, randomRange } from "../helper-functions.js";
 import { ingredients } from "./ingredients.js";
 
 export class RamenBowl {
-  constructor(tempX, tempY) {
+  constructor(tempX, tempY, tempImage) {
     this.pos = { x: tempX, y: tempY };
     this.size = 40;
     this.color = "purple";
+    this.image = tempImage
     this.lives = 3;
     this.bowlIngredients = [];
     this.turnedInIngredients = [];
@@ -14,9 +15,13 @@ export class RamenBowl {
   }
 
   render() {
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
-    this.renderIngredients();
+    if(!this.image) {
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.pos.x, this.pos.y, this.size, this.size);
+    } else {
+      ctx.drawImage(this.image, this.pos.x, this.pos.y);
+    }
+    //this.renderIngredients();
   }
 
   characterNear(characterPOS) {
