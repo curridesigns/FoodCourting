@@ -21,6 +21,16 @@ endScreen.load = function() {
 };
 
 endScreen.click = function(event) {
+  if (
+    helperFunction.button(
+      buttons.start.top,
+      buttons.start.bottom,
+      buttons.start.left,
+      buttons.start.right
+    )
+  ) {
+    endScreen.endGame = false;
+  }
 };
 
 export { endScreen };

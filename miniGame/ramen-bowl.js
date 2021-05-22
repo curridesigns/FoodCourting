@@ -21,7 +21,7 @@ export class RamenBowl {
     } else {
       ctx.drawImage(this.image, this.pos.x, this.pos.y);
     }
-    //this.renderIngredients();
+    this.renderIngredients();
   }
 
   characterNear(characterPOS) {

@@ -35,11 +35,14 @@ function setup(){
 function draw () {
   
   
-  if(splashScreen.startGame){
+  if(splashScreen.startGame && !endScreen.endGame){
     miniGame.play();
-  } else {
+  } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
+  } else if (splashScreen.startGame && endScreen.endGame){
+    endScreen.load();
   }
+  
   //console.log(frameCount);
   
   // noodles.selected(character.pos);

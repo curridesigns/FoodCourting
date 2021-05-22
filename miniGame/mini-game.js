@@ -1,7 +1,7 @@
 //This is the main file for the miniGame. All of the miniGame functions are called here, in order to help keep the canvas.js functions cleaner. All of the necessary files and functions can be found in this folder; except for PlayerCharacter, which can be found in the characters folder.
 //import all the necessary files and function
 import { canvas, ctx, frameCount } from "../canvas.js";
-import { endScreen } from "../EndScreen."
+import { endScreen } from "../EndScreen.js";
 import { Topping } from "./ramen-toppings.js";
 import { ingredients } from "./ingredients.js";
 import { RamenBowl } from "./ramen-bowl.js";
