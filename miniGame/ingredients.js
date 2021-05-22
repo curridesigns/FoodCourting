@@ -25,9 +25,7 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
 
 ingredients.reset = function(){
   for(let i = 0; i<ingredients.availableIngredients.length;i++){
-    for(let j = 1; j < ingredients.availableIngredient[i].length; j++){
-      ingredients.
-    }
+      ingredients.availableIngredients[i].splice(1); //removes all elements from the array after the first one
     ingredients.availableIngredients[i].push(
           new Topping(
             ingredients.availableIngredients[i][0].name,
@@ -43,7 +41,9 @@ ingredients.reset = function(){
 }
 
 ingredients.checkMatch = function(checkObj) {
-  if (checkObj.name === bowl.bowlIngredients[ingredients.checkIndex].name) {
+  if (bowl.bowlIngredients[ingredients.checkIndex] === undefined){
+    return false;
+  } else if (checkObj.name === bowl.bowlIngredients[ingredients.checkIndex].name) {
     ingredients.checkIndex++;
     return true;
   }
