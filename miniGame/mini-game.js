@@ -13,6 +13,7 @@ const miniGame = {};
 const kitchenBG = document.getElementById("kitchenBG");
 miniGame.preLoad = function() {
   ingredients.preLoad();
+  
 };
 
 miniGame.load = function() {
