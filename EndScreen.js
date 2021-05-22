@@ -29,7 +29,7 @@ endScreen.click = function(event) {
       buttons.start.right
     )
   ) {
-    endScreen.startGame = true;
+    endScreen.endGame = true;
   }
 };
 
