@@ -2,6 +2,7 @@ import { miniGame } from "./miniGame/mini-game.js";
 import { keyDownHandler, keyUpHandler, onClick } from "./event-handlers.js"
 import * as helperFunction from "./helper-functions.js"
 import { splashScreen } from "./SplashScreen.js"
+import { endScreen } from "./EndScreen.js"
 
 
 const canvas = document.querySelector('#gameCanvas');
