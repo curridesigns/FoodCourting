@@ -20,7 +20,14 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
   //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
 ];
+  ingredients.finishedBowls = 0;
+};
+
+ingredients.reset = function(){
   for(let i = 0; i<ingredients.availableIngredients.length;i++){
+    for(let j = 1; j < ingredients.availableIngredient[i].length; j++){
+      ingredients.
+    }
     ingredients.availableIngredients[i].push(
           new Topping(
             ingredients.availableIngredients[i][0].name,
@@ -32,6 +39,7 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
         );
   }
   ingredients.checkIndex = 0;
+  bowl.generateBowl();
 }
 
 ingredients.checkMatch = function(checkObj) {
@@ -118,9 +126,9 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
 ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
-    bowl.generateBowl();
-    finishedBowls+=1;
-    ingredients.checkIndex = 0;
+    ingredients.reset();
+    ingredients.finishedBowls+=1;
+    
     
   }
   ctx.font = "48px ariel";
