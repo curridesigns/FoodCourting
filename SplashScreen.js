@@ -14,8 +14,8 @@ splashScreen.load = function(){
 }
 
 
-splashScreen.click = function(){
-  console.log(event.clientX/window.innerWidth, event.clientY);
+splashScreen.click = function(event){
+  console.log(helperFunction.getMouseCoordinates(event).x);
 }
 
 export { splashScreen };
