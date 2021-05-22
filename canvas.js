@@ -41,6 +41,7 @@ function draw () {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame){
     endScreen.load();
+    
   }
   
   //console.log(frameCount);

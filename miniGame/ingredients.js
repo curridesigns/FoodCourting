@@ -3,7 +3,7 @@
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "../helper-functions.js";
 import { canvas, ctx } from "../canvas.js";
-import { bowl } from "./mini-game.js";
+import { bowl, miniGame } from "./mini-game.js";
 
 const ingredients = {};
 
@@ -127,12 +127,12 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     ingredients.reset();
-    ingredients.finishedBowls+=1;
+    miniGame.finishedBowls+=1;
   }
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
   ctx.fillText(ingredients.finishedBowls, 1720, 100);
-  if(ingredients.finishedBowls === 2){
+  if(miniGame.finishedBowls === 1){
     return true;
   }
   return false;

@@ -9,6 +9,7 @@ endScreen.endGame = false;
 const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
 
 endScreen.load = function() {
+  
   helperFunction.background(endScreen.bg);
   ctx.fillStyle = "#f9cb9cff";
   ctx.fillRect(
@@ -30,6 +31,7 @@ endScreen.click = function(event) {
     )
   ) {
     endScreen.endGame = false;
+    console.log("hello")
   }
 };
 
