@@ -125,7 +125,7 @@ ingredients.finishBowl = function (finishedBowls){
   }
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
-  ctx.fillText(finishedBowls, 1720, 100);
+  ctx.fillText(ingredients.finishedBowls, 1720, 100);
 };
 
 // ingredients.bowlComplete = function() {

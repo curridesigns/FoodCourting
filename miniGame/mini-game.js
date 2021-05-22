@@ -7,7 +7,7 @@ import { RamenBowl } from "./ramen-bowl.js"
 import { PlayerCharacter } from "../characters/player-character.js";
 import * as helperFunction from "../helper-functions.js"
 //declare global variables for this page
-var character, bowl, finishedBowls;
+var character, bowl;
 
 const miniGame = {};
 const kitchenBG = document.getElementById("kitchenBG");
@@ -35,9 +35,9 @@ miniGame.play = function() {
   character.render();
   bowl.render();
   ingredients.renderStarterIngredients();
-  ingredients.finishBowl(finishedBowls);
+  ingredients.finishBowl();
 };
 
 
 
-export { miniGame, character, bowl, finishedBowls }
+export { miniGame, character, bowl}
