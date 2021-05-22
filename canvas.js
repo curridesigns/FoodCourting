@@ -20,7 +20,7 @@ document.addEventListener('click', onClick, false);
 let lastTime = 0
 let aggregatedTime = 0
 const frameRateInMillis =  1000/20 // 30 FPS
-var StartGame = false;
+// var startGame = false;
 
 
 function setup(){
@@ -34,7 +34,7 @@ function setup(){
 function draw () {
   
   
-  if(StartGame){
+  if(splashScreen.startGame){
     miniGame.play();
   } else {
     splashScreen.load();

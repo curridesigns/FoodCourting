@@ -1,10 +1,11 @@
-import { canvas, ctx, frameCount }  from "../canvas.js";
+import { canvas, ctx, frameCount}  from "../canvas.js";
 import * as helperFunction from "./helper-functions.js";
 
 
 const splashScreen = {};
 
 splashScreen.bg = document.getElementById("splashScreen");
+splashScreen.startGame = false;
 
 splashScreen.load = function(){
   helperFunction.background(splashScreen.bg)
@@ -15,8 +16,8 @@ splashScreen.load = function(){
 
 
 splashScreen.click = function(event){
-  if(helperFunction.getMouseCoordinates(event).x > 200 && helperFunction.getMouseCoordinates(event).x < 500 && helperFunction.getMouseCoordinates(event).y > 800 && helperFunction.getMouseCoordinates(event).y > 900){
-    console.log("hello");
+  if(helperFunction.button(800,900,200,500)){
+    splashScreen.startGame = true;
   }
  }
 

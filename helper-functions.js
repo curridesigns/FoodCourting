@@ -17,8 +17,6 @@ function randomRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function button() {}
-
 function getMouseCoordinates(event) {
   var rect = canvas.getBoundingClientRect(),
     scaleX = canvas.width / rect.width,
@@ -29,4 +27,12 @@ function getMouseCoordinates(event) {
   };
 }
 
-export { background, dist, randomRange, getMouseCoordinates };
+function button(top, bottom, left, right) {
+  if(getMouseCoordinates(event).x > left && getMouseCoordinates(event).x < right && getMouseCoordinates(event).y > top && getMouseCoordinates(event).y < bottom){
+    return true
+  } 
+  return false;
+}
+
+
+export { background, dist, randomRange, getMouseCoordinates, button };
