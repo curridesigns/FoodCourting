@@ -15,7 +15,7 @@ splashScreen.load = function(){
 
 
 splashScreen.click = function(){
-  console.log(window.width, event.clientY);
+  console.log(event.clientX/window.innerWidth, event.clientY);
 }
 
 export { splashScreen };
