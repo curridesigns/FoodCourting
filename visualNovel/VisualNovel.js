@@ -126,4 +126,15 @@ visualNovel.returnToMapClick = function(event, screen){
       }
 }
 
+//this function show ths button for return to map, needs the button object, and what color you want it
+visualNovel.returnToMapRender = function(screen, color){
+  ctx.fillStyle = color;
+  ctx.fillRect(
+    screen.returnToMap.left,
+    screen.returnToMap.top,
+    screen.returnToMap.right - screen.returnToMap.left,
+    screen.returnToMap.bottom - screen.returnToMap.top
+  );
+}
+
 export { visualNovel };

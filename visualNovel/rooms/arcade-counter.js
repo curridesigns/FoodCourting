@@ -16,14 +16,7 @@ arcade.load = function() {
   //character loading should go here
   helperFunction.background(arcade.Reg);
   //dialoge should go here
-  
-  ctx.fillStyle = "#f9cb9c55";
-  ctx.fillRect(
-    buttons.returnToMap.left,
-    buttons.returnToMap.top,
-    buttons.returnToMap.right - buttons.returnToMap.left,
-    buttons.returnToMap.bottom - buttons.returnToMap.top
-  );
+  visualNovel.returnToMapRender(buttons, "#f9cb9c55");
   // endScreen.click();
 };
 
