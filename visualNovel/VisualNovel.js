@@ -135,6 +135,9 @@ visualNovel.returnToMapRender = function(screen, color){
     screen.returnToMap.right - screen.returnToMap.left,
     screen.returnToMap.bottom - screen.returnToMap.top
   );
+  ctx.font = "48px ariel";
+  ctx.fillStyle = 'red'
+  ctx.fillText("Back To The Mall", 1720, 100);
 }
 
 export { visualNovel };

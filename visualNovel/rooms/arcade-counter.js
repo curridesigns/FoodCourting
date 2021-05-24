@@ -14,7 +14,7 @@ const dialogueBoxes = {}
 arcade.load = function() {
   
   helperFunction.background(arcade.bg);
-  chad.render(750,50);
+  chad.render(885,50);
   helperFunction.background(arcade.Reg);
   //dialoge should go here
   visualNovel.returnToMapRender(buttons, "#f9cb9c55");
