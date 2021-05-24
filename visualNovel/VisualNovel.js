@@ -112,4 +112,18 @@ visualNovel.click = function(event) {
   
 };
 
+//this function is for each screen the "screen" is what ever variable the buttons are stored in for the file its in
+visualNovel.returnToMapClick = function(event, screen){
+  if (
+        helperFunction.button(
+          screen.returnToMap.top,
+          screen.returnToMap.bottom,
+          screen.returnToMap.left,
+          screen.returnToMap.right
+        )
+      ) {
+        visualNovel.display = "map";
+      }
+}
+
 export { visualNovel };

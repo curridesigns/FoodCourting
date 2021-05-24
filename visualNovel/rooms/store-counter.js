@@ -1,5 +1,6 @@
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
+import { visualNovel } from "../VisualNovel.js"
 
 const store = {};
 store.bg = document.getElementById("storeBG");
