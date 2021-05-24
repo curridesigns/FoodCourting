@@ -20,6 +20,7 @@ function onClick(event){
   if(!splashScreen.startGame){
   splashScreen.click(event);
   }
+  if()
   if(endScreen.endGame){
     endScreen.click(event);
   }

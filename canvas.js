@@ -3,6 +3,7 @@ import { keyDownHandler, keyUpHandler, onClick } from "./event-handlers.js"
 import * as helperFunction from "./helper-functions.js"
 import { splashScreen } from "./SplashScreen.js"
 import { endScreen } from "./EndScreen.js"
+import { visualNovel } from "./visualNovel/VisualNovel.js"
 
 
 const canvas = document.querySelector('#gameCanvas');
@@ -36,7 +37,8 @@ function draw () {
   
   
   if(splashScreen.startGame && !endScreen.endGame){
-    miniGame.play();
+    visualNovel.load();
+    // miniGame.play();
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame){
