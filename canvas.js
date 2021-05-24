@@ -37,7 +37,7 @@ function draw () {
   
   
   if(splashScreen.startGame && !endScreen.endGame){
-    visualNovel.display = true;
+    
     visualNovel.load();
     // miniGame.play();
   } else if (!splashScreen.startGame && !endScreen.endGame) {

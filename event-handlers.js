@@ -22,7 +22,7 @@ function onClick(event){
   if(!splashScreen.startGame){
   splashScreen.click(event);
   }
-  if(splashScreen.startGame && visualNovel.display){
+  if(visualNovel.display){
     visualNovel.click(event);
   }
   if(endScreen.endGame){
