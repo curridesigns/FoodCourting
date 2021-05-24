@@ -25,9 +25,6 @@ function onClick(event){
   if(visualNovel.display){
     visualNovel.click(event);
   }
-  if(roomDisplay.arcade){
-    
-  }
   if(endScreen.endGame){
     endScreen.click(event);
   }
