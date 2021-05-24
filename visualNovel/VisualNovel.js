@@ -14,13 +14,21 @@ const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy:
 
 visualNovel.load = function() {
   
-  helperFunction.background(visualNovel.bg);
+  
 
   switch(visualNovel.display){
+    case "map":
+      
+      console.log("there")
     case "arcade":
       arcade.load();
       break;
-      case ""
+    case "store":
+      break;
+    case "spicy":
+      break;
+    case "food":
+      break;
   }
 };
 
@@ -57,7 +65,6 @@ visualNovel.click = function(event) {
       buttons.arcade.right
     )
   ) {
-    roomDisplay.arcade = true;
     visualNovel.display = "arcade";
   }
   //sends you to the Food Court to work a shift
@@ -76,4 +83,4 @@ visualNovel.click = function(event) {
   
 }
     
-    export { visualNovel, roomDisplay };
+    export { visualNovel };

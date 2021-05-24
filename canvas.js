@@ -34,7 +34,7 @@ function setup(){
 }
 
 function draw () {
-  
+  console.log(endScreen.endGame);
   
   if(splashScreen.startGame && !endScreen.endGame){
     

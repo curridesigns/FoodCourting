@@ -1,7 +1,7 @@
  import { character } from "./miniGame/mini-game.js";
 import { splashScreen } from "./SplashScreen.js"
 import { endScreen } from "./EndScreen.js"
-import { visualNovel, roomDisplay } from "./visualNovel/VisualNovel.js"
+import { visualNovel } from "./visualNovel/VisualNovel.js"
 
 import * as helperFunction from "./helper-functions.js"
 
@@ -21,12 +21,14 @@ function keyUpHandler(event){
 function onClick(event){
   if(!splashScreen.startGame){
   splashScreen.click(event);
-  }
-  if(visualNovel.display){
+    console.log("hello");
+  }else {
+    if(splashScreen.startGame){
     visualNovel.click(event);
-  }
-  if(endScreen.endGame){
+    }
+    if(endScreen.endGame){
     endScreen.click(event);
+    }
   }
 }
 
