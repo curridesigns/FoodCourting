@@ -10,8 +10,9 @@ const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy:
 arcade.load = function() {
   
   helperFunction.background(arcade.bg);
-  
+  //character loading should go here
   helperFunction.background(arcade.Reg);
+  //dialoge should go here
   
   ctx.fillStyle = "#f9cb9cff";
   ctx.fillRect(

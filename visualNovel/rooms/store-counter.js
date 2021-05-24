@@ -10,8 +10,9 @@ const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy:
 store.load = function() {
   
   helperFunction.background(store.bg);
-  
+  //helperFunction.background();
   helperFunction.background(store.Reg);
+  //dialogue
   
   ctx.fillStyle = "#f9cb9cff";
   ctx.fillRect(
@@ -35,6 +36,5 @@ store.click = function() {
         console.log("store");
       }
 }
-
 
 export { store };

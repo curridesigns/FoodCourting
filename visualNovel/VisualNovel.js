@@ -20,16 +20,21 @@ visualNovel.load = function() {
   //console.log(visualNovel.display);
   //changes what is displayed based on the visualNovel.display machine state
   switch (visualNovel.display) {
+    //displays the map  
     case "map":
       helperFunction.background(visualNovel.bg);
       break;
+    //displays the arcade
     case "arcade":
       arcade.load();
       break;
+    //displays the store
     case "store":
       break;
+    //displays Spicy Take
     case "spicy":
       break;
+    //displays the Food Court
     case "food":
       break;
   }
@@ -38,6 +43,7 @@ visualNovel.load = function() {
 visualNovel.click = function(event) {
   // console.log(helperFunction.getMouseCoordinates(event));
   switch (visualNovel.display) {
+      //runs the click "function" for the map
     case "map":
       //sends you to the store
       if (
@@ -85,13 +91,17 @@ visualNovel.click = function(event) {
       }
       break;
     //console.log("there")
+      //runs the click "function" for the arcade
     case "arcade":
       arcade.click();
       break;
+      //runs the click "function" for the store
     case "store":
       break;
+      //runs the click "function" for Spicy Take
     case "spicy":
       break;
+      //runs the click "function" for the Food Court
     case "food":
       break;
   }
