@@ -22,6 +22,7 @@ visualNovel.load = function() {
 
 visualNovel.click = function(event) {
   console.log(helperFunction.getMouseCoordinates(event));
+  //sends you to the store
   if (
     helperFunction.button(
       buttons.store.top,
@@ -32,6 +33,7 @@ visualNovel.click = function(event) {
   ) {
     console.log("store");
   }
+  //sends you to Spicy Take
   if (
     helperFunction.button(
       buttons.spicy.top,
@@ -42,6 +44,7 @@ visualNovel.click = function(event) {
   ) {
     console.log("spicy");
   }
+  //sends you to the Arcade
   if (
     helperFunction.button(
       buttons.arcade.top,
@@ -53,6 +56,7 @@ visualNovel.click = function(event) {
     visualNovel.arcadeDisplay = true;
     visualNovel.display = false;
   }
+  //sends you to the Food Court to work a shift
   if (
     helperFunction.button(
       buttons.food.top,
