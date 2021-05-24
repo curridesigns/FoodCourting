@@ -39,23 +39,23 @@ visualNovel.click = function(event) {
   }
   if (
     helperFunction.button(
-      buttons.store.top,
-      buttons.store.bottom,
-      buttons.store.left,
-      buttons.store.right
+      buttons.arcade.top,
+      buttons.arcade.bottom,
+      buttons.arcade.left,
+      buttons.arcade.right
     )
   ) {
-    console.log("store");
+    console.log("arcade");
   }
   if (
     helperFunction.button(
-      buttons.store.top,
-      buttons.store.bottom,
-      buttons.store.left,
-      buttons.store.right
+      buttons.food.top,
+      buttons.food.bottom,
+      buttons.food.left,
+      buttons.food.right
     )
   ) {
-    console.log("store");
+    console.log("food court");
   }
   
 }
