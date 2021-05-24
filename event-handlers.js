@@ -21,7 +21,7 @@ function keyUpHandler(event){
 function onClick(event){
   if(!splashScreen.startGame){
   splashScreen.click(event);
-    console.log("hello");
+    
   }else {
     if(splashScreen.startGame){
     visualNovel.click(event);
