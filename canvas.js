@@ -34,10 +34,10 @@ function setup(){
 }
 
 function draw () {
-  console.log(endScreen.endGame);
+  // console.log(endScreen.endGame);
   
   if(splashScreen.startGame && !endScreen.endGame){
-    
+    //console.log("hello there")
     visualNovel.load();
     // miniGame.play();
   } else if (!splashScreen.startGame && !endScreen.endGame) {

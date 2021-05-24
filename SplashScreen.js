@@ -31,7 +31,7 @@ splashScreen.click = function(event) {
     )
   ) {
     splashScreen.startGame = true;
-    visualNovel.display = true;
+    visualNovel.display = "map";
   }
 };
 

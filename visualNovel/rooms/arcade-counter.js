@@ -24,7 +24,16 @@ arcade.load = function() {
 };
 
 arcade.click = function() {
-  
+  if (
+        helperFunction.button(
+          buttons.store.top,
+          buttons.store.bottom,
+          buttons.store.left,
+          buttons.store.right
+        )
+      ) {
+        console.log("store");
+      }
 }
 
 
