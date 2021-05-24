@@ -3,7 +3,7 @@ import * as helperFunction from "../../helper-functions.js";
 
 const store = {};
 store.bg = document.getElementById("storeBG");
-store.Reg = document.getElementById("storeCounter")
+store.Reg = document.getElementById("storeReg")
 
 const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy: { top: 275, bottom: 470, left: 1095, right:  1415}, arcade: { top: 275, bottom: 575, left: 1430, right:  1830}, food: { top: 590, bottom: 870, left: 725, right:  1070} };
 

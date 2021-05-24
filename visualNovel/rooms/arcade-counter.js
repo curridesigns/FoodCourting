@@ -7,6 +7,8 @@ arcade.Reg = document.getElementById("arcadeCounterReg")
 
 const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy: { top: 275, bottom: 470, left: 1095, right:  1415}, arcade: { top: 275, bottom: 575, left: 1430, right:  1830}, food: { top: 590, bottom: 870, left: 725, right:  1070} };
 
+const dialogueBoxes = {returnToMap: { top: 275, bottom: 575, left: 77, right:  710 }}
+
 arcade.load = function() {
   
   helperFunction.background(arcade.bg);
@@ -14,7 +16,7 @@ arcade.load = function() {
   helperFunction.background(arcade.Reg);
   //dialoge should go here
   
-  ctx.fillStyle = "#f9cb9cff";
+  ctx.fillStyle = "#f9cb9c55";
   ctx.fillRect(
     buttons.store.left,
     buttons.store.top,
