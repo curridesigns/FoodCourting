@@ -1,5 +1,6 @@
 import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "./helper-functions.js";
+import { visualNovel } from "./visualNovel/VisualNovel.js"
 
 const splashScreen = {};
 
@@ -30,6 +31,7 @@ splashScreen.click = function(event) {
     )
   ) {
     splashScreen.startGame = true;
+    visualNovel.display = true;
   }
 };
 
