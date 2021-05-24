@@ -1,6 +1,8 @@
  import { character } from "./miniGame/mini-game.js";
 import { splashScreen } from "./SplashScreen.js"
 import { endScreen } from "./EndScreen.js"
+import { visualNovel } from "./visualNovel/VisualNovel.js"
+
 import * as helperFunction from "./helper-functions.js"
 
 
@@ -20,7 +22,9 @@ function onClick(event){
   if(!splashScreen.startGame){
   splashScreen.click(event);
   }
-  if()
+  if(splashScreen.startGame && visualNovel.display){
+    visualNovel.click(event);
+  }
   if(endScreen.endGame){
     endScreen.click(event);
   }

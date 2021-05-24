@@ -7,32 +7,26 @@ visualNovel.bg = document.getElementById("mallMap");
 
 visualNovel.display = false
 
-const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
+const buttons = { store: { top: 350, bottom: 575, left: 77, right:  710} };
 
 visualNovel.load = function() {
   
   helperFunction.background(visualNovel.bg);
-  ctx.fillStyle = "#f9cb9cff";
-  ctx.fillRect(
-    buttons.start.left,
-    buttons.start.top,
-    buttons.start.right - buttons.start.left,
-    buttons.start.bottom - buttons.start.top
-  );
   // endScreen.click();
 };
 
 visualNovel.click = function(event) {
-  console.log(helperFunction.getMouseCoordinates(event));
-  // if (
-  //   helperFunction.button(
-  //     buttons.start.top,
-  //     buttons.start.bottom,
-  //     buttons.start.left,
-  //     buttons.start.right
-  //   )
-  // ) {
-  // }
+  
+  if (
+    helperFunction.button(
+      buttons.store.top,
+      buttons.store.bottom,
+      buttons.store.left,
+      buttons.store.right
+    )
+  ) {
+    console.log("hello");
+  }
 }
     
     export { visualNovel };
