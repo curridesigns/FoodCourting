@@ -1,6 +1,7 @@
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js"
+import { chad } from "../../../characters/Chad.js"
 
 const arcade = {};
 arcade.bg = document.getElementById("arcadeCounterBG");
@@ -13,7 +14,7 @@ const dialogueBoxes = {}
 arcade.load = function() {
   
   helperFunction.background(arcade.bg);
-  //character loading should go here
+  chad.render(750,50);
   helperFunction.background(arcade.Reg);
   //dialoge should go here
   visualNovel.returnToMapRender(buttons, "#f9cb9c55");

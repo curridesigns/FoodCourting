@@ -8,7 +8,7 @@ const visualNovel = {};
 
 visualNovel.bg = document.getElementById("mallMap");
 
-visualNovel.display = "map";
+visualNovel.display = "arcade";
 
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
