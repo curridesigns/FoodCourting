@@ -16,7 +16,7 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
-  
+  console.log(helperFunction.getMouseCoordinates(event));
   if (
     helperFunction.button(
       buttons.store.top,
@@ -25,8 +25,9 @@ visualNovel.click = function(event) {
       buttons.store.right
     )
   ) {
-    console.log("hello");
+    console.log("store");
   }
+  
 }
     
     export { visualNovel };
