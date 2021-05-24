@@ -3,11 +3,12 @@ import * as helperFunction from "../helper-functions.js";
 import { arcade } from "./rooms/arcade-counter.js"
 
 const visualNovel = {};
+const roomDisplay = {store: false, spicy: false, arcade: false, food: false};
+
 
 visualNovel.bg = document.getElementById("mallMap");
 
 visualNovel.display = false;
-visualNovel.arcadeDisplay = false
 
 const buttons = { store: { top: 275, bottom: 575, left: 77, right:  710}, spicy: { top: 275, bottom: 470, left: 1095, right:  1415}, arcade: { top: 275, bottom: 575, left: 1430, right:  1830}, food: { top: 590, bottom: 870, left: 725, right:  1070} };
 
@@ -15,7 +16,7 @@ visualNovel.load = function() {
   
   helperFunction.background(visualNovel.bg);
 
-  if(visualNovel.arcadeDisplay){
+  if(roomDisplay.arcade){
     arcade.load();
   }
 };
@@ -53,7 +54,7 @@ visualNovel.click = function(event) {
       buttons.arcade.right
     )
   ) {
-    visualNovel.arcadeDisplay = true;
+    roomDisplay.arcade = true;
     visualNovel.display = false;
   }
   //sends you to the Food Court to work a shift
@@ -70,4 +71,4 @@ visualNovel.click = function(event) {
   
 }
     
-    export { visualNovel };
+    export { visualNovel, roomDisplay };

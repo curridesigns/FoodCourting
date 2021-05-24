@@ -1,7 +1,7 @@
  import { character } from "./miniGame/mini-game.js";
 import { splashScreen } from "./SplashScreen.js"
 import { endScreen } from "./EndScreen.js"
-import { visualNovel } from "./visualNovel/VisualNovel.js"
+import { visualNovel, roomDisplay } from "./visualNovel/VisualNovel.js"
 
 import * as helperFunction from "./helper-functions.js"
 
@@ -24,6 +24,9 @@ function onClick(event){
   }
   if(visualNovel.display){
     visualNovel.click(event);
+  }
+  if(roomDisplay.arcade){
+    
   }
   if(endScreen.endGame){
     endScreen.click(event);
