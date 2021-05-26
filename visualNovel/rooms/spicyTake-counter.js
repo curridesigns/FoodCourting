@@ -1,6 +1,7 @@
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js"
+import { raven } from "../../../characters/Raven.js"
 
 const spencers = {};
 //spencers.bg = document.getElementById("");
@@ -12,6 +13,7 @@ spencers.load = function() {
   
   //helperFunction.background(spencers.bg);
   //helperFunction.background();
+    raven.render(885,50);
   //helperFunction.background(spencers.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons, "#f9cb9c55");

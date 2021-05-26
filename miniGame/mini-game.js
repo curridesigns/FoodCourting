@@ -40,7 +40,8 @@ miniGame.play = function() {
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()){
-    miniGame.finished = true
+    miniGame.finished = true;
+    console.log("hello");
   }
 
   //debug purposes only

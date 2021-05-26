@@ -39,11 +39,14 @@ function draw () {
   if(splashScreen.startGame && !endScreen.endGame){
     //console.log("hello there")
     visualNovel.load();
+  if(miniGame.finished){
+    visualNovel.miniGame = false;
+    visualNovel.display = "map";
+  }
     if(visualNovel.miniGame){
       miniGame.finished = false;
       miniGame.play();
     }
-  if()
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame){
