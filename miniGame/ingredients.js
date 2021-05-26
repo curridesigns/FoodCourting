@@ -38,7 +38,7 @@ ingredients.reset = function(){
   }
   ingredients.checkIndex = 0;
   bowl.generateBowl();
-  miniGame.finishedBowls = 0;
+  
 }
 
 ingredients.checkMatch = function(checkObj) {
@@ -126,6 +126,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 };
 
 ingredients.finishBowl = function (finishedBowls){
+  //console.log("this is from the ")
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     ingredients.reset();
     miniGame.finishedBowls+=1;

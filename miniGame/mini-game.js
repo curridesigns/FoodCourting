@@ -25,6 +25,7 @@ miniGame.load = function() {
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
+  miniGame.finishedBowls = 0;
   
 };
 
@@ -40,9 +41,7 @@ miniGame.play = function() {
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()){
     miniGame.finished = true;
-    console.log("hello");
   }
-console.log(miniGame.finishedBowls)
   //debug purposes only
   if (frameCount % 10 === 0) {
     
@@ -51,6 +50,7 @@ console.log(miniGame.finishedBowls)
 
 miniGame.reset = function(){
   ingredients.reset();
+  miniGame.finishedBowls = 0;
 }
 
 export { miniGame, character, bowl };

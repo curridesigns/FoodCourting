@@ -48,7 +48,6 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
-  console.log(helperFunction.getMouseCoordinates(event)); 
   
   switch (visualNovel.display) {
       //runs the click "function" for the map
