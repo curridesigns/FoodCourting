@@ -39,17 +39,17 @@ function draw() {
       visualNovel.display = "map";
       miniGame.reset();
       miniGame.finished = false;
-      if (frameCount % 10 === 0) {
-        console.log("there")
-      }
+      // if (frameCount % 10 === 0) {
+      //   console.log("there")
+      // }
     }
     if (visualNovel.miniGame) {
       
       miniGame.play();
       //debug purposes only
-      if (frameCount % 10 === 0) {
-        console.log("hello")
-      }
+      // if (frameCount % 10 === 0) {
+      //   console.log("hello")
+      // }
     }
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();

@@ -42,9 +42,10 @@ miniGame.play = function() {
     miniGame.finished = true;
     console.log("hello");
   }
-
+console.log(miniGame.finishedBowls)
   //debug purposes only
   if (frameCount % 10 === 0) {
+    
   }
 };
 

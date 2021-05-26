@@ -2,6 +2,7 @@ import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 import { arcade } from "./rooms/arcade-counter.js";
 import { store } from "./rooms/store-counter.js";
+import { spicy } from "./rooms/spicyTake-counter.js";
 
 const visualNovel = {};
 // const roomDisplay = {store: false, spicy: false, arcade: false, food: false};
@@ -37,6 +38,7 @@ visualNovel.load = function() {
       break;
     //displays Spicy Take
     case "spicy":
+      spicy.load();
       break;
     //displays the Food Court
     case "food":
@@ -71,7 +73,8 @@ visualNovel.click = function(event) {
           buttons.spicy.right
         )
       ) {
-        console.log("spicy");
+        //console.log("spicy");
+        visualNovel.display = "spicy";
       }
       //sends you to the Arcade
       if (
@@ -107,6 +110,7 @@ visualNovel.click = function(event) {
       break;
       //runs the click "function" for Spicy Take
     case "spicy":
+      spicy.click();
       break;
       //runs the click "function" for the Food Court
     case "food":

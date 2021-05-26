@@ -129,6 +129,7 @@ ingredients.finishBowl = function (finishedBowls){
   if(ingredients.checkIndex === bowl.bowlIngredients.length){
     ingredients.reset();
     miniGame.finishedBowls+=1;
+    
   }
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
