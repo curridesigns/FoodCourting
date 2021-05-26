@@ -110,6 +110,7 @@ visualNovel.click = function(event) {
       break;
       //runs the click "function" for the Food Court
     case "food":
+      visualNovel.miniGame = true;
       break;
   }
   

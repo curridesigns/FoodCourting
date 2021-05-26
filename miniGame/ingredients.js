@@ -38,6 +38,7 @@ ingredients.reset = function(){
   }
   ingredients.checkIndex = 0;
   bowl.generateBowl();
+  miniGame.finishedBowls = 0;
 }
 
 ingredients.checkMatch = function(checkObj) {
@@ -131,8 +132,8 @@ ingredients.finishBowl = function (finishedBowls){
   }
   ctx.font = "48px ariel";
   ctx.fillStyle = 'red'
-  ctx.fillText(ingredients.finishedBowls, 1720, 100);
-  if(miniGame.finishedBowls === 1){
+  ctx.fillText(miniGame.finishedBowls, 1720, 100);
+  if(miniGame.finishedBowls === 2){
     return true;
   }
   return false;

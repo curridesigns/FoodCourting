@@ -24,7 +24,6 @@ miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588, bowlImage);
-  miniGame.finishedBowls = 0;
   ingredients.reset();
   
 };
@@ -48,5 +47,9 @@ miniGame.play = function() {
   if (frameCount % 10 === 0) {
   }
 };
+
+miniGame.reset = function(){
+  ingredients.reset();
+}
 
 export { miniGame, character, bowl };
