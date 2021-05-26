@@ -10,6 +10,8 @@ visualNovel.bg = document.getElementById("mallMap");
 
 visualNovel.display = "arcade";
 
+visualNovel.miniGame = false;
+
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
   spicy: { top: 275, bottom: 470, left: 1095, right: 1415 },
@@ -38,6 +40,7 @@ visualNovel.load = function() {
       break;
     //displays the Food Court
     case "food":
+      visualNovel.miniGame = true;
       break;
   }
 };
@@ -90,7 +93,7 @@ visualNovel.click = function(event) {
           buttons.food.right
         )
       ) {
-        console.log("food court");
+        visualNovel.display = "food";
       }
       break;
     //console.log("there")

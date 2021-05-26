@@ -14,7 +14,6 @@ const miniGame = {};
 const kitchenBG = document.getElementById("kitchenBG");
 const bowlImage = document.getElementById("bowl");
 
-let play = false;
 
 miniGame.preLoad = function() {
   ingredients.preLoad();
@@ -41,7 +40,7 @@ miniGame.play = function() {
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()){
-    endScreen.endGame = true;
+    return true;
   }
 
   //debug purposes only
@@ -49,4 +48,4 @@ miniGame.play = function() {
   }
 };
 
-export { miniGame, character, bowl, play };
+export { miniGame, character, bowl };
