@@ -10,7 +10,7 @@ const ingredients = {};
 //TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
-ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg"), sea420: document.getElementById("sea420"), spawn: document.getElementById("spawn"), swirly: document.getElementById("swirly") };
+ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg"), sea420: document.getElementById("sea420"), spawn: document.getElementById("spawn"), swirly: document.getElementById("swirly"), noods: document.getElementById("noods") };
   
   ingredients.availableIngredients = [
   [new Topping("mushroom", 750, 100, ingredients.images.mushroom, "#FAC600")],
@@ -18,7 +18,7 @@ ingredients.images = { mushroom: document.getElementById("mush"), egg: document.
   [new Topping("sea420", 750, 575, ingredients.images.sea420, "#59A8F7")],
   [new Topping("spawn", 950, 575, ingredients.images.spawn, "#FF9652")],
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
-  //[new Topping("menma", 300, 600, ingredients.images.mushroom, "#4EFAEC")]
+  [new Topping("noodles", 950, 1000, ingredients.images.noods, "#4EFAEC")]
 ];
   ingredients.finishedBowls = 0;
 };
