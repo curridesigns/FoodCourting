@@ -40,8 +40,10 @@ function draw () {
     //console.log("hello there")
     visualNovel.load();
     if(visualNovel.miniGame){
-      if(miniGame.play()) {visualNovel.miniGame = false};
+      miniGame.finished = false;
+      miniGame.play();
     }
+  if()
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame){
