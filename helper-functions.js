@@ -34,5 +34,7 @@ function button(top, bottom, left, right) {
   return false;
 }
 
+function dialogueBoxes(top, bottom, left, right, )
+
 
 export { background, dist, randomRange, getMouseCoordinates, button };
