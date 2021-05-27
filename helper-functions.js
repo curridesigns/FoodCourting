@@ -28,13 +28,19 @@ function getMouseCoordinates(event) {
 }
 
 function button(top, bottom, left, right) {
-  if(getMouseCoordinates(event).x > left && getMouseCoordinates(event).x < right && getMouseCoordinates(event).y > top && getMouseCoordinates(event).y < bottom){
-    return true
-  } 
+  if (
+    getMouseCoordinates(event).x > left &&
+    getMouseCoordinates(event).x < right &&
+    getMouseCoordinates(event).y > top &&
+    getMouseCoordinates(event).y < bottom
+  ) {
+    return true;
+  }
   return false;
 }
 
-function dialogueBoxes(top, bottom, left, right, )
-
+//requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
+//from the
+function dialogueBoxes(boxObj, stringObj) {}
 
 export { background, dist, randomRange, getMouseCoordinates, button };
