@@ -17,6 +17,7 @@ spicy.load = function() {
   helperFunction.background(spicy.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons, "#f9cb9c55");
+  raven.dialogueRender();
   // endScreen.click();
 };
 

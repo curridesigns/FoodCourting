@@ -42,19 +42,19 @@ function button(top, bottom, left, right) {
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
 function dialogueBoxes(boxObj, stringObj, ctx) {
-  wrapText(ctx, stringObj.npc, boxObj.left-20, boxObj.top-20, 50, 25)
+  wrapText(ctx, stringObj.npc, boxObj.left-20, boxObj.top-20, boxObj.right, 50);
 }
 
-function wrapText(context, text, x, y, maxWidth, lineHeight) {
+function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
         var words = text.split(' ');
         var line = '';
 
         for(var n = 0; n < words.length; n++) {
           var testLine = line + words[n] + ' ';
-          var metrics = context.measureText(testLine);
+          var metrics = ctx.measureText(testLine);
           var testWidth = metrics.width;
           if (testWidth > maxWidth && n > 0) {
-            context.fillText(line, x, y);
+            ctx.fillText(line, x, y);
             line = words[n] + ' ';
             y += lineHeight;
           }
@@ -62,6 +62,8 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
             line = testLine;
           }
         }
-        context.fillText(line, x, y);
+        ctx.font = "48px ariel";
+        ctx.fillStyle = 'red';
+        ctx.fillText(line, x, y);
       }
-export { background, dist, randomRange, getMouseCoordinates, button };
+export { background, dist, randomRange, getMouseCoordinates, button, dialogueBoxes };

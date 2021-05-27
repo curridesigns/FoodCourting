@@ -20,8 +20,11 @@ raven.render = function(tempX, tempY){
   
 }
 
-raven.dialogue = function(){
-  
+raven.dialogue = {firstDay: {greeting: {npc: "Heya, player! How was your time off?"} }}
+raven.dialogueBoxes = {main: {top: 1000, bottom: 1500, left: 100, right:500 }}
+
+raven.dialogueRender = function(){
+  helperFunction.dialogueBoxes(raven.dialogueBoxes.main, raven.dialogue.firstDay.greeting, ctx);
 }
 
 export { raven }
