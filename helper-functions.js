@@ -40,7 +40,7 @@ function button(top, bottom, left, right) {
 }
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
-//from the
+//for the NPC, and the player object text
 function dialogueBoxes(boxObj, stringObj) {}
 
 export { background, dist, randomRange, getMouseCoordinates, button };
