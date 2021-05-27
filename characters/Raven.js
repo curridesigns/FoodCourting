@@ -20,5 +20,8 @@ raven.render = function(tempX, tempY){
   
 }
 
+raven.dialogue = function(){
+  
+}
 
 export { raven }
