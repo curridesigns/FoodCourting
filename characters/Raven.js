@@ -52,9 +52,9 @@ raven.dialogue = {
 raven.dialogueBoxes = {
   main: { top: 700, bottom: 900, left: 100, right: 1000 },
   choices: {
-    a: { top: 1000, bottom: 1100, left: 100, right: 400 },
-    b: { top: 1000, bottom: 1100, left: 450, right: 750 },
-    c: { top: 1000, bottom: 1100, left: 800, right: 1100 },
+    a: { top: 920, bottom: 1020, left: 100, right: 400 },
+    b: { top: 920, bottom: 1020, left: 450, right: 750 },
+    c: { top: 920, bottom: 1020, left: 800, right: 1100 }
   },
   color: "#f9cb9ccc"
 };
@@ -64,9 +64,18 @@ raven.dialogueRender = function() {
     raven.dialogueBoxes.main,
     raven.dialogueBoxes.color
   );
+  helperFunction.button.render(
+    raven.dialogueBoxes.choices.a,
+    raven.dialogueBoxes.color
+  );
   helperFunction.dialogueBoxes(
     raven.dialogueBoxes.main,
-    raven.dialogue.firstDay.greeting,
+    raven.dialogue.firstDay.greeting.npc,
+    ctx
+  );
+  helperFunction.dialogueBoxes(
+    raven.dialogueBoxes.choices.a,
+    raven.dialogue.firstDay.greeting.choice1.a,
     ctx
   );
 };
