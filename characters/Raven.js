@@ -50,7 +50,7 @@ raven.dialogue = {
 
 */
 raven.dialogueBoxes = {
-  main: { top: 700, bottom: 900, left: 100, right: 1000 },
+  main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
     b: { top: 920, bottom: 1020, left: 450, right: 750 },
@@ -67,6 +67,7 @@ raven.dialogueRender = function() {
   helperFunction.dialogueBoxes(
     raven.dialogueBoxes.main,
     raven.dialogue.firstDay.greeting.npc,
+    "48px",
     ctx
   );
   
@@ -78,6 +79,7 @@ raven.dialogueRender = function() {
   helperFunction.dialogueBoxes(
     raven.dialogueBoxes.choices[prop],
     raven.dialogue.firstDay.greeting.choice1[prop],
+    "24px",
     ctx
   );
   }

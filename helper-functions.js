@@ -51,11 +51,11 @@ button.click = function(boxObj) {
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
-function dialogueBoxes(boxObj, stringObj, ctx) {
-  wrapText(ctx, stringObj, boxObj.left+40, boxObj.top+60, boxObj.right, 50);
+function dialogueBoxes(boxObj, stringObj, size, ctx) {
+  wrapText(ctx, stringObj, boxObj.left+40, boxObj.top+60, boxObj.right, 50, size);
 }
 
-function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
         var words = text.split(' ');
         var line = '';
 
@@ -72,7 +72,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
             line = testLine;
           }
         }
-        ctx.font = "48px ariel";
+        ctx.font = size + " ariel";
         ctx.fillStyle = 'red';
         ctx.fillText(line, x, y);
       }
