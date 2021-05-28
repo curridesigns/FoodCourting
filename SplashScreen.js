@@ -32,7 +32,7 @@ splashScreen.click = function(event) {
     )
   ) {
     splashScreen.startGame = true;
-    visualNovel.display = "map";
+    visualNovel.display = "spicy";
     splashFrameRendered = false;
   }
 };

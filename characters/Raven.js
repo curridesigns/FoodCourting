@@ -23,24 +23,24 @@ raven.render = function(tempX, tempY) {
 };
 
 raven.dialogue = {
-  firstDay: { greeting: { npc: "Heya, player! How was your time off?" } },
+  firstDay: { greeting: { npc: "Heya, player! How was your time off?", } },
   color: 'red',
 };
 /*
 
 */
 raven.dialogueBoxes = {
-  main: { top: 800, bottom: 1500, left: 100, right: 1000 },
-  color: "#f9cb9c55",
+  main: { top: 700, bottom: 900, left: 100, right: 1000 },
+  color: "#f9cb9ccc",
 };
 
 raven.dialogueRender = function() {
+  helperFunction.button.render(raven.dialogueBoxes.main, raven.dialogueBoxes.color);
   helperFunction.dialogueBoxes(
     raven.dialogueBoxes.main,
     raven.dialogue.firstDay.greeting,
     ctx
   );
-  helperFunction.button.render(raven.dialogueBoxes.main, );
 };
 
 export { raven };
