@@ -13,8 +13,6 @@ canvas {
   height: 1080px;
   image-rendering: pixelated;
   position: absolute;
-   align-content: center;
-  
 }
 
 @media (orientation: landscape) {

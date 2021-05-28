@@ -28,6 +28,7 @@ raven.dialogueBoxes = {main: {top: 800, bottom: 1500, left: 100, right: 1000 }}
 
 raven.dialogueRender = function(){
   helperFunction.dialogueBoxes(raven.dialogueBoxes.main, raven.dialogue.firstDay.greeting, ctx);
+  
 }
 
 export { raven }
