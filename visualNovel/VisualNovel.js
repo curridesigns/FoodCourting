@@ -52,48 +52,20 @@ visualNovel.click = function(event) {
     //runs the click "function" for the map
     case "map":
       //sends you to the store
-      if (
-        helperFunction.button(
-          buttons.store.top,
-          buttons.store.bottom,
-          buttons.store.left,
-          buttons.store.right
-        )
-      ) {
+      if (helperFunction.button.click(buttons.store)) {
         visualNovel.display = "store";
       }
       //sends you to Spicy Take
-      if (
-        helperFunction.button(
-          buttons.spicy.top,
-          buttons.spicy.bottom,
-          buttons.spicy.left,
-          buttons.spicy.right
-        )
-      ) {
+      if (helperFunction.button.click(buttons.spicy)) {
         //console.log("spicy");
         visualNovel.display = "spicy";
       }
       //sends you to the Arcade
-      if (
-        helperFunction.button(
-          buttons.arcade.top,
-          buttons.arcade.bottom,
-          buttons.arcade.left,
-          buttons.arcade.right
-        )
-      ) {
+      if (helperFunction.button.click(buttons.arcade)) {
         visualNovel.display = "arcade";
       }
       //sends you to the Food Court to work a shift
-      if (
-        helperFunction.button(
-          buttons.food.top,
-          buttons.food.bottom,
-          buttons.food.left,
-          buttons.food.right
-        )
-      ) {
+      if (helperFunction.button.click(buttons.food)) {
         visualNovel.display = "food";
       }
       break;
@@ -119,27 +91,14 @@ visualNovel.click = function(event) {
 
 //this function is for each screen the "screen" is what ever variable the buttons are stored in for the file its in
 visualNovel.returnToMapClick = function(event, boxObj) {
-  if (
-    helperFunction.button.click(
-      boxObj.top,
-      boxObj.bottom,
-      boxObj.left,
-      boxObj.right
-    )
-  ) {
+  if (helperFunction.button.click(boxObj)) {
     visualNovel.display = "map";
   }
 };
 
 //this function show ths button for return to map, needs the button object, and what color you want it
 visualNovel.returnToMapRender = function(boxObj, color) {
-  helperFunction.button.render(
-    boxObj.top,
-    boxObj.bottom,
-    boxObj.left,
-    boxObj.right,
-    color
-  );
+  helperFunction.button.render(boxObj, color);
   ctx.font = "48px ariel";
   ctx.fillStyle = "red";
   ctx.fillText("Back To The Mall", 1720, 100);

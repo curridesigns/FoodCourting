@@ -52,7 +52,7 @@ button.click = function(boxObj) {
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
 function dialogueBoxes(boxObj, stringObj, ctx) {
-  wrapText(ctx, stringObj.npc, boxObj.left-20, boxObj.top-20, boxObj.right, 50);
+  wrapText(ctx, stringObj.npc, boxObj.left+40, boxObj.top+40, boxObj.right, 50);
 }
 
 function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
