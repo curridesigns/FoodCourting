@@ -64,20 +64,23 @@ raven.dialogueRender = function() {
     raven.dialogueBoxes.main,
     raven.dialogueBoxes.color
   );
-  helperFunction.button.render(
-    raven.dialogueBoxes.choices.a,
-    raven.dialogueBoxes.color
-  );
   helperFunction.dialogueBoxes(
     raven.dialogueBoxes.main,
     raven.dialogue.firstDay.greeting.npc,
     ctx
   );
+  
+  for (const prop in raven.dialogue.firstDay.greeting.choice1) {
+    helperFunction.button.render(
+    raven.dialogueBoxes.choices[prop],
+    raven.dialogueBoxes.color
+  );
   helperFunction.dialogueBoxes(
-    raven.dialogueBoxes.choices.a,
-    raven.dialogue.firstDay.greeting.choice1.a,
+    raven.dialogueBoxes.choices[prop],
+    raven.dialogue.firstDay.greeting.choice1[prop],
     ctx
   );
+  }
 };
 
 export { raven };
