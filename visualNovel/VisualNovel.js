@@ -24,7 +24,7 @@ visualNovel.load = function() {
   //console.log(visualNovel.display);
   //changes what is displayed based on the visualNovel.display machine state
   switch (visualNovel.display) {
-    //displays the map  
+    //displays the map
     case "map":
       helperFunction.background(visualNovel.bg);
       break;
@@ -48,9 +48,8 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
-  
   switch (visualNovel.display) {
-      //runs the click "function" for the map
+    //runs the click "function" for the map
     case "map":
       //sends you to the store
       if (
@@ -99,52 +98,51 @@ visualNovel.click = function(event) {
       }
       break;
     //console.log("there")
-      //runs the click "function" for the arcade
+    //runs the click "function" for the arcade
     case "arcade":
       arcade.click();
       break;
-      //runs the click "function" for the store
+    //runs the click "function" for the store
     case "store":
       store.click();
       break;
-      //runs the click "function" for Spicy Take
+    //runs the click "function" for Spicy Take
     case "spicy":
       spicy.click();
       break;
-      //runs the click "function" for the Food Court
+    //runs the click "function" for the Food Court
     case "food":
       visualNovel.miniGame = true;
       break;
   }
-  
 };
 
 //this function is for each screen the "screen" is what ever variable the buttons are stored in for the file its in
-visualNovel.returnToMapClick = function(event, screen){
+visualNovel.returnToMapClick = function(event, screen) {
   if (
-        helperFunction.button(
-          screen.returnToMap.top,
-          screen.returnToMap.bottom,
-          screen.returnToMap.left,
-          screen.returnToMap.right
-        )
-      ) {
-        visualNovel.display = "map";
-      }
-}
+    helperFunction.button.click(
+      screen.returnToMap.top,
+      screen.returnToMap.bottom,
+      screen.returnToMap.left,
+      screen.returnToMap.right
+    )
+  ) {
+    visualNovel.display = "map";
+  }
+};
 
 //this function show ths button for return to map, needs the button object, and what color you want it
-visualNovel.returnToMapRender = function(screen, color){
-  ctx.fillStyle = color;
-  ctx.fillRect(
-    screen.returnToMap.left,
+visualNovel.returnToMapRender = function(screen, color) {
+  helperFunction.button.render(
     screen.returnToMap.top,
-    screen.returnToMap.right - screen.returnToMap.left,
-    screen.returnToMap.bottom - screen.returnToMap.top
+    screen.returnToMap.bottom,
+    screen.returnToMap.left,
+    screen.returnToMap.right,
+    color
   );
   ctx.font = "48px ariel";
-  ctx.fillStyle = 'red'
+  ctx.fillStyle = "red";
   ctx.fillText("Back To The Mall", 1720, 100);
-}
+};
 
 export { visualNovel };

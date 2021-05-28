@@ -27,7 +27,17 @@ function getMouseCoordinates(event) {
   };
 }
 
-function button(top, bottom, left, right) {
+const button = {};
+button.render = function(boxObj, color){
+  ctx.fillStyle = color;
+  ctx.fillRect(
+    boxObj.left,
+    boxtop,
+    right - left,
+    bottom - top
+  );
+}
+button.click = function(top, bottom, left, right) {
   if (
     getMouseCoordinates(event).x > left &&
     getMouseCoordinates(event).x < right &&
