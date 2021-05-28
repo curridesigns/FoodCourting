@@ -32,17 +32,17 @@ button.render = function(boxObj, color){
   ctx.fillStyle = color;
   ctx.fillRect(
     boxObj.left,
-    boxtop,
-    right - left,
-    bottom - top
+    boxObj.top,
+    boxObj.right - boxObj.left,
+    boxObj.bottom - boxObj.top
   );
 }
-button.click = function(top, bottom, left, right) {
+button.click = function(boxObj) {
   if (
-    getMouseCoordinates(event).x > left &&
-    getMouseCoordinates(event).x < right &&
-    getMouseCoordinates(event).y > top &&
-    getMouseCoordinates(event).y < bottom
+    getMouseCoordinates(event).x > boxObj.left &&
+    getMouseCoordinates(event).x < boxObj.right &&
+    getMouseCoordinates(event).y > boxObj.top &&
+    getMouseCoordinates(event).y < boxObj.bottom
   ) {
     return true;
   }

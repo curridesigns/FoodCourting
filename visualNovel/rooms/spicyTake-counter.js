@@ -16,13 +16,13 @@ spicy.load = function() {
     raven.render(885,50);
   helperFunction.background(spicy.Reg);
   //dialogue
-  visualNovel.returnToMapRender(buttons, "#f9cb9c55");
+  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   raven.dialogueRender();
   // endScreen.click();
 };
 
 spicy.click = function(event) {
-  visualNovel.returnToMapClick(event, buttons);
+  visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 
 export { spicy };

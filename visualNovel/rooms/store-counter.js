@@ -14,12 +14,12 @@ store.load = function() {
   //helperFunction.background();
   helperFunction.background(store.Reg);
   //dialogue
-  visualNovel.returnToMapRender(buttons, "#f9cb9c55");
+  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   // endScreen.click();
 };
 
 store.click = function(event) {
-  visualNovel.returnToMapClick(event, buttons);
+  visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 
 export { store };

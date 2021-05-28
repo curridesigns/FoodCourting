@@ -17,12 +17,12 @@ arcade.load = function() {
   chad.render(885,50);
   helperFunction.background(arcade.Reg);
   //dialoge should go here
-  visualNovel.returnToMapRender(buttons, "#f9cb9c55");
+  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   // endScreen.click();
 };
 
 arcade.click = function(event) {
-  visualNovel.returnToMapClick(event, buttons);
+  visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 
 

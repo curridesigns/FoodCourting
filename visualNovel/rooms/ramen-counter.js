@@ -14,12 +14,12 @@ ramen.load = function() {
   //helperFunction.background();
   //helperFunction.background(ramen.Reg);
   //dialogue
-  visualNovel.returnToMapRender(buttons, "#f9cb9c55");
+  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   // endScreen.click();
 };
 
 ramen.click = function(event) {
-  visualNovel.returnToMapClick(event, buttons);
+  visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 
 export { ramen };

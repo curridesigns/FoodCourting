@@ -18,10 +18,7 @@ splashScreen.load = function() {
 
   helperFunction.background(splashScreen.bg);
   helperFunction.button.render(
-    buttons.start.top,
-    buttons.start.bottom,
-    buttons.start.left,
-    buttons.start.right,
+    buttons.start,
     "#f9cb9cff"
   );
   splashFrameRendered = true;
@@ -31,10 +28,7 @@ splashScreen.load = function() {
 splashScreen.click = function(event) {
   if (
     helperFunction.button.click(
-      buttons.start.top,
-      buttons.start.bottom,
-      buttons.start.left,
-      buttons.start.right
+      buttons.start
     )
   ) {
     splashScreen.startGame = true;

@@ -118,13 +118,13 @@ visualNovel.click = function(event) {
 };
 
 //this function is for each screen the "screen" is what ever variable the buttons are stored in for the file its in
-visualNovel.returnToMapClick = function(event, screen) {
+visualNovel.returnToMapClick = function(event, boxObj) {
   if (
     helperFunction.button.click(
-      screen.returnToMap.top,
-      screen.returnToMap.bottom,
-      screen.returnToMap.left,
-      screen.returnToMap.right
+      boxObj.top,
+      boxObj.bottom,
+      boxObj.left,
+      boxObj.right
     )
   ) {
     visualNovel.display = "map";
@@ -132,12 +132,12 @@ visualNovel.returnToMapClick = function(event, screen) {
 };
 
 //this function show ths button for return to map, needs the button object, and what color you want it
-visualNovel.returnToMapRender = function(screen, color) {
+visualNovel.returnToMapRender = function(boxObj, color) {
   helperFunction.button.render(
-    screen.returnToMap.top,
-    screen.returnToMap.bottom,
-    screen.returnToMap.left,
-    screen.returnToMap.right,
+    boxObj.top,
+    boxObj.bottom,
+    boxObj.left,
+    boxObj.right,
     color
   );
   ctx.font = "48px ariel";

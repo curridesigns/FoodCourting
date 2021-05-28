@@ -9,29 +9,15 @@ endScreen.endGame = false;
 const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
 
 endScreen.load = function() {
-  
   helperFunction.background(endScreen.bg);
-  ctx.fillStyle = "#f9cb9cff";
-  ctx.fillRect(
-    buttons.start.left,
-    buttons.start.top,
-    buttons.start.right - buttons.start.left,
-    buttons.start.bottom - buttons.start.top
-  );
+  helperFunction.button.render(buttons.start, "#f9cb9cff")
   // endScreen.click();
 };
 
 endScreen.click = function(event) {
-  if (
-    helperFunction.button(
-      buttons.start.top,
-      buttons.start.bottom,
-      buttons.start.left,
-      buttons.start.right
-    )
-  ) {
+  if (helperFunction.button.click(buttons.start)) {
     endScreen.endGame = false;
-    console.log("hello")
+    console.log("hello");
   }
 };
 
