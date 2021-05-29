@@ -75,6 +75,8 @@ raven.dialogue.render = function() {
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
     raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse],
+    40,
+    60,
     "48px",
     ctx
   );
@@ -87,6 +89,8 @@ raven.dialogue.render = function() {
     helperFunction.dialogueBoxes(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.text[0].choice[raven.chatProgress][prop],
+      20,
+      10,
       "24px",
       ctx
     );
