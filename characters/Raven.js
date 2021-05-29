@@ -25,6 +25,8 @@ raven.render = function(tempX, tempY) {
   }
 };
 
+raven.dialogue.playerResponse
+
 raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
@@ -41,14 +43,14 @@ raven.dialogue.text[0] = {
       c: "Damn, movie worthy."
     }
   ],
-  choice: {
-    A: { a: "Boring", b: "Definitely needed", c: "Exciting" },
-    B: {
+  choice: [
+    { a: "Boring", b: "Definitely needed", c: "Exciting" },
+    {
       a: "Sat back, vibed with some new music.",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
     }
-  }
+  ]
 };
 
 
