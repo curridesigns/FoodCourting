@@ -24,9 +24,19 @@ raven.render = function(tempX, tempY) {
 
 raven.dialogue = {
   firstDay: {
-    greeting: {
+    morning: {
       response: {
-        1: {"Heya, player! How was your time off?"}
+        1: { a: "Heya, player! How was your time off?" },
+        2: {
+          a: "Boring's better than horrible!",
+          b: "Niiiiiiiiice",
+          c: "Oh yeah?"
+        },
+        3: {
+          a: "Let me know the band later, yeah?",
+          b: "Oh no, the walking dead!",
+          c: "Damn, movie worthy."
+        }
       },
       choice: {
         1: { a: "Boring", b: "Definitely needed", c: "Exciting" },
@@ -34,17 +44,7 @@ raven.dialogue = {
           a: "Sat back, vibed with some new music.",
           b: "I slept for so long, my roommate thought I was dead.",
           c: "Went out for a long drive that turned into camping."
-        },
-      },
-      response1: {
-        a: "Boring's better than horrible!",
-        b: "Niiiiiiiiice",
-        c: "Oh yeah?"
-      },
-      response2: {
-        a: "Let me know the band later, yeah?",
-        b: "Oh no, the walking dead!",
-        c: "Damn, movie worthy."
+        }
       }
     }
   },
