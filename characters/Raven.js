@@ -24,33 +24,31 @@ raven.render = function(tempX, tempY) {
   }
 };
 
-raven.dialogue.text = [ {
-    morning: {
-      response: {
-        1: { a: "Heya, player! How was your time off?" },
-        2: {
-          a: "Boring's better than horrible!",
-          b: "Niiiiiiiiice",
-          c: "Oh yeah?"
-        },
-        3: {
-          a: "Let me know the band later, yeah?",
-          b: "Oh no, the walking dead!",
-          c: "Damn, movie worthy."
-        }
-      },
-      choice: {
-        1: { a: "Boring", b: "Definitely needed", c: "Exciting" },
-        2: {
-          a: "Sat back, vibed with some new music.",
-          b: "I slept for so long, my roommate thought I was dead.",
-          c: "Went out for a long drive that turned into camping."
-        }
-      }
+raven.dialogue.text = [];
+
+raven.dialogue.text[0] = {
+  response: [
+    { a: "Heya, player! How was your time off?" },
+    {
+      a: "Boring's better than horrible!",
+      b: "Niiiiiiiiice",
+      c: "Oh yeah?"
+    },
+    {
+      a: "Let me know the band later, yeah?",
+      b: "Oh no, the walking dead!",
+      c: "Damn, movie worthy."
     }
-  },
-  color: "red"
-];
+  ],
+  choice: {
+    A: { a: "Boring", b: "Definitely needed", c: "Exciting" },
+    B: {
+      a: "Sat back, vibed with some new music.",
+      b: "I slept for so long, my roommate thought I was dead.",
+      c: "Went out for a long drive that turned into camping."
+    }
+  }
+};
 /*
 
 */
@@ -70,20 +68,20 @@ raven.dialogue.render = function() {
     raven.dialogueBoxes.color
   );
   helperFunction.dialogueBoxes(
-    raven.dialogueBoxes.main,
-    raven.dialogue.firstDay.greeting.npc,
+    raven.dialogue.boxes.main,
+    raven.dialogue.text[0].response.A.a,
     "48px",
     ctx
   );
 
   for (const prop in raven.dialogue.firstDay.greeting.choice1) {
     helperFunction.button.render(
-      raven.dialogueBoxes.choices[prop],
-      raven.dialogueBoxes.color
+      raven.dialogue.boxes.choices[prop],
+      raven.dialogue.boxes.color
     );
     helperFunction.dialogueBoxes(
-      raven.dialogueBoxes.choices[prop],
-      raven.dialogue.firstDay.greeting.choice1[prop],
+      raven.dialogue.boxes.choices[prop],
+      raven.dialogue.text[0].choice[prop],
       "24px",
       ctx
     );
