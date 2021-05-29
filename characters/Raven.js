@@ -25,6 +25,8 @@ raven.render = function(tempX, tempY) {
   }
 };
 
+raven.chatProgress = 0;
+
 raven.dialogue = {};
 
 raven.dialogue.playerResponse = "a";
@@ -72,19 +74,19 @@ raven.dialogue.render = function() {
   );
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
-    raven.dialogue.text[0].response[0][raven.dialogue.playerResponse],
+    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse],
     "48px",
     ctx
   );
 
-  for (const prop in raven.dialogue.text[0].choice[0]) {
+  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
     helperFunction.button.render(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.boxes.color
     );
     helperFunction.dialogueBoxes(
-      raven.dialogue.boxes.choice[prop],
-      raven.dialogue.text[0].choice[prop],
+      raven.dialogue.boxes.choices[prop],
+      raven.dialogue.text[0].choice[raven.chatProgress][prop],
       "24px",
       ctx
     );
@@ -92,9 +94,10 @@ raven.dialogue.render = function() {
 };
 
 raven.click = function(event) {
-  for (const prop in raven.dialogue.firstDay.greeting.choice1) {
-    if (helperFunction.button.click(raven.dialogueBoxes.choices[prop])) {
-      console.log(prop);
+  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+    if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
+      raven.dialogue.playerResponse = [prop];
+      raven.chatProgress++;
     }
   }
 };
