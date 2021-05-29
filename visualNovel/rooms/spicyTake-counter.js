@@ -24,6 +24,7 @@ spicy.load = function() {
 spicy.click = function(event) {
   //console.log(buttons.returnToMap)
   visualNovel.returnToMapClick(event, buttons.returnToMap);
+  raven.click(event)
 }
 
 export { spicy };

@@ -49,7 +49,7 @@ raven.dialogue = {
 /*
 
 */
-raven.dialogueBoxes = {
+raven.dialogue.boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
@@ -59,9 +59,9 @@ raven.dialogueBoxes = {
   color: "#f9cb9ccc"
 };
 
-raven.dialogueRender = function() {
+raven.dialogue.render = function() {
   helperFunction.button.render(
-    raven.dialogueBoxes.main,
+    raven.dialogue.boxes.main,
     raven.dialogueBoxes.color
   );
   helperFunction.dialogueBoxes(
@@ -87,7 +87,9 @@ raven.dialogueRender = function() {
 
 raven.click = function (event){
   for (const prop in raven.dialogue.firstDay.greeting.choice1) {
-    helperFunction.button.click(ra)
+    if(helperFunction.button.click(raven.dialogueBoxes.choices[prop])){
+      console.log(prop);
+    }
   }
 }
 
