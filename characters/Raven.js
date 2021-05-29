@@ -86,7 +86,9 @@ raven.dialogueRender = function() {
 };
 
 raven.click = function (event){
-  
+  for (const prop in raven.dialogue.firstDay.greeting.choice1) {
+    helperFunction.button.click(ra)
+  }
 }
 
 export { raven };
