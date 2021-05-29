@@ -1,4 +1,4 @@
-import { canvas, ctx } from "../canvas.js";
+import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 
 const raven = {};
@@ -82,7 +82,12 @@ raven.dialogue.render = function() {
   );
 
   for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+    if (frameCount % 120 === 0) {
     
+    console.log(prop);
+    console.log(raven.dialogue.text[0].choice[raven.chatProgress][prop])
+    console.log(raven.dialogue.boxes.choices[prop])
+  }
     helperFunction.button.render(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.boxes.color
