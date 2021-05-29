@@ -21,6 +21,7 @@ raven.render = function(tempX, tempY) {
       break;
     default:
       ctx.drawImage(raven.images.listening, tempX, tempY);
+      break;
   }
 };
 
@@ -49,9 +50,8 @@ raven.dialogue.text[0] = {
     }
   }
 };
-/*
 
-*/
+
 raven.dialogue.boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
