@@ -85,4 +85,8 @@ raven.dialogueRender = function() {
   }
 };
 
+raven.click = function (event){
+  
+}
+
 export { raven };
