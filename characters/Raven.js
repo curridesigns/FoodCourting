@@ -25,17 +25,21 @@ raven.render = function(tempX, tempY) {
 raven.dialogue = {
   firstDay: {
     greeting: {
-      npc: "Heya, player! How was your time off?",
-      choice1: { a: "Boring", b: "Definitely needed", c: "Exciting" },
+      response: {
+        1: {"Heya, player! How was your time off?"}
+      },
+      choice: {
+        1: { a: "Boring", b: "Definitely needed", c: "Exciting" },
+        2: {
+          a: "Sat back, vibed with some new music.",
+          b: "I slept for so long, my roommate thought I was dead.",
+          c: "Went out for a long drive that turned into camping."
+        },
+      },
       response1: {
         a: "Boring's better than horrible!",
         b: "Niiiiiiiiice",
         c: "Oh yeah?"
-      },
-      choice2: {
-        a: "Sat back, vibed with some new music.",
-        b: "I slept for so long, my roommate thought I was dead.",
-        c: "Went out for a long drive that turned into camping."
       },
       response2: {
         a: "Let me know the band later, yeah?",
@@ -70,27 +74,27 @@ raven.dialogue.render = function() {
     "48px",
     ctx
   );
-  
+
   for (const prop in raven.dialogue.firstDay.greeting.choice1) {
     helperFunction.button.render(
-    raven.dialogueBoxes.choices[prop],
-    raven.dialogueBoxes.color
-  );
-  helperFunction.dialogueBoxes(
-    raven.dialogueBoxes.choices[prop],
-    raven.dialogue.firstDay.greeting.choice1[prop],
-    "24px",
-    ctx
-  );
+      raven.dialogueBoxes.choices[prop],
+      raven.dialogueBoxes.color
+    );
+    helperFunction.dialogueBoxes(
+      raven.dialogueBoxes.choices[prop],
+      raven.dialogue.firstDay.greeting.choice1[prop],
+      "24px",
+      ctx
+    );
   }
 };
 
-raven.click = function (event){
+raven.click = function(event) {
   for (const prop in raven.dialogue.firstDay.greeting.choice1) {
-    if(helperFunction.button.click(raven.dialogueBoxes.choices[prop])){
+    if (helperFunction.button.click(raven.dialogueBoxes.choices[prop])) {
       console.log(prop);
     }
   }
-}
+};
 
 export { raven };
