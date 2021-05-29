@@ -38,7 +38,7 @@ raven.dialogue.text[0] = {
     { a: "Heya, player! How was your time off?" },
     {
       a: "Boring's better than horrible!",
-      b: "Niiiiiiiiice",
+      b: "I slept for so long, my roommate thought I was dead.",
       c: "Oh yeah?"
     },
     {
@@ -89,8 +89,8 @@ raven.dialogue.render = function() {
     helperFunction.dialogueBoxes(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.text[0].choice[raven.chatProgress][prop],
+      5,
       20,
-      10,
       "24px",
       ctx
     );

@@ -28,7 +28,7 @@ function getMouseCoordinates(event) {
 }
 
 const button = {};
-button.render = function(boxObj, color){
+button.render = function(boxObj, color) {
   ctx.fillStyle = color;
   ctx.fillRect(
     boxObj.left,
@@ -36,7 +36,7 @@ button.render = function(boxObj, color){
     boxObj.right - boxObj.left,
     boxObj.bottom - boxObj.top
   );
-}
+};
 button.click = function(boxObj) {
   if (
     getMouseCoordinates(event).x > boxObj.left &&
@@ -47,33 +47,50 @@ button.click = function(boxObj) {
     return true;
   }
   return false;
-}
+};
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
 function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) {
-  wrapText(ctx, stringObj, boxObj.left+leftOffset, boxObj.top+topOffset, boxObj.right, 50, size);
+  wrapText(
+    ctx,
+    stringObj,
+    boxObj.left + leftOffset,
+    boxObj.top + topOffset,
+    boxObj.right - 10,
+    50,
+    size
+  );
 }
 
 function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
-        var words = text.split(' ');
-        var line = '';
-        ctx.font = size + " ariel";
-        ctx.fillStyle = 'red';
+  var words = text.split(" ");
+  var line = "";
+  ctx.font = size + " ariel";
+  ctx.fillStyle = "red";
 
-        for(var n = 0; n < words.length; n++) {
-          var testLine = line + words[n] + ' ';
-          var metrics = ctx.measureText(testLine);
-          var testWidth = metrics.width;
-          if (testWidth > maxWidth && n > 0) {
-            ctx.fillText(line, x, y);
-            line = words[n] + ' ';
-            y += lineHeight;
-          }
-          else {
-            line = testLine;
-          }
-        }
-        ctx.fillText(line, x, y);
-      }
-export { background, dist, randomRange, getMouseCoordinates, button, dialogueBoxes };
+  for (var n = 0; n < words.length; n++) {
+    var testLine = line + words[n] + " ";
+    var metrics = ctx.measureText(testLine);
+    var testWidth =
+      Math.abs(metrics.actualBoundingBoxLeft) +
+      Math.abs(metrics.actualBoundingBoxRight);
+    console.log(testWidth)
+    if (testWidth > maxWidth && n > 0) {
+      ctx.fillText(line, x, y);
+      line = words[n] + " ";
+      y += lineHeight;
+    } else {
+      line = testLine;
+    }
+  }
+  ctx.fillText(line, x, y);
+}
+export {
+  background,
+  dist,
+  randomRange,
+  getMouseCoordinates,
+  button,
+  dialogueBoxes
+};
