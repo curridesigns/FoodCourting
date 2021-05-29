@@ -82,6 +82,7 @@ raven.dialogue.render = function() {
   );
 
   for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+    
     helperFunction.button.render(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.boxes.color
