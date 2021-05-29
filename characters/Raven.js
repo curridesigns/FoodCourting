@@ -25,7 +25,9 @@ raven.render = function(tempX, tempY) {
   }
 };
 
-raven.dialogue.playerResponse
+raven.dialogue = {};
+
+raven.dialogue.playerResponse = "a";
 
 raven.dialogue.text = [];
 
@@ -53,7 +55,6 @@ raven.dialogue.text[0] = {
   ]
 };
 
-
 raven.dialogue.boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
@@ -67,22 +68,22 @@ raven.dialogue.boxes = {
 raven.dialogue.render = function() {
   helperFunction.button.render(
     raven.dialogue.boxes.main,
-    raven.dialogueBoxes.color
+    raven.dialogue.boxes.color
   );
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
-    raven.dialogue.text[0].response.A.a,
+    raven.dialogue.text[0].response[0][raven.dialogue.playerResponse],
     "48px",
     ctx
   );
 
-  for (const prop in raven.dialogue.firstDay.greeting.choice1) {
+  for (const prop in raven.dialogue.text[0].choice[0]) {
     helperFunction.button.render(
       raven.dialogue.boxes.choices[prop],
       raven.dialogue.boxes.color
     );
     helperFunction.dialogueBoxes(
-      raven.dialogue.boxes.choices[prop],
+      raven.dialogue.boxes.choice[prop],
       raven.dialogue.text[0].choice[prop],
       "24px",
       ctx
