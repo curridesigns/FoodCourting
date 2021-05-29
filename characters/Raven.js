@@ -7,6 +7,8 @@ raven.images = {
   talking: document.getElementById("ravenT")
 };
 
+raven.chats = 0;
+
 raven.state = "idle";
 
 raven.render = function(tempX, tempY) {
@@ -22,8 +24,7 @@ raven.render = function(tempX, tempY) {
   }
 };
 
-raven.dialogue = {
-  firstDay: {
+raven.dialogue.text = [ {
     morning: {
       response: {
         1: { a: "Heya, player! How was your time off?" },
@@ -49,7 +50,7 @@ raven.dialogue = {
     }
   },
   color: "red"
-};
+];
 /*
 
 */
