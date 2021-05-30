@@ -35,9 +35,9 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: "Heya, player! How was your time off?", },
+    { a: {text: "Heya, player! How was your time off?", hasResponse: true},  },
     {
-      a: "Boring's better than horrible!",
+      a: {text: "Boring's better than horrible!", hasResponse: false},
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Oh yeah?"
     },
@@ -75,14 +75,14 @@ raven.dialogue.render = function() {
   );
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
-    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse],
+    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].text,
     40,
     60,
     "48px",
     ctx
   );
 
-  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+ if(raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].hasResponse) {for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
     if (frameCount % 120 === 0) {
     
     
@@ -99,7 +99,8 @@ raven.dialogue.render = function() {
       "24px",
       ctx
     );
-  }
+  };
+ };
 };
 
 raven.click = function(event) {
