@@ -23,7 +23,10 @@ spicy.load = function() {
 
 spicy.click = function(event) {
   //console.log(buttons.returnToMap)
-  visualNovel.returnToMapClick(event, buttons.returnToMap);
+  if(visualNovel.returnToMapClick(event, buttons.returnToMap)){
+    raven.chatProgress = 0;
+    raven.dialogue.playerResponse = "a"
+  }
   raven.click(event)
 }
 

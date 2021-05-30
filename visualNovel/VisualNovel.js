@@ -93,6 +93,7 @@ visualNovel.click = function(event) {
 visualNovel.returnToMapClick = function(event, boxObj) {
   if (helperFunction.button.click(boxObj)) {
     visualNovel.display = "map";
+    return true;
   }
 };
 
