@@ -35,7 +35,7 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: "Heya, player! How was your time off?" },
+    { a: "Heya, player! How was your time off?", },
     {
       a: "Boring's better than horrible!",
       b: "I slept for so long, my roommate thought I was dead.",
@@ -85,9 +85,7 @@ raven.dialogue.render = function() {
   for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
     if (frameCount % 120 === 0) {
     
-    console.log(prop);
-    console.log(raven.dialogue.text[0].choice[raven.chatProgress][prop])
-    console.log(raven.dialogue.boxes.choices[prop])
+    
   }
     helperFunction.button.render(
       raven.dialogue.boxes.choices[prop],
