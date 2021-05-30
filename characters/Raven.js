@@ -35,9 +35,9 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: {text: "Heya, player! How was your time off?", hasResponse: true},  },
+    { a: "Heya, player! How was your time off?",  },
     {
-      a: {text: "Boring's better than horrible!", hasResponse: false},
+      a: "Boring's better than horrible!",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Oh yeah?"
     },
@@ -75,7 +75,7 @@ raven.dialogue.render = function() {
   );
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
-    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].text,
+    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse],
     40,
     60,
     "48px",
