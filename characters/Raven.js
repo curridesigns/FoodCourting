@@ -35,7 +35,7 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: "Heya, player! How was your time off?",  },
+    { a: {text: "Heya, player! How was your time off?", playerChoices: 0} },
     {
       a: "Boring's better than horrible!",
       b: "I slept for so long, my roommate thought I was dead.",
@@ -54,7 +54,8 @@ raven.dialogue.text[0] = {
       a: "Sat back, vibed with some new music.",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
-    }
+    },
+   { complete: "Return to Map"}
   ]
 };
 
@@ -81,10 +82,10 @@ raven.dialogue.render = function() {
     "48px",
     ctx
   );
-
- if(raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].hasResponse) {for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+let pla
+  {for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
     if (frameCount % 120 === 0) {
-    
+    console.log(raven.dialogue.text[0])
     
   }
     helperFunction.button.render(
