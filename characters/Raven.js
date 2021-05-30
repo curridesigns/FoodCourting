@@ -35,27 +35,30 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: {text: "Heya, player! How was your time off?", playerChoices: 0} },
+    { a: { text: "Heya, player! How was your time off?", playerChoices: 0 } },
     {
-      a: {text: "Boring's better than horrible!", playerChoices: 2},
-      b: {text: "I slept for so long, my roommate thought I was dead.", playerChoices: 2},
-      c: {text: "Oh yeah?", playerChoices: 1},
+      a: { text: "Boring's better than horrible!", playerChoices: 2 },
+      b: {
+        text: "I slept for so long, my roommate thought I was dead.",
+        playerChoices: 2
+      },
+      c: { text: "Oh yeah?", playerChoices: 1 }
     },
     {
-      a: {text: "Let me know the band later, yeah?", playerChoices: 2},
-      b: {text: "Oh no, the walking dead!", playerChoices: 2},
-      c: {text: "Damn, movie worthy.", playerChoices: 2}
+      a: { text: "Let me know the band later, yeah?", playerChoices: 2 },
+      b: { text: "Oh no, the walking dead!", playerChoices: 2 },
+      c: { text: "Damn, movie worthy.", playerChoices: 2 }
     }
   ],
   choice: [
     { a: "Boring", b: "Definitely needed", c: "Exciting" },
-    
+
     {
       a: "Sat back, vibed with some new music.",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
     },
-   { complete: "Return to Map"}
+    { complete: "Return to Map" }
   ]
 };
 
@@ -64,10 +67,15 @@ raven.dialogue.boxes = {
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
     b: { top: 920, bottom: 1020, left: 450, right: 750 },
-    c: { top: 920, bottom: 1020, left: 800, right: 1100 }
+    c: { top: 920, bottom: 1020, left: 800, right: 1100 },
+    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
   color: "#f9cb9ccc"
 };
+raven.playerChoices =
+  raven.dialogue.text[0].response[raven.chatProgress][
+    raven.dialogue.playerResponse
+  ].playerChoices;
 
 raven.dialogue.render = function() {
   helperFunction.button.render(
@@ -76,33 +84,36 @@ raven.dialogue.render = function() {
   );
   helperFunction.dialogueBoxes(
     raven.dialogue.boxes.main,
-    raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].text,
+    raven.dialogue.text[0].response[raven.chatProgress][
+      raven.dialogue.playerResponse
+    ].text,
     40,
     60,
     "48px",
     ctx
   );
-let playerChoices = raven.dialogue.text[0].response[raven.chatProgress][raven.dialogue.playerResponse].playerChoices;
-  {for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
-    if (frameCount % 10 === 0) {
-      if(prop == "complete"){
-        console.log("hello")
+
+  {
+    for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
+      if (frameCount % 10 === 0) {
+        if (prop == "complete") {
+          console.log("hello");
+        }
       }
+      helperFunction.button.render(
+        raven.dialogue.boxes.choices[prop],
+        raven.dialogue.boxes.color
+      );
+      helperFunction.dialogueBoxes(
+        raven.dialogue.boxes.choices[prop],
+        raven.dialogue.text[0].choice[raven.playerChoices][prop],
+        5,
+        20,
+        "24px",
+        ctx
+      );
+    }
   }
-    helperFunction.button.render(
-      raven.dialogue.boxes.choices[prop],
-      raven.dialogue.boxes.color
-    );
-    helperFunction.dialogueBoxes(
-      raven.dialogue.boxes.choices[prop],
-      raven.dialogue.text[0].choice[playerChoices][prop],
-      5,
-      20,
-      "24px",
-      ctx
-    );
-  };
- };
 };
 
 raven.click = function(event) {

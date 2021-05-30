@@ -105,4 +105,6 @@ visualNovel.returnToMapRender = function(boxObj, color) {
   ctx.fillText("Back To The Mall", 1720, 100);
 };
 
+
+
 export { visualNovel };
