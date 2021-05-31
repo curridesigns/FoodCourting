@@ -37,10 +37,10 @@ class npc {
     // if (this.startTime === undefined) {
     //   this.startTime = new Date();
     // }
-    console.log(this.elapsedTime);
-    if (this.elapsedTime >= this.talkingTime){
-      this.startTime = new Date();
-    }
+    // console.log(this.elapsedTime);
+    // if (this.elapsedTime >= this.talkingTime){
+    //   this.startTime = new Date();
+    // }
     if (this.dialogue.text[this.chatNumber] === undefined) {
       this.chatNumber = 0;
     }
