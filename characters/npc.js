@@ -2,7 +2,7 @@ import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 
 class npc {
-  constructor(imagesObj, dialogueArr, boxesObj, talkingFrames) {
+  constructor(imagesObj, dialogueArr, boxesObj, talkingTime) {
     this.images = imagesObj;
     this.chats = 0;
     this.state = "idle";
@@ -12,9 +12,11 @@ class npc {
     this.dialogue.boxes = boxesObj;
     this.dialogue.playerResponse = "a";
     this.dialogue.text = dialogueArr;
-    this.talkingFrames = talkingFrames;
-    this.endFrame = undefined;
-    this.seconds = 
+    this.talkingTime = talkingTime;
+    this.endTime = new Date();
+    this.startTime = new Date();
+    this.elapsedTime = this.endTime.getTime() - this.startTime.getTime();
+    
   }
 
   render(tempX, tempY) {
@@ -32,12 +34,12 @@ class npc {
   }
 
   dialogueRender() {
-    if (this.endFrame === undefined) {
-      this.endFrame = frameCount + this.talkingFrames;
-      this.state = "talking";
-    }
-    if (frameCount >= this.endFrame) {
-      this.state = "listening";
+    // if (this.startTime === undefined) {
+    //   this.startTime = new Date();
+    // }
+    console.log(this.elapsedTime);
+    if (this.elapsedTime >= this.talkingTime){
+      this.startTime = new Date();
     }
     if (this.dialogue.text[this.chatNumber] === undefined) {
       this.chatNumber = 0;
@@ -92,7 +94,7 @@ class npc {
         } else {
           this.dialogue.playerResponse = [prop];
           this.chatProgress++;
-          this.endFrame = undefined;
+          this.startTime = undefined;
         }
       }
     }
