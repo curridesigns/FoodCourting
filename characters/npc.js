@@ -2,7 +2,7 @@ import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 
 class npc {
-  constructor(imagesObj, dialogueArr, boxesObj ){
+  constructor(imagesObj, dialogueArr, boxesObj, talkingFrames ){
     this.images = imagesObj;
     this.chats = 0;
     this.state = "idle";
@@ -12,6 +12,8 @@ class npc {
     this.dialogue.boxes = boxesObj;
     this.dialogue.playerResponse = "a";
     this.dialogue.text = dialogueArr;
+    this.talkingFrames = talkingFrames;
+    this.endFrame = undefined;
   }
   
   render(tempX, tempY){
@@ -29,6 +31,10 @@ class npc {
   }
   
   dialogueRender(){
+    if (this.endFrame === undefined){
+      this.endFrame = frameCount + this.talkingFrames;
+    }
+    
     if(this.dialogue.text[this.chatNumber] === undefined){
     this.chatNumber = 0;
   }
