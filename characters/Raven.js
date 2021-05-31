@@ -4,7 +4,8 @@ import { npc } from "./npc.js";
 
 const images = {
   listening: document.getElementById("ravenL"),
-  talking: document.getElementById("ravenT")
+  talking: document.getElementById("ravenT"),
+  idle: document.getElementById("ravenC")
 };
 
 const text = [];
