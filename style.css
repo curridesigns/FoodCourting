@@ -9,6 +9,8 @@ canvas {
   margin-top: 30px;
   margin: auto;
   background: navy;
+  text-align: center;
+  font-size: 48px;
   width: 1920px;
   height: 1080px;
   image-rendering: pixelated;
