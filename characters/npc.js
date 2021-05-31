@@ -14,6 +14,7 @@ class npc {
     this.dialogue.text = dialogueArr;
     this.talkingFrames = talkingFrames;
     this.endFrame = undefined;
+    this.seconds = 
   }
 
   render(tempX, tempY) {
