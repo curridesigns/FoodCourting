@@ -32,11 +32,16 @@ class npc {
   }
 
   dialogueRender() {
+    this.playerChoices = this.dialogue.text[this.chatNumber].response[
+      this.chatProgress
+    ][this.dialogue.playerResponse].playerChoices;
+    this.talkingTime = this.dialogue.text[this.chatNumber].response[
+      this.chatProgress
+    ][this.dialogue.playerResponse].talkingTime * 1000;
     if(this.playerChose){
       this.state = "talking";
-      this.endTime = new Date().getTime + this.talkingTime;
+      this.endTime = new Date().getTime() + this.talkingTime;
       this.playerChose = false;
-      console.log("hello");
     }
     if(Date.now() >= this.endTime){
       this.state = "listening";
@@ -52,9 +57,6 @@ class npc {
       this.chatNumber = 0;
     }
     this.display = true;
-    this.playerChoices = this.dialogue.text[this.chatNumber].response[
-      this.chatProgress
-    ][this.dialogue.playerResponse].playerChoices;
     helperFunction.button.render(
       this.dialogue.boxes.main,
       this.dialogue.boxes.color
