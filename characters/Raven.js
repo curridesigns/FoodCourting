@@ -7,8 +7,6 @@ raven.images = {
   talking: document.getElementById("ravenT")
 };
 
-raven.display = false;
-
 raven.chats = 0;
 
 raven.state = "idle";
