@@ -12,8 +12,8 @@ class npc {
     this.dialogue.boxes = boxesObj;
     this.dialogue.playerResponse = "a";
     this.dialogue.text = dialogueArr;
-    this.talkingTime = talkingTime;
-    this.endTime = new Date().getTime + talkingTime;
+    this.talkingTime = talkingTime * 1000;
+    this.endTime = new Date().getTime + this.talkingTime;
     this.playerChose = true;
   }
 
@@ -34,7 +34,12 @@ class npc {
   dialogueRender() {
     if(this.playerChose){
       this.state = "talking";
-      this.endTime
+      this.endTime = new Date().getTime + this.talkingTime;
+      this.playerChose = false;
+      console.log("hello");
+    }
+    if(Date.now() >= this.endTime){
+      this.state = "listening";
     }
     // if (this.startTime === undefined) {
     //   this.startTime = new Date();
@@ -96,7 +101,7 @@ class npc {
         } else {
           this.dialogue.playerResponse = [prop];
           this.chatProgress++;
-          this.startTime = undefined;
+          this.playerChose = true;
         }
       }
     }
