@@ -13,10 +13,8 @@ class npc {
     this.dialogue.playerResponse = "a";
     this.dialogue.text = dialogueArr;
     this.talkingTime = talkingTime;
-    this.endTime = new Date();
-    this.startTime = new Date();
-    this.elapsedTime = this.endTime.getTime() - this.startTime.getTime();
-    
+    this.endTime = new Date().getTime + talkingTime;
+    this.playerChose = true;
   }
 
   render(tempX, tempY) {
@@ -34,6 +32,10 @@ class npc {
   }
 
   dialogueRender() {
+    if(this.playerChose){
+      this.state = "talking";
+      this.endTime
+    }
     // if (this.startTime === undefined) {
     //   this.startTime = new Date();
     // }

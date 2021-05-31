@@ -19,7 +19,6 @@ document.addEventListener("click", onClick, false);
 let lastTime = 0;
 let aggregatedTime = 0;
 const frameRateInMillis = 1000 / 20; // 30 FPS
-let startTime,endTime;
 // var startGame = false;
 
 function setup() {
@@ -27,13 +26,10 @@ function setup() {
   miniGame.preLoad();
   miniGame.load();
   window.requestAnimationFrame(loop);
-  startTime = new Date();
-  endTime = startTime.getTime() + 120;
 }
 
 function draw() {
   // console.log(endScreen.endGame);
-
   if (splashScreen.startGame && !endScreen.endGame) {
     //console.log("hello there")
     visualNovel.load();
@@ -58,11 +54,10 @@ function draw() {
     endScreen.load();
     miniGame.finishedBowls = 0;
   }
-  if (frameCount % 10 === 0) {
-        if(startTime.getTime() > endTime){
-          console.log("hello")
-        }
-      }
+  //debug statement to stop the page from crashing on console.logs
+//   if (frameCount % 10 === 0) {
+        
+//       }
   //console.log(frameCount);
 
   // noodles.selected(character.pos);
