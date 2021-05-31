@@ -37,7 +37,36 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: { text: "Heya, player! How was your time off?", playerChoices: 0 } },
+    { a: { text: "Heya, player! How was your time off?", playerChoices: 1 } },
+    {
+      a: { text: "Boring's better than horrible!", playerChoices: 0 },
+      b: {
+        text: "I slept for so long, my roommate thought I was dead.",
+        playerChoices: 0
+      },
+      c: { text: "Oh yeah?", playerChoices: 2 }
+    },
+    {
+      a: { text: "Let me know the band later, yeah?", playerChoices: 0 },
+      b: { text: "Oh no, the walking dead!", playerChoices: 0 },
+      c: { text: "Damn, movie worthy.", playerChoices: 0 }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Boring", b: "Definitely needed", c: "Exciting" },
+
+    {
+      a: "Sat back, vibed with some new music.",
+      b: "I slept for so long, my roommate thought I was dead.",
+      c: "Went out for a long drive that turned into camping."
+    },
+  ]
+};
+
+raven.dialogue.text[1] = {
+  response: [
+    { a: { text: "How's the ramen slingin' today?", playerChoices: 1 } },
     {
       a: { text: "Boring's better than horrible!", playerChoices: 2 },
       b: {
@@ -46,13 +75,9 @@ raven.dialogue.text[0] = {
       },
       c: { text: "Oh yeah?", playerChoices: 1 }
     },
-    {
-      a: { text: "Let me know the band later, yeah?", playerChoices: 2 },
-      b: { text: "Oh no, the walking dead!", playerChoices: 2 },
-      c: { text: "Damn, movie worthy.", playerChoices: 2 }
-    }
   ],
   choice: [
+    { complete: "Return to Map" },
     { a: "Boring", b: "Definitely needed", c: "Exciting" },
 
     {
@@ -60,7 +85,6 @@ raven.dialogue.text[0] = {
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
     },
-    { complete: "Return to Map" }
   ]
 };
 
@@ -112,16 +136,17 @@ raven.dialogue.render = function() {
         "24px",
         ctx
       );
+      // console.log(raven.dialogue.boxes.choices[prop])
     }
   }
 };
 
 raven.click = function(event) {
   for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
-      if (prop == "complete") {
-        console.log("hello")
-      }
     if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
+      if (prop == "complete") {
+        return true;
+      }
         raven.dialogue.playerResponse = [prop];
         raven.chatProgress++;
     }

@@ -16,11 +16,7 @@ spicy.load = function() {
   helperFunction.background(spicy.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
-  if(raven.display){
   raven.dialogue.render();
-  } else {
-    visualNovel.display = "map"
-  }
   // endScreen.click();
 };
 
@@ -30,7 +26,11 @@ spicy.click = function(event, visualNovelDisplay) {
     raven.chatProgress = 0;
     raven.dialogue.playerResponse = "a"
   }
-  raven.click(event)
+  if(raven.click(event)){
+    visualNovel.display = "map";
+    raven.chatProgress = 0;
+    raven.dialogue.playerResponse = "a"
+  }
 }
 
 export { spicy };
