@@ -9,17 +9,16 @@ canvas {
   margin-top: 30px;
   margin: auto;
   background: navy;
-  text-align: center;
-  font-size: 48px;
   width: 1920px;
   height: 1080px;
   image-rendering: pixelated;
-  position: absolute;
+  position: relative;
 }
 
 @media (orientation: landscape) {
   canvas {
-    margin-top: 100px;
+    margin: auto;
+    display: block;
     width: 1920px;
     height: 1080px;
   }
