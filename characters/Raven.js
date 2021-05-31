@@ -1,41 +1,17 @@
 import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
+import { npc } from "./npc.js";
 
-const raven = {};
-raven.images = {
+
+
+const images = {
   listening: document.getElementById("ravenL"),
   talking: document.getElementById("ravenT")
 };
 
-raven.chats = 0;
+const text = [];
 
-raven.state = "idle";
-
-raven.render = function(tempX, tempY) {
-  switch (raven.state) {
-    case "listening":
-      ctx.drawImage(raven.images.listening, tempX, tempY);
-      break;
-    case "talking":
-      ctx.drawImage(raven.images.talking, tempX, tempY);
-      break;
-    default:
-      ctx.drawImage(raven.images.listening, tempX, tempY);
-      break;
-  }
-};
-
-raven.chatNumber = 0;
-
-raven.chatProgress = 0;
-
-raven.dialogue = {};
-
-raven.dialogue.playerResponse = "a";
-
-raven.dialogue.text = [];
-
-raven.dialogue.text[0] = {
+text[0] = {
   response: [
     { a: { text: "Heya, player! How was your time off?", playerChoices: 1 } },
     {
@@ -64,7 +40,7 @@ raven.dialogue.text[0] = {
   ]
 };
 
-raven.dialogue.text[1] = {
+text[1] = {
   response: [
     { a: { text: "How's the ramen slingin' today?", playerChoices: 1 } },
     {
@@ -82,7 +58,7 @@ raven.dialogue.text[1] = {
   ]
 };
 
-raven.dialogue.boxes = {
+const boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
@@ -93,61 +69,6 @@ raven.dialogue.boxes = {
   color: "#f9cb9ccc"
 };
 
-raven.dialogue.render = function() {
-  if(raven.dialogue.text[raven.chatNumber] === undefined){
-    raven.chatNumber = 0;
-  }
-  raven.display = true;
-  raven.playerChoices =
-    raven.dialogue.text[raven.chatNumber].response[raven.chatProgress][
-      raven.dialogue.playerResponse
-    ].playerChoices;
-  helperFunction.button.render(
-    raven.dialogue.boxes.main,
-    raven.dialogue.boxes.color
-  );
-  helperFunction.dialogueBoxes(
-    raven.dialogue.boxes.main,
-    raven.dialogue.text[raven.chatNumber].response[raven.chatProgress][
-      raven.dialogue.playerResponse
-    ].text,
-    40,
-    60,
-    "48px",
-    ctx
-  );
-
-  {
-    for (const prop in raven.dialogue.text[raven.chatNumber].choice[raven.playerChoices]) {
-      if (frameCount % 10 === 0) {
-      }
-      helperFunction.button.render(
-        raven.dialogue.boxes.choices[prop],
-        raven.dialogue.boxes.color
-      );
-      helperFunction.dialogueBoxes(
-        raven.dialogue.boxes.choices[prop],
-        raven.dialogue.text[raven.chatNumber].choice[raven.playerChoices][prop],
-        5,
-        20,
-        "24px",
-        ctx
-      );
-      // console.log(raven.dialogue.boxes.choices[prop])
-    }
-  }
-};
-
-raven.click = function(event) {
-  for (const prop in raven.dialogue.text[raven.chatNumber].choice[raven.playerChoices]) {
-    if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
-      if (prop == "complete") {
-        return true;
-      }
-        raven.dialogue.playerResponse = [prop];
-        raven.chatProgress++;
-    }
-  }
-};
+const raven = new npc(images, text, boxes);
 
 export { raven };

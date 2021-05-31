@@ -29,6 +29,59 @@ class npc {
   }
   
   dialogueRender(){
-    
+    if(this.dialogue.text[this.chatNumber] === undefined){
+    this.chatNumber = 0;
+  }
+  this.display = true;
+  this.playerChoices =
+    this.dialogue.text[this.chatNumber].response[this.chatProgress][
+      this.dialogue.playerResponse
+    ].playerChoices;
+  helperFunction.button.render(
+    this.dialogue.boxes.main,
+    this.dialogue.boxes.color
+  );
+  helperFunction.dialogueBoxes(
+    this.dialogue.boxes.main,
+    this.dialogue.text[this.chatNumber].response[this.chatProgress][
+      this.dialogue.playerResponse
+    ].text,
+    40,
+    60,
+    "48px",
+    ctx
+  );
+
+    for (const prop in this.dialogue.text[this.chatNumber].choice[this.playerChoices]) {
+      if (frameCount % 10 === 0) {
+      }
+      helperFunction.button.render(
+        this.dialogue.boxes.choices[prop],
+        this.dialogue.boxes.color
+      );
+      helperFunction.dialogueBoxes(
+        this.dialogue.boxes.choices[prop],
+        this.dialogue.text[this.chatNumber].choice[this.playerChoices][prop],
+        5,
+        20,
+        "24px",
+        ctx
+      );
+      // console.log(raven.dialogue.boxes.choices[prop])
+    };
+  }
+  
+  click(){
+    for (const prop in this.dialogue.text[this.chatNumber].choice[this.playerChoices]) {
+    if (helperFunction.button.click(this.dialogue.boxes.choices[prop])) {
+      if (prop == "complete") {
+        return true;
+      }
+        this.dialogue.playerResponse = [prop];
+        this.chatProgress++;
+    }
+  }
   }
 }
+
+export { npc }
