@@ -76,7 +76,7 @@ raven.dialogue.boxes = {
 };
 
 raven.dialogue.render = function() {
-  raven.display = true;
+  //raven.display = true;
   raven.playerChoices =
     raven.dialogue.text[0].response[raven.chatProgress][
       raven.dialogue.playerResponse
@@ -117,7 +117,7 @@ raven.dialogue.render = function() {
 };
 
 raven.click = function(event) {
-  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+  for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
     if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
       if (prop == "complete") {
         raven.display = false;
