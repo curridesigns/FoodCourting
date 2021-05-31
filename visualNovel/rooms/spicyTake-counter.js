@@ -10,6 +10,7 @@ spicy.Reg = document.getElementById("spicytakesCounter")
 const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }};
 
 spicy.load = function() {
+  
   helperFunction.background(spicy.bg);
   //helperFunction.background();
     raven.render(885,50);
@@ -28,6 +29,7 @@ spicy.click = function(event, visualNovelDisplay) {
   }
   if(raven.click(event)){
     visualNovel.display = "map";
+    raven.chatNumber++;
     raven.chatProgress = 0;
     raven.dialogue.playerResponse = "a"
   }
