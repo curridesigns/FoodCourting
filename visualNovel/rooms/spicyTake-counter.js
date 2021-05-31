@@ -10,7 +10,6 @@ spicy.Reg = document.getElementById("spicytakesCounter")
 const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }};
 
 spicy.load = function() {
-  raven.display = true;
   helperFunction.background(spicy.bg);
   //helperFunction.background();
     raven.render(885,50);
@@ -25,7 +24,7 @@ spicy.load = function() {
   // endScreen.click();
 };
 
-spicy.click = function(event) {
+spicy.click = function(event, visualNovelDisplay) {
   //console.log(buttons.returnToMap)
   if(visualNovel.returnToMapClick(event, buttons.returnToMap)){
     raven.chatProgress = 0;
