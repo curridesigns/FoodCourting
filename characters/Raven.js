@@ -7,6 +7,8 @@ raven.images = {
   talking: document.getElementById("ravenT")
 };
 
+raven.display = false;
+
 raven.chats = 0;
 
 raven.state = "idle";
@@ -35,30 +37,30 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: { text: "Heya, player! How was your time off?", playerChoices: 1 } },
+    { a: { text: "Heya, player! How was your time off?", playerChoices: 0 } },
     {
-      a: { text: "Boring's better than horrible!", playerChoices: 0 },
+      a: { text: "Boring's better than horrible!", playerChoices: 2 },
       b: {
         text: "I slept for so long, my roommate thought I was dead.",
         playerChoices: 2
       },
-      c: { text: "Oh yeah?", playerChoices: 2 }
+      c: { text: "Oh yeah?", playerChoices: 1 }
     },
     {
-      a: { text: "Let me know the band later, yeah?", playerChoices: 0 },
-      b: { text: "Oh no, the walking dead!", playerChoices: 0 },
-      c: { text: "Damn, movie worthy.", playerChoices: 0 }
+      a: { text: "Let me know the band later, yeah?", playerChoices: 2 },
+      b: { text: "Oh no, the walking dead!", playerChoices: 2 },
+      c: { text: "Damn, movie worthy.", playerChoices: 2 }
     }
   ],
   choice: [
-    { complete: "Return to Map" },
     { a: "Boring", b: "Definitely needed", c: "Exciting" },
 
     {
       a: "Sat back, vibed with some new music.",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
-    }
+    },
+    { complete: "Return to Map" }
   ]
 };
 
@@ -72,12 +74,13 @@ raven.dialogue.boxes = {
   },
   color: "#f9cb9ccc"
 };
-raven.playerChoices =
-  raven.dialogue.text[0].response[raven.chatProgress][
-    raven.dialogue.playerResponse
-  ].playerChoices;
 
 raven.dialogue.render = function() {
+  raven.display = true;
+  raven.playerChoices =
+    raven.dialogue.text[0].response[raven.chatProgress][
+      raven.dialogue.playerResponse
+    ].playerChoices;
   helperFunction.button.render(
     raven.dialogue.boxes.main,
     raven.dialogue.boxes.color
@@ -96,9 +99,6 @@ raven.dialogue.render = function() {
   {
     for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
       if (frameCount % 10 === 0) {
-        if (prop == "complete") {
-          console.log("hello");
-        }
       }
       helperFunction.button.render(
         raven.dialogue.boxes.choices[prop],
@@ -117,14 +117,14 @@ raven.dialogue.render = function() {
 };
 
 raven.click = function(event) {
-  for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
-      if(prop == "complete"){
-        continue;
-      }
-      console.log(prop)
+  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
     if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
-      // raven.dialogue.playerResponse = [prop];
-      raven.chatProgress++;
+      if (prop == "complete") {
+        raven.display = false;
+      } else {
+        raven.dialogue.playerResponse = [prop];
+        raven.chatProgress++;
+      }
     }
   }
 };
