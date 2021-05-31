@@ -35,30 +35,30 @@ raven.dialogue.text = [];
 
 raven.dialogue.text[0] = {
   response: [
-    { a: { text: "Heya, player! How was your time off?", playerChoices: 0 } },
+    { a: { text: "Heya, player! How was your time off?", playerChoices: 1 } },
     {
-      a: { text: "Boring's better than horrible!", playerChoices: 2 },
+      a: { text: "Boring's better than horrible!", playerChoices: 0 },
       b: {
         text: "I slept for so long, my roommate thought I was dead.",
         playerChoices: 2
       },
-      c: { text: "Oh yeah?", playerChoices: 1 }
+      c: { text: "Oh yeah?", playerChoices: 2 }
     },
     {
-      a: { text: "Let me know the band later, yeah?", playerChoices: 2 },
-      b: { text: "Oh no, the walking dead!", playerChoices: 2 },
-      c: { text: "Damn, movie worthy.", playerChoices: 2 }
+      a: { text: "Let me know the band later, yeah?", playerChoices: 0 },
+      b: { text: "Oh no, the walking dead!", playerChoices: 0 },
+      c: { text: "Damn, movie worthy.", playerChoices: 0 }
     }
   ],
   choice: [
+    { complete: "Return to Map" },
     { a: "Boring", b: "Definitely needed", c: "Exciting" },
 
     {
       a: "Sat back, vibed with some new music.",
       b: "I slept for so long, my roommate thought I was dead.",
       c: "Went out for a long drive that turned into camping."
-    },
-    { complete: "Return to Map" }
+    }
   ]
 };
 
@@ -117,9 +117,13 @@ raven.dialogue.render = function() {
 };
 
 raven.click = function(event) {
-  for (const prop in raven.dialogue.text[0].choice[raven.chatProgress]) {
+  for (const prop in raven.dialogue.text[0].choice[raven.playerChoices]) {
+      if(prop == "complete"){
+        continue;
+      }
+      console.log(prop)
     if (helperFunction.button.click(raven.dialogue.boxes.choices[prop])) {
-      raven.dialogue.playerResponse = [prop];
+      // raven.dialogue.playerResponse = [prop];
       raven.chatProgress++;
     }
   }
