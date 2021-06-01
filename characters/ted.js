@@ -7,7 +7,7 @@ const ted = {};
 ted.image = document.getElementById("miniTed");
 
 ted.size = 45;
-ted.pos = { x: 650, y: 250 };
+ted.pos = { x: 1825 , y: 300 };
 ted.speedMax = 3;
 ted.centerOffset = { x: -72, y: -85 };
 ted.up = { range: [1, 5], flag: false };

@@ -6,7 +6,7 @@ import { Topping } from "./ramen-toppings.js";
 import { ingredients } from "./ingredients.js";
 import { RamenBowl } from "./ramen-bowl.js";
 import { PlayerCharacter } from "../characters/player-character.js";
-import { ted } from "../characters/ted.js"
+import { ted } from "../characters/ted.js";
 import * as helperFunction from "../helper-functions.js";
 //declare global variables for this page
 var character, bowl;
@@ -15,10 +15,8 @@ const miniGame = {};
 const kitchenBG = document.getElementById("kitchenBG");
 const bowlImage = document.getElementById("bowl");
 
-
 miniGame.preLoad = function() {
   ingredients.preLoad();
-  
 };
 
 miniGame.load = function() {
@@ -27,7 +25,6 @@ miniGame.load = function() {
   bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
   miniGame.finishedBowls = 0;
-  
 };
 
 miniGame.play = function() {
@@ -35,28 +32,36 @@ miniGame.play = function() {
   character.movement();
   ted.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
-  if(helperFunction.dist(character.pos.x, character.pos.y, ted.pos.x, ted.pos.y) < character.size){
-    console.log("hello");
+  if (
+    helperFunction.dist(
+      character.pos.x,
+      character.pos.y,
+      ted.pos.x,
+      ted.pos.y
+    ) <
+    character.size + ted.size
+  ) {
+    miniGame.finished = true;
   }
-  
+
   // All drawing
   helperFunction.background(kitchenBG);
   character.render();
   ted.render();
   bowl.render();
   ingredients.renderStarterIngredients();
-  if (ingredients.finishBowl()){
+  if (ingredients.finishBowl()) {
     miniGame.finished = true;
   }
   //debug purposes only
   if (frameCount % 10 === 0) {
-    
   }
 };
 
-miniGame.reset = function(){
+miniGame.reset = function() {
   ingredients.reset();
   miniGame.finishedBowls = 0;
-}
+  ted.pos = { x: 1825, y: 300 };
+};
 
 export { miniGame, character, bowl };
