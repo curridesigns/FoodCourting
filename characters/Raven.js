@@ -94,6 +94,6 @@ const boxes = {
   color: "#f9cb9ccc"
 };
 
-const raven = new npc(images, text, boxes, 1);
+const raven = new npc(images, text, boxes);
 
 export { raven };

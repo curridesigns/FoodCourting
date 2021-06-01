@@ -163,9 +163,9 @@ ted.miniGame = {};
       ted.miniGame.brakePedal.x = false;
     }
 
-    physics.movement(ted);
-    physics.worldSpace(ted);
-    physics.collision(ted);
+    physics.movement(ted.miniGame);
+    physics.worldSpace(ted.miniGame);
+    physics.collision(ted.miniGame);
   };
 }
 ted.text = [];
@@ -173,5 +173,5 @@ ted.text[0] = {
   
 }
 
-ted.novel = new npc(ted.image, );
+ted.novel = new npc(ted.image, ted.text,  );
 export { ted };

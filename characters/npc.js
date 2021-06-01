@@ -2,7 +2,7 @@ import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 
 class npc {
-  constructor(imagesObj, dialogueArr, boxesObj, talkingTime) {
+  constructor(imagesObj, dialogueArr, boxesObj) {
     this.images = imagesObj;
     this.chats = 0;
     this.state = "idle";
@@ -12,7 +12,7 @@ class npc {
     this.dialogue.boxes = boxesObj;
     this.dialogue.playerResponse = "a";
     this.dialogue.text = dialogueArr;
-    this.talkingTime = talkingTime * 1000;
+    this.talkingTime = 1 * 1000;
     this.endTime = new Date().getTime + this.talkingTime;
     this.playerChose = true;
   }

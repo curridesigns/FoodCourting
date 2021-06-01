@@ -30,16 +30,16 @@ miniGame.load = function() {
 miniGame.play = function() {
   // All updates
   character.movement();
-  ted.movement();
+  ted.miniGame.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   if (
     helperFunction.dist(
       character.pos.x,
       character.pos.y,
-      ted.pos.x,
-      ted.pos.y
+      ted.miniGame.pos.x,
+      ted.miniGame.pos.y
     ) <
-    character.size + ted.size
+    character.size + ted.miniGame.size
   ) {
     miniGame.finished = true;
   }
@@ -47,7 +47,7 @@ miniGame.play = function() {
   // All drawing
   helperFunction.background(kitchenBG);
   character.render();
-  ted.render();
+  ted.miniGame.render();
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()) {
@@ -61,7 +61,7 @@ miniGame.play = function() {
 miniGame.reset = function() {
   ingredients.reset();
   miniGame.finishedBowls = 0;
-  ted.pos = { x: 1825, y: 300 };
+  ted.miniGame.pos = { x: 1825, y: 300 };
 };
 
 export { miniGame, character, bowl };
