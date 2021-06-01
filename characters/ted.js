@@ -17,9 +17,10 @@ ted.left = { range: [6, 10], flag: false };
 ted.direction = { x: 0, y: 0 };
 ted.speed = { x: 0, y: 0 };
 ted.brakePedal = { x: true, y: true };
-ted.input = { x: 0 };
+ted.input = { x: 0, y: 0 };
 ted.contact = { x: false, y: false };
 ted.needsMovement = true;
+ted.initial = true;
 ted.timer = false;
 ted.moveTime = Math.floor(helperFunction.randomRange(0, 21));
 ted.endTime = new Date().getTime() + ted.moveTime;
@@ -41,8 +42,12 @@ ted.render = function(debug = false) {
 
 ted.movement = function() {
   if (frameCount % 10 === 0) {
-    console.log(ted.input);
-    console.log(ted.contact);
+    console.log("input x: " + ted.input.x);
+    console.log("input y: " + ted.input.y);
+    console.log("contact x: " + ted.contact.x);
+    console.log("contact y: " + ted.contact.y);
+    console.log("movement: " + ted.needsMovement);
+    console.log("timer: " + ted.timer);
   }
   if (ted.timer) {
     ted.moveTime = Math.floor(helperFunction.randomRange(0, 1000));
@@ -52,25 +57,37 @@ ted.movement = function() {
   if (Date.now() >= ted.endTime) {
     ted.timer = true;
   }
+  
   ted.brakePedal = { x: true, y: true };
   if (ted.needsMovement || ted.timer) {
-    ted.input.x = Math.floor(helperFunction.randomRange(0, ted.left.range[1]));
-    ted.needsMovement = false;
+    if (ted.initial) {
+      ted.input.x = Math.floor(
+        helperFunction.randomRange(0, ted.left.range[1])
+      );
+      ted.input.y = Math.floor(
+        helperFunction.randomRange(0, ted.down.range[1])
+      );
+    }
     if (ted.contact.x) {
+      ted.input.y = Math.floor(
+        helperFunction.randomRange(0, ted.down.range[1])
+      );
       ted.contact.x = false;
     }
     if (ted.contact.y) {
-      ted.contact.x = false;
+      ted.input.y = Math.floor(
+        helperFunction.randomRange(0, ted.down.range[1])
+      );
+      ted.contact.y = false;
     }
+    ted.needsMovement = false;
   }
   if (ted.input.x === 0 || ted.input.y === 0) {
     ted.up.flag = false;
     ted.down.flag = false;
     ted.right.flag = false;
     ted.left.flag = false;
-  } else if (
-    ted.input.y >= ted.up.range[0] && 
-    ted.input.y <= ted.up.range[1]) {
+  } else if (ted.input.y >= ted.up.range[0] && ted.input.y <= ted.up.range[1]) {
     ted.up.flag = true;
   } else if (
     ted.input.y >= ted.down.range[0] &&
