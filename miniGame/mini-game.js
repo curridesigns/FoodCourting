@@ -33,6 +33,7 @@ miniGame.load = function() {
 miniGame.play = function() {
   // All updates
   character.movement();
+  ted.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   
   // All drawing
