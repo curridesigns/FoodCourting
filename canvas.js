@@ -37,7 +37,7 @@ function draw() {
       if (miniGame.tedEnding) {
         visualNovel.miniGame = false;
         visualNovel.display = "food"
-        
+        visualNovel.tedChat = true;
       } else {
         visualNovel.miniGame = false;
         visualNovel.display = "map";

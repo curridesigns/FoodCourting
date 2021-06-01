@@ -43,7 +43,7 @@ visualNovel.load = function() {
       break;
     //displays the Food Court
     case "food":
-      ramen.load();
+      ramen.load(visualNovel.tedChat);
       break;
   }
 };

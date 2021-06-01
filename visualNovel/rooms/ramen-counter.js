@@ -4,7 +4,9 @@ import { visualNovel } from "../VisualNovel.js";
 import { ted } from "../../characters/ted.js";
 
 const ramen = {};
-ramen.bg = document.getElementById("splashScreen");
+ramen.shiftStart = document.getElementById("splashScreen");
+ramen.bg = document.getElementById("storeBG");
+ramen.Reg = document.getElementById("storeReg");
 let screen = "novel";
 //ramen.Reg = document.getElementById("")
 
@@ -14,24 +16,31 @@ const buttons = {
   returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }
 };
 
-ramen.load = function(state) {
-  helperFunction.background(ramen.bg);
-  //ted.render(screen);
-  //helperFunction.background(ramen.Reg);
+ramen.load = function(tedChat = false) {
+  if (tedChat) {
+    helperFunction.background(ramen.bg);
+    ted.render(screen);
+    helperFunction.background(ramen.Reg);
+        visualNovel.returnToMapRender(event, buttons.returnToMap);
+
+  } else {
+    helperFunction.background(ramen.shiftStart);
+  }
   //dialogue
-  //visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
-  // endScreen.click();
 };
 
-ramen.click = function(event) {
-  console.log(helperFunction.getMouseCoordinates(event));
-  if(helperFunction.button.click(buttons.clockIn)){
-    visualNovel.miniGame = true;
+ramen.click = function(event, tedChat = false) {
+  if (tedChat) {
+    console.log(helperFunction.getMouseCoordinates(event));
+    visualNovel.returnToMapClick(event, buttons.returnToMap);
+  } else {
+    if (helperFunction.button.click(buttons.clockIn)) {
+      visualNovel.miniGame = true;
+    }
+    if (helperFunction.button.click(buttons.clockOut)) {
+      visualNovel.display = "map";
+    }
   }
-  if(helperFunction.button.click(buttons.clockOut)){
-    visualNovel.display = "map";
-  }
-  //visualNovel.returnToMapClick(event, buttons.returnToMap);
 };
 
 export { ramen };

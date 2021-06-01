@@ -33,7 +33,7 @@ ted.render = function(state = "miniGame", debug = false) {
       ctx.translate(-ted.miniGame.pos.x, -ted.miniGame.pos.y);
       break;
     case "novel":
-      ted.novel.render();
+      ted.novel.render(200,200);
   }
 };
 
