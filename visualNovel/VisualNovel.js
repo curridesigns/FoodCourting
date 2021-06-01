@@ -73,19 +73,19 @@ visualNovel.click = function(event) {
     //console.log("there")
     //runs the click "function" for the arcade
     case "arcade":
-      arcade.click();
+      arcade.click(event);
       break;
     //runs the click "function" for the store
     case "store":
-      store.click();
+      store.click(event);
       break;
     //runs the click "function" for Spicy Take
     case "spicy":
-      spicy.click();
+      spicy.click(event);
       break;
     //runs the click "function" for the Food Court
     case "food":
-      ramen.click();
+      ramen.click(event);
       break;
   }
 };
