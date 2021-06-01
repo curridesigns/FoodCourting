@@ -27,7 +27,13 @@ ted.render = function() {
 ted.movement = function() {
   this.brakePedal = { x: true, y: true };
   if(ted.needsMovement && !ted.contact){
-    ted.input = helperFunction.randomRange(0,20)
+    ted.input = Math.floor(helperFunction.randomRange(0,21))
+  }
+  if(ted.input === 0){
+    ted.brakePedal.x = false;
+    ted.brakePedal.y = false;
+  } else if(ted.input > ted.up.range[0] && ted.input < ted.up.range){
+    ted.up.flag = true
   }
 
     //sets the values for the direction to pass to the physics.movement function
