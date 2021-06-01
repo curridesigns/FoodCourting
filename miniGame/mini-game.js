@@ -6,6 +6,7 @@ import { Topping } from "./ramen-toppings.js";
 import { ingredients } from "./ingredients.js";
 import { RamenBowl } from "./ramen-bowl.js";
 import { PlayerCharacter } from "../characters/player-character.js";
+import { ted } from "../characters/ted.js"
 import * as helperFunction from "../helper-functions.js";
 //declare global variables for this page
 var character, bowl;
@@ -37,7 +38,7 @@ miniGame.play = function() {
   // All drawing
   helperFunction.background(kitchenBG);
   character.render();
-  ted.
+  ted.render();
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()){
