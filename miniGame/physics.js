@@ -124,22 +124,18 @@ physics.worldSpace = function (obj, contact){
   if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
     obj.pos.y = worldBoundries.y.lower - obj.size;
     obj.contact.y = true;
-    console.log("lower")
   }
   if(dist(obj.pos.y,worldBoundries.y.upper) < obj.size){
     obj.pos.y = worldBoundries.y.upper + obj.size;
     obj.contact.y = true;
-    console.log("upper")
   }
   if(dist(obj.pos.x,worldBoundries.x.right) < obj.size){
     obj.pos.x = worldBoundries.x.right - obj.size;
     obj.contact.y = true;
-    console.log("right")
   }
   if(dist(worldBoundries.x.left,obj.pos.x) < obj.size){
     obj.pos.x = worldBoundries.x.left + obj.size;
     obj.contact.y = true;
-    console.log("left")
   }
   
 }

@@ -35,6 +35,9 @@ miniGame.play = function() {
   character.movement();
   ted.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
+  if(helperFunction.dist(character.pos.x, character.pos.y, ted.pos.x, ted.pos.y) < character.size){
+    console.log("hello");
+  }
   
   // All drawing
   helperFunction.background(kitchenBG);
