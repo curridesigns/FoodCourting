@@ -85,7 +85,7 @@ visualNovel.click = function(event) {
       break;
     //runs the click "function" for the Food Court
     case "food":
-      ramen.click(event);
+      ramen.click(event, visualNovel.tedChat);
       break;
   }
 };

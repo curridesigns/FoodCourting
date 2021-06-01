@@ -35,9 +35,12 @@ function draw() {
     visualNovel.load();
     if (miniGame.finished) {
       if (miniGame.tedEnding) {
+        if (!visualNovel.tedChat) {
+          miniGame.tedEnding = false;
+        }else {
         visualNovel.miniGame = false;
-        visualNovel.display = "food"
-        visualNovel.tedChat = true;
+        visualNovel.display = "food";
+        visualNovel.tedChat = true;}
       } else {
         visualNovel.miniGame = false;
         visualNovel.display = "map";

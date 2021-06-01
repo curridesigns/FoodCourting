@@ -21,8 +21,10 @@ ramen.load = function(tedChat = false) {
     helperFunction.background(ramen.bg);
     ted.render(screen);
     helperFunction.background(ramen.Reg);
-        visualNovel.returnToMapRender(event, buttons.returnToMap);
-
+    visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
+    if (frameCount % 10 === 0) {
+      console.log(visualNovel.display);
+    }
   } else {
     helperFunction.background(ramen.shiftStart);
   }
@@ -32,7 +34,10 @@ ramen.load = function(tedChat = false) {
 ramen.click = function(event, tedChat = false) {
   if (tedChat) {
     console.log(helperFunction.getMouseCoordinates(event));
-    visualNovel.returnToMapClick(event, buttons.returnToMap);
+    if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
+      visualNovel.display = "map";
+      visualNovel.tedChat = false;
+    }
   } else {
     if (helperFunction.button.click(buttons.clockIn)) {
       visualNovel.miniGame = true;
