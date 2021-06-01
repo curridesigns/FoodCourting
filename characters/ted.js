@@ -4,43 +4,49 @@ import * as helperFunction from "../helper-functions.js";
 
 const ted = {};
 
-ted.image = document.getElementById("miniTed");
+ted.image = { miniGame: document.getElementById("miniTed") };
 
-ted.size = 45;
-ted.pos = { x: 1825 , y: 300 };
-ted.speedMax = 3;
-ted.centerOffset = { x: -72, y: -85 };
-ted.up = { range: [1, 5], flag: false };
-ted.down = { range: [6, 10], flag: false };
-ted.right = { range: [1, 5], flag: false };
-ted.left = { range: [6, 10], flag: false };
-ted.direction = { x: 0, y: 0 };
-ted.speed = { x: 0, y: 0 };
-ted.brakePedal = { x: true, y: true };
-ted.input = { x: 0, y: 0 };
-ted.contact = { x: false, y: false };
-ted.needsMovement = true;
-ted.initial = true;
-ted.timer = false;
-ted.moveTime = Math.floor(helperFunction.randomRange(0, 21));
-ted.endTime = new Date().getTime() + ted.moveTime;
 
-ted.render = function(debug = false) {
-  ctx.translate(ted.pos.x, ted.pos.y);
-  ctx.drawImage(ted.image, ted.centerOffset.x, ted.centerOffset.y);
-  if (debug) {
-    ctx.fillStyle = "blue";
-    ctx.fillRect(0, 0, 10, 10);
-    ctx.beginPath();
-    ctx.lineWidth = 5;
-    ctx.strokeStyle = ted.color;
-    ctx.arc(0, 0, ted.size, 0, 2 * Math.PI);
-    ctx.stroke();
+ted.render = function(debug = false, state = "miniGame") {
+  switch (state) {
+    case "miniGame":
+      ctx.translate(ted.pos.x, ted.pos.y);
+      ctx.drawImage(ted.image.miniGame, ted.centerOffset.x, ted.centerOffset.y);
+      if (debug) {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 10, 10);
+        ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = ted.color;
+        ctx.arc(0, 0, ted.size, 0, 2 * Math.PI);
+        ctx.stroke();
+      }
+      ctx.translate(-ted.pos.x, -ted.pos.y);
+      break;
+    case "food":
+      ted.novel.render()
   }
-  ctx.translate(-ted.pos.x, -ted.pos.y);
 };
 
-ted.movement = function() {
+ted.miniGame.size = 45;
+ted.miniGame.pos = { x: 1825, y: 300 };
+ted.miniGame.speedMax = 3;
+ted.miniGame.centerOffset = { x: -72, y: -85 };
+ted.miniGame.up = { range: [1, 5], flag: false };
+ted.miniGame.down = { range: [6, 10], flag: false };
+ted.miniGame.right = { range: [1, 5], flag: false };
+ted.miniGame.left = { range: [6, 10], flag: false };
+ted.miniGame.direction = { x: 0, y: 0 };
+ted.miniGame.speed = { x: 0, y: 0 };
+ted.miniGame.brakePedal = { x: true, y: true };
+ted.miniGame.input = { x: 0, y: 0 };
+ted.miniGame.contact = { x: false, y: false };
+ted.miniGame.needsMovement = true;
+ted.miniGame.initial = true;
+ted.miniGame.timer = false;
+ted.miniGame.moveTime = Math.floor(helperFunction.randomRange(0, 21));
+ted.miniGame.endTime = new Date().getTime() + ted.moveTime;
+ted.miniGame.movement = function() {
   if (frameCount % 10 === 0) {
     // console.log("input x: " + ted.input.x);
     // console.log("input y: " + ted.input.y);
