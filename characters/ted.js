@@ -6,6 +6,7 @@ const ted = {};
 
 ted.image = document.getElementById("miniTed");
 
+ted.size = 45;
 ted.pos = { x: 600, y: 300 };
 ted.up = { range: [1, 5], flag: false };
 ted.down = { range: [6, 10], flag: false };
@@ -25,6 +26,7 @@ ted.render = function() {
 ted.movement = function() {
   if (frameCount % 10 === 0) {
     console.log(ted.input)
+    // console.log(ted.contact)
     
   }
   ted.brakePedal = { x: true, y: true };
@@ -37,15 +39,11 @@ ted.movement = function() {
     ted.brakePedal.y = false;
   } else if (ted.input > ted.up.range[0] && ted.input < ted.up.range[1]) {
     ted.up.flag = true;
-    console.log("up")
   } else if (ted.input > ted.down.range[0] && ted.input < ted.down.range[1]) {
-    console.log("down")
     ted.down.flag = true;
   } else if (ted.input > ted.right.range[0] && ted.input < ted.right.range[1]) {
-    console.log("right")
     ted.right.flag = true;
   } else if (ted.input > ted.left.range[0] && ted.input < ted.left.range[1]) {
-    console.log("left")
     ted.left.flag = true;
   }
 

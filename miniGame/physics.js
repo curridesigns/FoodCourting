@@ -60,6 +60,7 @@ physics.movement = function (obj){
 }
 
 physics.collision = function (obj, contact){
+  // console.log(obj.size)
   const counters = {front: {left: 500, bottom: 900}, top: {left: 655, bottom:165}, island: {top: 430, bottom: 675, left: 655, right: 1720}, bottom: {top: 900, left: 655}}
   if(obj.pos.y < counters.front.bottom){
     if(dist(obj.pos.x, counters.front.left) < obj.size){
@@ -82,6 +83,7 @@ physics.collision = function (obj, contact){
     if(dist(obj.pos.x, counters.top.left) < obj.size){
       obj.pos.x = counters.top.left - obj.size;
       contact = true;
+      // console.log("hello")
     }
   }
   if(obj.pos.x > counters.top.left){
@@ -122,18 +124,22 @@ physics.worldSpace = function (obj, contact){
   if(dist(obj.pos.y,worldBoundries.y.lower) < obj.size){
     obj.pos.y = worldBoundries.y.lower - obj.size;
     contact = true;
+    console.log("lower")
   }
   if(dist(obj.pos.y,worldBoundries.y.upper) < obj.size){
     obj.pos.y = worldBoundries.y.upper + obj.size;
     contact = true;
+    console.log("upper")
   }
   if(dist(obj.pos.x,worldBoundries.x.right) < obj.size){
     obj.pos.x = worldBoundries.x.right - obj.size;
     contact = true;
+    console.log("right")
   }
   if(dist(worldBoundries.x.left,obj.pos.x) < obj.size){
     obj.pos.x = worldBoundries.x.left + obj.size;
     contact = true;
+    console.log("left")
   }
   
 }
