@@ -5,6 +5,7 @@ import { ted } from "../../characters/ted.js"
 
 const ramen = {};
 ramen.bg = document.getElementById("splashScreen");
+let screen = "novel"
 //ramen.Reg = document.getElementById("")
 
 const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }};
@@ -12,7 +13,7 @@ const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 185
 ramen.load = function() {
   
   helperFunction.background(ramen.bg);
-  ted.render();
+  //ted.render(screen);
   //helperFunction.background(ramen.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
@@ -20,6 +21,7 @@ ramen.load = function() {
 };
 
 ramen.click = function(event) {
+  console.log("x: " + event.clientX + "/ny: " + event.clientY);
   visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 

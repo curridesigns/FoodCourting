@@ -3,6 +3,7 @@ import * as helperFunction from "../helper-functions.js";
 import { arcade } from "./rooms/arcade-counter.js";
 import { store } from "./rooms/store-counter.js";
 import { spicy } from "./rooms/spicyTake-counter.js";
+import { ramen } from "./rooms/ramen-counter.js";
 
 const visualNovel = {};
 // const roomDisplay = {store: false, spicy: false, arcade: false, food: false};
@@ -42,7 +43,7 @@ visualNovel.load = function() {
       break;
     //displays the Food Court
     case "food":
-      visualNovel.miniGame = true;
+      ramen.load();
       break;
   }
 };
@@ -84,7 +85,7 @@ visualNovel.click = function(event) {
       break;
     //runs the click "function" for the Food Court
     case "food":
-      visualNovel.miniGame = true;
+      ramen.click();
       break;
   }
 };

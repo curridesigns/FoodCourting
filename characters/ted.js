@@ -12,7 +12,7 @@ ted.image = {
   idle: document.getElementById("tedL")
 };
 
-ted.render = function(debug = false, state = "miniGame") {
+ted.render = function(state = "miniGame", debug = false) {
   switch (state) {
     case "miniGame":
       ctx.translate(ted.miniGame.pos.x, ted.miniGame.pos.y);
@@ -32,7 +32,7 @@ ted.render = function(debug = false, state = "miniGame") {
       }
       ctx.translate(-ted.miniGame.pos.x, -ted.miniGame.pos.y);
       break;
-    case "food":
+    case "novel":
       ted.novel.render();
   }
 };
@@ -168,6 +168,10 @@ ted.miniGame = {};
     physics.collision(ted);
   };
 }
+ted.text = [];
+ted.text[0] = {
+  
+}
 
-ted.novel = new npc();
+ted.novel = new npc(ted.image, );
 export { ted };
