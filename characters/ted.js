@@ -44,29 +44,30 @@ ted.movement = function() {
   if (frameCount % 10 === 0) {
     console.log("input x: " + ted.input.x);
     console.log("input y: " + ted.input.y);
-    console.log("contact x: " + ted.contact.x);
-    console.log("contact y: " + ted.contact.y);
-    console.log("movement: " + ted.needsMovement);
-    console.log("timer: " + ted.timer);
+    // console.log("contact x: " + ted.contact.x);
+    // console.log("contact y: " + ted.contact.y);
+    // console.log("movement: " + ted.needsMovement);
+    // console.log("timer: " + ted.timer);
   }
   if (ted.timer) {
-    ted.moveTime = Math.floor(helperFunction.randomRange(0, 1000));
+    ted.moveTime = Math.floor(helperFunction.randomRange(0, 10000));
     ted.endTime = new Date().getTime() + ted.moveTime;
     ted.timer = false;
   }
   if (Date.now() >= ted.endTime) {
     ted.timer = true;
   }
-  
+
   ted.brakePedal = { x: true, y: true };
   if (ted.needsMovement || ted.timer) {
-    if (ted.initial) {
+    if (ted.initial || ted.timer) {
       ted.input.x = Math.floor(
         helperFunction.randomRange(0, ted.left.range[1])
       );
       ted.input.y = Math.floor(
         helperFunction.randomRange(0, ted.down.range[1])
       );
+      ted.initial = false;
     }
     if (ted.contact.x) {
       ted.input.y = Math.floor(
@@ -87,33 +88,26 @@ ted.movement = function() {
     ted.down.flag = false;
     ted.right.flag = false;
     ted.left.flag = false;
-  } else if (ted.input.y >= ted.up.range[0] && ted.input.y <= ted.up.range[1]) {
+  }
+  if (ted.input.y >= ted.up.range[0] && ted.input.y <= ted.up.range[1]) {
     ted.up.flag = true;
-  } else if (
-    ted.input.y >= ted.down.range[0] &&
-    ted.input.y <= ted.down.range[1]
-  ) {
+  }
+  if (ted.input.y >= ted.down.range[0] && ted.input.y <= ted.down.range[1]) {
     ted.down.flag = true;
-  } else if (
-    ted.input.x >= ted.right.range[0] &&
-    ted.input.x <= ted.right.range[1]
-  ) {
+  }
+  if (ted.input.x >= ted.right.range[0] && ted.input.x <= ted.right.range[1]) {
     ted.right.flag = true;
-  } else if (
-    ted.input.x >= ted.left.range[0] &&
-    ted.input.x <= ted.left.range[1]
-  ) {
+    console.log("right");
+  }
+  if (ted.input.x >= ted.left.range[0] && ted.input.x <= ted.left.range[1]) {
+    console.log("left");
     ted.left.flag = true;
   }
-
-  if (ted.contact.x) {
-    ted.right.flag = false;
-    ted.left.flag = false;
-    ted.needsMovement = true;
-  }
-  if (ted.contact.y) {
+  if (ted.contact.y || ted.contact.x) {
     ted.up.flag = false;
     ted.down.flag = false;
+    ted.right.flag = false;
+    ted.left.flag = false;
     ted.needsMovement = true;
   }
 
