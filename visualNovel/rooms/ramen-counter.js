@@ -21,7 +21,7 @@ ramen.load = function() {
 };
 
 ramen.click = function(event) {
-  console.log("x: " + event.clientX + "/ny: " + event.clientY);
+  console.log(helperFunction.getMouseCoordinates(event));
   visualNovel.returnToMapClick(event, buttons.returnToMap);
 }
 
