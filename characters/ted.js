@@ -12,15 +12,17 @@ ted.speedMax = 3;
 ted.centerOffset = { x: -72, y: -85 };
 ted.up = { range: [1, 5], flag: false };
 ted.down = { range: [6, 10], flag: false };
-ted.right = { range: [11, 15], flag: false };
-ted.left = { range: [16, 20], flag: false };
+ted.right = { range: [1, 5], flag: false };
+ted.left = { range: [6, 10], flag: false };
 ted.direction = { x: 0, y: 0 };
 ted.speed = { x: 0, y: 0 };
 ted.brakePedal = { x: true, y: true };
-ted.input = {x: 0};
-ted.contact = {x: false, y: false};
+ted.input = { x: 0 };
+ted.contact = { x: false, y: false };
 ted.needsMovement = true;
-
+ted.timer = false;
+ted.moveTime = Math.floor(helperFunction.randomRange(0, 21));
+ted.endTime = new Date().getTime() + ted.moveTime;
 
 ted.render = function(debug = false) {
   ctx.translate(ted.pos.x, ted.pos.y);
@@ -42,28 +44,48 @@ ted.movement = function() {
     console.log(ted.input);
     console.log(ted.contact);
   }
+  if (ted.timer) {
+    ted.moveTime = Math.floor(helperFunction.randomRange(0, 1000));
+    ted.endTime = new Date().getTime() + ted.moveTime;
+    ted.timer = false;
+  }
+  if (Date.now() >= ted.endTime) {
+    ted.timer = true;
+  }
   ted.brakePedal = { x: true, y: true };
-  if (ted.needsMovement) {
-    ted.input.x = Math.floor(helperFunction.randomRange(0, 21));
+  if (ted.needsMovement || ted.timer) {
+    ted.input.x = Math.floor(helperFunction.randomRange(0, ted.left.range[1]));
     ted.needsMovement = false;
-    if(ted.contact.x){ted.contact.x = false}
-    if(ted.contact.y){ted.contact.x = false}
+    if (ted.contact.x) {
+      ted.contact.x = false;
+    }
+    if (ted.contact.y) {
+      ted.contact.x = false;
+    }
   }
   if (ted.input.x === 0 || ted.input.y === 0) {
     ted.up.flag = false;
     ted.down.flag = false;
     ted.right.flag = false;
     ted.left.flag = false;
-  } else if (ted.input >= ted.up.range[0] && ted.input <= ted.up.range[1]) {
+  } else if (
+    ted.input.y >= ted.up.range[0] && 
+    ted.input.y <= ted.up.range[1]) {
     ted.up.flag = true;
-  } else if (ted.input >= ted.down.range[0] && ted.input <= ted.down.range[1]) {
+  } else if (
+    ted.input.y >= ted.down.range[0] &&
+    ted.input.y <= ted.down.range[1]
+  ) {
     ted.down.flag = true;
   } else if (
-    ted.input >= ted.right.range[0] &&
-    ted.input <= ted.right.range[1]
+    ted.input.x >= ted.right.range[0] &&
+    ted.input.x <= ted.right.range[1]
   ) {
     ted.right.flag = true;
-  } else if (ted.input >= ted.left.range[0] && ted.input <= ted.left.range[1]) {
+  } else if (
+    ted.input.x >= ted.left.range[0] &&
+    ted.input.x <= ted.left.range[1]
+  ) {
     ted.left.flag = true;
   }
 
@@ -72,7 +94,7 @@ ted.movement = function() {
     ted.left.flag = false;
     ted.needsMovement = true;
   }
-  if (ted.contact.y){
+  if (ted.contact.y) {
     ted.up.flag = false;
     ted.down.flag = false;
     ted.needsMovement = true;
