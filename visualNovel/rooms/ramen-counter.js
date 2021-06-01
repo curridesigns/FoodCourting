@@ -1,17 +1,18 @@
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js"
+import { ted } from "../../characters/ted.js"
 
 const ramen = {};
-//ramen.bg = document.getElementById("");
+ramen.bg = document.getElementById("splashScreen");
 //ramen.Reg = document.getElementById("")
 
 const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }};
 
 ramen.load = function() {
   
-  //helperFunction.background(ramen.bg);
-  //helperFunction.background();
+  helperFunction.background(ramen.bg);
+  ted.render();
   //helperFunction.background(ramen.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
