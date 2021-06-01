@@ -32,13 +32,13 @@ miniGame.load = function() {
 
 miniGame.play = function() {
   // All updates
-  //character.movement();
+  character.movement();
   ted.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
   
   // All drawing
   helperFunction.background(kitchenBG);
-  //character.render();
+  character.render();
   ted.render();
   bowl.render();
   ingredients.renderStarterIngredients();

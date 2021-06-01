@@ -16,6 +16,7 @@ class PlayerCharacter {
     this.speed = { x: 0, y: 0 };
     this.brakePedal = { x: true, y: true };
     this.image = document.getElementById("character");
+    this.contact = false
   }
 
   render(debug = false) {

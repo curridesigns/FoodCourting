@@ -7,7 +7,6 @@ const ted = {};
 ted.image = document.getElementById("miniTed");
 
 ted.size = 45;
-ted.pos = { x: 600, y: 300 };
 ted.up = { range: [1, 5], flag: false };
 ted.down = { range: [6, 10], flag: false };
 ted.right = { range: [11, 15], flag: false };
@@ -18,6 +17,12 @@ ted.brakePedal = { x: true, y: true };
 ted.contact = false;
 ted.needsMovement = true;
 ted.input = 0;
+    ted.pos = { x: 650, y: 250 };
+    ted.size = 45;
+    ted.color = "red";
+    ted.direction = { x: 0, y: 0 };
+    ted.brakePedal = { x: true, y: true };
+    ted.contact = false
 
 ted.render = function() {
   ctx.drawImage(ted.image, ted.pos.x, ted.pos.y);
@@ -25,25 +30,25 @@ ted.render = function() {
 
 ted.movement = function() {
   if (frameCount % 10 === 0) {
-    console.log(ted.input)
-    // console.log(ted.contact)
-    
+    console.log(ted.input);
+    console.log(ted.contact);
   }
   ted.brakePedal = { x: true, y: true };
   if (ted.needsMovement) {
-    ted.input = Math.floor(helperFunction.randomRange(0, 21));
+    ted.input = Math.floor(helperFunction.randomRange(1, 21));
     ted.needsMovement = false;
+    ted.contact = false;
   }
   if (ted.input === 0) {
     ted.brakePedal.x = false;
     ted.brakePedal.y = false;
-  } else if (ted.input > ted.up.range[0] && ted.input < ted.up.range[1]) {
+  } else if (ted.input >= ted.up.range[0] && ted.input <= ted.up.range[1]) {
     ted.up.flag = true;
-  } else if (ted.input > ted.down.range[0] && ted.input < ted.down.range[1]) {
+  } else if (ted.input >= ted.down.range[0] && ted.input <= ted.down.range[1]) {
     ted.down.flag = true;
-  } else if (ted.input > ted.right.range[0] && ted.input < ted.right.range[1]) {
+  } else if (ted.input >= ted.right.range[0] && ted.input <= ted.right.range[1]) {
     ted.right.flag = true;
-  } else if (ted.input > ted.left.range[0] && ted.input < ted.left.range[1]) {
+  } else if (ted.input >= ted.left.range[0] && ted.input <= ted.left.range[1]) {
     ted.left.flag = true;
   }
 
@@ -76,8 +81,8 @@ ted.movement = function() {
   }
 
   physics.movement(ted);
-  physics.worldSpace(ted, ted.contact);
-  physics.collision(ted, ted.contact);
+  physics.worldSpace(ted);
+  physics.collision(ted);
 };
 
 export { ted };
