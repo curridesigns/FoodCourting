@@ -17,7 +17,7 @@ ted.render = function(state = "miniGame", debug = false) {
     case "miniGame":
       ctx.translate(ted.miniGame.pos.x, ted.miniGame.pos.y);
       ctx.drawImage(
-        ted.miniGame.image.miniGame,
+        ted.image.miniGame,
         ted.miniGame.centerOffset.x,
         ted.miniGame.centerOffset.y
       );

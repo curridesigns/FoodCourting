@@ -14,7 +14,7 @@ const buttons = {
   returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }
 };
 
-ramen.load = function() {
+ramen.load = function(state) {
   helperFunction.background(ramen.bg);
   //ted.render(screen);
   //helperFunction.background(ramen.Reg);

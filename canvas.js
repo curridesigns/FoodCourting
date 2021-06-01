@@ -34,19 +34,23 @@ function draw() {
     //console.log("hello there")
     visualNovel.load();
     if (miniGame.finished) {
-      visualNovel.miniGame = false;
-      visualNovel.display = "map";
-      miniGame.reset();
-      miniGame.finished = false;
+      if (miniGame.tedEnding) {
+        visualNovel.miniGame = false;
+        visualNovel.display = "food"
+        
+      } else {
+        visualNovel.miniGame = false;
+        visualNovel.display = "map";
+        miniGame.reset();
+        miniGame.finished = false;
+      }
+    }
+    if (visualNovel.miniGame) {
+      miniGame.play();
+      //debug purposes only
       // if (frameCount % 10 === 0) {
       //   console.log("there")
       // }
-    }
-    if (visualNovel.miniGame) {
-      
-      miniGame.play();
-      //debug purposes only
-      
     }
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
@@ -55,9 +59,9 @@ function draw() {
     miniGame.finishedBowls = 0;
   }
   //debug statement to stop the page from crashing on console.logs
-//   if (frameCount % 10 === 0) {
-        
-//       }
+  //   if (frameCount % 10 === 0) {
+
+  //       }
   //console.log(frameCount);
 
   // noodles.selected(character.pos);

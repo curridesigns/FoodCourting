@@ -25,6 +25,7 @@ miniGame.load = function() {
   bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
   miniGame.finishedBowls = 0;
+  miniGame.tedEnding = false;
 };
 
 miniGame.play = function() {
@@ -41,13 +42,14 @@ miniGame.play = function() {
     ) <
     character.size + ted.miniGame.size
   ) {
+    miniGame.tedEnding = true;
     miniGame.finished = true;
   }
 
   // All drawing
   helperFunction.background(kitchenBG);
   character.render();
-  ted.miniGame.render();
+  ted.render();
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()) {
@@ -62,6 +64,7 @@ miniGame.reset = function() {
   ingredients.reset();
   miniGame.finishedBowls = 0;
   ted.miniGame.pos = { x: 1825, y: 300 };
+  miniGame.tedEnding = false;
 };
 
 export { miniGame, character, bowl };
