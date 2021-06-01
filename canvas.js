@@ -33,14 +33,14 @@ function draw() {
   if (splashScreen.startGame && !endScreen.endGame) {
     //console.log("hello there")
     visualNovel.load();
+    if (!visualNovel.tedChat) {
+      miniGame.tedEnding = false;
+    }
     if (miniGame.finished) {
       if (miniGame.tedEnding) {
-        if (!visualNovel.tedChat) {
-          miniGame.tedEnding = false;
-        }else {
-        visualNovel.miniGame = false;
+        // visualNovel.miniGame = false;
         visualNovel.display = "food";
-        visualNovel.tedChat = true;}
+        visualNovel.tedChat = true;
       } else {
         visualNovel.miniGame = false;
         visualNovel.display = "map";
