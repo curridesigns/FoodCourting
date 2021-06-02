@@ -9,6 +9,7 @@ ramen.shiftStart = document.getElementById("splashScreen");
 ramen.bg = document.getElementById("storeBG");
 ramen.Reg = document.getElementById("storeReg");
 let screen = "novel";
+ramen.miniGame = false
 //ramen.Reg = document.getElementById("")
 
 const buttons = {
