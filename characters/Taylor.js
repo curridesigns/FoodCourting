@@ -14,15 +14,10 @@ text[0] = {
   response: [
     {
       a: {
-        text: "Oh, player...",
+        text: "Oh, player... So, you still work in the foodcourt?",
         playerChoices: 1,
-        talkingTime: 5,
+        talkingTime: 2,
       },
-      b: {
-        text: "So you still work in the food court?",
-        playerChoices: 1,
-        talkingTime: 1
-      }
     },
     {
       a: {
@@ -74,14 +69,14 @@ text[1] = {
 };
 
 const boxes = {
-  main: { top: 700, bottom: 850, left: 100, right: 1000 },
+  main: { top: 500, bottom: 850, left: 100, right: 1000 },
   choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 400 },
-    b: { top: 920, bottom: 1020, left: 450, right: 750 },
-    c: { top: 920, bottom: 1020, left: 800, right: 1100 },
+    a: { top: 920, bottom: 1020, left: 100, right: 600 },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
     complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
-  color: "#8F6EADcc"
+  color: "#F3D950cc"
 };
 
 const taylor = new npc(images, text, boxes);

@@ -83,7 +83,7 @@ text[1] = {
   ]
 };
 
-const boxes = {
+/*const boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
@@ -92,7 +92,19 @@ const boxes = {
     complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
   color: "#8F6EADcc"
+};*/
+
+const boxes = {
+  main: { top: 500, bottom: 850, left: 100, right: 1000 },
+  choices: {
+    a: { top: 920, bottom: 1020, left: 100, right: 600 },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
+    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
+  },
+  color: "#8F6EADcc"
 };
+
 
 const raven = new npc(images, text, boxes);
 

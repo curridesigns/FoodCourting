@@ -352,7 +352,7 @@ const boxes = {
     c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
     complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
-  color: "#8F6EADcc"
+  color: "#2987D7cc"
 };
 
 const chad = new npc(images, text, boxes);
