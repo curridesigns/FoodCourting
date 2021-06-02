@@ -51,19 +51,19 @@ button.click = function(boxObj) {
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
-function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) {
-  
+function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) { 
   wrapText(
     ctx,
     stringObj,
     boxObj.left + leftOffset,
     boxObj.top + topOffset,
-    boxObj.right - 10,
+    boxObj.right - boxObj.left,
     50,
     size
   );
 }
 
+// x, and y can be anything... but maxWidth should not be the right side of your rectangle.
 function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
   var words = text.split(" ");
   var line = "";
@@ -75,7 +75,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
     var metrics = ctx.measureText(testLine);
     var testWidth =
       Math.abs(metrics.actualBoundingBoxLeft) +
-      Math.abs(metrics.actualBoundingBoxRight) + 100;
+      Math.abs(metrics.actualBoundingBoxRight);
     if (testWidth > maxWidth && n > 0) {
       ctx.fillText(line, x, y);
       line = words[n] + " ";
