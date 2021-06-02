@@ -82,6 +82,9 @@ class npc {
         this.dialogue.boxes.choices[prop],
         this.dialogue.boxes.color
       );
+     
+    
+      
       helperFunction.dialogueBoxes(
         this.dialogue.boxes.choices[prop],
         this.dialogue.text[this.chatNumber].choice[this.playerChoices][prop],
@@ -90,6 +93,10 @@ class npc {
         "24px",
         ctx
       );
+     
+      
+      
+      
       // console.log(raven.dialogue.boxes.choices[prop])
     }
   }

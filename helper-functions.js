@@ -52,6 +52,7 @@ button.click = function(boxObj) {
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
 function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) {
+  
   wrapText(
     ctx,
     stringObj,
@@ -66,7 +67,7 @@ function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) {
 function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
   var words = text.split(" ");
   var line = "";
-  ctx.font = size + " ariel";
+  ctx.font = size + " arial";
   ctx.fillStyle = "black";
 
   for (var n = 0; n < words.length; n++) {
@@ -85,6 +86,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
   }
   ctx.fillText(line, x, y);
 }
+
 export {
   background,
   dist,

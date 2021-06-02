@@ -13,7 +13,7 @@ spicy.load = function() {
   
   helperFunction.background(spicy.bg);
   //helperFunction.background();
-    raven.render(885,50);
+    raven.render(900,50);
   helperFunction.background(spicy.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");

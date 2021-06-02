@@ -13,7 +13,7 @@ store.load = function() {
   
   helperFunction.background(store.bg);
   //helperFunction.background
-  taylor.render(885,50);
+  taylor.render(900,50);
   helperFunction.background(store.Reg);
   //dialogue
   visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
