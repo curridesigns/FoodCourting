@@ -67,7 +67,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
   var words = text.split(" ");
   var line = "";
   ctx.font = size + " ariel";
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "black";
 
   for (var n = 0; n < words.length; n++) {
     var testLine = line + words[n] + " ";

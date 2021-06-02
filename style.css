@@ -3,6 +3,8 @@ body {
   display: inline;
   height: 100vh;
   margin: 0;
+  font-family: Verdana, sans-serif;
+  font-color: black;
 }
 
 canvas {

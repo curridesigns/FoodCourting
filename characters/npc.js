@@ -15,6 +15,7 @@ class npc {
     this.talkingTime = 1 * 1000;
     this.endTime = new Date().getTime + this.talkingTime;
     this.playerChose = true;
+    this.color
   }
 
   render(tempX, tempY) {
@@ -66,6 +67,7 @@ class npc {
       this.dialogue.text[this.chatNumber].response[this.chatProgress][
         this.dialogue.playerResponse
       ].text,
+      this.color,
       40,
       60,
       "48px",
