@@ -43,7 +43,7 @@ text[0] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
+    { complete: "Return to Map" },//0
     { a: "Boring", b: "Definitely needed", c: "Exciting" },
 
     {
@@ -91,7 +91,7 @@ const boxes = {
     c: { top: 920, bottom: 1020, left: 800, right: 1100 },
     complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
-  color: "#f9cb9ccc"
+  color: "#8F6EADcc"
 };
 
 const raven = new npc(images, text, boxes);
