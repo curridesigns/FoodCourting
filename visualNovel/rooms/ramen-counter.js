@@ -20,15 +20,10 @@ const buttons = {
 };
 
 ramen.load = function(tedChat = false) {
-  if(miniGame.finished){
-    miniGame.reset();
-    ramen.miniGame = false
-  }
-  if (tedChat) {
-    helperFunction.background(ramen.bg);
-    ted.render(screen);
-    helperFunction.background(ramen.Reg);
-    visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
+  if (miniGame.tedEnding) {
+    ramen.miniGame = false;
+    helperFunction.background(ramen.bg)
+    visualNovel.returnToMapRender(buttons.returnToMap);
     if (frameCount % 10 === 0) {
       console.log(visualNovel.display);
     }
@@ -43,11 +38,11 @@ ramen.load = function(tedChat = false) {
 
 ramen.click = function(event, tedChat = false) {
       console.log(miniGame.finished)
-  if (tedChat) {
+  if (miniGame.tedEnding) {
     console.log(helperFunction.getMouseCoordinates(event));
     if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
       visualNovel.display = "map";
-      visualNovel.tedChat = false;
+      miniGame.reset();
     }
   } else {
     if (helperFunction.button.click(buttons.clockIn)) {
@@ -55,6 +50,10 @@ ramen.click = function(event, tedChat = false) {
     }
     if (helperFunction.button.click(buttons.clockOut)) {
       visualNovel.display = "map";
+  if (miniGame.finished) {
+    miniGame.reset();
+    ramen.miniGame = false;
+  }
     }
   }
 };

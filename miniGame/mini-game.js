@@ -65,6 +65,7 @@ miniGame.reset = function() {
   miniGame.finishedBowls = 0;
   ted.miniGame.pos = { x: 1825, y: 300 };
   miniGame.tedEnding = false;
+  character.pos = { x: 650, y: 250 };
 };
 
 export { miniGame, character, bowl };
