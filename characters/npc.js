@@ -33,6 +33,9 @@ class npc {
   }
 
   dialogueRender() {
+    if (this.dialogue.text[this.chatNumber] === undefined) {
+      this.chatNumber = 0;
+    }
     this.playerChoices = this.dialogue.text[this.chatNumber].response[
       this.chatProgress
     ][this.dialogue.playerResponse].playerChoices;
@@ -54,9 +57,6 @@ class npc {
     // if (this.elapsedTime >= this.talkingTime){
     //   this.startTime = new Date();
     // }
-    if (this.dialogue.text[this.chatNumber] === undefined) {
-      this.chatNumber = 0;
-    }
     this.display = true;
     helperFunction.button.render(
       this.dialogue.boxes.main,

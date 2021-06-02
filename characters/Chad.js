@@ -159,6 +159,125 @@ text[3] = {
   ]
 };
 
+text[4] = {
+  response: [
+    {
+      a: {
+        text: "Feh. Once again, I’ve fallen victim to reverse sexism.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Oh, I wouldn’t expect a non-nerd to understand my plight. Off with you! Let me stew with my cheese-flavored Mountained Dew in peace.",
+        playerChoices: 0,
+        talkingTime: 3.2
+      },
+      b: {
+        text: "I was rejected by a potential dark elf beau on my dating platform of choice, the Wars of Worldcraft unofficial roleplay forum, simply on the virtue of not being a lesbian. Misandry, I say!",
+        playerChoices: 2,
+        talkingTime: 4
+      },
+      c: { 
+        text: "Very well. I respect the self-centered callousness towards my plight.", 
+        playerChoices: 0, 
+        talkingTime: 1.5 }
+    },
+    {
+      a: {
+        text: "Finally, someone who understands me. You and I are kindred spirits, Player.",
+        playerChoices: 0,
+        talkingTime: 2
+      },
+      b: { 
+        text: "Oh, I wouldn’t expect a non-nerd to understand my plight. Off with you! Let me stew with my cheese-flavored Mountained Dew in peace.", 
+        playerChoices: 0, 
+        talkingTime: 4 },
+      c: { 
+        text: "...I’ve been ‘um actually’d! The highest level of respect among nerds… kudos to you for sharing your superior knowledge, Player. I shall e-pay you a single dogecoin as a token of my appreciation.", 
+        playerChoices: 0, 
+        talkingTime: 4.8 }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "You are insane.", b: "...What happened?", c: "Dude, I’m just here to play the crane game" },
+
+    {
+      a: "That’s rough, buddy.",
+      b: "You are insane.",
+      c: "Wouldn’t that still just be sexism, not “reverse sexism”?"
+    }
+  ]
+};
+
+text[5] = {
+  response: [
+    {
+      a: {
+        text: "Good afternoon, ____. I’m afraid I can’t talk right now, I’m participating in a Sorcery: The Meeting draft event on my phone.",
+        playerChoices: 1,
+        talkingTime: 2.8
+      }
+    },
+    {
+      a: {
+        text: "Mono-teal aristocrats with a beige splash for the Beaver tribal archetype, if you must know.",
+        playerChoices: 0,
+        talkingTime: 1.5
+      },
+      b: {
+        text: "Please, as if I need to concern myself with the goings-on of the peons who spend their quarters here. Nobody ever gets enough tickets for a prize, anyway.",
+        playerChoices: 0,
+        talkingTime: 3
+      },
+      c: { 
+        text: "Oh, excellent! I’ll have to let you borrow one of my lower-tier General decks sometime.", 
+        playerChoices: 0, 
+        talkingTime: 1.5 }
+    },
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "What are you drafting?", b: "Aren’t you at work?", c: "Huh, I’ve been meaning to play that." },
+
+  ]
+};
+
+text[6] = {
+  response: [
+    {
+      a: {
+        text: "My displeasure is immeasurable and my day is ruined.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "[You do.]",
+        playerChoices: 0,
+        talkingTime: 0
+      },
+      b: {
+        text: "Once again, people are wrong online and require my correction. A hero’s work is never done, I suppose.",
+        playerChoices: 0,
+        talkingTime: 2.6
+      },
+      c: { 
+        text: "Oh, excellent! I’ll have to let you borrow one of my lower-tier General decks sometime.", 
+        playerChoices: 0, 
+        talkingTime: 1.5 }
+    },
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "I’m going to ignore you now.", b: "What is it this time?", c: "Huh, I’ve been meaning to play that." },
+
+  ]
+};
+
 const boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {

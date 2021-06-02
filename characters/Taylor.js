@@ -13,9 +13,13 @@ const text = [];
 text[0] = {
   response: [
     {
-      
       a: {
-        text: "Oh, player.",
+        text: "Oh, player...",
+        playerChoices: 1,
+        talkingTime: 5,
+      },
+      b: {
+        text: "So you still work in the food court?",
         playerChoices: 1,
         talkingTime: 1
       }
@@ -44,20 +48,20 @@ text[1] = {
   response: [
     {
       a: {
-        text: "How's the ramen slingin' today?",
+        text: "Welcome to [store name]... Oh, you're back.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "I feel that.", playerChoices: 0, talkingTime: 1 },
+      a: { text: "Uh... Yeah, break between quarters, ya know?", playerChoices: 0, talkingTime: 1 },
       b: {
-        text: "Niiiiiiiiccceeeeeeeee",
+        text: "No! I'm just on break.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "...that's the wrong pasta.",
+        text: "No, I'm home for break.",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -65,7 +69,7 @@ text[1] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "Life sucking", b: "Gooooooooooooooooood", c: "Fun-chini :]" }
+    { a: "So are you on break from college or something?", b: "Did you drop out?", c: "Did you already graduate?" }
   ]
 };
 
