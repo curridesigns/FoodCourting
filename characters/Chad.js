@@ -266,24 +266,90 @@ text[6] = {
         talkingTime: 2.6
       },
       c: { 
-        text: "Oh, excellent! I’ll have to let you borrow one of my lower-tier General decks sometime.", 
+        text: "[You walk away while he keeps talking.]", 
         playerChoices: 0, 
         talkingTime: 1.5 }
     },
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "I’m going to ignore you now.", b: "What is it this time?", c: "Huh, I’ve been meaning to play that." },
+    { a: "I’m going to ignore you now.", b: "What is it this time?", c: "Huh. Okay!" },
+
+  ]
+};
+
+text[7] = {
+  response: [
+    {
+      a: {
+        text: "Feh. I’m crashed from War of Worldcraft raids all night.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yes, my problems are more important than everyone else’s problems. I'm glad you understand.",
+        playerChoices: 0,
+        talkingTime: 2.5
+      },
+      b: {
+        text: "Please, I don’t sully my body with that swill. I’ll stick to perfectly formulated Full Day Energy, thank you very much.",
+        playerChoices: 0,
+        talkingTime: 2.8
+      },
+      c: { 
+        text: "Extremely well, in fact. I hit platinum rank on my gnome archer.", 
+        playerChoices: 0, 
+        talkingTime: 1.5 }
+    },
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Sounds like a you problem.", b: "That’s rough. Need coffee?", c: "How’d that go?" },
+
+  ]
+};
+
+text[8] = {
+  response: [
+    {
+      a: {
+        text: "“I’m heading to a rally tomorrow, by the way. I believe I heard that you have the day off - care to join me?",
+        playerChoices: 1,
+        talkingTime: 3
+      }
+    },
+    {
+      a: {
+        text: "Hmm. Well, I wouldn’t expect someone who isn’t a devotee to the cause to understand. No “work hours” could keep me from my quest.",
+        playerChoices: 0,
+        talkingTime: 2.5
+      },
+      b: {
+        text: "Then this is where our paths diverge. Farewell, fellow mallworker.",
+        playerChoices: 0,
+        talkingTime: 1.8
+      },
+      c: { 
+        text: "Excellent. My friends will be so impressed that I have a date. I shall be king of the nerds!", 
+        playerChoices: 0, 
+        talkingTime: 2.2 }
+    },
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "...Wait, do YOU have the day off?", b: "I’m busy.", c: "Sure!" },
 
   ]
 };
 
 const boxes = {
-  main: { top: 700, bottom: 850, left: 100, right: 1000 },
+  main: { top: 500, bottom: 850, left: 100, right: 1000 },
   choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 400 },
-    b: { top: 920, bottom: 1020, left: 450, right: 750 },
-    c: { top: 920, bottom: 1020, left: 800, right: 1100 },
+    a: { top: 920, bottom: 1020, left: 100, right: 600 },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
     complete: { top: 920, bottom: 1020, left: 100, right: 400 }
   },
   color: "#8F6EADcc"
