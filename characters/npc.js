@@ -67,7 +67,6 @@ class npc {
       this.dialogue.text[this.chatNumber].response[this.chatProgress][
         this.dialogue.playerResponse
       ].text,
-      this.color,
       40,
       60,
       "48px",
