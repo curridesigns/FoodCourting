@@ -24,6 +24,7 @@ miniGame.load = function() {
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
+  miniGame.reset();
 };
 
 miniGame.play = function() {
@@ -60,6 +61,7 @@ miniGame.play = function() {
 
 miniGame.reset = function() {
   ingredients.reset();
+  miniGame.finished = false;
   miniGame.finishedBowls = 0;
   ted.miniGame.pos = { x: 1825, y: 300 };
   miniGame.tedEnding = false;
