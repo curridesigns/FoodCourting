@@ -2,6 +2,7 @@ import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js";
 import { ted } from "../../characters/ted.js";
+import { miniGame } from "../../miniGame/mini-game.js"
 
 const ramen = {};
 ramen.shiftStart = document.getElementById("splashScreen");
