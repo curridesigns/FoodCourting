@@ -42,6 +42,12 @@ ramen.click = function(event, tedChat = false) {
       console.log(miniGame.finished)
   if (miniGame.tedEnding) {
     console.log(helperFunction.getMouseCoordinates(event));
+    if(ted.novel.click(event)){
+    visualNovel.display = "map";
+    ted.novel.chatNumber++;
+    ted.novel.chatProgress = 0;
+    ted.novel.dialogue.playerResponse = "a"
+  }
     if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
       visualNovel.display = "map";
       miniGame.reset();

@@ -243,12 +243,12 @@ text[1] = {
 };
 
 const boxes = {
-  main: { top: 500, bottom: 850, left: 100, right: 1000 },
+  main: { top: 250, bottom: 550, left: 900, right: 1700 },
   choices: {
-    a: { top: 600, bottom: 1020, left: 1200, right: 1700 },
-    b: { top: 920, bottom: 1020, left: 1200, right: 1700 },
-    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
-    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
+    a: { top: 600, bottom: 700, left: 1200, right: 1700 },
+    b: { top: 750, bottom: 850, left: 1200, right: 1700 },
+    c: { top: 900, bottom: 1000, left: 1200, right: 1700 },
+    complete: { top: 600, bottom: 700, left: 1200, right: 1700 }
   },
   color: "#8F6EADcc"
 };
