@@ -17,17 +17,17 @@ arcade.load = function() {
   chad.render(900,50);
   helperFunction.background(arcade.Reg);
   //dialoge should go here
-  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
+  // visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   chad.dialogueRender();
   // endScreen.click();
 };
 
 arcade.click = function(event, visualNovelDisplay) {
   //console.log(buttons.returnToMap)
-  if(visualNovel.returnToMapClick(event, buttons.returnToMap)){
-    chad.chatProgress = 0;
-    chad.dialogue.playerResponse = "a"
-  }
+  // if(visualNovel.returnToMapClick(event, buttons.returnToMap)){
+  //   chad.chatProgress = 0;
+  //   chad.dialogue.playerResponse = "a"
+  // }
   if(chad.click(event)){
     visualNovel.display = "map";
     chad.chatNumber++;
