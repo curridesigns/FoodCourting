@@ -48,7 +48,7 @@ miniGame.play = function() {
   // All drawing
   helperFunction.background(kitchenBG);
   character.render();
-  ted.render();
+  ted.render("miniGame");
   bowl.render();
   ingredients.renderStarterIngredients();
   if (ingredients.finishBowl()) {

@@ -12,7 +12,7 @@ ted.image = {
   idle: document.getElementById("tedL")
 };
 
-ted.render = function(state = "miniGame", debug = false) {
+ted.render = function(state = "miniGame", novelX, novelY, debug = false) {
   switch (state) {
     case "miniGame":
       ctx.translate(ted.miniGame.pos.x, ted.miniGame.pos.y);
@@ -33,7 +33,7 @@ ted.render = function(state = "miniGame", debug = false) {
       ctx.translate(-ted.miniGame.pos.x, -ted.miniGame.pos.y);
       break;
     case "novel":
-      ted.novel.render(200,200);
+      ted.novel.render(novelX,novelY);
   }
 };
 

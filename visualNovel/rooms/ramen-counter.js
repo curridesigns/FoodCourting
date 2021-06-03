@@ -6,8 +6,7 @@ import { miniGame } from "../../miniGame/mini-game.js"
 
 const ramen = {};
 ramen.shiftStart = document.getElementById("splashScreen");
-ramen.bg = document.getElementById("storeBG");
-ramen.Reg = document.getElementById("storeReg");
+ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
 ramen.display = "miniGame";
@@ -24,6 +23,7 @@ ramen.load = function(tedChat = false) {
   if (miniGame.tedEnding) {
     ramen.miniGame = false;
     helperFunction.background(ramen.bg)
+    ted.render("novel", 200, 200)
     visualNovel.returnToMapRender(buttons.returnToMap);
     if (frameCount % 10 === 0) {
       console.log(visualNovel.display);
