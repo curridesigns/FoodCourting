@@ -10,6 +10,7 @@ ramen.bg = document.getElementById("storeBG");
 ramen.Reg = document.getElementById("storeReg");
 let screen = "novel";
 ramen.miniGame = false;
+ramen.display = "miniGame";
 
 //ramen.Reg = document.getElementById("")
 
