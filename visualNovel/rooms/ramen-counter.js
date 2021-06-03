@@ -9,7 +9,7 @@ ramen.shiftStart = document.getElementById("splashScreen");
 ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
-ramen.display = "miniGame";
+
 
 //ramen.Reg = document.getElementById("")
 
