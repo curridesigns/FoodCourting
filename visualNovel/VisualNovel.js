@@ -45,6 +45,12 @@ visualNovel.load = function() {
     case "food":
       ramen.load(visualNovel.tedChat);
       break;
+    case "ending":
+      switch (visualNovel.ending) {
+        case "ted":
+          
+          break;
+      }
   }
 };
 

@@ -66,4 +66,8 @@ ramen.click = function(event, tedChat = false) {
   }
 };
 
+ramen.ending = function (){
+  
+};
+
 export { ramen };
