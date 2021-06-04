@@ -2,7 +2,8 @@ import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 
 class npc {
-  constructor(imagesObj, dialogueArr, boxesObj) {
+  constructor(name, imagesObj, dialogueArr, boxesObj) {
+    this.name = name;
     this.images = imagesObj;
     this.chats = 0;
     this.state = "idle";

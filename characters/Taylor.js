@@ -79,6 +79,6 @@ const boxes = {
   color: "#F3D950cc"
 };
 
-const taylor = new npc(images, text, boxes);
+const taylor = new npc("taylor",images, text, boxes);
 
 export { taylor };

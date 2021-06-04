@@ -112,6 +112,11 @@ visualNovel.returnToMapRender = function(boxObj, color) {
   ctx.fillText("Back To The Mall", 1720, 100);
 };
 
+visualNovel.endLoad = function(character){
+  if(character.chatNumber = 9){
+    
+  }
+}
 
 
 export { visualNovel };

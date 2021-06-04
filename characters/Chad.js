@@ -355,5 +355,5 @@ const boxes = {
   color: "#2987D7cc"
 };
 
-const chad = new npc(images, text, boxes);
+const chad = new npc("chad",images, text, boxes);
 export { chad };

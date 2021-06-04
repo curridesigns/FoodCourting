@@ -106,6 +106,6 @@ const boxes = {
 };
 
 
-const raven = new npc(images, text, boxes);
+const raven = new npc("raven",images, text, boxes);
 
 export { raven };
