@@ -14,7 +14,7 @@ visualNovel.display = "arcade";
 
 visualNovel.miniGame = false;
 
-var splashScreen = document.getElementById("")
+var debug = document.getElementById("debug")
 
 
 
@@ -55,7 +55,7 @@ visualNovel.load = function() {
       helperFunction.background(ramen.ending1);
       break;
         default:
-          helperFunction.background()
+          helperFunction.background(debug)
       }
       break;
   }
