@@ -168,7 +168,10 @@ ted.miniGame = {};
     physics.collision(ted.miniGame);
   };
 }
+
+
 const text = [];
+/*
 text[0] = {
   response: [
     {
@@ -240,7 +243,7 @@ text[1] = {
     { complete: "Return to Map" },
     { a: "Life sucking", b: "Gooooooooooooooooood", c: "Fun-chini :]" }
   ]
-};
+}; */
 
 const boxes = {
   main: { top: 250, bottom: 550, left: 900, right: 1700 },
