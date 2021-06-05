@@ -192,27 +192,16 @@ text[0] = {
         playerChoices: 0,
         talkingTime: 2
       },
-      c: { text: "", playerChoices: 2, talkingTime: 0.5 }
-    },
+ 
     {
-      a: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 2
-      },
+      a: { text: "", playerChoices: 0, talkingTime: 2 },
       b: { text: "", playerChoices: 0, talkingTime: 1 },
-      c: { text: "Damn, movie worthy.", playerChoices: 0, talkingTime: 0.8 }
+      c: { text: "", playerChoices: 0, talkingTime: 0.8 }
     }
   ],
   choice: [
     { complete: "Return to Map" },//0
-    { a: "Boring", b: "Definitely needed", c: "Exciting" },
-
-    {
-      a: "Sat back, vibed with some new music.",
-      b: "I slept for so long, my roommate thought I was dead.",
-      c: "Went out for a long drive that turned into camping."
-    }
+    { a: "", b: "", c: "" }
   ]
 };
 
@@ -220,20 +209,20 @@ text[1] = {
   response: [
     {
       a: {
-        text: "How's the ramen slingin' today?",
+        text: "Hey, just wanted to say you're doing great today, Player.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "I feel that.", playerChoices: 0, talkingTime: 1 },
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
       b: {
-        text: "Niiiiiiiiccceeeeeeeee",
+        text: "",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "...that's the wrong pasta.",
+        text: "",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -241,7 +230,7 @@ text[1] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "Life sucking", b: "Gooooooooooooooooood", c: "Fun-chini :]" }
+    { a: "", b: "", c: "" }
   ]
 }; */
 

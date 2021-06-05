@@ -7,7 +7,8 @@ const splashScreen = {};
 splashScreen.bg = document.getElementById("splashScreen");
 splashScreen.startGame = false;
 
-const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
+//const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
+const buttons = { start: { top: 258, bottom: 480, left: 1055, right: 1713 } };
 
 let splashFrameRendered = false;
 
@@ -19,7 +20,7 @@ splashScreen.load = function() {
   helperFunction.background(splashScreen.bg);
   helperFunction.button.render(
     buttons.start,
-    "#f9cb9cff"
+    //"#f9cb9cff"
   );
   splashFrameRendered = true;
   // splashScreen.click();
