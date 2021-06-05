@@ -101,20 +101,24 @@ text[3] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Hey, picking up something?",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "About?",
+        playerChoices: 2,
+        talkingTime: 1
+      },
       b: {
-        text: "",
+        text: "You've never liked this before.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Oh",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -122,7 +126,8 @@ text[3] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "I wanted to talk to you", b: "Yeah! (You grab the closest thing in the aisle)", c: "It wasn't in stock" },
+    { a: "Our breakup", b: "Do you like working here?", c: "" }
   ]
 };
 

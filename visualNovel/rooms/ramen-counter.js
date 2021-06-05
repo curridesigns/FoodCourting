@@ -6,6 +6,7 @@ import { miniGame } from "../../miniGame/mini-game.js"
 
 const ramen = {};
 ramen.shiftStart = document.getElementById("splashScreen");
+ramen.ending = document.getElementById("tedEnding")
 ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
@@ -70,7 +71,8 @@ ramen.click = function(event, tedChat = false) {
 
 ramen.ending = function (){
   if(ted.ending()){
-    visualNovel.endScene = ted.
+    visualNovel.display = "ending";
+    visualNovel.endSceneName = ted.name;
   }
 };
 

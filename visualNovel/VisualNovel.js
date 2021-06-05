@@ -48,10 +48,8 @@ visualNovel.load = function() {
       ramen.load(visualNovel.tedChat);
       break;
     case "ending":
-      switch (visualNovel.ending) {
-        case "ted":
-          break;
-      }
+      visualNovel.endScene();
+      break;
   }
 };
 
@@ -112,5 +110,12 @@ visualNovel.returnToMapRender = function(boxObj, color) {
   ctx.fillStyle = "red";
   ctx.fillText("Back To The Mall", 1720, 100);
 };
+
+visualNovel.endScene = function(){
+  switch (visualNovel.endSceneName){
+    case "ted":
+      helperFunction.background(ramen.ending)
+  }
+}
 
 export { visualNovel };
