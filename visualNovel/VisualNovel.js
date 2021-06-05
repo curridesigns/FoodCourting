@@ -62,6 +62,24 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
+  if(visualNovel.forcedMini){
+    if (helperFunction.button.click(buttons.store)) {
+        visualNovel.display = "store";
+      }
+      //sends you to Spicy Take
+      if (helperFunction.button.click(buttons.spicy)) {
+        //console.log("spicy");
+        visualNovel.display = "spicy";
+      }
+      //sends you to the Arcade
+      if (helperFunction.button.click(buttons.arcade)) {
+        visualNovel.display = "arcade";
+      }
+      //sends you to the Food Court to work a shift
+      if (helperFunction.button.click(buttons.food)) {
+        visualNovel.display = "food";
+      }
+  }
   switch (visualNovel.display) {
     //runs the click "function" for the map
     case "map":
