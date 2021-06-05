@@ -21,6 +21,9 @@ const buttons = {
 };
 
 ramen.load = function(tedChat = false) {
+  if(miniGame.finished){
+    
+  }
   if (miniGame.tedEnding) {
     ramen.miniGame = false;
     helperFunction.background(ramen.bg);
@@ -31,7 +34,7 @@ ramen.load = function(tedChat = false) {
   } else {
     helperFunction.background(ramen.shiftStart);
   }
-  if (ramen.miniGame) {
+  if (ramen.miniGame && ) {
     miniGame.play();
   }
   //dialogue
@@ -45,16 +48,13 @@ ramen.click = function(event, tedChat = false) {
         ted.novel.chatNumber++;
         ted.novel.chatProgress = 0;
         ted.novel.dialogue.playerResponse = "a";
+        visualNovel.forcedMini = true
         miniGame.reset();
         break;
       case "ending":
         visualNovel.endScene = "ted";
         visualNovel.display = "ending"
         break;
-    }
-    if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
-      visualNovel.display = "map";
-      miniGame.reset();
     }
   } else {
     if (helperFunction.button.click(buttons.clockIn)) {
@@ -68,6 +68,7 @@ ramen.click = function(event, tedChat = false) {
       if (miniGame.finished) {
         miniGame.reset();
         ramen.miniGame = false;
+        visualNovel.forcedMini = false;
       }
     }
   }

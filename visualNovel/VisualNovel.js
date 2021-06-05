@@ -64,16 +64,15 @@ visualNovel.load = function() {
 visualNovel.click = function(event) {
   if(visualNovel.forcedMini){
     if (helperFunction.button.click(buttons.store)) {
-        visualNovel.display = "store";
+        window.alert("Please go to the Food Court for your shift!");
       }
       //sends you to Spicy Take
       if (helperFunction.button.click(buttons.spicy)) {
-        //console.log("spicy");
-        visualNovel.display = "spicy";
+        window.alert("Please go to the Food Court for your shift!");
       }
       //sends you to the Arcade
       if (helperFunction.button.click(buttons.arcade)) {
-        visualNovel.display = "arcade";
+        window.alert("Please go to the Food Court for your shift!");
       }
       //sends you to the Food Court to work a shift
       if (helperFunction.button.click(buttons.food)) {

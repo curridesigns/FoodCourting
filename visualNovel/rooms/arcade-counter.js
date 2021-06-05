@@ -34,6 +34,7 @@ arcade.click = function(event, visualNovelDisplay) {
       chad.chatNumber++;
       chad.chatProgress = 0;
       chad.dialogue.playerResponse = "a";
+      visualNovel.forcedMini = true;
       break;
     case "ending":
       visualNovel.endScene = "chad";
