@@ -159,23 +159,23 @@ text[4] = {
   response: [
     {
       a: {
-        text: "",
+        text: "...",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
       a: {
-        text: "",
+        text: "Can't help but think about what else I want to do with my life...",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
+        text: "Barely chugging along.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Need some coffee?",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -183,7 +183,7 @@ text[4] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "How's that one brain cell?", b: "How's that one brain cell?", c: "Need some coffee?"}
   ]
 };
 
@@ -191,23 +191,23 @@ text[5] = {
   response: [
     {
       a: {
-        text: "",
+        text: "If you could do any job, what would you do? Like you didn't dream of working at the mall right?",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
       a: {
-        text: "",
+        text: "Oooo! You should show me what you make sometime!",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
+        text: "Aw, come on.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Pure punk, I like it. Fuck government.",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -215,7 +215,7 @@ text[5] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "An artist", b: "I actually was the weird teen that wanted to work at the mall at least once.", c: "I want to run away from society. Middle of the woods, farm, foraging, kinda life."}
   ]
 };
 
@@ -223,23 +223,23 @@ text[6] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Mornings are NOT my thing.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
       a: {
-        text: "",
+        text: "I'm surprised we're both here, haha",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
+        text: "Maybe I should up my dose.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "That makes me want to off myself, thnx.",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -247,7 +247,7 @@ text[6] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Same", b: "", c: "" }
   ]
 };
 
