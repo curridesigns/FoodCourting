@@ -111,9 +111,9 @@ class npc {
       if (helperFunction.button.click(this.dialogue.boxes.choices[prop])) {
         if (prop == "complete") {
           if (this.chatNumber === this.dialogue.text.length - 1) {
-            
+            return "ending";
           }
-          return true;
+          return "map";
         } else {
           this.dialogue.playerResponse = [prop];
           this.chatProgress++;

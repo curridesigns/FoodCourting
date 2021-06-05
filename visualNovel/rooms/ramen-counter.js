@@ -21,12 +21,12 @@ const buttons = {
 
 ramen.load = function(tedChat = false) {
   if (miniGame.tedEnding) {
-      ramen.miniGame = false;
-      helperFunction.background(ramen.bg);
-      ted.render("novel", 200, 200);
-      ted.render(900, 50);
-      ted.novel.dialogueRender();
-      visualNovel.returnToMapRender(buttons.returnToMap);
+    ramen.miniGame = false;
+    helperFunction.background(ramen.bg);
+    ted.render("novel", 200, 200);
+    ted.render(900, 50);
+    ted.novel.dialogueRender();
+    visualNovel.returnToMapRender(buttons.returnToMap);
   } else {
     helperFunction.background(ramen.shiftStart);
   }
@@ -38,11 +38,17 @@ ramen.load = function(tedChat = false) {
 
 ramen.click = function(event, tedChat = false) {
   if (miniGame.tedEnding) {
-    if (ted.novel.click(event)) {
-      visualNovel.display = "map";
-      ted.novel.chatNumber++;
-      ted.novel.chatProgress = 0;
-      ted.novel.dialogue.playerResponse = "a";
+    switch (ted.novel.click(event)) {
+      case "map":
+        visualNovel.display = "map";
+        ted.novel.chatNumber++;
+        ted.novel.chatProgress = 0;
+        ted.novel.dialogue.playerResponse = "a";
+        miniGame.reset();
+        break;
+      case "ending":
+        visualNovel.display = "ending"
+        visualNovel.endSceneName = ted.name;
     }
     if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
       visualNovel.display = "map";

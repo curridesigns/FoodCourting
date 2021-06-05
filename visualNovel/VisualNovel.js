@@ -45,10 +45,10 @@ visualNovel.load = function() {
       break;
     //displays the Food Court
     case "food":
-      ramen.load(visualNovel.tedChat);
+      ramen.load();
       break;
     case "ending":
-      visualNovel.endScene();
+      console.log("hello")
       break;
   }
 };
@@ -114,7 +114,7 @@ visualNovel.returnToMapRender = function(boxObj, color) {
 visualNovel.endScene = function(){
   switch (visualNovel.endSceneName){
     case "ted":
-      helperFunction.background(ramen.ending)
+      visualNovel.display = "arcade"
   }
 }
 
