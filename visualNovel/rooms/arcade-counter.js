@@ -14,10 +14,6 @@ const buttons = {
 const dialogueBoxes = {};
 
 arcade.load = function() {
-  if (chad.ending()) {
-    console.log("hello");
-  }
-
   helperFunction.background(arcade.bg);
   chad.render(900, 50);
   helperFunction.background(arcade.Reg);
