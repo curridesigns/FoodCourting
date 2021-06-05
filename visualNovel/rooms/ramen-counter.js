@@ -21,9 +21,6 @@ const buttons = {
 };
 
 ramen.load = function(tedChat = false) {
-  if(miniGame.finished){
-    
-  }
   if (miniGame.tedEnding) {
     ramen.miniGame = false;
     helperFunction.background(ramen.bg);
@@ -34,7 +31,7 @@ ramen.load = function(tedChat = false) {
   } else {
     helperFunction.background(ramen.shiftStart);
   }
-  if (ramen.miniGame && ) {
+  if (ramen.miniGame && !miniGame.finished) {
     miniGame.play();
   }
   //dialogue
@@ -56,19 +53,20 @@ ramen.click = function(event, tedChat = false) {
         visualNovel.display = "ending"
         break;
     }
-  } else {
+  } else if(!ramen.miniGame || miniGame.finished){
     if (helperFunction.button.click(buttons.clockIn)) {
       ramen.miniGame = true;
+      miniGame.reset();
       window.alert(
         "Welcome to your shift! You'll have to complete ___ bowls by going around via WASD and holding space to pick up items. But be cafeul to avoid your creepy manager!"
       );
+      visualNovel.forcedMini = false;
     }
     if (helperFunction.button.click(buttons.clockOut)) {
       visualNovel.display = "map";
       if (miniGame.finished) {
         miniGame.reset();
         ramen.miniGame = false;
-        visualNovel.forcedMini = false;
       }
     }
   }

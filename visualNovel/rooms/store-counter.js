@@ -33,6 +33,7 @@ store.click = function(event, visualNovelDisplay) {
         taylor.chatNumber++;
         taylor.chatProgress = 0;
         taylor.dialogue.playerResponse = "a";
+      visualNovel.forcedMini = true;
         break;
       case "ending":
         visualNovel.endScene = "taylor";

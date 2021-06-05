@@ -14,9 +14,8 @@ visualNovel.display = "arcade";
 
 visualNovel.miniGame = false;
 
-var debug = document.getElementById("debug")
-
-
+var debug = document.getElementById("debug");
+visualNovel.forcedMini = false;
 
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
@@ -50,73 +49,78 @@ visualNovel.load = function() {
       ramen.load();
       break;
     case "ending":
-      switch (visualNovel.endScene){
+      switch (visualNovel.endScene) {
         case "ted":
-      helperFunction.background(ramen.ending1);
-      break;
+          helperFunction.background(ramen.ending1);
+          break;
         default:
-          helperFunction.background(debug)
+          helperFunction.background(debug);
       }
       break;
   }
 };
 
 visualNovel.click = function(event) {
-  if(visualNovel.forcedMini){
-    if (helperFunction.button.click(buttons.store)) {
-        window.alert("Please go to the Food Court for your shift!");
-      }
-      //sends you to Spicy Take
-      if (helperFunction.button.click(buttons.spicy)) {
-        window.alert("Please go to the Food Court for your shift!");
-      }
-      //sends you to the Arcade
-      if (helperFunction.button.click(buttons.arcade)) {
-        window.alert("Please go to the Food Court for your shift!");
-      }
-      //sends you to the Food Court to work a shift
-      if (helperFunction.button.click(buttons.food)) {
-        visualNovel.display = "food";
-      }
-  }
-  switch (visualNovel.display) {
-    //runs the click "function" for the map
-    case "map":
-      //sends you to the store
-      if (helperFunction.button.click(buttons.store)) {
-        visualNovel.display = "store";
-      }
-      //sends you to Spicy Take
-      if (helperFunction.button.click(buttons.spicy)) {
-        //console.log("spicy");
-        visualNovel.display = "spicy";
-      }
-      //sends you to the Arcade
-      if (helperFunction.button.click(buttons.arcade)) {
-        visualNovel.display = "arcade";
-      }
-      //sends you to the Food Court to work a shift
-      if (helperFunction.button.click(buttons.food)) {
-        visualNovel.display = "food";
-      }
-      break;
-    //console.log("there")
-    //runs the click "function" for the arcade
-    case "arcade":
-      arcade.click(event);
-      break;
-    //runs the click "function" for the store
-    case "store":
-      store.click(event);
-      break;
-    //runs the click "function" for Spicy Take
-    case "spicy":
-      spicy.click(event);
-      break;
-    //runs the click "function" for the Food Court
-    case "food":
+  if (visualNovel.forcedMini) {
+    if (visualNovel.display === "food") {
       ramen.click(event);
-      break;
+    } else {
+      if (helperFunction.button.click(buttons.store)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to Spicy Take
+      if (helperFunction.button.click(buttons.spicy)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Arcade
+      if (helperFunction.button.click(buttons.arcade)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Food Court to work a shift
+      if (helperFunction.button.click(buttons.food)) {
+        visualNovel.display = "food";
+      }
+    }
+  } else {
+    switch (visualNovel.display) {
+      //runs the click "function" for the map
+      case "map":
+        //sends you to the store
+        if (helperFunction.button.click(buttons.store)) {
+          visualNovel.display = "store";
+        }
+        //sends you to Spicy Take
+        if (helperFunction.button.click(buttons.spicy)) {
+          //console.log("spicy");
+          visualNovel.display = "spicy";
+        }
+        //sends you to the Arcade
+        if (helperFunction.button.click(buttons.arcade)) {
+          visualNovel.display = "arcade";
+        }
+        //sends you to the Food Court to work a shift
+        if (helperFunction.button.click(buttons.food)) {
+          visualNovel.display = "food";
+        }
+        break;
+      //console.log("there")
+      //runs the click "function" for the arcade
+      case "arcade":
+        arcade.click(event);
+        break;
+      //runs the click "function" for the store
+      case "store":
+        store.click(event);
+        break;
+      //runs the click "function" for Spicy Take
+      case "spicy":
+        spicy.click(event);
+        break;
+      //runs the click "function" for the Food Court
+      case "food":
+        ramen.click(event);
+        break;
+    }
   }
 };
 

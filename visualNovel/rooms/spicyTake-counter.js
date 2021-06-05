@@ -33,6 +33,7 @@ spicy.click = function(event, visualNovelDisplay) {
         raven.chatNumber++;
         raven.chatProgress = 0;
         raven.dialogue.playerResponse = "a";
+      visualNovel.forcedMini = true;
         break;
       case "ending":
         visualNovel.endScene = "raven";
