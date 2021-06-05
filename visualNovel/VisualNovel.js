@@ -77,28 +77,27 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
-  // if (visualNovel.forcedMini) {
-  //   if (visualNovel.display === "food") {
-  //     ramen.click(event);
-  //   } else {
-  //     if (helperFunction.button.click(buttons.store)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to Spicy Take
-  //     if (helperFunction.button.click(buttons.spicy)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Arcade
-  //     if (helperFunction.button.click(buttons.arcade)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Food Court to work a shift
-  //     if (helperFunction.button.click(buttons.food)) {
-  //       visualNovel.display = "food";
-  //     }
-  //   }
-  // } else 
-  {
+  if (visualNovel.forcedMini) {
+    if (visualNovel.display === "food") {
+      ramen.click(event);
+    } else {
+      if (helperFunction.button.click(buttons.store)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to Spicy Take
+      if (helperFunction.button.click(buttons.spicy)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Arcade
+      if (helperFunction.button.click(buttons.arcade)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Food Court to work a shift
+      if (helperFunction.button.click(buttons.food)) {
+        visualNovel.display = "food";
+      }
+    }
+  } else {
     switch (visualNovel.display) {
       //runs the click "function" for the map
       case "map":
