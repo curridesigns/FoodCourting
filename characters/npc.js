@@ -102,7 +102,7 @@ class npc {
   }
   
   ending(){
-    if (this.dialogue.text[this.chatNumber] === undefined) {
+    if (this.chatNumber === 1) {
       return true;
     }
   }

@@ -2,15 +2,14 @@ import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js";
 import { ted } from "../../characters/ted.js";
-import { miniGame } from "../../miniGame/mini-game.js"
+import { miniGame } from "../../miniGame/mini-game.js";
 
 const ramen = {};
 ramen.shiftStart = document.getElementById("splashScreen");
-ramen.ending = document.getElementById("tedEnding")
+ramen.ending = document.getElementById("tedEnding");
 ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
-
 
 //ramen.Reg = document.getElementById("")
 
@@ -22,57 +21,56 @@ const buttons = {
 
 ramen.load = function(tedChat = false) {
   if (miniGame.tedEnding) {
-    ramen.miniGame = false;
-    helperFunction.background(ramen.bg)
-    ted.render("novel", 200, 200)
-    ted.render(900,50);
-    ted.novel.dialogueRender();
-    visualNovel.returnToMapRender(buttons.returnToMap);
-    if (frameCount % 10 === 0) {
-      console.log(visualNovel.display);
+    if (ted.novel.ending()) {
+      console.log("hello")
+    } else {
+      ramen.miniGame = false;
+      helperFunction.background(ramen.bg);
+      ted.render("novel", 200, 200);
+      ted.render(900, 50);
+      ted.novel.dialogueRender();
+      visualNovel.returnToMapRender(buttons.returnToMap);
+      if (frameCount % 10 === 0) {
+        console.log(visualNovel.display);
+      }
     }
   } else {
     helperFunction.background(ramen.shiftStart);
   }
-  if(ramen.miniGame){
+  if (ramen.miniGame) {
     miniGame.play();
   }
   //dialogue
 };
 
 ramen.click = function(event, tedChat = false) {
-      console.log(miniGame.finished)
+  console.log(miniGame.finished);
   if (miniGame.tedEnding) {
     console.log(helperFunction.getMouseCoordinates(event));
-    if(ted.novel.click(event)){
-    visualNovel.display = "map";
-    ted.novel.chatNumber++;
-    ted.novel.chatProgress = 0;
-    ted.novel.dialogue.playerResponse = "a"
-  }
+    if (ted.novel.click(event)) {
+      visualNovel.display = "map";
+      ted.novel.chatNumber++;
+      ted.novel.chatProgress = 0;
+      ted.novel.dialogue.playerResponse = "a";
+    }
     if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
       visualNovel.display = "map";
       miniGame.reset();
     }
   } else {
     if (helperFunction.button.click(buttons.clockIn)) {
-      ramen.miniGame = true
-      window.alert("Welcome to your shift! You'll have to complete ___ bowls by going around via WASD and holding space to pick up items. But be cafeul to avoid your creepy manager!");
+      ramen.miniGame = true;
+      window.alert(
+        "Welcome to your shift! You'll have to complete ___ bowls by going around via WASD and holding space to pick up items. But be cafeul to avoid your creepy manager!"
+      );
     }
     if (helperFunction.button.click(buttons.clockOut)) {
       visualNovel.display = "map";
-  if (miniGame.finished) {
-    miniGame.reset();
-    ramen.miniGame = false;
-  }
+      if (miniGame.finished) {
+        miniGame.reset();
+        ramen.miniGame = false;
+      }
     }
-  }
-};
-
-ramen.ending = function (){
-  if(ted.ending()){
-    visualNovel.display = "ending";
-    visualNovel.endSceneName = ted.name;
   }
 };
 

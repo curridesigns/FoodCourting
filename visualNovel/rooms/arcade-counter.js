@@ -12,6 +12,9 @@ const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 185
 const dialogueBoxes = {}
 
 arcade.load = function() {
+  if(chad.ending()){
+    console.log("hello");
+  }
   
   helperFunction.background(arcade.bg);
   chad.render(900,50);
