@@ -126,34 +126,34 @@ text[3] = {
     },
     {
       a: {
-        text: "Dead Mouth Trap",
+        text: "Sadly.",
         playerChoices: 0,
         talkingTime: 0.75
       },
       b: {
-        text: "",
+        text: "Yeah...",
         playerChoices: 0,
         talkingTime: 2
       },
-      c: { text: "", playerChoices: 2, talkingTime: 0.5 }
+      c: { text: "Dead Mouse Trap", playerChoices: 2, talkingTime: 0.5 }
     },
     {
-      a: { text: "Let me know the band later, yeah?", playerChoices: 0, talkingTime: 2 },
-      b: { text: "Yeah? :]", playerChoices: 0, talkingTime: 1 },
-      c: { text: "", playerChoices: 0, talkingTime: 0.8 }
+      a: { text: "Haha! Don't think it's weird?", playerChoices: 0, talkingTime: 2 },
+      b: { text: "Yeah, I guess so...", playerChoices: 0, talkingTime: 1 },
+      c: { text: "Yeah? :]"}
     }
   ],
   choice: [
     { complete: "Return to Map" },//0
-    { a: "Boring", b: "Definitely needed", c: "Exciting" },
+    { a: "All managers suck at that, huh.", b: "Cool.", c: "Dead Mouse Trap" },
 
     {
-      a: "Sat back, vibed with some new music.",
-      b: "I slept for so long, my roommate thought I was dead.",
-      c: "Went out for a long drive that turned into camping."
+      a: "I like it!",
+      b: "They sound kinda cringey.",
+      c: "Wannabe grungey, I like it."
     }
   ]
-};
+}; //fuck
 
 text[4] = {
   response: [
