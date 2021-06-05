@@ -51,7 +51,13 @@ visualNovel.load = function() {
     case "ending":
       switch (visualNovel.endScene) {
         case "ted":
+          var alternate = 16;
+          if(frameCount % alternate === alternate/2){
           helperFunction.background(ramen.ending1);
+          }
+          if(frameCount % alternate === 0){
+          helperFunction.background(ramen.ending2);
+          }
           break;
         default:
           helperFunction.background(debug);
