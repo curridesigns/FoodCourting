@@ -1,4 +1,5 @@
 import { canvas, ctx, frameCount } from "../canvas.js";
+import { endingScene } from "../visualNovel/VisualNovel.js"
 import * as helperFunction from "../helper-functions.js";
 
 class npc {
@@ -35,7 +36,7 @@ class npc {
 
   dialogueRender() {
     if (this.dialogue.text[this.chatNumber] === undefined) {
-      this.chatNumber = 0;
+      endingScene = this.name;
     }
     this.playerChoices = this.dialogue.text[this.chatNumber].response[
       this.chatProgress

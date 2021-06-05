@@ -14,6 +14,8 @@ visualNovel.display = "arcade";
 
 visualNovel.miniGame = false;
 
+var endingScene;
+
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
   spicy: { top: 275, bottom: 470, left: 1095, right: 1415 },
@@ -22,6 +24,12 @@ const buttons = {
 };
 
 visualNovel.load = function() {
+  if(endingScene){
+    //debug purposes only
+  if (frameCount % 10 === 0) {
+    console.log(endingScene);
+  }
+  }
   //console.log(visualNovel.display);
   //changes what is displayed based on the visualNovel.display machine state
   switch (visualNovel.display) {
@@ -119,4 +127,4 @@ visualNovel.endLoad = function(character){
 }
 
 
-export { visualNovel };
+export { visualNovel, endingScene };

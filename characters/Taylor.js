@@ -21,7 +21,7 @@ text[0] = {
     },
     {
       a: {
-        text: "Ah haha! THose jokes of yours...",
+        text: "Ah haha! Those jokes of yours...",
         playerChoices: 0,
         talkingTime: 0.75
       },
@@ -214,6 +214,93 @@ text[6] = {
 };
 
 text[7] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[8] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[9] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[10] = {
   response: [
     {
       a: {

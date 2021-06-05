@@ -171,7 +171,7 @@ ted.miniGame = {};
 
 
 const text = [];
-/*
+
 text[0] = {
   response: [
     {
@@ -192,7 +192,7 @@ text[0] = {
         playerChoices: 0,
         talkingTime: 2
       },
- 
+    },
     {
       a: { text: "", playerChoices: 0, talkingTime: 2 },
       b: { text: "", playerChoices: 0, talkingTime: 1 },
@@ -232,7 +232,7 @@ text[1] = {
     { complete: "Return to Map" },
     { a: "", b: "", c: "" }
   ]
-}; */
+};
 
 const boxes = {
   main: { top: 250, bottom: 550, left: 900, right: 1700 },
@@ -245,5 +245,5 @@ const boxes = {
   color: "#8F6EADcc"
 };
 
-ted.novel = new npc(ted.image, text, boxes );
+ted.novel = new npc("ted" ,ted.image, text, boxes );
 export { ted };
