@@ -247,7 +247,7 @@ text[6] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "Same", b: "", c: "" }
+    { a: "Same", b: "Need that daily caffeine", c: "Go for a run?" }
   ]
 };
 
@@ -255,7 +255,7 @@ text[7] = {
   response: [
     {
       a: {
-        text: "",
+        text: "I've got Saturday off!",
         playerChoices: 1,
         talkingTime: 1
       }

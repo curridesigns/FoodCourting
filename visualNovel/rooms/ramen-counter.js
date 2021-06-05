@@ -24,6 +24,7 @@ ramen.load = function(tedChat = false) {
     ramen.miniGame = false;
     helperFunction.background(ramen.bg)
     ted.render("novel", 200, 200)
+    ted.render(900,50);
     ted.novel.dialogueRender();
     visualNovel.returnToMapRender(buttons.returnToMap);
     if (frameCount % 10 === 0) {
