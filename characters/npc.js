@@ -35,6 +35,9 @@ class npc {
   }
 
   dialogueRender() {
+    if(this.dialogue.text[this.chatNumber] === undefined){
+      this.chatNumber = 0;
+    }
     
     this.playerChoices = this.dialogue.text[this.chatNumber].response[
       this.chatProgress
@@ -100,12 +103,6 @@ class npc {
       // console.log(raven.dialogue.boxes.choices[prop])
     }
   }
-  
-  ending(){
-    if (this.chatNumber === 1) {
-      return true;
-    }
-  }
 
   click() {
     for (const prop in this.dialogue.text[this.chatNumber].choice[
@@ -113,6 +110,9 @@ class npc {
     ]) {
       if (helperFunction.button.click(this.dialogue.boxes.choices[prop])) {
         if (prop == "complete") {
+          if (this.chatNumber === this.dialogue.text.length - 1) {
+            
+          }
           return true;
         } else {
           this.dialogue.playerResponse = [prop];

@@ -122,12 +122,17 @@ text[3] = {
         playerChoices: 0,
         talkingTime: 1
       }
+    },
+    {
+    a: {text: "Oh... Yeah, I can get behind that.", playerChoices: 0, talkingTime: 1},
+    b: {text: "", playerChoices: 0, talkingTime: 1}
     }
   ],
   choice: [
     { complete: "Return to Map" },
     { a: "I wanted to talk to you", b: "Yeah! (You grab the closest thing in the aisle)", c: "It wasn't in stock" },
     { a: "Our breakup", b: "Do you like working here?", c: "" }
+    
   ]
 };
 

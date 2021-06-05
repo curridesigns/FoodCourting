@@ -21,19 +21,12 @@ const buttons = {
 
 ramen.load = function(tedChat = false) {
   if (miniGame.tedEnding) {
-    if (ted.novel.ending()) {
-      console.log("hello")
-    } else {
       ramen.miniGame = false;
       helperFunction.background(ramen.bg);
       ted.render("novel", 200, 200);
       ted.render(900, 50);
       ted.novel.dialogueRender();
       visualNovel.returnToMapRender(buttons.returnToMap);
-      if (frameCount % 10 === 0) {
-        console.log(visualNovel.display);
-      }
-    }
   } else {
     helperFunction.background(ramen.shiftStart);
   }
@@ -44,9 +37,7 @@ ramen.load = function(tedChat = false) {
 };
 
 ramen.click = function(event, tedChat = false) {
-  console.log(miniGame.finished);
   if (miniGame.tedEnding) {
-    console.log(helperFunction.getMouseCoordinates(event));
     if (ted.novel.click(event)) {
       visualNovel.display = "map";
       ted.novel.chatNumber++;
