@@ -176,31 +176,31 @@ text[0] = {
   response: [
     {
       a: {
-        text: "Heya, player! How was your time off?",
+        text: "Player! I wanted to talk to you about your performance at work.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
       a: {
-        text: "Boring's better than horrible!",
+        text: "",
         playerChoices: 0,
         talkingTime: 0.75
       },
       b: {
-        text: "Niiiiiiiiiccccccccccceeeeeeeeeeeee",
+        text: "",
         playerChoices: 0,
         talkingTime: 2
       },
-      c: { text: "Oh yeah?", playerChoices: 2, talkingTime: 0.5 }
+      c: { text: "", playerChoices: 2, talkingTime: 0.5 }
     },
     {
       a: {
-        text: "Let me know the band later, yeah?",
+        text: "",
         playerChoices: 0,
         talkingTime: 2
       },
-      b: { text: "Oh no, the walking dead!", playerChoices: 0, talkingTime: 1 },
+      b: { text: "", playerChoices: 0, talkingTime: 1 },
       c: { text: "Damn, movie worthy.", playerChoices: 0, talkingTime: 0.8 }
     }
   ],
