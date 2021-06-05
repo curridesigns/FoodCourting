@@ -69,7 +69,9 @@ ramen.click = function(event, tedChat = false) {
 };
 
 ramen.ending = function (){
-  
+  if(ted.ending()){
+    visualNovel.endScene = ted.
+  }
 };
 
 export { ramen };

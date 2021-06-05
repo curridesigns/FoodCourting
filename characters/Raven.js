@@ -350,39 +350,6 @@ text[9] = {
     { a: "", b: "", c: "" }
   ]
 };
-
-text[10] = {
-  response: [
-    {
-      a: {
-        text: "",
-        playerChoices: 1,
-        talkingTime: 1
-      }
-    },
-    {
-      a: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1 },
-      b: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      },
-      c: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      }
-    }
-  ],
-  choice: [
-    { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
-  ]
-};
-
 */
 
 /* !!! Original boxes

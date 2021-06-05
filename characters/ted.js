@@ -234,6 +234,239 @@ text[1] = {
   ]
 };
 
+text[2] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[3] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[4] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[5] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[6] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[7] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[8] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+text[9] = {
+  response: [
+    {
+      a: {
+        text: "",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
+
+
 const boxes = {
   main: { top: 250, bottom: 550, left: 900, right: 1700 },
   choices: {

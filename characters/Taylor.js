@@ -300,35 +300,6 @@ text[9] = {
   ]
 };
 
-text[10] = {
-  response: [
-    {
-      a: {
-        text: "",
-        playerChoices: 1,
-        talkingTime: 1
-      }
-    },
-    {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
-      b: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      },
-      c: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      }
-    }
-  ],
-  choice: [
-    { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
-  ]
-};
-
 const boxes = {
   main: { top: 500, bottom: 850, left: 100, right: 1000 },
   choices: {

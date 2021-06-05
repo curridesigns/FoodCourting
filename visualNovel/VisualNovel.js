@@ -14,7 +14,7 @@ visualNovel.display = "arcade";
 
 visualNovel.miniGame = false;
 
-var endingScene;
+
 
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
@@ -24,12 +24,6 @@ const buttons = {
 };
 
 visualNovel.load = function() {
-  if(endingScene){
-    //debug purposes only
-  if (frameCount % 10 === 0) {
-    console.log(endingScene);
-  }
-  }
   //console.log(visualNovel.display);
   //changes what is displayed based on the visualNovel.display machine state
   switch (visualNovel.display) {
@@ -56,7 +50,6 @@ visualNovel.load = function() {
     case "ending":
       switch (visualNovel.ending) {
         case "ted":
-          
           break;
       }
   }
@@ -120,11 +113,4 @@ visualNovel.returnToMapRender = function(boxObj, color) {
   ctx.fillText("Back To The Mall", 1720, 100);
 };
 
-visualNovel.endLoad = function(character){
-  if(character.chatNumber = 9){
-    
-  }
-}
-
-
-export { visualNovel, endingScene };
+export { visualNovel };
