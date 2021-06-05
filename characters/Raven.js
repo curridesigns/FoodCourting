@@ -140,12 +140,12 @@ text[3] = {
     {
       a: { text: "Haha! Don't think it's weird?", playerChoices: 0, talkingTime: 2 },
       b: { text: "Yeah, I guess so...", playerChoices: 0, talkingTime: 1 },
-      c: { text: "Yeah? :]"}
+      c: { text: "Yeah? :]" } //!!!!Return to Map doesn't come up after this, only the one in the corner
     }
   ],
   choice: [
     { complete: "Return to Map" },//0
-    { a: "All managers suck at that, huh.", b: "Cool.", c: "Dead Mouse Trap" },
+    { a: "All managers suck at that, huh.", b: "Cool.", c: "What band?" },
 
     {
       a: "I like it!",
@@ -166,7 +166,7 @@ text[4] = {
     },
     {
       a: {
-        text: "Can't help but think about what else I want to do with my life...",
+        text: "I just can't help but think about what else I want to do with my life...",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
@@ -175,7 +175,7 @@ text[4] = {
         talkingTime: 1
       },
       c: {
-        text: "Need some coffee?",
+        text: "Sure, I could switch off between that an my energy drink!",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -183,7 +183,7 @@ text[4] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "How's that one brain cell?", b: "How's that one brain cell?", c: "Need some coffee?"}
+    { a: "Whatcha thinkin' about?", b: "How's that one brain cell?", c: "Need some coffee?"}
   ]
 };
 
@@ -250,7 +250,7 @@ text[6] = {
     { a: "Same", b: "Need that daily caffeine", c: "Go for a run?" }
   ]
 };
-
+/*
 text[7] = {
   response: [
     {
@@ -313,9 +313,10 @@ text[8] = {
     { complete: "Return to Map" },
     { a: "", b: "", c: "" }
   ]
-};
+};*/
 
-/*const boxes = {
+/* !!! Original boxes
+const boxes = {
   main: { top: 700, bottom: 850, left: 100, right: 1000 },
   choices: {
     a: { top: 920, bottom: 1020, left: 100, right: 400 },
