@@ -126,25 +126,36 @@ text[3] = {
     },
     {
       a: {
-        text: "Dead Mouse Trap",
+        text: "Boring's better than horrible!",
         playerChoices: 0,
-        talkingTime: 1 },
-      b: {
-        text: "Yeah? :]",
-        playerChoices: 2,
-        talkingTime: 1
+        talkingTime: 0.75
       },
-      c: {
-        text: "Sadly.",
+      b: {
+        text: "Niiiiiiiiiccccccccccceeeeeeeeeeeee",
         playerChoices: 0,
-        talkingTime: 1
-      }
+        talkingTime: 2
+      },
+      c: { text: "Oh yeah?", playerChoices: 2, talkingTime: 0.5 }
+    },
+    {
+      a: {
+        text: "Let me know the band later, yeah?",
+        playerChoices: 0,
+        talkingTime: 2
+      },
+      b: { text: "Oh no, the walking dead!", playerChoices: 0, talkingTime: 1 },
+      c: { text: "Damn, movie worthy.", playerChoices: 0, talkingTime: 0.8 }
     }
-    
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "What's the band?", b: "Wannabe grungey, I like it.", c: "All managers suck at that, huh." }
+    { complete: "Return to Map" },//0
+    { a: "Boring", b: "Definitely needed", c: "Exciting" },
+
+    {
+      a: "Sat back, vibed with some new music.",
+      b: "I slept for so long, my roommate thought I was dead.",
+      c: "Went out for a long drive that turned into camping."
+    }
   ]
 };
 
