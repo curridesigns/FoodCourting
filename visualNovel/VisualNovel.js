@@ -48,7 +48,7 @@ visualNovel.load = function() {
       ramen.load();
       break;
     case "ending":
-      console.log("hello")
+      visualNovel.endScene();
       break;
   }
 };
@@ -114,7 +114,7 @@ visualNovel.returnToMapRender = function(boxObj, color) {
 visualNovel.endScene = function(){
   switch (visualNovel.endSceneName){
     case "ted":
-      visualNovel.display = "arcade"
+      helperFunction.background(ramen.ending1)
   }
 }
 

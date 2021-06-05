@@ -6,7 +6,8 @@ import { miniGame } from "../../miniGame/mini-game.js";
 
 const ramen = {};
 ramen.shiftStart = document.getElementById("splashScreen");
-ramen.ending = document.getElementById("tedEnding");
+ramen.ending1 = document.getElementById("tedEnding1");
+ramen.ending2 = document.getElementById("tedEnding2");
 ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
