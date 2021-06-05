@@ -48,8 +48,9 @@ ramen.click = function(event, tedChat = false) {
         miniGame.reset();
         break;
       case "ending":
+        visualNovel.endScene = "ted";
         visualNovel.display = "ending"
-        visualNovel.endSceneName = ted.name;
+        break;
     }
     if (visualNovel.returnToMapClick(event, buttons.returnToMap)) {
       visualNovel.display = "map";

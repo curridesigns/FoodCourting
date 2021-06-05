@@ -27,12 +27,18 @@ spicy.click = function(event, visualNovelDisplay) {
     raven.chatProgress = 0;
     raven.dialogue.playerResponse = "a"
   }
-  if(raven.click(event)){
-    visualNovel.display = "map";
-    raven.chatNumber++;
-    raven.chatProgress = 0;
-    raven.dialogue.playerResponse = "a"
-  }
+  switch (raven.click(event)) {
+      case "map":
+        visualNovel.display = "map";
+        raven.chatNumber++;
+        raven.chatProgress = 0;
+        raven.dialogue.playerResponse = "a";
+        break;
+      case "ending":
+        visualNovel.endScene = "raven";
+        visualNovel.display = "ending"
+        break;
+    }
 }
 
 export { spicy };

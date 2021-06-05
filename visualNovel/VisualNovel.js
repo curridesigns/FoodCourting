@@ -14,6 +14,8 @@ visualNovel.display = "arcade";
 
 visualNovel.miniGame = false;
 
+var splashScreen = document.getElementById("")
+
 
 
 const buttons = {
@@ -48,7 +50,13 @@ visualNovel.load = function() {
       ramen.load();
       break;
     case "ending":
-      visualNovel.endScene();
+      switch (visualNovel.endScene){
+        case "ted":
+      helperFunction.background(ramen.ending1);
+      break;
+        default:
+          helperFunction.background()
+      }
       break;
   }
 };
@@ -110,12 +118,5 @@ visualNovel.returnToMapRender = function(boxObj, color) {
   ctx.fillStyle = "red";
   ctx.fillText("Back To The Mall", 1720, 100);
 };
-
-visualNovel.endScene = function(){
-  switch (visualNovel.endSceneName){
-    case "ted":
-      helperFunction.background(ramen.ending1)
-  }
-}
 
 export { visualNovel };

@@ -27,12 +27,18 @@ store.click = function(event, visualNovelDisplay) {
     taylor.chatProgress = 0;
     taylor.dialogue.playerResponse = "a"
   }
-  if(taylor.click(event)){
-    visualNovel.display = "map";
-    taylor.chatNumber++;
-    taylor.chatProgress = 0;
-    taylor.dialogue.playerResponse = "a"
-  }
+  switch (taylor.click(event)) {
+      case "map":
+        visualNovel.display = "map";
+        taylor.chatNumber++;
+        taylor.chatProgress = 0;
+        taylor.dialogue.playerResponse = "a";
+        break;
+      case "ending":
+        visualNovel.endScene = "taylor";
+        visualNovel.display = "ending"
+        break;
+    }
 }
 
 export { store };
