@@ -16,12 +16,13 @@ splashScreen.load = function() {
   if (splashFrameRendered === true) {
     return;
   } // If we already rendered the splash screen once, then don't draw it again.
-
-  helperFunction.background(splashScreen.bg);
+  
   helperFunction.button.render(
     buttons.start,
-    //"#f9cb9cff"
+    "#f9cb9cff"
   );
+  helperFunction.background(splashScreen.bg);
+
   splashFrameRendered = true;
   // splashScreen.click();
 };
