@@ -56,6 +56,7 @@ ramen.click = function(event, tedChat = false) {
   } else {
     if (helperFunction.button.click(buttons.clockIn)) {
       ramen.miniGame = true
+      window.alert("Welcome to your shift! You'll have to complete ___ bowls by going around via WASD and holding space to pick up items. But be cafeul to avoid your creepy manager!");
     }
     if (helperFunction.button.click(buttons.clockOut)) {
       visualNovel.display = "map";
