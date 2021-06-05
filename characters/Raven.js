@@ -130,16 +130,17 @@ text[3] = {
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
-        playerChoices: 0,
+        text: "Yeah? :]",
+        playerChoices: 2,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Sadly.",
         playerChoices: 0,
         talkingTime: 1
       }
     }
+    
   ],
   choice: [
     { complete: "Return to Map" },
