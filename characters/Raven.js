@@ -254,7 +254,7 @@ text[6] = {
     { a: "Same", b: "Need that daily caffeine", c: "Go for a run?" }
   ]
 };
-/*
+
 text[7] = {
   response: [
     {
@@ -266,23 +266,25 @@ text[7] = {
     },
     {
       a: {
-        text: "Want to come to that gig with me tomorrow?",
+        text: "Want to come to that gig with me Saturday?",
         playerChoices: 2,
         talkingTime: 1 },
-      b: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
       },
-      c: {
-        text: "",
+      {
+      a: {
+        text: "Nice, can't wait!",
+        playerChoices: 0,
+        talkingTime: 1 },      
+      b: { //WHY
+        text: "Alright, cool. Come by and let me know if you change your mind.",
         playerChoices: 0,
         talkingTime: 1
-      }
     }
+}
   ],
   choice: [
     { complete: "Return to Map" },
+    { a: "Cool! I do too!" },
     { a: "Sure", b: "No, thanks" }
   ]
 };
@@ -350,7 +352,7 @@ text[9] = {
     { a: "Yeah!", b: "Nervous", c: "Actually, I'm not sure about going." }
   ]
 };
-*/
+
 
 /* !!! Original boxes
 const boxes = {
