@@ -10,15 +10,18 @@ import { ted } from "../characters/ted.js";
 import * as helperFunction from "../helper-functions.js";
 //declare global variables for this page
 var character, bowl;
-
 const miniGame = {};
+//the images for the miniGame that weren't setup elsewhere
 const kitchenBG = document.getElementById("kitchenBG");
 const bowlImage = document.getElementById("bowl");
 
+//run in setup() on canvas.js
 miniGame.preLoad = function() {
   ingredients.preLoad();
 };
 
+
+//run in setup() on canvas.js
 miniGame.load = function() {
   //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
