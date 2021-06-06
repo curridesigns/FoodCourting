@@ -100,7 +100,7 @@ class npc {
         this.dialogue.text[this.chatNumber].choice[this.playerChoices][prop],
         5,
         20,
-        "24px",
+        "30px",
         ctx
       );
     }

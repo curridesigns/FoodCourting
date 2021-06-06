@@ -475,7 +475,8 @@ text[8] = {
       }
     }
   ],
-  choice: [{ complete: "Return to Map" }, { a: "Thanks" }]
+  choice: [{ complete: "Return to Map" },
+           { a: "Thanks" }]
 };
 
 text[9] = {
