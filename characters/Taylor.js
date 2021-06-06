@@ -268,7 +268,7 @@ text[7] = {
         talkingTime: 1
       },
       b: {
-        text: "",
+        text: "Yeah...",
         playerChoices: 0,
         talkingTime: 1
       },
@@ -335,13 +335,17 @@ text[9] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Want to just play some games tomorrow?",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
       b: {
         text: "",
         playerChoices: 0,
