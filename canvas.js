@@ -12,9 +12,13 @@ let frameCount = 0;
 canvas.width = 1920;
 canvas.height = 1080;
 
-document.getElementById("gameCanvas").style.width = window.innerWidth/1.43 + 'px';
+var canvasComputedWidth = window.innerWidth - 200;
+var cavasComputedHeight = canvasComputedWidth
 
-console.log(window.innerWidth + 'px')
+document.getElementById("gameCanvas").style.width = window.innerWidth-200 + 'px';
+
+
+console.log(document.getElementById("gameCanvas").style.width)
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
