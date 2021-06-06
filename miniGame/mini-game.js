@@ -21,9 +21,8 @@ miniGame.preLoad = function() {
 };
 
 
-//run in setup() on canvas.js
+//run in setup() on canvas.js, has to come after preload so all the images are there
 miniGame.load = function() {
-  //moves the initialization of the miniGame to a different function so it can be called when it is needed at the begining of each round
   character = new PlayerCharacter();
   bowl = new RamenBowl(385, 588, bowlImage);
   ingredients.reset();
@@ -59,9 +58,11 @@ miniGame.play = function() {
   }
   //debug purposes only
   if (frameCount % 10 === 0) {
+    //prevents console.log from crashing the screen by slowing the number of logs it generates
   }
 };
 
+//used to start the miniGame over again after each attempt
 miniGame.reset = function() {
   ingredients.reset();
   miniGame.finished = false;

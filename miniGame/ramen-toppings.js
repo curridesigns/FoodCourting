@@ -1,6 +1,9 @@
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../canvas.js";
 import { dist } from "../helper-functions.js";
 
+
+//creates the topping class
 class Topping {
   constructor(tempName, tempX, tempY, tempImage, tempColor) {
     this.name = tempName;
