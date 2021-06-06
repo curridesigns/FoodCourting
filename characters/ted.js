@@ -183,25 +183,25 @@ text[0] = {
     },
     {
       a: {
-        text: "",
+        text: "Oh, no. Just wanted to say you're doing a great job!",
         playerChoices: 0,
         talkingTime: 0.75
       },
       b: {
-        text: "",
+        text: "I just wanted to tell you you’re on the track for Employee of the Month. Keep at it, old sport!",
         playerChoices: 0,
         talkingTime: 2
       },
-    },
-    {
-      a: { text: "", playerChoices: 0, talkingTime: 2 },
-      b: { text: "", playerChoices: 0, talkingTime: 1 },
-      c: { text: "", playerChoices: 0, talkingTime: 0.8 }
+      c: {
+        text: "Actually, you know what? Take the rest of the day off. You’ve earned it!",
+        playerChoices: 0,
+        talkingTime: 1
+      }
     }
   ],
   choice: [
     { complete: "Return to Map" },//0
-    { a: "", b: "", c: "" }
+    { a: "Is there a problem?", b: "About what, exactly?", c: "I really need to get back to work." }
   ]
 };
 
@@ -215,14 +215,18 @@ text[1] = {
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        playerChoices: 0, 
+        talkingTime: 1
+         },
       b: {
-        text: "",
+        text: "Oh, I just noticed how diligent you were being. You know, the last person who worked here wasn’t that motivated. In fact, this one time…",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Ha! Well said, Player! You know, I’ve always thought that, but as your manager I feel like I don’t say it enough. So often I’ve gone ‘oh, look at that Player, what a studious employee’... ",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -230,7 +234,7 @@ text[1] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Thanks", b: "What brought this on?", c: "Aren't I always?" }
   ]
 };
 
@@ -244,7 +248,7 @@ text[1] = {
 //       }
 //     },
 //     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
+//       a: { text: "", playerChoices: 0,talkingTime: 1 },
 //       b: {
 //         text: "",
 //         playerChoices: 0,
