@@ -144,7 +144,7 @@ text[3] = {
     {
       a: { text: "Haha! Don't think it's weird?", playerChoices: 0, talkingTime: 2 },
       b: { text: "Yeah, I guess so...", playerChoices: 0, talkingTime: 1 },
-      c: { text: "Yeah? :]", playerChoices: 0, talktingTime: 1 } //!!!!Return to Map doesn't come up after this, only the one in the corner
+      c: { text: "Yeah? :]", playerChoices: 0, talktingTime: 1 } //This is fixed
     }
   ],
   choice: [
@@ -157,7 +157,7 @@ text[3] = {
       c: "Wannabe grungey, I like it."
     }
   ]
-}; //fuck
+}; //fuck, what is your problem here?
 
 text[4] = {
   response: [

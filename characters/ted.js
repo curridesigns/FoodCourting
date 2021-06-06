@@ -95,6 +95,7 @@ ted.miniGame = {};
     
     //this generates input values to tell ted where to move
     if (ted.miniGame.needsMovement || ted.miniGame.timer) {
+      //if the timer goe
       if (ted.miniGame.initial || ted.miniGame.timer) {
         ted.miniGame.input.x = Math.floor(
           helperFunction.randomRange(0, ted.miniGame.left.range[1])
@@ -391,12 +392,12 @@ text[6] = {
       talkingTime: 1
     },
     b:  {
-      text: "",
+      text: "Another job? We're not enough for you?",
       playerChoices: 0,
       talkingTime: 1        
       },
     c:  {
-      text: "",
+      text: "Where? Let me know if you need a hiking buddy to keep you... safe. It's dangerous out there.",
       playerChoices: 0,
       talkingTime: 1        
       }
@@ -479,7 +480,7 @@ text[9] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "Absolutely not.", b: "Sure, I guess"}
+    { a: "Absolutely not.", b: "Sure, I guess" }
   ]
 };
 
@@ -491,7 +492,7 @@ const boxes = {
     c: { top: 900, bottom: 1000, left: 1200, right: 1700 },
     complete: { top: 600, bottom: 700, left: 1200, right: 1700 }
   },
-  color: "#8F6EADcc"
+  color: "#91d13dcc"
 };
 
 ted.novel = new npc("ted" ,ted.image, text, boxes );
