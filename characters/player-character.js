@@ -89,6 +89,7 @@ class PlayerCharacter {
 
   //this is where the physics happen
   movement() {
+    //turns the brakePedal on every frame, then turned off by player input
     this.brakePedal = { x: true, y: true };
 
     //sets the values for the direction to pass to the physics.movement function

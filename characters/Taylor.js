@@ -16,19 +16,19 @@ text[0] = {
       a: {
         text: "Oh, player... So, you still work in the foodcourt?",
         playerChoices: 1,
-        talkingTime: 2,
+        talkingTime: 1,
       },
     },
     {
       a: {
         text: "Ah haha! Those jokes of yours...",
         playerChoices: 0,
-        talkingTime: 0.75
+        talkingTime: 1
       },
       b: {
         text: "Right, right.",
         playerChoices: 0,
-        talkingTime: 2
+        talkingTime: 1
       },
       c: { text: "Oh really?", playerChoices: 0, talkingTime: 0.5 }
     },

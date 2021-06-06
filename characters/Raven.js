@@ -23,12 +23,12 @@ text[0] = {
       a: {
         text: "Boring's better than horrible!",
         playerChoices: 0,
-        talkingTime: 0.75
+        talkingTime: 1
       },
       b: {
         text: "Niiiiiiiiiccccccccccceeeeeeeeeeeee",
         playerChoices: 0,
-        talkingTime: 2
+        talkingTime: 1
       },
       c: { text: "Oh yeah?", playerChoices: 2, talkingTime: 0.5 }
     },
@@ -36,7 +36,7 @@ text[0] = {
       a: {
         text: "Let me know the band later, yeah?",
         playerChoices: 0,
-        talkingTime: 2
+        talkingTime: 1
       },
       b: { text: "Oh no, the walking dead!", playerChoices: 0, talkingTime: 1 },
       c: { text: "Damn, movie worthy.", playerChoices: 0, talkingTime: 0.8 }
@@ -128,17 +128,17 @@ text[3] = {
       a: {
         text: "Sadly.",
         playerChoices: 0,
-        talkingTime: 0.75
+        talkingTime: 1
       },
       b: {
         text: "Yeah...",
         playerChoices: 0,
-        talkingTime: 2
+        talkingTime: 1
       },
       c: {
         text: "Dead Mouse Trap",
         playerChoices: 2,
-        talkingTime: 0.5
+        talkingTime: 1
       }
     },
     {

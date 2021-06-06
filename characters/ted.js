@@ -69,10 +69,15 @@ ted.miniGame = {};
   ted.miniGame.needsMovement = true;
   //a setup bool used to generate the first input values
   ted.miniGame.initial = true;
+  //bool for if the inputs need to be regenerated based on a random time value
   ted.miniGame.timer = false;
+  //the variables for the timer
   ted.miniGame.moveTime = Math.floor(helperFunction.randomRange(0, 21));
   ted.miniGame.endTime = new Date().getTime() + ted.miniGame.moveTime;
+  
+  
   ted.miniGame.movement = function() {
+    //resets the timer at the top of the next frame after it has fired
     if (ted.miniGame.timer) {
       ted.miniGame.moveTime = Math.floor(
         helperFunction.randomRange(1000, 4000)
@@ -80,11 +85,15 @@ ted.miniGame = {};
       ted.miniGame.endTime = new Date().getTime() + ted.miniGame.moveTime;
       ted.miniGame.timer = false;
     }
+    //fires the timer when apporiate
     if (Date.now() >= ted.miniGame.endTime) {
       ted.miniGame.timer = true;
     }
 
+    //sets the brakePedal on every frame to be turned off by the appropriate input value
     ted.miniGame.brakePedal = { x: true, y: true };
+    
+    //this generates input values to tell ted where to move
     if (ted.miniGame.needsMovement || ted.miniGame.timer) {
       if (ted.miniGame.initial || ted.miniGame.timer) {
         ted.miniGame.input.x = Math.floor(
@@ -191,12 +200,12 @@ text[0] = {
       a: {
         text: "Oh, no. Just wanted to say you're doing a great job!",
         playerChoices: 0,
-        talkingTime: 0.75
+        talkingTime: 1
       },
       b: {
         text: "I just wanted to tell you you’re on the track for Employee of the Month. Keep at it, old sport!",
         playerChoices: 0,
-        talkingTime: 2
+        talkingTime: 1
       },
       c: {
         text: "Actually, you know what? Take the rest of the day off. You’ve earned it!",
@@ -370,7 +379,48 @@ text[6] = {
     },
     {
       a: {
-        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        text: "What do you do when you're not here?",
+        playerChoices: 2,
+        talkingTime: 1
+      },
+    },
+    {
+    a:  {
+      text: "It's very good to rest up, must be what keeps you optimal while working here!",
+      playerChoices: 0,
+      talkingTime: 1
+    },
+    b:  {
+      text: "",
+      playerChoices: 0,
+      talkingTime: 1        
+      },
+    c:  {
+      text: "",
+      playerChoices: 0,
+      talkingTime: 1        
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks"},
+    { a: "Stay home.", b: "I have another job.", c: "Hike" }
+  ]
+};
+
+text[7] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "A lot better than our last employee, ya know I take this business very seriously. Just because we're in a chain cooporation doesn't mean we can't be... close.",
         playerChoices: 0,
         talkingTime: 1
       },
@@ -382,7 +432,30 @@ text[6] = {
   ]
 };
 
-text[7] = {
+text[8] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about that attack that happened in the park near here? Better be careful, huh!",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks"}
+  ]
+};
+
+text[9] = {
   response: [
     {
       a: {
