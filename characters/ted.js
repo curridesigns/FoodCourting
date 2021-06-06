@@ -353,122 +353,56 @@ text[5] = {
   ]
 };
 
-// text[6] = {
-//   response: [
-//     {
-//       a: {
-//         text: "",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
+text[6] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks"}
+  ]
+};
 
-// text[7] = {
-//   response: [
-//     {
-//       a: {
-//         text: "Hey, Player! So, I know you’re off work tomorrow, buuuut I was wondering if you could come in for overtime? Yknow, since we’re pals and all.",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
-
-// text[8] = {
-//   response: [
-//     {
-//       a: {
-//         text: "",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
-
-// text[9] = {
-//   response: [
-//     {
-//       a: {
-//         text: "",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
-
+text[7] = {
+  response: [
+    {
+      a: {
+        text: "Hey, Player! So, I know you’re off work tomorrow, buuuut I was wondering if you could come in for overtime? Yknow, since we’re pals and all.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Ah, that’s the way it goes, I guess! Not a problem, buddy! I’m going to kill you in your sleep. What? I didn’t say anything.",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "That's the spirit! See you tomorrow then!",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Absolutely not.", b: "Sure, I guess"}
+  ]
+};
 
 const boxes = {
   main: { top: 250, bottom: 550, left: 900, right: 1700 },
