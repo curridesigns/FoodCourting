@@ -16,17 +16,12 @@ store.load = function() {
   taylor.render(900,50);
   helperFunction.background(store.Reg);
   //dialogue
-  visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   taylor.dialogueRender();
   // endScreen.click();
 };
 
 store.click = function(event, visualNovelDisplay) {
   //console.log(buttons.returnToMap)
-  if(visualNovel.returnToMapClick(event, buttons.returnToMap)){
-    taylor.chatProgress = 0;
-    taylor.dialogue.playerResponse = "a"
-  }
   switch (taylor.click(event)) {
       case "map":
         visualNovel.display = "map";
