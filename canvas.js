@@ -12,6 +12,8 @@ let frameCount = 0;
 canvas.width = 1920;
 canvas.height = 1080;
 
+
+
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("click", onClick, false);
@@ -29,46 +31,14 @@ function setup() {
 }
 
 function draw() {
-  // console.log(endScreen.endGame);
   if (splashScreen.startGame && !endScreen.endGame) {
-    //console.log("hello there")
     visualNovel.load();
-    // if (!visualNovel.tedChat) {
-    //   miniGame.tedEnding = false;
-    // }
-    // if (miniGame.finished) {
-    //   if (miniGame.tedEnding) {
-    //     // visualNovel.miniGame = false;
-    //     visualNovel.display = "food";
-    //     visualNovel.tedChat = true;
-    //   } else {
-    //     visualNovel.miniGame = false;
-    //     visualNovel.display = "map";
-    //     miniGame.reset();
-    //     miniGame.finished = false;
-    //   }
-    // }
-    // if (visualNovel.miniGame) {
-    //   miniGame.play();
-    //   //debug purposes only
-    //   // if (frameCount % 10 === 0) {
-    //   //   console.log("there")
-    //   // }
-    // }
   } else if (!splashScreen.startGame && !endScreen.endGame) {
     splashScreen.load();
   } else if (splashScreen.startGame && endScreen.endGame) {
     endScreen.load();
     miniGame.finishedBowls = 0;
   }
-  //debug statement to stop the page from crashing on console.logs
-  //   if (frameCount % 10 === 0) {
-
-  //       }
-  //console.log(frameCount);
-
-  // noodles.selected(character.pos);
-  //console.log(character.grab)
 }
 
 function loop(time) {

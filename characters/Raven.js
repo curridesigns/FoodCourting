@@ -275,7 +275,7 @@ text[7] = {
         text: "Nice, can't wait!",
         playerChoices: 0,
         talkingTime: 1 },      
-      b: { //WHY
+      b: {
         text: "Alright, cool. Come by and let me know if you change your mind.",
         playerChoices: 0,
         talkingTime: 1
