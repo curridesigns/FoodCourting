@@ -12,11 +12,13 @@ let frameCount = 0;
 canvas.width = 1920;
 canvas.height = 1080;
 
-var canvasComputedWidth = window.innerWidth - 200;
-var canvasComputedHeight = (canvasComputedWidth/16)
+var aspectRatio = canvas.width/canvas.height;
 
-// document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
-// document.getElementById("gameCanvas").style.height = canvasComputedHeight + 'px';
+var canvasComputedWidth = window.innerWidth - 200;
+var canvasComputedHeight = Math.ceil(canvasComputedWidth/aspectRatio)
+
+document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
+document.getElementById("gameCanvas").style.height = canvasComputedHeight + 'px';
 
 
 console.log('width: ' + canvasComputedWidth);
