@@ -238,69 +238,72 @@ text[1] = {
   ]
 };
 
-// text[2] = {
-//   response: [
-//     {
-//       a: {
-//         text: "",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0,talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
+text[2] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "Oh, I just noticed how diligent you were being. You know, the last person who worked here wasn’t that motivated. In fact, this one time…",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks", b: "What brought this on?" }
+  ]
+};
 
-// text[3] = {
-//   response: [
-//     {
-//       a: {
-//         text: "",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
+text[3] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "", b: "", c: "" }
+  ]
+};
 
 // text[4] = {
 //   response: [
 //     {
 //       a: {
-//         text: "",
+//         text: "Hey, just wanted to say you're doing great today, Player.",
 //         playerChoices: 1,
 //         talkingTime: 1
 //       }
@@ -329,7 +332,7 @@ text[1] = {
 //   response: [
 //     {
 //       a: {
-//         text: "",
+//         text: "Hey, just wanted to say you're doing great today, Player.",
 //         playerChoices: 1,
 //         talkingTime: 1
 //       }
@@ -358,7 +361,7 @@ text[1] = {
 //   response: [
 //     {
 //       a: {
-//         text: "",
+//         text: "Hey, Player! So, I know you’re off work tomorrow, buuuut I was wondering if you could come in for overtime? Yknow, since we’re pals and all.",
 //         playerChoices: 1,
 //         talkingTime: 1
 //       }
