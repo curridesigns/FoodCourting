@@ -1,8 +1,12 @@
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../canvas.js";
-//import { endingScene } from "../visualNovel/VisualNovel.js"
 import * as helperFunction from "../helper-functions.js";
 
+
+//this is used to handle the npc generation
 class npc {
+  //this requires a string for the npc name, the images, the text array, and the boxes 
+  //for the text to be displayed in
   constructor(name, imagesObj, dialogueArr, boxesObj) {
     this.name = name;
     this.images = imagesObj;
@@ -20,6 +24,7 @@ class npc {
     this.color
   }
 
+  //the x and y values are used to place the 
   render(tempX, tempY) {
     switch (this.state) {
       case "listening":

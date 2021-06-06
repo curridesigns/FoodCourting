@@ -1,15 +1,15 @@
-import { canvas, ctx, frameCount } from "../canvas.js";
-import * as helperFunction from "../helper-functions.js";
+//imports the npc class from it's file
 import { npc } from "./npc.js";
 
+//these are the images for the characters
 const images = {
   listening: document.getElementById("ravenL"),
   talking: document.getElementById("ravenT"),
   idle: document.getElementById("ravenC")
 };
 
+//this is the text object that is passed into the npc class
 const text = [];
-
 text[0] = {
   response: [
     {
@@ -353,19 +353,7 @@ text[9] = {
   ]
 };
 
-
-/* !!! Original boxes
-const boxes = {
-  main: { top: 700, bottom: 850, left: 100, right: 1000 },
-  choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 400 },
-    b: { top: 920, bottom: 1020, left: 450, right: 750 },
-    c: { top: 920, bottom: 1020, left: 800, right: 1100 },
-    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
-  },
-  color: "#8F6EADcc"
-};*/
-
+//the various boxes that the text will be displayed in
 const boxes = {
   main: { top: 500, bottom: 850, left: 100, right: 1000 },
   choices: {

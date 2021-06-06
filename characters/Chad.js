@@ -1,12 +1,14 @@
-import { canvas, ctx } from "../canvas.js";
-import * as helperFunction from "../helper-functions.js";
+
+//imports the npc class from it's file
 import { npc } from "./npc.js";
 
 
+//these are the images for the characters
 const images = {listening: document.getElementById("chadL"), talking: document.getElementById("chadT")};
 
-const text = [];
 
+//this is the text object that is passed into the npc class
+const text = [];
 text[0] = {
   response: [
     {
@@ -344,6 +346,7 @@ text[8] = {
   ]
 };
 
+//the various boxes that the text will be displayed in
 const boxes = {
   main: { top: 500, bottom: 850, left: 100, right: 1000 },
   choices: {

@@ -21,7 +21,6 @@ store.load = function() {
 };
 
 store.click = function(event, visualNovelDisplay) {
-  //console.log(buttons.returnToMap)
   switch (taylor.click(event)) {
       case "map":
         visualNovel.display = "map";
