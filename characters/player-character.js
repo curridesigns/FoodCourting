@@ -5,26 +5,37 @@ import { physics } from "../miniGame/physics.js";
 //creates a PlayerCharacter class, although this probably could've been a normal object
 class PlayerCharacter {
   constructor() {
+    //postion
     this.pos = { x: 650, y: 250 };
+    //used for collison, is a radius
     this.size = 45;
+    //the centerOffset values are where I want the player to be centered
     this.centerOffset = {x: -72, y: -85};
+    //this was used in the early stages, and Im afraid to remove it
     this.color = "red";
+    //these are keyValues, and flags associated with each direction, and the grab key
     this.up = { key: 87, flag: false };
     this.down = { key: 83, flag: false };
     this.right = { key: 68, flag: false };
     this.left = { key: 65, flag: false };
     this.grab = { key: 32, flag: false, hasObject: false };
+    //tells the physics engine which direction to move the character, can be either positive or negative 1
     this.direction = { x: 0, y: 0 };
+    //current speed of the player, used to make sure the player doesnt fly off the screen
     this.speed = { x: 0, y: 0 };
+    this.speedMax = 6;
+    //if true, stops the player movement
     this.brakePedal = { x: true, y: true };
     this.image = document.getElementById("character");
+    //this actually in here becaure I needed it for the npc in the miniGame, it has no purpose in this
+    //file, but I didn't have time to figure out how to remove it
     this.contact = {x: false, y: false};
-    this.speedMax = 6;
   }
 
   //renders the player on the screen, the debug value is used to display some boxes to help line the image
   //up with where it needed to be
   render(debug = false) {
+    //the translate makes it so the image can be centered easily and quickly
     ctx.translate(this.pos.x, this.pos.y);
     ctx.drawImage(this.image, this.centerOffset.x, this.centerOffset.y);
     if(debug){
@@ -39,6 +50,7 @@ class PlayerCharacter {
     ctx.translate(-this.pos.x, -this.pos.y);
   }
 
+  
   keyDownHandler() {
     if (event.keyCode == this.up.key) {
       this.up.flag = true;
