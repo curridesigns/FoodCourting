@@ -120,7 +120,6 @@ visualNovel.click = function(event) {
           visualNovel.display = "food";
         }
         break;
-      //console.log("there")
       //runs the click "function" for the arcade
       case "arcade":
         arcade.click(event);
@@ -139,22 +138,6 @@ visualNovel.click = function(event) {
         break;
     }
   }
-};
-
-//this function is for each screen the "screen" is what ever variable the buttons are stored in for the file its in
-visualNovel.returnToMapClick = function(event, boxObj) {
-  if (helperFunction.button.click(boxObj)) {
-    visualNovel.display = "map";
-    return true;
-  }
-};
-
-//this function show ths button for return to map, needs the button object, and what color you want it
-visualNovel.returnToMapRender = function(boxObj, color) {
-  helperFunction.button.render(boxObj, color);
-  ctx.font = "48px ariel";
-  ctx.fillStyle = "red";
-  ctx.fillText("Back To The Mall", 1720, 100);
 };
 
 export { visualNovel };

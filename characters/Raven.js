@@ -165,7 +165,7 @@ text[4] = {
       a: {
         text: "...",
         playerChoices: 1,
-        talkingTime: 1
+        talkingTime: 0
       }
     },
     {

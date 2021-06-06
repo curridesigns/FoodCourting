@@ -27,7 +27,6 @@ ramen.load = function(tedChat = false) {
     ted.render("novel", 200, 200);
     ted.render(900, 50);
     ted.novel.dialogueRender();
-    visualNovel.returnToMapRender(buttons.returnToMap);
   } else {
     helperFunction.background(ramen.shiftStart);
   }

@@ -52,17 +52,22 @@ ted.miniGame = {};
   ted.miniGame.speedMax = 3;
   ted.miniGame.centerOffset = { x: -72, y: -85 };
   //ted's movement is essentially just fuzzing the physics system with inputs
-  //theses values are generated 
+  //theses values are generated randomly, and give ted his movement based on which range they hit
+  //they are seperated by axis
   ted.miniGame.up = { range: [1, 5], flag: false };
   ted.miniGame.down = { range: [6, 10], flag: false };
   ted.miniGame.right = { range: [1, 5], flag: false };
   ted.miniGame.left = { range: [6, 10], flag: false };
+  //the stored random value for the input fuzzing
+  ted.miniGame.input = { x: 0, y: 0 };
   ted.miniGame.direction = { x: 0, y: 0 };
   ted.miniGame.speed = { x: 0, y: 0 };
   ted.miniGame.brakePedal = { x: true, y: true };
-  ted.miniGame.input = { x: 0, y: 0 };
+  //this tells the fuzzing system if it has run into something, and which axis
   ted.miniGame.contact = { x: false, y: false };
+  //bool used to tell if it needs to run the random input generation
   ted.miniGame.needsMovement = true;
+  //a setup bool used to generate the first input values
   ted.miniGame.initial = true;
   ted.miniGame.timer = false;
   ted.miniGame.moveTime = Math.floor(helperFunction.randomRange(0, 21));
