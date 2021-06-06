@@ -72,35 +72,6 @@ text[2] = {
   response: [
     {
       a: {
-        text: "",
-        playerChoices: 1,
-        talkingTime: 1
-      }
-    },
-    {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
-      b: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      },
-      c: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      }
-    }
-  ],
-  choice: [
-    { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
-  ]
-};
-
-text[3] = {   // !!!!!!   *****    !!!!!!
-  response: [
-    {
-      a: {
         text: "Hey, picking up something?",
         playerChoices: 1,
         talkingTime: 1
@@ -113,43 +84,72 @@ text[3] = {   // !!!!!!   *****    !!!!!!
         talkingTime: 1
       },
       b: {
-        text: "You've never liked this before.",
+        text: "You never used to like this...",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "Oh",
-        playerChoices: 0,
-        talkingTime: 1
-      }
-    },
-        {
-      a: {
-        text: "About?",
-        playerChoices: 3,
-        talkingTime: 1
-      },
-      b: {
-        text: "You've never liked this before.",
-        playerChoices: 0,
-        talkingTime: 1
-      },
-      c: {
-        text: "Oh",
+        text: "Oh.",
         playerChoices: 0,
         talkingTime: 1
       }
     },
     {
-    a: {text: "Oh... Yeah, I can get behind that.", playerChoices: 0, talkingTime: 1},
-    b: {text: "", playerChoices: 0, talkingTime: 1}
+    a: {
+        text: "This... Isn't the best time to talk about that.",
+        playerChoices: 0,
+        talkingTime: 1
+    },
+    b: {
+        text: "Ya know, it's a job.",
+        playerChoices: 0,
+        talkingTime: 1
+    },
+    c: {
+        text: "Alright...",
+        playerChoices: 0,
+        talkingTime: 1
+    }
     }
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "I wanted to talk to you", b: "Oh-yeah! (You grab the closest thing in the aisle)", c: "It wasn't in stock" },
-    { a: "Our breakup", b: "Do you like working here?", c: "" },
-    { a: "", b: ""}
+    { a: "I wanted to talk to you.", b: "Yeah! (grab something)", c: "It wasn't in stock." },
+    { a: "Our breakup", b: "Do you like working here?", c: "Nevermind." }
+  ]
+};
+
+
+text[3] = {
+  response: [
+    {
+      a: {
+        text: "You come to this store a lot.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Oh, yeah. I remember the time that we went to pick up supplies for that project and you forgot the posterboard, like the only thing you *actually* needed.",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "Makes sense.",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: {
+        text: "Yeah, it's kinda weird to be back.",
+        playerChoices: 0,
+        talkingTime: 1
+      }
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "You know me... Bad with making lists.", b: "I like to get snacks and energy drinks for my shifts", c: "I haven't seen you in a lont time" }
   ]
 };
 
@@ -157,20 +157,24 @@ text[4] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Hey, I'm not on clock yet, came in a bit early.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "Yeah, someone else will have'ta check you out today.",
+        playerChoices: 0,
+        talkingTime: 1
+      },
       b: {
-        text: "",
+        text: "I was out of coffee at my house, haha.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Sure man!",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -178,7 +182,7 @@ text[4] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Cool, cool.", b: "Why?", c: "Cool, I could hang out until your shifts starts?" }
   ]
 };
 
@@ -186,13 +190,17 @@ text[5] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Ya know, I was thinking about our breakup...",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "Haha! Yeah... I'm sorry",
+        playerChoices: 0,
+        talkingTime: 1
+      },
       b: {
         text: "",
         playerChoices: 0,
@@ -207,7 +215,7 @@ text[5] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "You were kinda an ass about it.", b: "", c: "" }
   ]
 };
 
