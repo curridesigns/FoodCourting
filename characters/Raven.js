@@ -266,8 +266,8 @@ text[7] = {
     },
     {
       a: {
-        text: "",
-        playerChoices: 0,
+        text: "Want to come to that gig with me tomorrow?",
+        playerChoices: 2,
         talkingTime: 1 },
       b: {
         text: "",
@@ -283,7 +283,7 @@ text[7] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Sure", b: "No, thanks" }
   ]
 };
 
@@ -291,23 +291,23 @@ text[8] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Hey!",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
       a: {
-        text: "",
+        text: "It’s a small alternative pub, Sammies with a side of Anarachy, that has small comedy and rock shows at night sometimes.",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
+        text: "Mmm, I'm not sure how to explain it. You'll see!",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Ya know, same shit, different day.",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -315,7 +315,7 @@ text[8] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "So, where's this gig?", b: "What kinda scene is this gig gonna be?", c: "How are ya?" }
   ]
 };
 
@@ -330,16 +330,16 @@ text[9] = {
     },
     {
       a: {
-        text: "",
+        text: "Can't wait!",
         playerChoices: 0,
         talkingTime: 1 },
       b: {
-        text: "",
+        text: "It'll be alright, just stick with me!",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Oh... okay, if you feel like going tomorrow, I'll look out for you!",
         playerChoices: 0,
         talkingTime: 1
       }
