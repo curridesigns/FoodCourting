@@ -3,23 +3,23 @@ import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js"
 import { taylor } from "../../../characters/Taylor.js"
 
+//creates the store object
 const store = {};
+//store's images
 store.bg = document.getElementById("storeBG");
 store.Reg = document.getElementById("storeReg")
 
-const buttons = { returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }};
-
+//run in VisualNovel.js
 store.load = function() {
-  
   helperFunction.background(store.bg);
-  //helperFunction.background
   taylor.render(900,50);
   helperFunction.background(store.Reg);
+  
   //dialogue
   taylor.dialogueRender();
-  // endScreen.click();
 };
 
+//handles taylor's click()
 store.click = function(event, visualNovelDisplay) {
   switch (taylor.click(event)) {
       case "map":

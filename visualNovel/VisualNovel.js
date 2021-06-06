@@ -1,3 +1,4 @@
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../canvas.js";
 import * as helperFunction from "../helper-functions.js";
 import { arcade } from "./rooms/arcade-counter.js";
@@ -5,24 +6,29 @@ import { store } from "./rooms/store-counter.js";
 import { spicy } from "./rooms/spicyTake-counter.js";
 import { ramen } from "./rooms/ramen-counter.js";
 
+//creates the visualNovel object
 const visualNovel = {};
-// const roomDisplay = {store: false, spicy: false, arcade: false, food: false};
 
+//the mall map
 visualNovel.bg = document.getElementById("mallMap");
 
-visualNovel.display = "arcade";
+//give the display a starting value to avoid bugs
+visualNovel.display = "map";
 
-visualNovel.miniGame = false;
-
-var debug = document.getElementById("debug");
+//makes the player go to their shift after talking to a npc
 visualNovel.forcedMini = false;
 
+//used for testing images
+var debug = document.getElementById("debug");
+
+//the buttons for each of the st
 const buttons = {
   store: { top: 275, bottom: 575, left: 77, right: 710 },
   spicy: { top: 275, bottom: 470, left: 1095, right: 1415 },
   arcade: { top: 275, bottom: 575, left: 1430, right: 1830 },
-  food: { top: 570, bottom: 1045, left: 725, right: 1120 }
-};
+  food: { top: 570, bottom: 1045, left: 725, right: 1320 }
+}; 
+//
 
 visualNovel.load = function() {
   //console.log(visualNovel.display);

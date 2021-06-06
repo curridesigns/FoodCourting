@@ -39,14 +39,15 @@ ramen.load = function() {
     //loads the cash register at the start and end of a shift, unless you talk to ted
     helperFunction.background(ramen.shiftStart);
   }
-  //runs the miniGame
+  //runs the miniGame when appropriate
   if (ramen.miniGame && !miniGame.finished) {
     miniGame.play();
   }
-  //dialogue
 };
 
+//handles the click events for food court
 ramen.click = function(event, tedChat = false) {
+  //if you talk to ted, runs the click events for that
   if (miniGame.tedEnding) {
     switch (ted.novel.click(event)) {
       case "map":
@@ -62,7 +63,8 @@ ramen.click = function(event, tedChat = false) {
         visualNovel.display = "ending"
         break;
     }
-  } else if(!ramen.miniGame || miniGame.finished){
+  } //runs the click events for the cash register 
+  else if(!ramen.miniGame || miniGame.finished){
     if (helperFunction.button.click(buttons.clockIn)) {
       ramen.miniGame = true;
       miniGame.reset();

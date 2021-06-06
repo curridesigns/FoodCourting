@@ -1,28 +1,27 @@
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js";
 import { raven } from "../../../characters/Raven.js";
 
+//sets up the spicy takes object
 const spicy = {};
+//spicy takes' images
 spicy.bg = document.getElementById("spicytakesBG");
 spicy.Reg = document.getElementById("spicytakesCounter");
 
-const buttons = {
-  returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }
-};
-
+//run in VisualNovel.js
 spicy.load = function() {
   helperFunction.background(spicy.bg);
-  //helperFunction.background();
   raven.render(900, 50);
   helperFunction.background(spicy.Reg);
+  
   //dialogue
   raven.dialogueRender();
-  // endScreen.click();
 };
 
+//handles raven's click()
 spicy.click = function(event, visualNovelDisplay) {
-  //console.log(buttons.returnToMap)
   switch (raven.click(event)) {
     case "map":
       visualNovel.display = "map";
