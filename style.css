@@ -5,7 +5,16 @@ body {
   margin: 0;
   font-family: Verdana, sans-serif;
   font-color: black;
-  font-size: 24px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 65px;
+  }
+p
+{
+  text-align: center;
+  font-size: 28px;
 }
 
 canvas {
