@@ -7,7 +7,8 @@ import { taylor } from "../../../characters/Taylor.js"
 const store = {};
 //store's images
 store.bg = document.getElementById("storeBG");
-store.Reg = document.getElementById("storeReg")
+store.Reg = document.getElementById("storeReg");
+store.ending = document.getElementById("taylorEnding");
 
 //run in VisualNovel.js
 store.load = function() {

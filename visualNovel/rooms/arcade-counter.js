@@ -9,6 +9,7 @@ const arcade = {};
 //the images for the arcade
 arcade.bg = document.getElementById("arcadeCounterBG");
 arcade.Reg = document.getElementById("arcadeCounterReg");
+arcade.ending = document.getElementById("chadEnding");
 
 //the render function for the arcade, called in VisualNovel.js
 arcade.load = function() {

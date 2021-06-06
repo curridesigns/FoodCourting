@@ -2,7 +2,6 @@ import { miniGame } from "./miniGame/mini-game.js";
 import { keyDownHandler, keyUpHandler, onClick } from "./event-handlers.js";
 import * as helperFunction from "./helper-functions.js";
 import { splashScreen } from "./SplashScreen.js";
-import { endScreen } from "./EndScreen.js";
 import { visualNovel } from "./visualNovel/VisualNovel.js";
 
 const canvas = document.querySelector("#gameCanvas");
@@ -42,13 +41,10 @@ function setup() {
 }
 
 function draw() {
-  if (splashScreen.startGame && !endScreen.endGame) {
+  if (splashScreen.startGame) {
     visualNovel.load();
-  } else if (!splashScreen.startGame && !endScreen.endGame) {
+  } else if (!splashScreen.startGame) {
     splashScreen.load();
-  } else if (splashScreen.startGame && endScreen.endGame) {
-    endScreen.load();
-    miniGame.finishedBowls = 0;
   }
 }
 

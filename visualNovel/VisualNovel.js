@@ -21,17 +21,17 @@ visualNovel.forcedMini = false;
 //used for testing images
 var debug = document.getElementById("debug");
 
-//the buttons for each of the st
+//the buttons for each of the stores in the mall
 const buttons = {
-  store: { top: 275, bottom: 575, left: 77, right: 710 },
-  spicy: { top: 275, bottom: 470, left: 1095, right: 1415 },
-  arcade: { top: 275, bottom: 575, left: 1430, right: 1830 },
-  food: { top: 570, bottom: 1045, left: 725, right: 1320 }
+  store: { top: 80, bottom: 605, left: 70, right: 605 },
+  spicy: { top: 80, bottom: 350, left: 570, right: 930 },
+  arcade: { top: 80, bottom: 605, left: 1350, right: 1830 },
+  food: { top: 575, bottom: 1030, left: 575, right: 1315 }
 }; 
-//
 
+
+//visualNovel's render function
 visualNovel.load = function() {
-  //console.log(visualNovel.display);
   //changes what is displayed based on the visualNovel.display machine state
   switch (visualNovel.display) {
     //displays the map
@@ -66,16 +66,13 @@ visualNovel.load = function() {
           }
           break;
         case "raven":
-          helperFunction.background(debug);
-          ctx.fillText(visualNovel.endScene, 500, 500)
+          helperFunction.background(spicy.ending);
           break;
         case "chad":
-          helperFunction.background(debug);
-          ctx.fillText(visualNovel.endScene, 500, 500)
+          helperFunction.background(arcade.ending);
           break;
         case "taylor":
-          helperFunction.background(debug);
-          ctx.fillText(visualNovel.endScene, 500, 500)
+          helperFunction.background(store.ending);
           break;
       }
       break;

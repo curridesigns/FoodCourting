@@ -9,6 +9,7 @@ const spicy = {};
 //spicy takes' images
 spicy.bg = document.getElementById("spicytakesBG");
 spicy.Reg = document.getElementById("spicytakesCounter");
+spicy.ending = document.getElementById("ravenEnding");
 
 //run in VisualNovel.js
 spicy.load = function() {
