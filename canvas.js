@@ -13,9 +13,10 @@ canvas.width = 1920;
 canvas.height = 1080;
 
 var canvasComputedWidth = window.innerWidth - 200;
-var cavasComputedHeight = canvasComputedWidth
+var cavasComputedHeight = canvasComputedWidth/9
 
-document.getElementById("gameCanvas").style.width = window.innerWidth-200 + 'px';
+document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
+document.getElementById("gameCanvas")
 
 
 console.log(document.getElementById("gameCanvas").style.width)
