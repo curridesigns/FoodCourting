@@ -14,8 +14,9 @@ canvas.height = 1080;
 
 var aspectRatio = canvas.width/canvas.height;
 
-var canvasComputedWidth = window.innerWidth - 200;
-var canvasComputedHeight = Math.ceil(canvasComputedWidth/aspectRatio)
+var canvasComputedHeight = window.innerHeight - 200;
+var canvasComputedWidth = Math.ceil(canvasComputedHeight*aspectRatio);
+
 
 document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
 document.getElementById("gameCanvas").style.height = canvasComputedHeight + 'px';
