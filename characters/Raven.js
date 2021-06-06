@@ -323,7 +323,7 @@ text[9] = {
   response: [
     {
       a: {
-        text: "",
+        text: "You ready for the gig tomorrow??",
         playerChoices: 1,
         talkingTime: 1
       }
@@ -347,7 +347,7 @@ text[9] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Yeah!", b: "Nervous", c: "Actually, I'm not sure about going." }
   ]
 };
 */
