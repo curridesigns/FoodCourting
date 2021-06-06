@@ -1,24 +1,34 @@
+//this is more complicated then the other rooms since it handles the miniGame functionality,
+//and the weird way you talk to ted
+
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js";
 import { ted } from "../../characters/ted.js";
 import { miniGame } from "../../miniGame/mini-game.js";
 
+//creates the ramen object
 const ramen = {};
+
+//the ramen images
 ramen.shiftStart = document.getElementById("splashScreen");
 ramen.ending1 = document.getElementById("tedEnding1");
 ramen.ending2 = document.getElementById("tedEnding2");
 ramen.bg = document.getElementById("ramenBG");
-let screen = "novel";
+
+//bool for if the miniGame should be loaded
 ramen.miniGame = false;
 
+//buttons to give the cash register functionality
 const buttons = {
   clockIn: { top: 260, bottom: 480, left: 1050, right: 1710 },
   clockOut: { top: 510, bottom: 730, left: 1050, right: 1710 },
-  returnToMap: { top: 1010, bottom: 1110, left: 1650, right: 1850 }
 };
 
-ramen.load = function(tedChat = false) {
+//run in the VisualNovel.js file
+ramen.load = function() {
+  //loads ted's visualNovel functions
   if (miniGame.tedEnding) {
     ramen.miniGame = false;
     helperFunction.background(ramen.bg);
@@ -26,8 +36,10 @@ ramen.load = function(tedChat = false) {
     ted.render(900, 50);
     ted.novel.dialogueRender();
   } else {
+    //loads the cash register at the start and end of a shift, unless you talk to ted
     helperFunction.background(ramen.shiftStart);
   }
+  //runs the miniGame
   if (ramen.miniGame && !miniGame.finished) {
     miniGame.play();
   }

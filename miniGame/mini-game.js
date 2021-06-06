@@ -34,6 +34,8 @@ miniGame.play = function() {
   character.movement();
   ted.miniGame.movement();
   ingredients.select(character.grab, character.pos, bowl.pos);
+  
+  //if the player runs into ted it ends the miniGame, and sets the tedEnding bool to true
   if (
     helperFunction.dist(
       character.pos.x,
