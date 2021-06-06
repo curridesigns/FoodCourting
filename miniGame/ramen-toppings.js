@@ -5,6 +5,7 @@ import { dist } from "../helper-functions.js";
 
 //creates the topping class
 class Topping {
+  //needs a name, where it should be rendered, the image, and a color(this can probably go away)
   constructor(tempName, tempX, tempY, tempImage, tempColor) {
     this.name = tempName;
     this.startPOS = { x: tempX, y: tempY };
@@ -18,6 +19,8 @@ class Topping {
     this.isRendered = false
   }
 
+  //this is where it is rendered, the override system is an old way of getting the bowlIngredients
+  //to render in the top, can probably be removed now
   render(overrideX, overrideY) {
     if (overrideX === undefined && overrideY === undefined) {
       ctx.drawImage(this.image, this.pos.x, this.pos.y);
@@ -32,9 +35,11 @@ class Topping {
     }
   }
 
+  //allows the player to pick up the ingredient
   select(characterGrab, characterPOS, bowlPOS) {
+    //sets it to not be selected at the top of every frame, to be changed by player input
     this.isSelected = false;
-    // console.log(characterGrab.flag);
+    //if the player is close enough, and they want to pick it up, sets the pos to follow the player
     if (
       this.characterNear(characterPOS) &&
       characterGrab.flag
@@ -45,6 +50,8 @@ class Topping {
       this.hasMoved = true;
       characterGrab.hasObject = true;
     }
+    //was trying to make the player only able to pick up one ingredient at a time
+    //it wasn't working, and I didn't have time to pull this code before beta release
     if (!this.isSelected) {
       this.pos.x = this.pos.x;
       this.pos.y = this.pos.y;
@@ -53,18 +60,14 @@ class Topping {
       characterGrab.hasObject = false;
       }
     }
+    //tells the ingredient system that it wants to be turned in when appropriate
     if (this.isSelected && this.bowlNear(bowlPOS)) {
       this.turnIn = true;
       // characterGrab.hasObject = false;
     }
-
-    if (this.pos.x != this.startPOS.x && this.pos.y != this.startPOS.y) {
-      this.hasMoved = true;
-    }
   }
 
   characterNear(characterPOS) {
-    //TODO: make a distance function
     if (dist(characterPOS.x, characterPOS.y, this.pos.x, this.pos.y) <= 150) {
       return true;
     }

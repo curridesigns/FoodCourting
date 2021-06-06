@@ -1,3 +1,4 @@
+
 import { canvas, ctx, frameCount } from "../../canvas.js";
 import * as helperFunction from "../../helper-functions.js";
 import { visualNovel } from "../VisualNovel.js";
@@ -17,13 +18,11 @@ arcade.load = function() {
   helperFunction.background(arcade.bg);
   chad.render(900, 50);
   helperFunction.background(arcade.Reg);
-  //dialoge should go here
-  // visualNovel.returnToMapRender(buttons.returnToMap, "#f9cb9c55");
   chad.dialogueRender();
-  // endScreen.click();
 };
 
 arcade.click = function(event, visualNovelDisplay) {
+  //runs chad's click() and handles it's return values as such
   switch (chad.click(event)) {
     case "map":
       visualNovel.display = "map";

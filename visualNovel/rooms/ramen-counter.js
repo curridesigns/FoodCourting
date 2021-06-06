@@ -12,8 +12,6 @@ ramen.bg = document.getElementById("ramenBG");
 let screen = "novel";
 ramen.miniGame = false;
 
-//ramen.Reg = document.getElementById("")
-
 const buttons = {
   clockIn: { top: 260, bottom: 480, left: 1050, right: 1710 },
   clockOut: { top: 510, bottom: 730, left: 1050, right: 1710 },
