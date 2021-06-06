@@ -50,7 +50,7 @@ class PlayerCharacter {
     ctx.translate(-this.pos.x, -this.pos.y);
   }
 
-  
+  //these 2 functions are called in the event-handlers.js file
   keyDownHandler() {
     if (event.keyCode == this.up.key) {
       this.up.flag = true;
@@ -87,29 +87,37 @@ class PlayerCharacter {
     }
   }
 
+  //this is where the physics happen
   movement() {
     this.brakePedal = { x: true, y: true };
 
     //sets the values for the direction to pass to the physics.movement function
+    //tells the physics engine to move the player "up" the screen
     if (this.up.flag) {
       this.direction.y = -1;
       this.brakePedal.y = false;
     }
-    //moves the ball down
+    
+    //tells the physics engine to move the player "down" the screen
     if (this.down.flag) {
       this.direction.y = 1;
       this.brakePedal.y = false;
     }
+  
+    //tells the physics engine to move the player "left" on the screen
     if (this.left.flag) {
       this.direction.x = -1;
       this.brakePedal.x = false;
     }
-    //moves the ball down
+    
+    
+    //tells the physics engine to move the player "right" on the screen
     if (this.right.flag) {
       this.direction.x = 1;
       this.brakePedal.x = false;
     }
 
+    //calls the physics functions that actually affect the player pos
     physics.movement(this);
     physics.worldSpace(this);
     physics.collision(this);

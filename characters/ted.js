@@ -1,10 +1,13 @@
+////imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx, frameCount } from "../canvas.js";
 import { physics } from "../miniGame/physics.js";
 import * as helperFunction from "../helper-functions.js";
 import { npc } from "./npc.js";
 
+//ted is more complicated than the other npcs since he appears in both the visualNovel and the miniGame
 const ted = {};
 
+//ted's images
 ted.image = {
   miniGame: document.getElementById("miniTed"),
   listening: document.getElementById("tedL"),
@@ -12,9 +15,11 @@ ted.image = {
   idle: document.getElementById("tedL")
 };
 
+//teds render function, the state is to switch between rendering the minigame version or the novel version
 ted.render = function(state = "miniGame", novelX, novelY, debug = false) {
   switch (state) {
     case "miniGame":
+      //similar to the player rendering system
       ctx.translate(ted.miniGame.pos.x, ted.miniGame.pos.y);
       ctx.drawImage(
         ted.image.miniGame,
@@ -40,10 +45,14 @@ ted.render = function(state = "miniGame", novelX, novelY, debug = false) {
 ted.miniGame = {};
 //all the miniGame code for ted
 {
+  //a lot of these values are the same for the player in the miniGame, the ones that are different are 
+  //commented as such
   ted.miniGame.size = 45;
   ted.miniGame.pos = { x: 1825, y: 300 };
   ted.miniGame.speedMax = 3;
   ted.miniGame.centerOffset = { x: -72, y: -85 };
+  //ted's movement is essentially just fuzzing the physics system with inputs
+  //theses values are generated 
   ted.miniGame.up = { range: [1, 5], flag: false };
   ted.miniGame.down = { range: [6, 10], flag: false };
   ted.miniGame.right = { range: [1, 5], flag: false };
@@ -59,14 +68,6 @@ ted.miniGame = {};
   ted.miniGame.moveTime = Math.floor(helperFunction.randomRange(0, 21));
   ted.miniGame.endTime = new Date().getTime() + ted.miniGame.moveTime;
   ted.miniGame.movement = function() {
-    if (frameCount % 10 === 0) {
-      // console.log("input x: " + ted.miniGame.input.x);
-      // console.log("input y: " + ted.miniGame.input.y);
-      // console.log("contact x: " + ted.miniGame.contact.x);
-      // console.log("contact y: " + ted.miniGame.contact.y);
-      // console.log("movement: " + ted.miniGame.needsMovement);
-      // console.log("timer: " + ted.miniGame.timer);
-    }
     if (ted.miniGame.timer) {
       ted.miniGame.moveTime = Math.floor(
         helperFunction.randomRange(1000, 4000)
