@@ -277,17 +277,47 @@ text[3] = {
     },
     {
       a: {
-        text: "",
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks"}
+  ]
+};
+
+text[4] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "You have really great form, might have to have you retrain ME sometime, haha!",
         playerChoices: 0,
         talkingTime: 1
       },
       b: {
-        text: "",
+        text: "Woah! I'm just complimenting your work ethic, little worker!",
+        playerChoices: 2,
+        talkingTime: 1
+      },
+    },
+    {
+      a: {
+        text: "Anyways, did you hear about...",
         playerChoices: 0,
         talkingTime: 1
       },
-      c: {
-        text: "",
+      b: {
+        text: "Alright, alright. Anyways, did you hear about...",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -295,79 +325,45 @@ text[3] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Thanks", b: "Again?" },
+    { a: "Yeah, sure. Thanks.", b: "No, it's weird." }
   ]
 };
 
-// text[4] = {
-//   response: [
-//     {
-//       a: {
-//         text: "Hey, just wanted to say you're doing great today, Player.",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
-
-// text[5] = {
-//   response: [
-//     {
-//       a: {
-//         text: "Hey, just wanted to say you're doing great today, Player.",
-//         playerChoices: 1,
-//         talkingTime: 1
-//       }
-//     },
-//     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
-//       b: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       },
-//       c: {
-//         text: "",
-//         playerChoices: 0,
-//         talkingTime: 1
-//       }
-//     }
-//   ],
-//   choice: [
-//     { complete: "Return to Map" },
-//     { a: "", b: "", c: "" }
-//   ]
-// };
+text[5] = {
+  response: [
+    {
+      a: {
+        text: "Hey, just wanted to say you're doing great today, Player.",
+        playerChoices: 1,
+        talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+    }
+  ],
+  choice: [
+    { complete: "Return to Map" },
+    { a: "Thanks"}
+  ]
+};
 
 // text[6] = {
 //   response: [
 //     {
 //       a: {
-//         text: "Hey, Player! So, I know you’re off work tomorrow, buuuut I was wondering if you could come in for overtime? Yknow, since we’re pals and all.",
+//         text: "",
 //         playerChoices: 1,
 //         talkingTime: 1
 //       }
 //     },
 //     {
-//       a: { text: "", playerChoices: 0, talkingTime: 1 },
+//       a: { text: "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about…", playerChoices: 0, talkingTime: 1 },
 //       b: {
 //         text: "",
 //         playerChoices: 0,
@@ -390,7 +386,7 @@ text[3] = {
 //   response: [
 //     {
 //       a: {
-//         text: "",
+//         text: "Hey, Player! So, I know you’re off work tomorrow, buuuut I was wondering if you could come in for overtime? Yknow, since we’re pals and all.",
 //         playerChoices: 1,
 //         talkingTime: 1
 //       }
