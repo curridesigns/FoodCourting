@@ -469,7 +469,7 @@ text[8] = {
     {
       a: {
         text:
-          "Yeah! Well, you always do great, so you don’t need me saying that, haha. Anyway, don’t let me detain you. Hey, did you hear about that attack that happened in the park near here? Better be careful, huh!",
+          "Yeah! Well, you always do great, so you don’t need me saying that, haha. Hey, did you hear about that attack that happened in the park near here? Better be careful, huh!",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -510,12 +510,12 @@ text[9] = {
 
 //the various boxes that the text will be displayed in
 const boxes = {
-  main: { top: 250, bottom: 550, left: 900, right: 1700 },
+  main: { top: 250, bottom: 550, left: 900, right: 1820 },
   choices: {
-    a: { top: 600, bottom: 700, left: 1200, right: 1700 },
-    b: { top: 750, bottom: 850, left: 1200, right: 1700 },
-    c: { top: 900, bottom: 1000, left: 1200, right: 1700 },
-    complete: { top: 600, bottom: 700, left: 1200, right: 1700 }
+    a: { top: 600, bottom: 700, left: 1200, right: 1820 },
+    b: { top: 750, bottom: 850, left: 1200, right: 1820 },
+    c: { top: 900, bottom: 1000, left: 1200, right: 1820 },
+    complete: { top: 600, bottom: 700, left: 1200, right: 1820 }
   },
   color: "#91d13dcc"
 };
