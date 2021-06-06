@@ -13,13 +13,14 @@ canvas.width = 1920;
 canvas.height = 1080;
 
 var canvasComputedWidth = window.innerWidth - 200;
-var cavasComputedHeight = canvasComputedWidth/9
+var canvasComputedHeight = (canvasComputedWidth/16)
 
-document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
-document.getElementById("gameCanvas")
+// document.getElementById("gameCanvas").style.width = canvasComputedWidth + 'px';
+// document.getElementById("gameCanvas").style.height = canvasComputedHeight + 'px';
 
 
-console.log(document.getElementById("gameCanvas").style.width)
+console.log('width: ' + canvasComputedWidth);
+console.log('height: ' + canvasComputedHeight);
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
