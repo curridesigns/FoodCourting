@@ -64,15 +64,17 @@ class npc {
       this.endTime = new Date().getTime() + this.talkingTime;
       this.playerChose = false;
     }
-    //
+    //switches back to listening after the alloted time
     if (Date.now() >= this.endTime) {
       this.state = "listening";
     }
 
+    //renders the text box for the npc
     helperFunction.button.render(
       this.dialogue.boxes.main,
       this.dialogue.boxes.color
     );
+    //renders the text inside of the npc box
     helperFunction.dialogueBoxes(
       this.dialogue.boxes.main,
       this.dialogue.text[this.chatNumber].response[this.chatProgress][
@@ -84,11 +86,10 @@ class npc {
       ctx
     );
 
+    //runs through the playerChoices and displays them in the appropriate spot
     for (const prop in this.dialogue.text[this.chatNumber].choice[
       this.playerChoices
     ]) {
-      if (frameCount % 10 === 0) {
-      }
       helperFunction.button.render(
         this.dialogue.boxes.choices[prop],
         this.dialogue.boxes.color
@@ -102,16 +103,20 @@ class npc {
         "24px",
         ctx
       );
-
-      // console.log(raven.dialogue.boxes.choices[prop])
     }
   }
 
+  //function to handle all the click events for each character on the appropiate page
   click() {
+    //runs through each of the options that given to the character and gives that value back to 
+    //dialogueRender() so it can move the conversation forward
     for (const prop in this.dialogue.text[this.chatNumber].choice[
       this.playerChoices
     ]) {
       if (helperFunction.button.click(this.dialogue.boxes.choices[prop])) {
+      //if the chat options for a path have been exhausted, it spits the player back to the map, or sends
+      //them to the ending for the character they are currently talking to if they have finished all the
+      //dialogue for that character
         if (prop == "complete") {
           if (this.chatNumber === this.dialogue.text.length - 1) {
             return "ending";

@@ -1,6 +1,8 @@
+//imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx } from "../canvas.js";
 import { physics } from "../miniGame/physics.js";
 
+//creates a PlayerCharacter class, although this probably could've been a normal object
 class PlayerCharacter {
   constructor() {
     this.pos = { x: 650, y: 250 };
@@ -20,6 +22,8 @@ class PlayerCharacter {
     this.speedMax = 6;
   }
 
+  //renders the player on the screen, the debug value is used to display some boxes to help line the image
+  //up with where it needed to be
   render(debug = false) {
     ctx.translate(this.pos.x, this.pos.y);
     ctx.drawImage(this.image, this.centerOffset.x, this.centerOffset.y);
