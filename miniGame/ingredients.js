@@ -1,5 +1,5 @@
 //this is where the ingredients are setup, rendered, selected, and new bowls are generated when one has been completed
-
+//imports the necessary functions and variables from the other modules in the project
 import { Topping } from "./ramen-toppings.js";
 import { randomRange } from "../helper-functions.js";
 import { canvas, ctx } from "../canvas.js";
@@ -7,22 +7,23 @@ import { bowl, miniGame } from "./mini-game.js";
 
 const ingredients = {};
 
-//TODO: implement a limit on the available ingredients subarrays
 //moves the declaration of ingredients to a new spot that can be managed easier
 ingredients.preLoad = function(){
 ingredients.images = { mushroom: document.getElementById("mush"), egg: document.getElementById("egg"), sea420: document.getElementById("sea420"), spawn: document.getElementById("spawn"), swirly: document.getElementById("swirly"), noods: document.getElementById("noods") };
   
+  
   ingredients.availableIngredients = [
   [new Topping("mushroom", 750, 100, ingredients.images.mushroom, "#FAC600")],
+  [new Topping("noodles", 950, 1000, ingredients.images.noods, "#4EFAEC")]
   [new Topping("egg", 950, 100, ingredients.images.egg, "#CE46E0")],
   [new Topping("sea420", 750, 575, ingredients.images.sea420, "#59A8F7")],
   [new Topping("spawn", 950, 575, ingredients.images.spawn, "#FF9652")],
   [new Topping("swirly", 750, 1000, ingredients.images.swirly, "#46E052")],
-  [new Topping("noodles", 950, 1000, ingredients.images.noods, "#4EFAEC")]
 ];
   ingredients.finishedBowls = 0;
 };
 
+//used to reset ingredients, and clean up between bowls, and miniGames
 ingredients.reset = function(){
   for(let i = 0; i<ingredients.availableIngredients.length;i++){
       ingredients.availableIngredients[i].splice(1); //removes all elements from the array after the first one
@@ -41,6 +42,7 @@ ingredients.reset = function(){
   
 }
 
+//checks if the ingredient turned in by the player matches the next one in the bowl
 ingredients.checkMatch = function(checkObj) {
   if (bowl.bowlIngredients[ingredients.checkIndex] === undefined){
     return false;
@@ -51,6 +53,7 @@ ingredients.checkMatch = function(checkObj) {
   return false;
 };
 
+//renders the ingredients that are shown on the counters 
 ingredients.renderStarterIngredients = function() {
   for (let i = 0; i < ingredients.availableIngredients.length; i += 1) {
     for (let j = 0; j < ingredients.availableIngredients[i].length; j++) {
