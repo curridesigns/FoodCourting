@@ -197,17 +197,17 @@ text[5] = {
     },
     {
       a: {
-        text: "Haha! Yeah... I'm sorry",
+        text: "Haha! Yeah.... I'm sorry about that.",
         playerChoices: 0,
         talkingTime: 1
       },
       b: {
-        text: "",
+        text: "I'm sorry for all of it.",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "Okay...",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -215,7 +215,7 @@ text[5] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "You were kinda an ass about it.", b: "", c: "" }
+    { a: "You were kinda an ass about it.", b: "Okay...", c: "It's fine. Really, let's just.. forget it." }
   ]
 };
 
@@ -223,20 +223,24 @@ text[6] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Yo, yo, it's the ramen man!",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "Haha, yeah!",
+        playerChoices: 0,
+        talkingTime: 1
+      },
       b: {
-        text: "",
+        text: "Haha, 'eyyyy!'",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "I might've had too much caffeine... haha",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -244,7 +248,7 @@ text[6] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Yo, yo, it's the shop man?", b: "'Eyy", c: "Hey?" }
   ]
 };
 
@@ -252,28 +256,50 @@ text[7] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Hey, I lied. I... I'm not on break from college. I got kicked out.",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
+      a: {
+        text: "It was stupid. I got caught plagerizing... I just didn't have enough time anymore to write paper after paper while still working and all my other classes and... I didn't think they'd check?",
+        playerChoices: 2,
+        talkingTime: 1
+      },
       b: {
         text: "",
         playerChoices: 0,
         talkingTime: 1
       },
       c: {
-        text: "",
+        text: "You knew? Okay...",
         playerChoices: 0,
         talkingTime: 1
+      }
+    },
+    {
+      a: {
+        text: "Yeah...",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "Yeah...",
+        playerChoices: 0,
+        talkingTime: 1        
+      },
+      c: {
+        text: "Yeah...",
+        playerChoices: 0,
+        talkingTime: 1        
       }
     }
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "For what?", b: "What?", c: "Yeah, I know." },
+    { a: "Wow.", b: "Really?", c: "That was stupid."}
   ]
 };
 
@@ -281,28 +307,27 @@ text[8] = {
   response: [
     {
       a: {
-        text: "",
+        text: "Hey, want to hang out tomorrow?",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "", playerChoices: 0, talkingTime: 1 },
-      b: {
-        text: "",
+      a: {
+        text: "Cool, cool!",
         playerChoices: 0,
         talkingTime: 1
       },
-      c: {
-        text: "",
+      b: {
+        text: "Cool, cool!",
         playerChoices: 0,
         talkingTime: 1
-      }
+      },
     }
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Sure, man.", b: "Uh, no."}
   ]
 };
 
