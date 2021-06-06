@@ -9,8 +9,9 @@ splashScreen.startGame = false;
 
 //const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
 const buttons = {
-  start: { top: 258, bottom: 480, left: 1055, right: 1713 }
-  credit:
+  start: { top: 258, bottom: 480, left: 1055, right: 1713 },
+  //credit: { top: , bottom: , left: , right:  },
+  //end: { top: , bottom: , left: , right:  } // Clockout could just have a pop up message? 
 };
 
 let splashFrameRendered = false;
