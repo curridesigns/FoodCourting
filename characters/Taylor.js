@@ -342,17 +342,12 @@ text[9] = {
     },
     {
       a: {
-        text: "",
+        text: "Nice, I just got in that new shooter - ya know, Zombie Bullets? I've been psyched to break it in, it could be like our good old days!",
         playerChoices: 0,
         talkingTime: 1
       },
       b: {
-        text: "",
-        playerChoices: 0,
-        talkingTime: 1
-      },
-      c: {
-        text: "",
+        text: "Alright, we can find something else then...",
         playerChoices: 0,
         talkingTime: 1
       }
@@ -360,7 +355,7 @@ text[9] = {
   ],
   choice: [
     { complete: "Return to Map" },
-    { a: "", b: "", c: "" }
+    { a: "Sounds good.", b: "Actually, no." }
   ]
 };
 
