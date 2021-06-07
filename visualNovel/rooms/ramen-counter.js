@@ -69,7 +69,7 @@ ramen.click = function(event, tedChat = false) {
       ramen.miniGame = true;
       miniGame.reset();
       window.alert(
-        "Welcome to your shift! You'll have to complete ___ bowls by going around via WASD and holding space to pick up items. But be cafeul to avoid your creepy manager!"
+        "Welcome to your shift! You'll have to complete 2 bowls by bringing the ingredients listed at the top of your screen to the front green mat, hold down shift to pick up and hold the ingredients and move around using WASD! But be cafeul to avoid your creepy manager!"
       );
       visualNovel.forcedMini = false;
     }
