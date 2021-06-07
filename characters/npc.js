@@ -80,7 +80,7 @@ class npc {
       this.dialogue.text[this.chatNumber].response[this.chatProgress][
         this.dialogue.playerResponse
       ].text,
-      40,
+      30,
       60,
       "48px",
       ctx
@@ -98,8 +98,8 @@ class npc {
       helperFunction.dialogueBoxes(
         this.dialogue.boxes.choices[prop],
         this.dialogue.text[this.chatNumber].choice[this.playerChoices][prop],
-        5,
-        20,
+        10,
+        40,
         "30px",
         ctx
       );

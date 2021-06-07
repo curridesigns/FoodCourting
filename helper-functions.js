@@ -58,7 +58,7 @@ function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) {
     stringObj,
     boxObj.left + leftOffset,
     boxObj.top + topOffset,
-    boxObj.right - boxObj.left,
+    boxObj.right - boxObj.left - 30,
     50,
     size
   );
