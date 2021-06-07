@@ -54,9 +54,11 @@ visualNovel.load = function() {
     case "food":
       ramen.load();
       break;
+      //displays the ending cards for each of the characters
     case "ending":
       switch (visualNovel.endScene) {
         case "ted":
+          //ted's has two images that it switches back and forth.
           var alternate = 16;
           if(frameCount % alternate === alternate/2){
           helperFunction.background(ramen.ending1);
@@ -80,27 +82,28 @@ visualNovel.load = function() {
 };
 
 visualNovel.click = function(event) {
-  // if (visualNovel.forcedMini) {
-  //   if (visualNovel.display === "food") {
-  //     ramen.click(event);
-  //   } else {
-  //     if (helperFunction.button.click(buttons.store)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to Spicy Take
-  //     if (helperFunction.button.click(buttons.spicy)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Arcade
-  //     if (helperFunction.button.click(buttons.arcade)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Food Court to work a shift
-  //     if (helperFunction.button.click(buttons.food)) {
-  //       visualNovel.display = "food";
-  //     }
-  //   }
-  // } else 
+  //this code can be commented out in order to not have to do a shift after every chat
+  if (visualNovel.forcedMini) {
+    if (visualNovel.display === "food") {
+      ramen.click(event);
+    } else {
+      if (helperFunction.button.click(buttons.store)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to Spicy Take
+      if (helperFunction.button.click(buttons.spicy)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Arcade
+      if (helperFunction.button.click(buttons.arcade)) {
+        window.alert("Please go to the Food Court for your shift!");
+      }
+      //sends you to the Food Court to work a shift
+      if (helperFunction.button.click(buttons.food)) {
+        visualNovel.display = "food";
+      }
+    }
+  } else 
   {
     switch (visualNovel.display) {
       //runs the click "function" for the map

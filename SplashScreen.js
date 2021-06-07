@@ -7,10 +7,8 @@ const splashScreen = {};
 splashScreen.bg = document.getElementById("splashScreen");
 splashScreen.startGame = false;
 
-//const buttons = { start: { top: 800, bottom: 900, left: 200, right: 500 } };
 const buttons = {
   start: { top: 258, bottom: 480, left: 1055, right: 1713 },
-  //start: {top: 70, bottom: 348, left: 73, right: 1025}, //new titlescreen
 };
 
 let splashFrameRendered = false;
@@ -18,8 +16,7 @@ let splashFrameRendered = false;
 splashScreen.load = function() {
   if (splashFrameRendered === true) {
     return;
-  } // If we already rendered the splash screen once, then don't draw it again.
-  
+  }  
   helperFunction.button.render(
     buttons.start,
     "#f9cb9cff"

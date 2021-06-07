@@ -12,7 +12,7 @@ import { miniGame } from "../../miniGame/mini-game.js";
 const ramen = {};
 
 //the ramen images
-ramen.shiftStart = document.getElementById("splashScreen");
+ramen.shiftStart = document.getElementById("ramenReg");
 ramen.ending1 = document.getElementById("tedEnding1");
 ramen.ending2 = document.getElementById("tedEnding2");
 ramen.bg = document.getElementById("ramenBG");
