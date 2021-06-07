@@ -20,12 +20,16 @@ Raven(Goth/good)
 Taylor(ex/bad)
 Chad(Incel/Bad)
 
-The game should have 4 possible endings:
+The game has 4 possible endings:
 Stalker's ending
 Spencer's Ending
 Ex's ending
 Incel's ending
 
-The endings will depend on what level of "Friendship" you have with each of the characters, and we'll have to talk about how to increase and decrease the "Friendship level."
+The endings will depend on how many chat events you have completed with each character
 
-Danny had a great idea of making the mini game first so we can make sure we have something to show by the end of the quarter, so we should definitely chat about that, preferably before Monday.
+Credits:
+Lead Design: GC Swedin
+Lead Development: Nick Currin
+Lead Environment: Mai Wisdom
+Lead Character: Danny Trump
