@@ -28,20 +28,24 @@ document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("click", onClick, false);
 
 //setup to generate consistent frameRate no matter the machine
+//more of it is in loop()
 //thanks to Jeffrey
 let lastTime = 0;
 let aggregatedTime = 0;
 const frameRateInMillis = 1000 / 20; // 60 FPS
 
 function setup() {
+  //makes sure the images and other things are setup properly before the player even sees the title
   miniGame.preLoad();
   miniGame.load();
   window.requestAnimationFrame(loop);
 }
 
 function draw() {
+  //if the player has clicked begin, starts the game
   if (splashScreen.startGame) {
     visualNovel.load();
+    //otherwise, sits on the title screen
   } else if (!splashScreen.startGame) {
     splashScreen.load();
   }
@@ -69,10 +73,11 @@ function loop(time) {
     //console.log(frameCount)
   }
   
-  //da
+  //draws everthing based on your machines abilities
   window.requestAnimationFrame(loop);
 }
 
+//starts the process for the first time
 setup();
 
 export { canvas, ctx, frameCount };

@@ -18,7 +18,7 @@ class PlayerCharacter {
     this.down = { key: 83, flag: false };
     this.right = { key: 68, flag: false };
     this.left = { key: 65, flag: false };
-    this.grab = { key: 32, flag: false, hasObject: false };
+    this.grab = { key: 16, flag: false, hasObject: false };
     //tells the physics engine which direction to move the character, can be either positive or negative 1
     this.direction = { x: 0, y: 0 };
     //current speed of the player, used to make sure the player doesnt fly off the screen

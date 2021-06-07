@@ -1,3 +1,4 @@
+//
 import { canvas, ctx } from "../canvas.js";
 
 function background(image) {
