@@ -8,7 +8,7 @@ it is full of great resources for how stuff works, and the syntax for different 
 
 This is a chatting game with a mini game that is a grab and place style game.
 
-Our Main Character is a Ramen Resturatant in a mall Food Court Employee
+Our Player character is a food court employee at a Ramen Shop in the local mall.
 
 For the mini game:
 You run around the kitchen collecting ingredients and bringing them back to bowl, while avoiding your creepy manager.
@@ -16,8 +16,8 @@ You run around the kitchen collecting ingredients and bringing them back to bowl
 For the chatting, we have 4 interactive characters:
 Ted(Stalker/bad)
 Raven(Goth/good)
-Taylor(ex/bad)
-Chad(Incel/Bad)
+Taylor(Ex/bad)
+Chad(Incel/bad)
 
 The game has 4 possible endings:
 Stalker/murder ending with Ted (bad unless you want to die)
@@ -25,8 +25,7 @@ Band gig date ending with Raven (good)
 Hanging with the Ex ending with Taylor (bad) 
 Incel campaign ending with Chad (bad)
 
-The endings will depend on how many chat events you have completed with each character
-(The endings are launched after using all of the character's chat functions.) ?
+The endings are launched after using all of the character's chat functions.
 
 Credits:
 Lead Design: GC Swedin

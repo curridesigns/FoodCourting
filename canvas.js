@@ -15,7 +15,7 @@ canvas.height = 1080;
 //the actual variable used elsewhere
 var aspectRatio = canvas.width/canvas.height;
 //makes it so the game can show up on any sized screen that is 16:9 or bigger
-var canvasComputedHeight = window.innerHeight - 200;
+var canvasComputedHeight = window.innerHeight - 300;
 var canvasComputedWidth = Math.ceil(canvasComputedHeight*aspectRatio);
 
 //changes the css values after page load

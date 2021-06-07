@@ -102,6 +102,15 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
           bowl.turnedInIngredients.push(
             ingredients.availableIngredients[i].splice(j, 1)
           );
+          ingredients.availableIngredients[i].push(
+          new Topping(
+            ingredients.availableIngredients[i][0].name,
+            ingredients.availableIngredients[i][0].startPOS.x,
+            ingredients.availableIngredients[i][0].startPOS.y,
+            ingredients.availableIngredients[i][0].image,
+            ingredients.availableIngredients[i][0].color
+          )
+        );
         }
       }
       //runs select() for each ingredient
