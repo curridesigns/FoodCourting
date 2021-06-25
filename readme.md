@@ -1,7 +1,5 @@
 Hey Everyone,
 
-Thought I would get started with a Read Me file. Just helps me gather some thought for a bigger project.
-
 First and foremost, this is created entirely in Vanilla JS. If you have any questions about how something is done please check the Web API docs
 https://developer.mozilla.org/en-US/docs/Web/API
 it is full of great resources for how stuff works, and the syntax for different things
@@ -27,8 +25,12 @@ Incel campaign ending with Chad (bad)
 
 The endings are launched after using all of the character's chat functions.
 
-Credits:
+Credits(Alpha):
 Lead Design: GC Swedin
 Lead Development: Nick Currin
 Lead Environment: Mai Wisdom
 Lead Character: Danny Trump
+
+Credits(Beta):
+Lead Design: GC Swedin
+Lead Development: Nick Currin
