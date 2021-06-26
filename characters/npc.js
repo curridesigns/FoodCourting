@@ -12,6 +12,7 @@ class npc {
     this.chats = 0;
     this.state = "idle";
     this.chatNumber = 0;
+    this.friendshipLevel = 0;
     this.chatProgress = 0;
     this.dialogue = {};
     this.dialogue.boxes = boxesObj;
@@ -49,7 +50,7 @@ class npc {
     }
     
     //playerChoices replaces the long path to playerChoices for each chat event
-    this.playerChoices = this.dialogue.text[this.chatNumber].response[this.chatProgress][this.dialogue.playerResponse].playerChoices;
+    this.playerChoices = this.dialogue.text[this.friendshipLevel].response[this.chatProgress][this.dialogue.playerResponse].playerChoices;
     //similar to playerChoices, but is for how long the npc should be in the 
     //"talking" state, then switches back to the "listening" state
     //the time is returned in milliseconds from the Date function, this is *1000 to convert to milliseconds
