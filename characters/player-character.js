@@ -30,6 +30,8 @@ class PlayerCharacter {
     //this actually in here becaure I needed it for the npc in the miniGame, it has no purpose in this
     //file, but I didn't have time to figure out how to remove it
     this.contact = {x: false, y: false};
+    this.money = 0;
+    this.moneyBox = { top: 30, bottom: 200, left: 10, right: 110 }
   }
 
   //renders the player on the screen, the debug value is used to display some boxes to help line the image
@@ -125,4 +127,6 @@ class PlayerCharacter {
   }
 }
 
-export { PlayerCharacter };
+var player = new PlayerCharacter();
+
+export { player };

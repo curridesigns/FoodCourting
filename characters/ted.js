@@ -204,7 +204,19 @@ ted.miniGame = {};
 
 //this is the text object that is passed into the npc class
 const text = [];
-text[0] = {
+//sets up each of the levels for the characters, they will have different numbers of replies for each level
+text[1] = [];
+text[2] = [];
+text[3] = [];
+text[4] = [];
+text[5] = [];
+text[6] = [];
+text[7] = [];
+text[8] = [];
+text[9] = [];
+text[10] = [];
+
+text[1][0] = {
   response: [
     {
       a: {
@@ -234,16 +246,25 @@ text[0] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" }, //0
+    { complete: {text: "Return to Map"} },
     {
-      a: "Is there a problem?",
-      b: "About what, exactly?",
-      c: "I really need to get back to work."
-    }
+      a: {
+        text: "Is there a problem?",
+        friendPoints: 0,
+      },
+      b: {
+        text: "About what, exactly?",
+        friendPoints: 0,
+      },
+      c: {
+        text: "I really need to get back to work.",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[1] = {
+text[2][0] = {
   response: [
     {
       a: {
@@ -274,12 +295,25 @@ text[1] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Thanks", b: "What brought this on?", c: "Aren't I always?" }
+    { complete: {text: "Return to Map"} },
+    {
+      a: {
+          text: "Thanks",
+          friendPoints: 0,
+        },
+      b: {
+         text: "What brought this on?",
+         friendPoints: 0,
+        },
+      c: {
+        text: "Aren't I always?",
+        friendPoints: 0,
+      }, 
+    },
   ]
 };
 
-text[2] = {
+text[3][0] = {
   response: [
     {
       a: {
@@ -304,12 +338,21 @@ text[2] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Thanks", b: "What brought this on?" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Thanks",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "What brought this on?",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[3] = {
+text[4][0] = {
   response: [
     {
       a: {
@@ -327,10 +370,18 @@ text[3] = {
       }
     }
   ],
-  choice: [{ complete: "Return to Map" }, { a: "Thanks" }]
+  choice: [
+    { complete: {text: "Return to Map"} },
+    {
+       a: {
+         text: "Thanks",
+         friendPoints: 0,
+        },
+      },
+    ]
 };
 
-text[4] = {
+text[5][0] = {
   response: [
     {
       a: {
@@ -366,13 +417,31 @@ text[4] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Thanks", b: "Again?" },
-    { a: "Yeah, sure. Thanks.", b: "No, it's weird." }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Thanks",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Again?",
+        friendPoints: 0,
+      },
+    },
+    { 
+      a: {
+        text: "Yeah, sure. Thanks.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "No, it's weird.",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[5] = {
+text[6][0] = {
   response: [
     {
       a: {
@@ -390,10 +459,18 @@ text[5] = {
       }
     }
   ],
-  choice: [{ complete: "Return to Map" }, { a: "Thanks" }]
+  choice: [
+    { complete: {text: "Return to Map"} },
+    {
+       a: {
+         text: "Thanks",
+         friendPoints: 0,
+        },
+      },
+    ],
 };
 
-text[6] = {
+text[7][0] = {
   response: [
     {
       a: {
@@ -430,13 +507,31 @@ text[6] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Thanks" },
-    { a: "Stay home.", b: "I have another job.", c: "Hike" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Thanks",
+        friendPoints: 0,
+      },
+    },
+    { 
+      a: {
+        text: "Stay home.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "I have another job.",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Hike",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[7] = {
+text[8][0] = {
   response: [
     {
       a: {
@@ -454,10 +549,18 @@ text[7] = {
       }
     }
   ],
-  choice: [{ complete: "Return to Map" }, { a: "Thanks" }]
+  choice: [
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Thanks",
+        friendPoints: 0,
+      },
+    },
+  ]
 };
 
-text[8] = {
+text[9][0] = {
   response: [
     {
       a: {
@@ -475,11 +578,18 @@ text[8] = {
       }
     }
   ],
-  choice: [{ complete: "Return to Map" },
-           { a: "Thanks" }]
+  choice: [
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Thanks",
+        friendPoints: 0,
+      },
+    },
+  ]
 };
 
-text[9] = {
+text[10][0] = {
   response: [
     {
       a: {
@@ -504,8 +614,17 @@ text[9] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Absolutely not.", b: "Sure, I guess" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Absolutely not.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Sure, I guess",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 

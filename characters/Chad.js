@@ -9,7 +9,19 @@ const images = {listening: document.getElementById("chadL"), talking: document.g
 
 //this is the text object that is passed into the npc class
 const text = [];
-text[0] = {
+//sets up each of the levels for the characters, they will have different numbers of replies for each level
+text[1] = [];
+text[2] = [];
+text[3] = [];
+text[4] = [];
+text[5] = [];
+text[6] = [];
+text[7] = [];
+text[8] = [];
+text[9] = [];
+text[10] = [];
+
+text[1][0] = {
   response: [
     {
       a: {
@@ -51,18 +63,40 @@ text[0] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Retro games", b: "The prizes", c: "Just passing through" },
+    { complete: {text: "Return to Map",} },
+    { 
+      a: {
+        text: "Retro games",
+        friendPoints: 0,
+      },
+      b: {
+        text: "The prizes",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Just passing through",
+        friendPoints: 0,
+      }
+     },
 
     {
-      a: "The sword",
-      b: "The Rubik’s Cube",
-      c: "The softball"
+      a: {
+        text: "The sword",
+        friendPoints: 0,
+      },
+      b: {
+        text:"The Rubik’s Cube",
+        friendPoints: 0,
+      },
+      c: {
+        text:"The softball",
+        friendPoints: 0,
+      },
     }
   ]
 };
 
-text[1] = {
+text[2][0] = {
   response: [
     {
       a: {
@@ -89,13 +123,26 @@ text[1] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Astronius (space shooter)", b: "Rolling Hills (platformer)", c: "Rust Bucket (beat-em-up)" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text:"Astronius (space shooter)",
+        friendPoints: 0,
+      },
+      b: {
+        text: "Rolling Hills (platformer)",
+        friendPoints: 0,
+      },
+      c: {
+        text:"Rust Bucket (beat-em-up)",
+        friendPoints: 0,
+      }
+     },
 
   ]
 };
 
-text[2] = {
+text[3][0] = {
   response: [
     {
       a: {
@@ -122,13 +169,26 @@ text[2] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Aw, that’s a shame.", b: "Not a big loss", c: "Huh, how’d it break?" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Aw, that’s a shame.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Not a big loss",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Huh, how’d it break?",
+        friendPoints: 0,
+      }
+    },
 
   ]
 };
 
-text[3] = {
+text[4][0] = {
   response: [
     {
       a: {
@@ -155,13 +215,26 @@ text[3] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Ouch.", b: "Any idea who?", c: "You’ll get it back." },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Ouch.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text:"Any idea who?",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "You’ll get it back.",
+        friendPoints: 0,
+      },
+    },
 
   ]
 };
 
-text[4] = {
+text[5][0] = {
   response: [
     {
       a: {
@@ -203,18 +276,40 @@ text[4] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "You are insane.", b: "...What happened?", c: "Dude, I’m just here to play the crane game" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text:"You are insane.",
+        friendPoints: 0,
+    },
+       b: {
+         text:"...What happened?",
+         friendPoints: 0,
+        }, 
+       c: {
+         text: "Dude, I’m just here to play the crane game",
+         friendPoints: 0,
+        },
+      },
 
     {
-      a: "That’s rough, buddy.",
-      b: "You are insane.",
-      c: "Wouldn’t that still just be sexism, not “reverse sexism”?"
+      a: {
+        text:"That’s rough, buddy.",
+        friendPoints: 0,
+      },
+      b: {
+        text:"You are insane.",
+        friendPoints: 0,
+      },
+      c: {
+        text: 'Wouldn’t that still just be sexism, not “reverse sexism”?',
+        friendPoints: 0,
+      },
     }
   ]
 };
 
-text[5] = {
+text[6][0] = {
   response: [
     {
       a: {
@@ -241,13 +336,26 @@ text[5] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "What are you drafting?", b: "Aren’t you at work?", c: "Huh, I’ve been meaning to play that." },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "What are you drafting?",
+        friendPoints: 0,
+        }, 
+      b: {
+        text:"Aren’t you at work?",
+        friendPoints: 0,
+      },
+      c: {
+        text:"Huh, I’ve been meaning to play that.",
+        friendPoints: 0,
+      },
+    },
 
   ]
 };
 
-text[6] = {
+text[7][0] = {
   response: [
     {
       a: {
@@ -274,13 +382,26 @@ text[6] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "I’m going to ignore you now.", b: "What is it this time?", c: "Huh. Okay!" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "I’m going to ignore you now.",
+        friendPoints: 0,
+      },
+      b: {
+        text: "What is it this time?",
+        friendPoints: 0,
+      }, 
+      c: {
+        text:"Huh. Okay!",
+        friendPoints: 0,
+      },
+    },
 
   ]
 };
 
-text[7] = {
+text[8][0] = {
   response: [
     {
       a: {
@@ -307,13 +428,26 @@ text[7] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Sounds like a you problem.", b: "That’s rough. Need coffee?", c: "How’d that go?" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Sounds like a you problem.",
+        friendPoints: 0,
+      },
+      b: {
+        text: "That’s rough. Need coffee?",
+        friendPoints: 0,
+      },
+      c: {
+        text: "How’d that go?",
+        friendPoints: 0,
+      },
+    },
 
   ]
 };
 
-text[8] = {
+text[9][0] = {
   response: [
     {
       a: {
@@ -340,8 +474,21 @@ text[8] = {
     },
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "...Wait, do YOU have the day off?", b: "I’m busy.", c: "Sure!" },
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text:"...Wait, do YOU have the day off?",
+        friendPoints: 0,
+      },
+      b: {
+        text:"I’m busy.",
+        friendPoints: 0,
+      },
+      c: {
+        text: "Sure!",
+        friendPoints: 0,
+      }, 
+    },
 
   ]
 };

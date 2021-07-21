@@ -20,7 +20,7 @@ arcade.load = function() {
 };
 
 //runs chad's click() and handles it's return values as such
-arcade.click = function(event, visualNovelDisplay) {
+arcade.click = function(event) {
   switch (chad.click(event)) {
     case "map":
       visualNovel.display = "map";

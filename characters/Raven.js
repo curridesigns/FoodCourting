@@ -10,7 +10,19 @@ const images = {
 
 //this is the text object that is passed into the npc class
 const text = [];
-text[0] = {
+//sets up each of the levels for the characters, they will have different numbers of replies for each level
+text[1] = [];
+text[2] = [];
+text[3] = [];
+text[4] = [];
+text[5] = [];
+text[6] = [];
+text[7] = [];
+text[8] = [];
+text[9] = [];
+text[10] = [];
+
+text[1][0] = {
   response: [
     {
       a: {
@@ -30,7 +42,11 @@ text[0] = {
         playerChoices: 0,
         talkingTime: 1
       },
-      c: { text: "Oh yeah?", playerChoices: 2, talkingTime: 0.5 }
+      c: { 
+        text: "Oh yeah?", 
+        playerChoices: 2, 
+        talkingTime: 0.5 
+      },
     },
     {
       a: {
@@ -38,52 +54,194 @@ text[0] = {
         playerChoices: 0,
         talkingTime: 1
       },
-      b: { text: "Oh no, the walking dead!", playerChoices: 0, talkingTime: 1 },
-      c: { text: "Damn, movie worthy.", playerChoices: 0, talkingTime: 0.8 }
+      b: { 
+        text: "Oh no, the walking dead!", 
+        playerChoices: 0, 
+        talkingTime: 1 
+      },
+      c: { 
+        text: "Damn, movie worthy.", 
+        playerChoices: 0,
+        talkingTime: 0.8 
+      }
     }
   ],
   choice: [
-    { complete: "Return to Map" },//0
-    { a: "Boring", b: "Definitely needed", c: "Exciting" },
+    { complete: {text: "Return to Map"} },//0
+    {
+      a: {
+      text: "Boring",
+      friendPoints: 0,
+    },
+      b: {
+       text: "Definitely needed",
+       friendPoints: 0,
+      }, 
+      c: {
+        text: "Exciting",
+        friendPoints: 0,
+      },
+     },
 
     {
-      a: "Sat back, vibed with some new music.",
-      b: "I slept for so long, my roommate thought I was dead.",
-      c: "Went out for a long drive that turned into camping."
+      a: {
+        text: "Sat back, vibed with some new music.",
+        friendPoints: 10,
+      },
+      b: {
+        text: "I slept for so long, my roommate thought I was dead.",
+        friendPoints: 5,
+      },
+      c: {
+        text: "Went out for a long drive that turned into camping.",
+        friendPoints: 5,
+      },
     }
-  ]
+  ],
 };
 
-text[1] = {
+text[1][1] = {
   response: [
     {
       a: {
-        text: "How's the ramen slingin' today?",
+        text: "Oh, player... So, you still work in the foodcourt?",
+        playerChoices: 1,
+        talkingTime: 1,
+      },
+    },
+    {
+      a: {
+        text: "Ah haha! Those jokes of yours...",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: {
+        text: "Right, right.",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      c: { 
+        text: "Oh really?", 
+        playerChoices: 0, 
+        talkingTime: 0.5 
+      },
+    },
+  ],
+  choice: [
+    { complete: {text: "Return to Map"} },//0
+    {
+      a: {
+      text: "Boring",
+      friendPoints: 0,
+    },
+      b: {
+       text: "Definitely needed",
+       friendPoints: 0,
+      }, 
+      c: {
+        text: "Exciting",
+        friendPoints: 0,
+      },
+     },
+
+    {
+      a: {
+        text: "Sat back, vibed with some new music.",
+        friendPoints: 10,
+      },
+      b: {
+        text: "I slept for so long, my roommate thought I was dead.",
+        friendPoints: 5,
+      },
+      c: {
+        text: "Went out for a long drive that turned into camping.",
+        friendPoints: 5,
+      },
+    }
+  ],
+};
+
+
+
+text[2][0] = {
+  response: [
+    {
+      a: {
+        text: "this is just to get this working",
         playerChoices: 1,
         talkingTime: 1
       }
     },
     {
-      a: { text: "I feel that.", playerChoices: 0, talkingTime: 1 },
-      b: {
-        text: "Niiiiiiiiccceeeeeeeee",
+      a: {
+        text: "this is just to get this working",
         playerChoices: 0,
         talkingTime: 1
       },
-      c: {
-        text: "...that's the wrong pasta.",
+      b: {
+        text: "this is just to get this working",
         playerChoices: 0,
         talkingTime: 1
+      },
+      c: { 
+        text: "this is just to get this working", 
+        playerChoices: 2, 
+        talkingTime: 0.5 
+      },
+    },
+    {
+      a: {
+        text: "this is just to get this working",
+        playerChoices: 0,
+        talkingTime: 1
+      },
+      b: { 
+        text: "this is just to get this working", 
+        playerChoices: 0, 
+        talkingTime: 1 
+      },
+      c: { 
+        text: "this is just to get this working", 
+        playerChoices: 0,
+        talkingTime: 0.8 
       }
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Life sucking", b: "Gooooooooooooooooood", c: "Fun-chini :]" }
-  ]
+    { complete: {text: "Return to Map"} },//0
+    {
+      a: {
+      text: "this is just to get this working",
+      friendPoints: 0,
+    },
+      b: {
+       text: "this is just to get this working",
+       friendPoints: 0,
+      }, 
+      c: {
+        text: "this is just to get this working",
+        friendPoints: 0,
+      },
+     },
+
+    {
+      a: {
+        text: "this is just to get this working",
+        friendPoints: 10,
+      },
+      b: {
+        text: "this is just to get this working",
+        friendPoints: 5,
+      },
+      c: {
+        text: "this is just to get this working",
+        friendPoints: 5,
+      },
+    }
+  ],
 };
 
-text[2] = {
+text[3][0] = {
   response: [
     {
       a: {
@@ -110,12 +268,25 @@ text[2] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Oh thank god", b: "Aw shucks", c: "Ah to be a cringey kid" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Oh thank god",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Aw shucks",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Ah to be a cringey kid",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[3] = {
+text[4][0] = {
   response: [
     {
       a: {
@@ -142,24 +313,57 @@ text[3] = {
       }
     },
     {
-      a: { text: "Haha! Don't think it's weird?", playerChoices: 0, talkingTime: 2 },
-      b: { text: "Yeah, I guess so...", playerChoices: 0, talkingTime: 1 },
-      c: { text: "Yeah? :]", playerChoices: 0, talktingTime: 1 }
+      a: { 
+        text: "Haha! Don't think it's weird?", 
+        playerChoices: 0, 
+        talkingTime: 2, 
+      },
+      b: { 
+        text: "Yeah, I guess so...", 
+        playerChoices: 0, 
+        talkingTime: 1,
+      },
+      c: { 
+        text: "Yeah? :]", 
+        playerChoices: 0, 
+        talktingTime: 1, 
+      },
     }
   ],
   choice: [
-    { complete: "Return to Map" },//0
-    { a: "All managers suck at that, huh.", b: "Cool.", c: "What band?" },
-
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "All managers suck at that, huh.",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Cool.",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "What band?",
+        friendPoints: 0,
+      },
+    },
     {
-      a: "I like it!",
-      b: "They sound kinda cringey.",
-      c: "Wannabe grungey, I like it."
-    }
+      a: {
+        text: "I like it!",
+        friendPoints: 0,
+      },
+      b: {
+        text: "They sound kinda cringey.",
+        friendPoints: 0,
+      },
+      c: {
+        text: "Wannabe grungey, I like it.",
+        friendPoints: 0,
+      },
+    },
   ]
-}; //fuck, what is your problem here?
+}; 
 
-text[4] = {
+text[5][0] = {
   response: [
     {
       a: {
@@ -179,19 +383,32 @@ text[4] = {
         talkingTime: 1
       },
       c: {
-        text: "Sure, I could switch off between that an my energy drink!",
+        text: "Sure, I could switch off between that and my energy drink!",
         playerChoices: 0,
         talkingTime: 1
       }
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Whatcha thinkin' about?", b: "How's that one brain cell?", c: "Need some coffee?"}
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Whatcha thinkin' about?",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "How's that one brain cell?",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Need some coffee?",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[5] = {
+text[6][0] = {
   response: [
     {
       a: {
@@ -218,12 +435,25 @@ text[5] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "An artist", b: "I actually was the weird teen that wanted to work at the mall at least once.", c: "I want to run away from society. Middle of the woods, farm, foraging, kinda life."}
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "An artist",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "I actually was the weird teen that wanted to work at the mall at least once.",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "I want to run away from society. Middle of the woods, farm, foraging, kinda life.",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[6] = {
+text[7][0] = {
   response: [
     {
       a: {
@@ -250,12 +480,25 @@ text[6] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Same", b: "Need that daily caffeine", c: "Go for a run?" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Same",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Need that daily caffeine",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Go for a run?",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[7] = {
+text[8][0] = {
   response: [
     {
       a: {
@@ -283,13 +526,27 @@ text[7] = {
 }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Cool! I do too!" },
-    { a: "Sure", b: "No, thanks" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Cool! I do too!",
+        friendPoints: 0,
+      },
+    },
+    { 
+      a: {
+        text: "Sure",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "No, thanks",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[8] = {
+text[9][0] = {
   response: [
     {
       a: {
@@ -316,12 +573,25 @@ text[8] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "So, where's this gig?", b: "What kinda scene is this gig gonna be?", c: "How are ya?" }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "So, where's this gig?",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "What kinda scene is this gig gonna be?",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "How are ya?",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 
-text[9] = {
+text[10][0] = {
   response: [
     {
       a: {
@@ -348,8 +618,21 @@ text[9] = {
     }
   ],
   choice: [
-    { complete: "Return to Map" },
-    { a: "Yeah!", b: "Nervous", c: "Actually, I'm not sure about going." }
+    { complete: {text: "Return to Map"} },
+    { 
+      a: {
+        text: "Yeah!",
+        friendPoints: 0,
+      }, 
+      b: {
+        text: "Nervous",
+        friendPoints: 0,
+      }, 
+      c: {
+        text: "Actually, I'm not sure about going.",
+        friendPoints: 0,
+      },
+    },
   ]
 };
 

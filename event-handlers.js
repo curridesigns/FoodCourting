@@ -1,5 +1,5 @@
 //imports the necessary functions and variables from other files
-import { character } from "./miniGame/mini-game.js";
+import { player } from "./miniGame/mini-game.js";
 import { splashScreen } from "./SplashScreen.js"
 import { visualNovel } from "./visualNovel/VisualNovel.js"
 import * as helperFunction from "./helper-functions.js"
@@ -9,12 +9,12 @@ import * as helperFunction from "./helper-functions.js"
 //handles all the key events for the miniGame, with the function below it as well
 function keyDownHandler(event){
   event.preventDefault;
-  character.keyDownHandler();
+  player.keyDownHandler();
 }
 
 function keyUpHandler(event){
   event.preventDefault;
-  character.keyUpHandler();
+  player.keyUpHandler();
 }
 
 //handles all the click events for the Novel

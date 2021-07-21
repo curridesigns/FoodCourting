@@ -52,24 +52,25 @@ button.click = function(boxObj) {
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
-function dialogueBoxes(boxObj, stringObj, leftOffset, topOffset, size, ctx) { 
+function dialogueBoxes(boxObj, string, leftOffset, topOffset, size, ctx, color) { 
   wrapText(
     ctx,
-    stringObj,
+    string.toString(),
     boxObj.left + leftOffset,
     boxObj.top + topOffset,
     boxObj.right - boxObj.left - 30,
     50,
-    size
+    size,
+    color
   );
 }
 
 // x, and y can be anything... but maxWidth should not be the right side of your rectangle.
-function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
+function wrapText(ctx, text, x, y, maxWidth, lineHeight, size, color) {
   var words = text.split(" ");
   var line = "";
-  ctx.font = size + " arial";
-  ctx.fillStyle = "white";
+  ctx.font = size + "pt arial";
+  ctx.fillStyle = color;
 
   for (var n = 0; n < words.length; n++) {
     var testLine = line + words[n] + " ";
@@ -88,11 +89,26 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight, size) {
   ctx.fillText(line, x, y);
 }
 
+let endTime;
+function timer(lengthInSeconds, timerReset) {
+  if (timerReset) {
+    endTime = new Date().getTime() + (lengthInSeconds * 1000);
+    timerReset = false;
+  }
+  if(Date.now() >= endTime){
+    endTime = undefined;
+    timerReset = true;
+    return true;
+  }
+  return false, endTime;
+}
+
 export {
   background,
   dist,
   randomRange,
   getMouseCoordinates,
   button,
-  dialogueBoxes
+  dialogueBoxes,
+  timer
 };

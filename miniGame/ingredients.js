@@ -121,7 +121,7 @@ ingredients.select = function(characterGrab, characterPOS, bowlPOS) {
 
 //tells if a bowl has been finished, and if the number of finished bowls has reached to correct 
 //value for each shift
-ingredients.finishBowl = function(finishedBowls) {
+ingredients.finishBowl = function() {
   //console.log("this is from the ")
   if (ingredients.checkIndex === bowl.bowlIngredients.length) {
     ingredients.reset();
@@ -130,10 +130,6 @@ ingredients.finishBowl = function(finishedBowls) {
   ctx.font = "48px ariel";
   ctx.fillStyle = "red";
   ctx.fillText(miniGame.finishedBowls, 1720, 100);
-  if (miniGame.finishedBowls === 2) {
-    return true;
-  }
-  return false;
 };
 
 export { ingredients };

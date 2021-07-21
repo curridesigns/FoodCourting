@@ -26,9 +26,6 @@ spicy.click = function(event, visualNovelDisplay) {
   switch (raven.click(event)) {
     case "map":
       visualNovel.display = "map";
-      raven.chatNumber++;
-      raven.chatProgress = 0;
-      raven.dialogue.playerResponse = "a";
       visualNovel.forcedMini = true;
       break;
     case "ending":

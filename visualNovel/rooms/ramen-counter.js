@@ -46,7 +46,7 @@ ramen.load = function() {
 };
 
 //handles the click events for food court
-ramen.click = function(event, tedChat = false) {
+ramen.click = function(event) {
   //if you talk to ted, runs the click events for that
   if (miniGame.tedEnding) {
     switch (ted.novel.click(event)) {

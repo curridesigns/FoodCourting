@@ -4,6 +4,7 @@ import { keyDownHandler, keyUpHandler, onClick } from "./event-handlers.js";
 import * as helperFunction from "./helper-functions.js";
 import { splashScreen } from "./SplashScreen.js";
 import { visualNovel } from "./visualNovel/VisualNovel.js";
+import {player} from "./characters/player-character.js";
 
 //sets up the canvas and the frameCount
 const canvas = document.querySelector("#gameCanvas");
@@ -80,4 +81,4 @@ function loop(time) {
 //starts the process for the first time
 setup();
 
-export { canvas, ctx, frameCount };
+export { canvas, ctx, frameCount, player };
