@@ -83,47 +83,46 @@ visualNovel.load = function() {
 
 visualNovel.click = function(event) {
   //this code can be commented out in order to not have to do a shift after every chat
-  // if (visualNovel.forcedMini) {
-  //   if (visualNovel.display === "food") {
-  //     ramen.click(event);
-  //   } else {
-  //     if (helperFunction.button.click(buttons.store)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to Spicy Take
-  //     if (helperFunction.button.click(buttons.spicy)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Arcade
-  //     if (helperFunction.button.click(buttons.arcade)) {
-  //       window.alert("Please go to the Food Court for your shift!");
-  //     }
-  //     //sends you to the Food Court to work a shift
-  //     if (helperFunction.button.click(buttons.food)) {
-  //       visualNovel.display = "food";
-  //     }
-  //   }
-  // } else 
+  /*if (visualNovel.forcedMini) {
+    if (visualNovel.display === "food") {
+      ramen.click(event);
+    } else {
+      if (helperFunction.button.click(buttons.store)|| helperFunction.button.click(buttons.spicy)
+          || helperFunction.button.click(buttons.arcade) ) {
+        visualNovel.forcedShift = true;
+      }
+      //sends you to the Food Court to work a shift
+      if (helperFunction.button.click(buttons.food)) {
+        visualNovel.display = "food";
+        visualNovel.forcedShift = false;
+      }
+    }
+  } else */
   {
     switch (visualNovel.display) {
       //runs the click "function" for the map
       case "map":
-        //sends you to the store
-        if (helperFunction.button.click(buttons.store)) {
-          visualNovel.display = "store";
-        }
-        //sends you to Spicy Take
-        if (helperFunction.button.click(buttons.spicy)) {
-          //console.log("spicy");
-          visualNovel.display = "spicy";
-        }
-        //sends you to the Arcade
-        if (helperFunction.button.click(buttons.arcade)) {
-          visualNovel.display = "arcade";
-        }
-        //sends you to the Food Court to work a shift
-        if (helperFunction.button.click(buttons.food)) {
-          visualNovel.display = "food";
+        if (player.invenotery.display) {
+          player.invenotery.click(event);
+        } else { 
+          //sends you to the store
+          if (helperFunction.button.click(buttons.store)) {
+            visualNovel.display = "store";
+          }
+          //sends you to Spicy Take
+          if (helperFunction.button.click(buttons.spicy)) {
+            //console.log("spicy");
+            visualNovel.display = "spicy";
+          }
+          //sends you to the Arcade
+          if (helperFunction.button.click(buttons.arcade)) {
+            visualNovel.display = "arcade";
+          }
+          //sends you to the Food Court to work a shift
+          if (helperFunction.button.click(buttons.food)) {
+            visualNovel.display = "food";
+          }
+          player.invenotery.click(event);
         }
         break;
       //runs the click "function" for the arcade
@@ -148,8 +147,26 @@ visualNovel.click = function(event) {
 
 visualNovel.mapRender = function() {
   
+  var shiftPopup = { top: 80, bottom: 605, left: 70, right: 605 }
+  var shiftMessage = "Please go to the Food Court for your shift!"
+
   helperFunction.background(visualNovel.bg);
-  helperFunction.dialogueBoxes(player.moneyBox, "$" + player.money, 10, 10, 24, ctx, "white");
+  helperFunction.dialogueBoxes(
+    player.moneyBox,
+    "$" + player.money,
+    10,
+    30,
+    24,
+    ctx,
+    "white",
+    "#00000000"
+  );
+
+
+  if (visualNovel.forcedShift) {
+    helperFunction.dialogueBoxes(shiftPopup, shiftMessage, 10, 58, 48, ctx, "black", "white");
+  }
+  player.invenotery.render();
   
 }
 

@@ -67,30 +67,30 @@ text[1][0] = {
     { 
       a: {
         text: "Retro games",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "The prizes",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Just passing through",
-        friendPoints: 0,
+        friendPoints: 5,
       }
      },
 
     {
       a: {
         text: "The sword",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text:"The Rubik’s Cube",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text:"The softball",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     }
   ]
@@ -127,15 +127,15 @@ text[2][0] = {
     { 
       a: {
         text:"Astronius (space shooter)",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "Rolling Hills (platformer)",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text:"Rust Bucket (beat-em-up)",
-        friendPoints: 0,
+        friendPoints: 5,
       }
      },
 
@@ -173,15 +173,15 @@ text[3][0] = {
     { 
       a: {
         text: "Aw, that’s a shame.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Not a big loss",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Huh, how’d it break?",
-        friendPoints: 0,
+        friendPoints: 5,
       }
     },
 
@@ -219,15 +219,15 @@ text[4][0] = {
     { 
       a: {
         text: "Ouch.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text:"Any idea who?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "You’ll get it back.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
 
@@ -280,30 +280,30 @@ text[5][0] = {
     { 
       a: {
         text:"You are insane.",
-        friendPoints: 0,
+        friendPoints: 5,
     },
        b: {
          text:"...What happened?",
-         friendPoints: 0,
+         friendPoints: 5,
         }, 
        c: {
          text: "Dude, I’m just here to play the crane game",
-         friendPoints: 0,
+         friendPoints: 5,
         },
       },
 
     {
       a: {
         text:"That’s rough, buddy.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text:"You are insane.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: 'Wouldn’t that still just be sexism, not “reverse sexism”?',
-        friendPoints: 0,
+        friendPoints: 5,
       },
     }
   ]
@@ -340,15 +340,15 @@ text[6][0] = {
     { 
       a: {
         text: "What are you drafting?",
-        friendPoints: 0,
+        friendPoints: 5,
         }, 
       b: {
         text:"Aren’t you at work?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text:"Huh, I’ve been meaning to play that.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
 
@@ -386,15 +386,15 @@ text[7][0] = {
     { 
       a: {
         text: "I’m going to ignore you now.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "What is it this time?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text:"Huh. Okay!",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
 
@@ -432,15 +432,15 @@ text[8][0] = {
     { 
       a: {
         text: "Sounds like a you problem.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "That’s rough. Need coffee?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "How’d that go?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
 
@@ -478,15 +478,15 @@ text[9][0] = {
     { 
       a: {
         text:"...Wait, do YOU have the day off?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text:"I’m busy.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "Sure!",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
     },
 
@@ -494,15 +494,15 @@ text[9][0] = {
 };
 
 //the various boxes that the text will be displayed in
+const color = "#2987D7cc";
 const boxes = {
-  main: { top: 500, bottom: 850, left: 100, right: 1000 },
+  main: { top: 500, bottom: 850, left: 100, right: 1000, color: color },
   choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 600 },
-    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
-    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
-    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
+    a: { top: 920, bottom: 1020, left: 100, right: 600, color: color },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150, color: color },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700, color: color },
+    complete: { top: 920, bottom: 1020, left: 100, right: 400, color: color }
   },
-  color: "#2987D7cc"
 };
 
 const chad = new npc("chad",images, text, boxes);

@@ -65,6 +65,7 @@ class npc {
       this.chatNumber = 0;
     };
     //playerChoices replaces the long path to playerChoices for each chat event
+
     this.playerChoices = this.dialogue.text[this.friendLevel][this.chatNumber].response[this.chatProgress][this.dialogue.playerResponse].playerChoices;
     //similar to playerChoices, but is for how long the npc should be in the 
     //"talking" state, then switches back to the "listening" state
@@ -98,9 +99,10 @@ class npc {
       ].text,
       30,
       60,
-      "48px",
+      48,
       ctx,
-      "white"
+      "white",
+      this.dialogue.boxes.color
     );
 
     //runs through the playerChoices and displays them in the appropriate spot
@@ -117,9 +119,10 @@ class npc {
         this.dialogue.text[this.friendLevel][this.chatNumber].choice[this.playerChoices][prop].text,
         10,
         40,
-        "30px",
+        30,
         ctx,
-        "white"
+        "white",
+        this.dialogue.boxes.color
       );
     }
   }
@@ -137,7 +140,7 @@ class npc {
         if (prop == "complete") {
           this.chatNumber = Math.floor(helperFunction.randomRange(0,this.dialogue.text[this.friendLevel].length));
           this.chatProgress = 0;
-          this.playerResponse = "a"
+          this.dialogue.playerResponse = "a"
           if (this.levelChange) {
             this.friendLevel++;
             this.chatNumber = 0;

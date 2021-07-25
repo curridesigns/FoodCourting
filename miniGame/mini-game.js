@@ -68,7 +68,7 @@ miniGame.timer = function(timeInSeconds){
   timer = helperFunction.timer(timeInSeconds,timerReset);
   if (timer != true) {
     timerReset = false;
-    let timeBox = {top: 100, bottom: 300, left:100, right: 300,};
+    let timeBox = {top: 100, bottom: 300, left:100, right: 300, color: "#00000000"};
     let countDown = {}
     countDown.seconds = (Math.floor((timer - Date.now())/1000))%60;
     countDown.minutes = (Math.floor(((timer - Date.now())/1000)/60));
@@ -76,7 +76,7 @@ miniGame.timer = function(timeInSeconds){
       countDown.seconds = "0" + (Math.floor((timer - Date.now())/1000))%60;
     }
     let text = "0" + countDown.minutes + " : " + countDown.seconds;
-    helperFunction.dialogueBoxes(timeBox, text, 10, 10, 48, ctx, "red");
+    helperFunction.dialogueBoxes(timeBox, text, 10, 10, 32, ctx, "red");
   }
   if (timer === true) {
     miniGame.ending();

@@ -29,8 +29,8 @@ function getMouseCoordinates(event) {
 }
 
 const button = {};
-button.render = function(boxObj, color) {
-  ctx.fillStyle = color;
+button.render = function(boxObj) {
+  ctx.fillStyle = boxObj.color;
   ctx.fillRect(
     boxObj.left,
     boxObj.top,
@@ -52,7 +52,8 @@ button.click = function(boxObj) {
 
 //requires a boxObj with the main dialogue window, and a max of 3 dialogue options for the character. Also requires a stringObj with the text
 //for the NPC, and the player object text
-function dialogueBoxes(boxObj, string, leftOffset, topOffset, size, ctx, color) { 
+function dialogueBoxes(boxObj, string, leftOffset, topOffset, size, ctx, textColor) { 
+  button.render(boxObj)
   wrapText(
     ctx,
     string.toString(),
@@ -61,7 +62,7 @@ function dialogueBoxes(boxObj, string, leftOffset, topOffset, size, ctx, color) 
     boxObj.right - boxObj.left - 30,
     50,
     size,
-    color
+    textColor
   );
 }
 

@@ -1,6 +1,7 @@
 //imports the necessary functions and variables from the other modules in the project
 import { canvas, ctx } from "../canvas.js";
 import { physics } from "../miniGame/physics.js";
+import { inventory } from "../visualNovel/inventory.js";
 
 //creates a PlayerCharacter class, although this probably could've been a normal object
 class PlayerCharacter {
@@ -31,7 +32,9 @@ class PlayerCharacter {
     //file, but I didn't have time to figure out how to remove it
     this.contact = {x: false, y: false};
     this.money = 0;
-    this.moneyBox = { top: 30, bottom: 200, left: 10, right: 110 }
+    this.moneyBox = { top: 10, bottom: 50, left: 10, right: 70 }
+    this.invenotery = new inventory("player");
+    
   }
 
   //renders the player on the screen, the debug value is used to display some boxes to help line the image

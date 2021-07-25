@@ -71,22 +71,22 @@ text[1][0] = {
     {
       a: {
       text: "Boring",
-      friendPoints: 0,
+      friendPoints: 5,
     },
       b: {
        text: "Definitely needed",
-       friendPoints: 0,
+       friendPoints: 5,
       }, 
       c: {
         text: "Exciting",
-        friendPoints: 0,
+        friendPoints: 5,
       },
      },
 
     {
       a: {
         text: "Sat back, vibed with some new music.",
-        friendPoints: 10,
+        friendPoints: 50,
       },
       b: {
         text: "I slept for so long, my roommate thought I was dead.",
@@ -132,22 +132,22 @@ text[1][1] = {
     {
       a: {
       text: "Boring",
-      friendPoints: 0,
+      friendPoints: 5,
     },
       b: {
        text: "Definitely needed",
-       friendPoints: 0,
+       friendPoints: 5,
       }, 
       c: {
         text: "Exciting",
-        friendPoints: 0,
+        friendPoints: 5,
       },
      },
 
     {
       a: {
         text: "Sat back, vibed with some new music.",
-        friendPoints: 10,
+        friendPoints: 5,
       },
       b: {
         text: "I slept for so long, my roommate thought I was dead.",
@@ -212,22 +212,22 @@ text[2][0] = {
     {
       a: {
       text: "this is just to get this working",
-      friendPoints: 0,
+      friendPoints: 5,
     },
       b: {
        text: "this is just to get this working",
-       friendPoints: 0,
+       friendPoints: 5,
       }, 
       c: {
         text: "this is just to get this working",
-        friendPoints: 0,
+        friendPoints: 5,
       },
      },
 
     {
       a: {
         text: "this is just to get this working",
-        friendPoints: 10,
+        friendPoints: 5,
       },
       b: {
         text: "this is just to get this working",
@@ -272,15 +272,15 @@ text[3][0] = {
     { 
       a: {
         text: "Oh thank god",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Aw shucks",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Ah to be a cringey kid",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -335,29 +335,29 @@ text[4][0] = {
     { 
       a: {
         text: "All managers suck at that, huh.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Cool.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "What band?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
     {
       a: {
         text: "I like it!",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "They sound kinda cringey.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "Wannabe grungey, I like it.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -394,15 +394,15 @@ text[5][0] = {
     { 
       a: {
         text: "Whatcha thinkin' about?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "How's that one brain cell?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Need some coffee?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -439,15 +439,15 @@ text[6][0] = {
     { 
       a: {
         text: "An artist",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "I actually was the weird teen that wanted to work at the mall at least once.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "I want to run away from society. Middle of the woods, farm, foraging, kinda life.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -484,15 +484,15 @@ text[7][0] = {
     { 
       a: {
         text: "Same",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Need that daily caffeine",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Go for a run?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -530,17 +530,17 @@ text[8][0] = {
     { 
       a: {
         text: "Cool! I do too!",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
     { 
       a: {
         text: "Sure",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "No, thanks",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -577,15 +577,15 @@ text[9][0] = {
     { 
       a: {
         text: "So, where's this gig?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "What kinda scene is this gig gonna be?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "How are ya?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -622,30 +622,30 @@ text[10][0] = {
     { 
       a: {
         text: "Yeah!",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Nervous",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Actually, I'm not sure about going.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
 };
 
 //the various boxes that the text will be displayed in
+const color = "#8F6EADcc";
 const boxes = {
-  main: { top: 500, bottom: 850, left: 100, right: 1000 },
+  main: { top: 500, bottom: 850, left: 100, right: 1000, color: color },
   choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 600 },
-    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
-    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
-    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
+    a: { top: 920, bottom: 1020, left: 100, right: 600, color: color },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150, color: color },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700, color: color },
+    complete: { top: 920, bottom: 1020, left: 100, right: 400, color: color }
   },
-  color: "#8F6EADcc"
 };
 
 

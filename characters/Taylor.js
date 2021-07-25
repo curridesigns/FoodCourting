@@ -50,15 +50,15 @@ text[1][0] = {
     { 
       a: { 
         text: "No, I'm stalking you.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "Yep, at the Ramen Shop.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "I've never worked here.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -92,15 +92,15 @@ text[2][0] = {
     { 
       a: {
         text: "So are you on break from college or something?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "Did you drop out?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "Did you already graduate?", 
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -155,22 +155,22 @@ text[3][0] = {
     { 
       a: {
         text: "I wanted to talk to you.", 
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: "Yeah! (grab something)", 
       c: "It wasn't in stock." },
     { 
       a: {
         text: "Our breakup", 
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Do you like working here?", 
-        friendPoints: 0,
+        friendPoints: 5,
       },
       c: {
         text: "Nevermind.", 
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -209,15 +209,15 @@ text[4][0] = {
     { 
       a: {
         text: "You know me... Bad with making lists.", 
-        friendPoints: 0,
+        friendPoints: 5,
       },
       b: {
         text: "I like to get snacks and energy drinks for my shifts", 
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "I haven't seen you in a lont time",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     }
   ]
@@ -255,15 +255,15 @@ text[5][0] = {
     { 
       a: {
         text: "Cool, cool.", 
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Why?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Cool, I could hang out until your shifts starts?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     }
   ]
@@ -301,15 +301,15 @@ text[6][0] = {
     { 
       a: {
         text: "You were kinda an ass about it.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Okay...",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "It's fine. Really, let's just.. forget it.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     }
   ]
@@ -347,15 +347,15 @@ text[7][0] = {
     { 
       a: {
         text: "Yo, yo, it's the shop man?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "'Eyy",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text:"Hey?",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -410,29 +410,29 @@ text[8][0] = {
     { 
       a: {
         text: "For what?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "What?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "Yeah, I know.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
     { 
       a: {
         text: "Wow.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Really?",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       c: {
         text: "That was stupid.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -465,11 +465,11 @@ text[9][0] = {
     { 
       a: {
         text: "Sure, man.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text:"Uh, no.",
-        friendPoints: 0,
+        friendPoints: 5,
       },
     },
   ]
@@ -502,26 +502,26 @@ text[10][0] = {
     { 
       a: {
         text:"Sounds good.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
       b: {
         text: "Actually, no.",
-        friendPoints: 0,
+        friendPoints: 5,
       }, 
     },
   ]
 };
 
 //the various boxes that the text will be displayed in
+const color = "#F3D950cc"
 const boxes = {
-  main: { top: 500, bottom: 850, left: 100, right: 1000 },
+  main: { top: 500, bottom: 850, left: 100, right: 1000, color: color },
   choices: {
-    a: { top: 920, bottom: 1020, left: 100, right: 600 },
-    b: { top: 920, bottom: 1020, left: 650, right: 1150 },
-    c: { top: 920, bottom: 1020, left: 1200, right: 1700 },
-    complete: { top: 920, bottom: 1020, left: 100, right: 400 }
+    a: { top: 920, bottom: 1020, left: 100, right: 600, color: color },
+    b: { top: 920, bottom: 1020, left: 650, right: 1150, color: color },
+    c: { top: 920, bottom: 1020, left: 1200, right: 1700, color: color },
+    complete: { top: 920, bottom: 1020, left: 100, right: 400, color: color }
   },
-  color: "#F3D950cc"
 };
 
 const taylor = new npc("taylor",images, text, boxes);
