@@ -18,7 +18,7 @@ class npc {
     this.chatProgress = 0;
     this.friendLevel = 1;
     this.levelChange = false
-    this.friendPoints = 1;
+    this.friendPoints = 90;
     this.levelGap = 10;
     this.dialogue = {};
     this.dialogue.boxes = boxesObj;
@@ -145,7 +145,7 @@ class npc {
             this.friendLevel++;
             this.chatNumber = 0;
           }
-          if (this.chatNumber === this.dialogue.text.length - 1) {
+          if (this.friendLevel === this.dialogue.text.length) {
             return "ending";
           }
           return "map";

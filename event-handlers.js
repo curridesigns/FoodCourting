@@ -4,7 +4,7 @@ import { splashScreen } from "./SplashScreen.js"
 import { visualNovel } from "./visualNovel/VisualNovel.js"
 import * as helperFunction from "./helper-functions.js"
 
-
+document.addEventListener
 
 //handles all the key events for the miniGame, with the function below it as well
 function keyDownHandler(event){

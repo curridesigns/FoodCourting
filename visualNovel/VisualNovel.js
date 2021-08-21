@@ -26,7 +26,8 @@ const buttons = {
   store: { top: 80, bottom: 605, left: 70, right: 605 },
   spicy: { top: 80, bottom: 350, left: 570, right: 930 },
   arcade: { top: 80, bottom: 605, left: 1350, right: 1830 },
-  food: { top: 575, bottom: 1030, left: 575, right: 1315 }
+  food: { top: 575, bottom: 1030, left: 575, right: 1315 },
+  endingMap: { top: 920, bottom: 1020, left: 100, right: 600, color: "#FFFFFF" }
 }; 
 
 
@@ -77,6 +78,7 @@ visualNovel.load = function() {
           helperFunction.background(store.ending);
           break;
       }
+      helperFunction.dialogueBoxes(buttons.endingMap, "Reset Game", 10, 30, 24, ctx, "black");
       break;
   }
 };
@@ -141,6 +143,10 @@ visualNovel.click = function(event) {
       case "food":
         ramen.click(event);
         break;
+      case "ending":
+        if(helperFunction.button.click(buttons.endingMap)){
+          location.reload();
+        }
     }
   }
 };

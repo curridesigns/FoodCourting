@@ -9,7 +9,7 @@ import * as helperFunction from "../helper-functions.js";
 
 class inventory {
 
-    constructor(context) {
+    constructor(context = "", inventory = []) {
         this.display = false;
         this.items = [];
         this.context = context;
@@ -22,6 +22,13 @@ class inventory {
             background: { top: 70, bottom: 775, left: 100, right: 1800, color: "red" },
             details: { top: 800, bottom: 1050, left: 100, right: 1350, color: "red" },
         };
+        this.boxSpacing = 20;
+        this.gridHeight = (this.boxes.background.bottom - this.boxes.background.top) / 2
+        this.gridWidth = (this.boxes.background.right - this.boxes.background.left) / 5;
+        this.clickBoxNumber = 0;
+        this.itemArray = inventory;
+
+        
     }
 
     render() {
@@ -29,7 +36,24 @@ class inventory {
             helperFunction.button.render(this.boxes.background);
             helperFunction.dialogueBoxes(this.boxes.buttons.leave, "Close", 10, 30, 20, ctx, "white");
             helperFunction.button.render(this.boxes.details);
-            
+
+            for (let i = this.boxes.background.top; i < this.boxes.background.bottom; i += this.gridHeight) {
+                for (let j = this.boxes.background.left; j < this.boxes.background.right; j += this.gridWidth) {
+                    let boxHeight = this.gridHeight + i - this.boxSpacing;
+                    let boxWidth = this.gridWidth + j - this.boxSpacing;
+                    let box = {
+                        top: i + this.boxSpacing,
+                        bottom: boxHeight,
+                        left: j + this.boxSpacing,
+                        right: boxWidth,
+                        color: "blue"
+                    }
+                    helperFunction.button.render(box);
+                }
+            };
+            // console.log(index, box.bottom);
+
+
             switch (this.context) {
                 case "store":
                     helperFunction.button.render(this.boxes.option);
@@ -45,6 +69,9 @@ class inventory {
     };
 
     click(event) {
+        if (this.itemArray === 0) {
+            console.log(this.itemArray)
+        }
         if (helperFunction.button.click(this.boxes.buttons.mapDisplay)) {
             this.display = true;
         }
@@ -52,7 +79,34 @@ class inventory {
             this.display = false;
         }
         console.log(helperFunction.getMouseCoordinates(event));
+        if (this.display) {
+            let boxNumber = 0;
+            for (let i = this.boxes.background.top; i < this.boxes.background.bottom; i += this.gridHeight) {
+                for (let j = this.boxes.background.left; j < this.boxes.background.right; j += this.gridWidth) {
+                    boxNumber++;
+                    let boxHeight = this.gridHeight + i - this.boxSpacing;
+                    let boxWidth = this.gridWidth + j - this.boxSpacing;
+                    let box = {
+                        top: i + this.boxSpacing,
+                        bottom: boxHeight,
+                        left: j + this.boxSpacing,
+                        right: boxWidth,
+                        color: "blue"
+                    }
+                    if (helperFunction.button.click(box)) {
+                        this.clickBoxNumber = boxNumber;
+                    }
+                    if (boxNumber === 10) {
+                        boxNumber = 1;
+                    }
+                }
+            }
+        }
     };
+
+    boxSelect(){
+
+    }
 
 }
 

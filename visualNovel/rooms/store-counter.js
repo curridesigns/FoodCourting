@@ -145,6 +145,7 @@ store.shop.render = function() {
 store.shop.click = function(){
   if (helperFunction.button.click(store.entrance.choice.chat.box)) {
     visualNovel.display = "map"
+    store.shop.bool = false;
   }
 }
 
